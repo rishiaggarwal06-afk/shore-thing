@@ -10,7 +10,8 @@ import 'widgets/brand.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Clean web addresses (/beach/asbury-park instead of /#/beach/asbury-park).
-  usePathUrlStrategy();
+  // HASH_URLS=true keeps addresses after a # (needed when hosted inside another page).
+  if (!const bool.fromEnvironment('HASH_URLS')) usePathUrlStrategy();
   final repo = await BeachRepository.load();
   runApp(ShoreThingApp(repo: repo));
 }
