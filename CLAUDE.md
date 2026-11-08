@@ -17,7 +17,7 @@ An app + website for discovering beaches worldwide.
 - **Maps**: flutter_map with free OpenStreetMap tiles, recoloured to the brand (sand land, ocean water) by a colour filter in `home_map_screen.dart`. Mapbox was dropped for now.
 - **Open-Meteo**: weather, marine, and climate data.
 - **OpenStreetMap**: seed source for beach locations.
-- **Attribution for OSM (and Open-Meteo, once connected) must appear in the app.** It's required by their licenses/terms, so don't remove it. The map shows it bottom-right.
+- **Attribution for OSM, Open-Meteo and each Wikimedia photo must appear in the app.** It's required by their licenses/terms, so don't remove it. The map shows it bottom-right.
 
 ## Current state
 - Focus region: **the Jersey Shore** (10 beaches, Sandy Hook → Cape May) in `assets/data/beaches.json`, gathered from public sources in Nov 2026 (2026 summer badge prices).
@@ -25,7 +25,11 @@ An app + website for discovering beaches worldwide.
 - Brand: ink #123d40, yellow #FFE14D, orange #FF7F50, paper #fff9e9, teal #98d7d0, ocean #0AB0C6, sand #FFE38A; bold Arial-style type (bundled Liberation Sans); thick ink borders with hard offset shadows. Add U+FE0E after symbols like ✳ ↗ so they don't render as emoji.
 - Routes (go_router, clean web paths): `/` map, `/beach/<slug>` detail, anything else under `/beach/` → fuzzy search, then the "not one of our ten (yet)" page.
 - Amenity booleans are true only when the beach's features list says so; "Family friendly" = lifeguards + (restrooms or food). Nothing lists water sports rentals yet.
-- "Best time to go" uses PLACEHOLDER numbers from `lib/services/climate_service.dart`. Next step: real Open-Meteo data.
+- Real data pipeline (run from the project folder, results written into the app's assets):
+  - `python3 tool/fetch_climate.py` → each beach's `monthly` (10-year Open-Meteo averages) + `monthlySource`. Until it has run, "Best time to go" shows labelled PLACEHOLDER numbers.
+  - `python3 tool/fetch_photos.py` → hand-picked CC0/CC BY/CC BY-SA Wikimedia Commons photos in `assets/images/beaches/` + each beach's `photos` (credit shown under each photo and in "Photo credits"). Until it has run, the illustrated scenes are shown.
+  - Cloud sessions often can't run these: Open-Meteo's free daily limit and Wikimedia's image servers block the shared cloud IP. Running them on the user's Mac works. `thumb.wikimedia.org` isn't on the cloud allowlist; the scripts use `upload.wikimedia.org` instead.
+  - Open-Meteo's free API is non-commercial only; a paid plan is needed once the app has ads or paid features.
 
 ## Code layout
 ```

@@ -1,3 +1,6 @@
+import 'beach_photo.dart';
+import 'month_conditions.dart';
+
 /// One beach, exactly as stored in assets/data/beaches.json.
 class Beach {
   const Beach({
@@ -25,6 +28,9 @@ class Beach {
     required this.waterSportsRentals,
     required this.restrooms,
     required this.familyFriendly,
+    this.monthly = const [],
+    this.monthlySource,
+    this.photos = const [],
   });
 
   /// URL-friendly name, used in web addresses like /beach/asbury-park.
@@ -61,6 +67,13 @@ class Beach {
   final bool restrooms;
   final bool familyFriendly;
 
+  /// Real month-by-month conditions (empty until tool/fetch_climate.py has run).
+  final List<MonthConditions> monthly;
+  final String? monthlySource;
+
+  /// Real photos with credits (empty → the illustrated scenes are shown instead).
+  final List<BeachPhoto> photos;
+
   factory Beach.fromJson(Map<String, dynamic> j) => Beach(
         slug: j['slug'] as String,
         name: j['name'] as String,
@@ -86,6 +99,9 @@ class Beach {
         waterSportsRentals: j['waterSportsRentals'] as bool,
         restrooms: j['restrooms'] as bool,
         familyFriendly: j['familyFriendly'] as bool,
+        monthly: [for (final m in (j['monthly'] as List?) ?? const []) MonthConditions.fromJson(m as Map<String, dynamic>)],
+        monthlySource: j['monthlySource'] as String?,
+        photos: [for (final p in (j['photos'] as List?) ?? const []) BeachPhoto.fromJson(p as Map<String, dynamic>)],
       );
 }
 

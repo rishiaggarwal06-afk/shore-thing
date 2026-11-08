@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../models/beach.dart';
+import '../models/beach_photo.dart';
 import '../services/beach_scope.dart';
 import '../services/climate_service.dart';
 import '../widgets/beach_scene.dart';
@@ -96,20 +97,52 @@ class BeachDetailScreen extends StatelessWidget {
         _StatusLine(b.tag),
         gap,
         _Stats(cards: [
-          ('☀︎ Air temperature', region.airTemp, region.airNote),
-          ('≈ Water temperature', region.waterTemp, region.waterNote),
+          _airCard(b, region),
+          _waterCard(b, region),
           ('↗︎ Waves', b.wave, b.waveNote),
           ('⚑︎ Lifeguards', b.lifeguards, b.lifeguardNote),
         ]),
         gap,
         _InfoGrid(b, phone: phone),
         const SizedBox(height: 30),
-        BestTimeToGo(months: const ClimateService().monthlyFor(b.slug)),
+        BestTimeToGo(climate: const ClimateService().monthlyFor(b)),
         gap,
         Text(region.sourcesNote, style: const TextStyle(fontSize: 12, height: 1.5)),
+        if (b.photos.isNotEmpty) _PhotoCredits(b.photos),
       ]),
     );
   }
+}
+
+/// Air temperature card: this beach's real summer highs if we have them, else the region's.
+(String, String, String) _airCard(Beach b, Region region) {
+  if (b.monthly.length != 12) return ('☀\ufe0e Air temperature', region.airTemp, region.airNote);
+  final summer = b.monthly.sublist(5, 8).map((m) => m.airF).toList()..sort();
+  return ('☀\ufe0e Air temperature', '${summer.first}–${summer.last}°F', 'Average summer highs · Jun–Aug');
+}
+
+/// Water temperature card: the warmest month on average.
+(String, String, String) _waterCard(Beach b, Region region) {
+  if (b.monthly.length != 12) return ('≈ Water temperature', region.waterTemp, region.waterNote);
+  final warmest = b.monthly.reduce((a, m) => m.waterF > a.waterF ? m : a);
+  return ('≈ Water temperature', 'Up to ${warmest.waterF}°F', 'Warmest in ${warmest.month}, on average');
+}
+
+/// Full photo credits with links to each photo's page (required by the CC licenses).
+class _PhotoCredits extends StatelessWidget {
+  const _PhotoCredits(this.photos);
+  final List<BeachPhoto> photos;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.only(top: 12),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Text('PHOTO CREDITS', style: Brand.eyebrow),
+          const SizedBox(height: 6),
+          for (final p in photos)
+            SelectableText('${p.artist}, ${p.license}, ${p.source}', style: const TextStyle(fontSize: 11, height: 1.5)),
+        ]),
+      );
 }
 
 class _Gallery extends StatelessWidget {
@@ -117,16 +150,26 @@ class _Gallery extends StatelessWidget {
   final Beach b;
   final bool phone;
 
+  /// Slot [i] shows the beach's i-th real photo, or an illustration if there isn't one.
+  Widget _slot(int i, String sceneLabel) {
+    final scene = BeachScene(palette: b.color, view: i, label: sceneLabel);
+    return i < b.photos.length ? PhotoTile(photo: b.photos[i], beachName: b.name, fallback: scene) : scene;
+  }
+
   @override
   Widget build(BuildContext context) {
-    final main = BeachScene(palette: b.color, view: 0, label: 'Illustrated shoreline for ${b.name}');
-    final side1 = BeachScene(palette: b.color, view: 1, label: 'Illustrated umbrella on the sand');
-    final side2 = BeachScene(palette: b.color, view: 2, label: 'Illustrated sailboat offshore');
+    final main = _slot(0, 'Illustrated shoreline for ${b.name}');
+    final side1 = _slot(1, 'Illustrated umbrella on the sand');
+    final side2 = _slot(2, 'Illustrated sailboat offshore');
     if (phone) {
       return Column(children: [
         main,
         const SizedBox(height: 10),
-        Row(children: [Expanded(child: side1), const SizedBox(width: 10), Expanded(child: side2)]),
+        Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Expanded(child: side1),
+          const SizedBox(width: 10),
+          Expanded(child: side2),
+        ]),
       ]);
     }
     return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -135,6 +178,32 @@ class _Gallery extends StatelessWidget {
       Expanded(child: Column(children: [side1, const SizedBox(height: 10), side2])),
     ]);
   }
+}
+
+/// A real photo in the chunky frame, with its required credit line underneath.
+class PhotoTile extends StatelessWidget {
+  const PhotoTile({super.key, required this.photo, required this.beachName, required this.fallback});
+  final BeachPhoto photo;
+  final String beachName;
+  final Widget fallback;
+
+  @override
+  Widget build(BuildContext context) => Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Container(
+          decoration: Brand.chunky(shadow: 0),
+          child: AspectRatio(
+            aspectRatio: 3 / 2,
+            child: Image.asset(
+              photo.asset,
+              fit: BoxFit.cover,
+              semanticLabel: 'Photo of $beachName',
+              errorBuilder: (_, _, _) => fallback, // photo file missing → show the illustration
+            ),
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(photo.credit, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10.5, height: 1.3)),
+      ]);
 }
 
 class _StatusLine extends StatelessWidget {

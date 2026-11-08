@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../services/climate_service.dart';
+import '../models/month_conditions.dart';
 import 'brand.dart';
 
 /// "Best time to go": 12 month cards in a sideways-scrolling strip.
 class BestTimeToGo extends StatelessWidget {
-  const BestTimeToGo({super.key, required this.months});
-  final List<MonthConditions> months;
+  const BestTimeToGo({super.key, required this.climate});
+  final ({List<MonthConditions> months, bool placeholder, String? source}) climate;
+
+  List<MonthConditions> get months => climate.months;
 
   @override
   Widget build(BuildContext context) => Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -16,13 +18,17 @@ class BestTimeToGo extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: Brand.chunky(color: Brand.yellow, shadow: 0, radius: 20, border: 2),
             child: Text(
-              ClimateService.isPlaceholder ? 'TYPICAL, NOT LIVE · PLACEHOLDER NUMBERS' : 'TYPICAL, NOT LIVE',
+              climate.placeholder ? 'TYPICAL, NOT LIVE · PLACEHOLDER NUMBERS' : 'TYPICAL, NOT LIVE · 10-YEAR AVERAGES',
               style: Brand.eyebrow,
             ),
           ),
         ]),
         const SizedBox(height: 6),
         const Text('☀︎ Air high   ≈ Water   ↗︎ Waves   ☂︎ Rain per month', style: TextStyle(fontSize: 12)),
+        if (climate.source != null) ...[
+          const SizedBox(height: 4),
+          Text(climate.source!, style: const TextStyle(fontSize: 11.5)),
+        ],
         const SizedBox(height: 14),
         // Phones swipe through the months; wider screens show them all as a grid.
         if (Brand.isPhone(context))

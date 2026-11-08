@@ -91,7 +91,7 @@ class SiteFooter extends StatelessWidget {
             SizedBox(height: 12),
             Text(
               'Beach info gathered from public sources, Nov 2026. Fees, hours and conditions change, '
-              'so always check with lifeguards and official sites. Map data © OpenStreetMap contributors.',
+              'so always check with lifeguards and official sites. Map data © OpenStreetMap contributors. Weather data by Open-Meteo.com (CC BY 4.0). Beach photos from Wikimedia Commons, credited on each beach page.',
               style: TextStyle(color: Brand.paper, fontSize: 12, height: 1.5),
             ),
           ]),
