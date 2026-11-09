@@ -15,7 +15,10 @@
       "lat": 40.4278,
       "lon": -73.9842,
       "tag": "THE NATIONAL PARK ONE",
-      "tags": ["Quiet escapes", "Nature & wildlife"],
+      "tags": [
+        "Quiet escapes",
+        "Nature & wildlife"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Usually moderate in summer; rougher in storms",
       "lifeguards": "Yes",
@@ -25,13 +28,127 @@
       "entryNote": "Beach parking fee, charged 8 a.m.–6 p.m. from Memorial Day weekend to Labor Day. Season pass $100. Cashless: cards or contactless only. Free for military members and veterans with an America the Beautiful pass.",
       "parking": "Several large beach lots. On hot summer weekends they fill up and the park can close the entrance until spaces open, so arrive early.",
       "description": "A seven-mile barrier spit at the top of the Jersey Shore, with wide ocean beaches, dunes, the 1764 Sandy Hook Lighthouse and views of the New York skyline across the bay.",
-      "features": ["Lifeguards at guarded beaches", "Restrooms & showers at the beach areas", "Seasonal food concessions", "Sandy Hook Lighthouse", "Multi-use bike path", "Bird watching"],
+      "features": [
+        "Lifeguards at guarded beaches",
+        "Restrooms & showers at the beach areas",
+        "Seasonal food concessions",
+        "Sandy Hook Lighthouse",
+        "Multi-use bike path",
+        "Bird watching"
+      ],
       "safety": "Swim only at guarded beaches and watch for rip currents. Some beaches are a long walk from the lot, so bring water and shade.",
       "color": 0,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 41,
+          "waterF": 41,
+          "waveFt": "2–3",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Feb",
+          "airF": 44,
+          "waterF": 40,
+          "waveFt": "2–3",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Mar",
+          "airF": 50,
+          "waterF": 43,
+          "waveFt": "2–3",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Apr",
+          "airF": 58,
+          "waterF": 50,
+          "waveFt": "2–3",
+          "rainIn": 4.1
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 60,
+          "waveFt": "2",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Jun",
+          "airF": 76,
+          "waterF": 68,
+          "waveFt": "1–2",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Jul",
+          "airF": 83,
+          "waterF": 77,
+          "waveFt": "1–2",
+          "rainIn": 5.3
+        },
+        {
+          "month": "Aug",
+          "airF": 81,
+          "waterF": 75,
+          "waveFt": "1–2",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Sep",
+          "airF": 75,
+          "waterF": 72,
+          "waveFt": "2–3",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Oct",
+          "airF": 66,
+          "waterF": 64,
+          "waveFt": "2–3",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Nov",
+          "airF": 54,
+          "waterF": 55,
+          "waveFt": "2",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Dec",
+          "airF": 45,
+          "waterF": 45,
+          "waveFt": "2–3",
+          "rainIn": 4.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/sandy-hook-1.jpg",
+          "artist": "Didier Moïse",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Sandy_Hook_Beach_at_the_Gateway_National_Recreation_Area_in_Highlands,_New_Jersey.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/sandy-hook-2.jpg",
+          "artist": "Tomwsulcer",
+          "license": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:New_York_City_skyline_view_from_Sandy_Hook_beach_NJ.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/sandy-hook-3.jpg",
+          "artist": "Tomwsulcer",
+          "license": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Beach_scene_at_Sandy_Hook_NJ.JPG"
+        }
+      ]
     },
     {
       "slug": "asbury-park",
@@ -40,7 +157,10 @@
       "lat": 40.219,
       "lon": -73.9985,
       "tag": "THE MUSIC TOWN",
-      "tags": ["Boardwalk fun", "Surf spots"],
+      "tags": [
+        "Boardwalk fun",
+        "Surf spots"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Small summer waves; bigger with fall swells",
       "lifeguards": "Yes",
@@ -50,13 +170,127 @@
       "entryNote": "$10 on weekends and holidays. Season badge $70 for adults, $20 for teens and seniors. Badges aren’t needed after Labor Day.",
       "parking": "Metered street parking and paid lots near the boardwalk, paid by app or kiosk. It fills up on summer weekends.",
       "description": "A lively mile-long boardwalk with the historic Convention Hall and Paramount Theatre, restaurants and bars right by the sand, and a designated surfing beach.",
-      "features": ["Lifeguards", "Boardwalk restaurants & bars", "Convention Hall & Paramount Theatre", "Designated surfing beach", "Restrooms on the boardwalk", "Live music nearby"],
+      "features": [
+        "Lifeguards",
+        "Boardwalk restaurants & bars",
+        "Convention Hall & Paramount Theatre",
+        "Designated surfing beach",
+        "Restrooms on the boardwalk",
+        "Live music nearby"
+      ],
       "safety": "Swim only between the lifeguard flags. Surfing is limited to the marked surfing beaches.",
       "color": 1,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 42,
+          "waterF": 43,
+          "waveFt": "3–5",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Feb",
+          "airF": 46,
+          "waterF": 41,
+          "waveFt": "3–5",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Mar",
+          "airF": 51,
+          "waterF": 43,
+          "waveFt": "3–6",
+          "rainIn": 4.7
+        },
+        {
+          "month": "Apr",
+          "airF": 60,
+          "waterF": 48,
+          "waveFt": "3–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "May",
+          "airF": 68,
+          "waterF": 56,
+          "waveFt": "3–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Jun",
+          "airF": 78,
+          "waterF": 64,
+          "waveFt": "2–4",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 71,
+          "waveFt": "2–4",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Aug",
+          "airF": 82,
+          "waterF": 71,
+          "waveFt": "2–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Sep",
+          "airF": 76,
+          "waterF": 71,
+          "waveFt": "3–5",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Oct",
+          "airF": 67,
+          "waterF": 65,
+          "waveFt": "3–5",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Nov",
+          "airF": 55,
+          "waterF": 56,
+          "waveFt": "3–4",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Dec",
+          "airF": 45,
+          "waterF": 47,
+          "waveFt": "3–5",
+          "rainIn": 4.7
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/asbury-park-1.jpg",
+          "artist": "Curlyrnd",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Asbury_Park_July_10_Early_Morning_01.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/asbury-park-2.jpg",
+          "artist": "Curlyrnd",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Asbury_Park_July_10_Early_Morning_02.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/asbury-park-3.jpg",
+          "artist": "Curlyrnd",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Asbury_Park_July_10_Early_Morning_16.jpg"
+        }
+      ]
     },
     {
       "slug": "point-pleasant-beach",
@@ -65,7 +299,9 @@
       "lat": 40.0912,
       "lon": -74.0347,
       "tag": "BOARDWALK CLASSIC",
-      "tags": ["Boardwalk fun"],
+      "tags": [
+        "Boardwalk fun"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Gentle on most summer days",
       "lifeguards": "Yes",
@@ -75,13 +311,121 @@
       "entryNote": "Jenkinson’s Beach: $15 on weekends and holidays, and kids under 12 get in free with an adult. Season badge $130 for adults. Buy daily admission at any open beach gate.",
       "parking": "Paid lots and metered street parking near the boardwalk. Lots fill early on summer weekends.",
       "description": "Home of Jenkinson’s Boardwalk, with rides, arcades, an aquarium, mini golf and boardwalk food right behind the sand.",
-      "features": ["Lifeguards", "Jenkinson’s rides & arcades", "Jenkinson’s Aquarium", "Boardwalk food & ice cream", "Mini golf", "Restrooms on the boardwalk"],
+      "features": [
+        "Lifeguards",
+        "Jenkinson’s rides & arcades",
+        "Jenkinson’s Aquarium",
+        "Boardwalk food & ice cream",
+        "Mini golf",
+        "Restrooms on the boardwalk"
+      ],
       "safety": "Swim at guarded beaches, and keep an eye on kids in the busy boardwalk crowds.",
       "color": 2,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 42,
+          "waterF": 43,
+          "waveFt": "3–5",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Feb",
+          "airF": 46,
+          "waterF": 41,
+          "waveFt": "3–5",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Mar",
+          "airF": 51,
+          "waterF": 43,
+          "waveFt": "3–6",
+          "rainIn": 4.7
+        },
+        {
+          "month": "Apr",
+          "airF": 60,
+          "waterF": 48,
+          "waveFt": "3–5",
+          "rainIn": 4.3
+        },
+        {
+          "month": "May",
+          "airF": 68,
+          "waterF": 56,
+          "waveFt": "3–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Jun",
+          "airF": 78,
+          "waterF": 64,
+          "waveFt": "2–4",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 70,
+          "waveFt": "2–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Aug",
+          "airF": 82,
+          "waterF": 71,
+          "waveFt": "2–4",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Sep",
+          "airF": 76,
+          "waterF": 71,
+          "waveFt": "3–5",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Oct",
+          "airF": 67,
+          "waterF": 65,
+          "waveFt": "3–6",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Nov",
+          "airF": 55,
+          "waterF": 57,
+          "waveFt": "3–5",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Dec",
+          "airF": 46,
+          "waterF": 48,
+          "waveFt": "3–5",
+          "rainIn": 4.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/point-pleasant-beach-1.jpg",
+          "artist": "Jazz Guy from New Jersey, United States",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach,_New_Jersey_(2483627837).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/point-pleasant-beach-2.jpg",
+          "artist": "Jazz Guy from New Jersey, United States",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach,_New_Jersey_(2815311015).jpg"
+        }
+      ]
     },
     {
       "slug": "seaside-heights",
@@ -90,7 +434,9 @@
       "lat": 39.9437,
       "lon": -74.0717,
       "tag": "RIDES ON THE PIER",
-      "tags": ["Boardwalk fun"],
+      "tags": [
+        "Boardwalk fun"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Gentle on most summer days",
       "lifeguards": "Yes",
@@ -100,13 +446,115 @@
       "entryNote": "Kids under 12 free. Weekly badge $50, season badge $75 ($15 for seniors).",
       "parking": "Metered streets and private lots. Lots fill on summer weekends.",
       "description": "A loud, bright boardwalk town with Casino Pier’s rides over the ocean, arcades and pizza stands, and a wide beach in front of it all.",
-      "features": ["Lifeguards", "Casino Pier rides", "Breakwater Beach waterpark", "Boardwalk pizza & food", "Arcades", "Restrooms on the boardwalk"],
+      "features": [
+        "Lifeguards",
+        "Casino Pier rides",
+        "Breakwater Beach waterpark",
+        "Boardwalk pizza & food",
+        "Arcades",
+        "Restrooms on the boardwalk"
+      ],
       "safety": "Swim at guarded beaches only. The boardwalk gets very crowded on summer nights.",
       "color": 0,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 42,
+          "waterF": 42,
+          "waveFt": "2–4",
+          "rainIn": 3.6
+        },
+        {
+          "month": "Feb",
+          "airF": 46,
+          "waterF": 41,
+          "waveFt": "2–4",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Mar",
+          "airF": 51,
+          "waterF": 44,
+          "waveFt": "2–4",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Apr",
+          "airF": 60,
+          "waterF": 49,
+          "waveFt": "2–3",
+          "rainIn": 4.0
+        },
+        {
+          "month": "May",
+          "airF": 68,
+          "waterF": 57,
+          "waveFt": "2–3",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Jun",
+          "airF": 79,
+          "waterF": 65,
+          "waveFt": "2–3",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Jul",
+          "airF": 85,
+          "waterF": 71,
+          "waveFt": "2–3",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Aug",
+          "airF": 82,
+          "waterF": 72,
+          "waveFt": "2–3",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Sep",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "2–4",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Oct",
+          "airF": 67,
+          "waterF": 65,
+          "waveFt": "2–4",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Nov",
+          "airF": 55,
+          "waterF": 56,
+          "waveFt": "2–3",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Dec",
+          "airF": 46,
+          "waterF": 46,
+          "waveFt": "2–4",
+          "rainIn": 4.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/seaside-heights-1.jpg",
+          "artist": "Dough4872",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Seaside_Heights_beach_north_of_Funtown_Pier.JPG"
+        }
+      ]
     },
     {
       "slug": "island-beach-state-park",
@@ -115,7 +563,10 @@
       "lat": 39.8,
       "lon": -74.093,
       "tag": "THE WILD ONE",
-      "tags": ["Quiet escapes", "Nature & wildlife"],
+      "tags": [
+        "Quiet escapes",
+        "Nature & wildlife"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Open ocean; rougher on windy days",
       "lifeguards": "Yes",
@@ -125,13 +576,121 @@
       "entryNote": "Summer weekend rate for New Jersey cars; out-of-state cars pay $20. Weekdays cost less, and the NJ State Parks annual pass ($50) also works. Rates vary by season, so check the park’s site.",
       "parking": "Lots along the park road. On hot summer weekends the park closes the gate once it’s full, so arrive early.",
       "description": "About ten miles of undeveloped barrier island, with dunes, maritime forest and almost no buildings. It’s one of the last natural stretches of the Jersey Shore.",
-      "features": ["Lifeguards at the swimming areas", "Bathhouses with restrooms & showers", "Nature center", "Surf fishing", "Dunes & bird watching", "Bring your own food and water"],
+      "features": [
+        "Lifeguards at the swimming areas",
+        "Bathhouses with restrooms & showers",
+        "Nature center",
+        "Surf fishing",
+        "Dunes & bird watching",
+        "Bring your own food and water"
+      ],
       "safety": "Swim only at the guarded areas, and use the marked paths over the dunes.",
       "color": 1,
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 42,
+          "waterF": 42,
+          "waveFt": "3–4",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Feb",
+          "airF": 46,
+          "waterF": 41,
+          "waveFt": "3–4",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Mar",
+          "airF": 52,
+          "waterF": 44,
+          "waveFt": "3–5",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Apr",
+          "airF": 60,
+          "waterF": 49,
+          "waveFt": "3–4",
+          "rainIn": 4.0
+        },
+        {
+          "month": "May",
+          "airF": 68,
+          "waterF": 57,
+          "waveFt": "2–4",
+          "rainIn": 4.7
+        },
+        {
+          "month": "Jun",
+          "airF": 78,
+          "waterF": 65,
+          "waveFt": "2–3",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 71,
+          "waveFt": "2–3",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Aug",
+          "airF": 82,
+          "waterF": 72,
+          "waveFt": "2–3",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Sep",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "2–5",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Oct",
+          "airF": 67,
+          "waterF": 65,
+          "waveFt": "3–5",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Nov",
+          "airF": 56,
+          "waterF": 56,
+          "waveFt": "2–4",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Dec",
+          "airF": 46,
+          "waterF": 46,
+          "waveFt": "2–4",
+          "rainIn": 4.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/island-beach-state-park-1.jpg",
+          "artist": "AntiCompositeNumber",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Island_Beach_State_Park_sand_dunes.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/island-beach-state-park-2.jpg",
+          "artist": "AntiCompositeNumber",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Island_Beach_State_Park_boardwalk.jpg"
+        }
+      ]
     },
     {
       "slug": "beach-haven",
@@ -140,7 +699,9 @@
       "lat": 39.559,
       "lon": -74.2425,
       "tag": "LBI SUMMER TOWN",
-      "tags": ["Quiet escapes"],
+      "tags": [
+        "Quiet escapes"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Gentle on most summer days",
       "lifeguards": "Yes",
@@ -150,13 +711,113 @@
       "entryNote": "Weekly badge $20, season badge $50 ($40 if bought before May 31).",
       "parking": "Mostly street parking in town. It gets tight near the beach on summer weekends.",
       "description": "A classic Long Beach Island town with wide guarded beaches, a small-town center of shops and ice cream, and the Fantasy Island amusement park a few blocks from the sand.",
-      "features": ["Lifeguards", "Fantasy Island amusement park nearby", "Shops, ice cream & food in town", "Sunsets over the bay"],
+      "features": [
+        "Lifeguards",
+        "Fantasy Island amusement park nearby",
+        "Shops, ice cream & food in town",
+        "Sunsets over the bay"
+      ],
       "safety": "Swim at guarded beaches and watch for rip currents, especially after storms.",
       "color": 2,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 43,
+          "waterF": 41,
+          "waveFt": "3–5",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Feb",
+          "airF": 47,
+          "waterF": 41,
+          "waveFt": "3–5",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Mar",
+          "airF": 53,
+          "waterF": 44,
+          "waveFt": "3–6",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Apr",
+          "airF": 61,
+          "waterF": 50,
+          "waveFt": "3–5",
+          "rainIn": 4.0
+        },
+        {
+          "month": "May",
+          "airF": 69,
+          "waterF": 59,
+          "waveFt": "3–4",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Jun",
+          "airF": 79,
+          "waterF": 66,
+          "waveFt": "2–4",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Jul",
+          "airF": 85,
+          "waterF": 73,
+          "waveFt": "2–4",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Aug",
+          "airF": 83,
+          "waterF": 73,
+          "waveFt": "2–4",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Sep",
+          "airF": 77,
+          "waterF": 72,
+          "waveFt": "3–5",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Oct",
+          "airF": 68,
+          "waterF": 65,
+          "waveFt": "3–6",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Nov",
+          "airF": 56,
+          "waterF": 56,
+          "waveFt": "3–5",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Dec",
+          "airF": 47,
+          "waterF": 46,
+          "waveFt": "3–5",
+          "rainIn": 4.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/beach-haven-1.jpg",
+          "artist": "Jim Griffin",
+          "license": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Beach_Haven,_New_Jersey_--_2020_(50249962011).jpg"
+        }
+      ]
     },
     {
       "slug": "atlantic-city",
@@ -165,7 +826,9 @@
       "lat": 39.356,
       "lon": -74.438,
       "tag": "FREE & FAMOUS",
-      "tags": ["Boardwalk fun"],
+      "tags": [
+        "Boardwalk fun"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Gentle on most summer days",
       "lifeguards": "Yes",
@@ -174,13 +837,127 @@
       "entryNote": "No beach badge needed.",
       "parking": "Casino garages and paid lots along the boardwalk, plus metered street parking.",
       "description": "Miles of free beach in front of America’s first boardwalk (1870), lined with casinos, Steel Pier rides, shops and food.",
-      "features": ["Lifeguards", "Free beach, no badges", "Steel Pier rides", "Boardwalk shops & food", "Casinos & shows", "Restrooms on the boardwalk"],
+      "features": [
+        "Lifeguards",
+        "Free beach, no badges",
+        "Steel Pier rides",
+        "Boardwalk shops & food",
+        "Casinos & shows",
+        "Restrooms on the boardwalk"
+      ],
       "safety": "Swim only at guarded beaches, between the lifeguard flags.",
       "color": 0,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 43,
+          "waterF": 41,
+          "waveFt": "3–5",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Feb",
+          "airF": 46,
+          "waterF": 41,
+          "waveFt": "3–5",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Mar",
+          "airF": 52,
+          "waterF": 45,
+          "waveFt": "3–6",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Apr",
+          "airF": 60,
+          "waterF": 51,
+          "waveFt": "3–5",
+          "rainIn": 3.9
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 60,
+          "waveFt": "3–5",
+          "rainIn": 4.9
+        },
+        {
+          "month": "Jun",
+          "airF": 77,
+          "waterF": 68,
+          "waveFt": "3–4",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Jul",
+          "airF": 83,
+          "waterF": 74,
+          "waveFt": "2–4",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Aug",
+          "airF": 81,
+          "waterF": 73,
+          "waveFt": "2–4",
+          "rainIn": 3.6
+        },
+        {
+          "month": "Sep",
+          "airF": 76,
+          "waterF": 73,
+          "waveFt": "3–6",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Oct",
+          "airF": 67,
+          "waterF": 65,
+          "waveFt": "3–6",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Nov",
+          "airF": 56,
+          "waterF": 56,
+          "waveFt": "3–5",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Dec",
+          "airF": 47,
+          "waterF": 46,
+          "waveFt": "3–5",
+          "rainIn": 4.8
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/atlantic-city-1.jpg",
+          "artist": "Bruce Emmerling",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:The_beach_and_boardwalk_in_Atlantic_City.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/atlantic-city-2.jpg",
+          "artist": "Jshnay",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Atlantic_City_beach_view.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/atlantic-city-3.jpg",
+          "artist": "EgorovaSvetlana",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Atlantic_City_Beach_and_Jettty_New_Jersey.jpg"
+        }
+      ]
     },
     {
       "slug": "ocean-city",
@@ -189,7 +966,10 @@
       "lat": 39.276,
       "lon": -74.575,
       "tag": "THE FAMILY RESORT",
-      "tags": ["Boardwalk fun", "Surf spots"],
+      "tags": [
+        "Boardwalk fun",
+        "Surf spots"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Gentle on most summer days",
       "lifeguards": "Yes",
@@ -199,13 +979,115 @@
       "entryNote": "Weekly badge $20, season badge $35 ($30 before June 1). Kids 11 and under are free.",
       "parking": "Metered streets and lots near the boardwalk. It fills up on summer weekends.",
       "description": "A dry town (no alcohol sales) with a 2.5-mile boardwalk of rides, mini golf, fudge and pizza, and wide guarded beaches.",
-      "features": ["Lifeguards", "2.5-mile boardwalk", "Rides & mini golf", "Boardwalk food, fudge & pizza", "Restrooms on the boardwalk", "Surfing beaches"],
+      "features": [
+        "Lifeguards",
+        "2.5-mile boardwalk",
+        "Rides & mini golf",
+        "Boardwalk food, fudge & pizza",
+        "Restrooms on the boardwalk",
+        "Surfing beaches"
+      ],
       "safety": "Swim at guarded beaches. Surfing is only allowed at the marked surfing beaches.",
       "color": 1,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 43,
+          "waterF": 41,
+          "waveFt": "2–4",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Feb",
+          "airF": 47,
+          "waterF": 41,
+          "waveFt": "2–4",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Mar",
+          "airF": 52,
+          "waterF": 45,
+          "waveFt": "2–5",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Apr",
+          "airF": 60,
+          "waterF": 52,
+          "waveFt": "2–4",
+          "rainIn": 3.7
+        },
+        {
+          "month": "May",
+          "airF": 68,
+          "waterF": 60,
+          "waveFt": "2–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Jun",
+          "airF": 78,
+          "waterF": 68,
+          "waveFt": "2–3",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 75,
+          "waveFt": "2–3",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Aug",
+          "airF": 82,
+          "waterF": 74,
+          "waveFt": "2–4",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Sep",
+          "airF": 76,
+          "waterF": 73,
+          "waveFt": "2–4",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Oct",
+          "airF": 68,
+          "waterF": 65,
+          "waveFt": "2–4",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Nov",
+          "airF": 56,
+          "waterF": 56,
+          "waveFt": "2–4",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Dec",
+          "airF": 47,
+          "waterF": 45,
+          "waveFt": "2–4",
+          "rainIn": 4.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/ocean-city-1.jpg",
+          "artist": "BJ Neary",
+          "license": "CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ocean_City_New_Jersey_beach_patrol_boat.jpg"
+        }
+      ]
     },
     {
       "slug": "wildwood",
@@ -214,7 +1096,9 @@
       "lat": 38.989,
       "lon": -74.815,
       "tag": "THE WIDE ONE",
-      "tags": ["Boardwalk fun"],
+      "tags": [
+        "Boardwalk fun"
+      ],
       "wave": "1–3 ft",
       "waveNote": "Gentle on most summer days",
       "lifeguards": "Yes",
@@ -223,13 +1107,126 @@
       "entryNote": "No beach tags in Wildwood, North Wildwood or Wildwood Crest.",
       "parking": "Metered streets and private lots near the boardwalk.",
       "description": "One of the widest beaches on the East Coast, with a long walk to the water, Morey’s Piers rides and waterparks, and the boardwalk tram car.",
-      "features": ["Lifeguards at guarded beaches", "Free beach, no tags", "Morey’s Piers rides & waterparks", "Boardwalk tram car", "Boardwalk food"],
+      "features": [
+        "Lifeguards at guarded beaches",
+        "Free beach, no tags",
+        "Morey’s Piers rides & waterparks",
+        "Boardwalk tram car",
+        "Boardwalk food"
+      ],
       "safety": "Swimming is only allowed at guarded beaches. The sand is wide and hot, so bring shoes.",
       "color": 2,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 42,
+          "waterF": 40,
+          "waveFt": "3–4",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Feb",
+          "airF": 46,
+          "waterF": 41,
+          "waveFt": "3–4",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Mar",
+          "airF": 51,
+          "waterF": 45,
+          "waveFt": "3–5",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Apr",
+          "airF": 59,
+          "waterF": 53,
+          "waveFt": "3–4",
+          "rainIn": 3.5
+        },
+        {
+          "month": "May",
+          "airF": 66,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Jun",
+          "airF": 76,
+          "waterF": 70,
+          "waveFt": "2–3",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Jul",
+          "airF": 82,
+          "waterF": 77,
+          "waveFt": "2–3",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Aug",
+          "airF": 80,
+          "waterF": 75,
+          "waveFt": "2–4",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Sep",
+          "airF": 75,
+          "waterF": 74,
+          "waveFt": "3–5",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Oct",
+          "airF": 67,
+          "waterF": 66,
+          "waveFt": "3–5",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Nov",
+          "airF": 56,
+          "waterF": 55,
+          "waveFt": "2–4",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Dec",
+          "airF": 47,
+          "waterF": 45,
+          "waveFt": "2–4",
+          "rainIn": 4.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/wildwood-1.jpg",
+          "artist": "Tomwsulcer",
+          "license": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Wildwood_New_Jersey_beach_view_with_motels_and_blue_sky.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/wildwood-2.jpg",
+          "artist": "Tomwsulcer",
+          "license": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Beaches_and_hotels_at_Wildwood_New_Jersey_in_early_August.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/wildwood-3.jpg",
+          "artist": "Tomwsulcer",
+          "license": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Wildwood_New_Jersey_beach_scene_with_kids_playing_in_the_tidal_pool.jpg"
+        }
+      ]
     },
     {
       "slug": "cape-may",
@@ -238,7 +1235,10 @@
       "lat": 38.931,
       "lon": -74.918,
       "tag": "VICTORIAN SEASIDE",
-      "tags": ["Quiet escapes", "Nature & wildlife"],
+      "tags": [
+        "Quiet escapes",
+        "Nature & wildlife"
+      ],
       "wave": "1–2 ft",
       "waveNote": "Usually gentle in summer",
       "lifeguards": "Yes",
@@ -248,13 +1248,121 @@
       "entryNote": "Season badge $40.",
       "parking": "Metered street parking and lots near the beach. It fills up on summer weekends.",
       "description": "The southern tip of New Jersey, with Victorian streets, a beachfront promenade, dolphin-watching boat trips and Cape May Lighthouse nearby.",
-      "features": ["Lifeguards", "Beachfront promenade", "Washington Street Mall shops & food", "Cape May Lighthouse nearby", "Dolphin & whale watching trips", "Bird watching"],
+      "features": [
+        "Lifeguards",
+        "Beachfront promenade",
+        "Washington Street Mall shops & food",
+        "Cape May Lighthouse nearby",
+        "Dolphin & whale watching trips",
+        "Bird watching"
+      ],
       "safety": "Swim at guarded beaches and watch for rip currents near the jetties.",
       "color": 0,
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 42,
+          "waterF": 40,
+          "waveFt": "2–4",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Feb",
+          "airF": 44,
+          "waterF": 41,
+          "waveFt": "2–4",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Mar",
+          "airF": 49,
+          "waterF": 45,
+          "waveFt": "3–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Apr",
+          "airF": 56,
+          "waterF": 53,
+          "waveFt": "2–3",
+          "rainIn": 3.3
+        },
+        {
+          "month": "May",
+          "airF": 63,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Jun",
+          "airF": 72,
+          "waterF": 71,
+          "waveFt": "2–3",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Jul",
+          "airF": 79,
+          "waterF": 78,
+          "waveFt": "2–3",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Aug",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "2–3",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Sep",
+          "airF": 74,
+          "waterF": 74,
+          "waveFt": "2–4",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Oct",
+          "airF": 66,
+          "waterF": 65,
+          "waveFt": "2–4",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Nov",
+          "airF": 55,
+          "waterF": 55,
+          "waveFt": "2–3",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Dec",
+          "airF": 46,
+          "waterF": 45,
+          "waveFt": "2–4",
+          "rainIn": 3.9
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/cape-may-1.jpg",
+          "artist": "8bit12man",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cape_May_Beach_Dusk.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/cape-may-2.jpg",
+          "artist": "DimiTalen",
+          "license": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:View_of_Cape_May_Lighthouse_from_the_beach,_near_Cape_May_Point,_2007.jpg"
+        }
+      ]
     }
   ]
 }
