@@ -37,8 +37,7 @@ class BackToMap extends StatelessWidget {
   @override
   Widget build(BuildContext context) => InkWell(
         onTap: () => context.go('/'),
-        child: const Text('← Back to the map',
-            style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15, decoration: TextDecoration.underline)),
+        child: const UnderlinedText('← Back to the map', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
       );
 }
 

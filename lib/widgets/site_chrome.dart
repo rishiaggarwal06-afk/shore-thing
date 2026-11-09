@@ -64,8 +64,7 @@ class SiteHeader extends StatelessWidget {
         const Spacer(),
         InkWell(
           onTap: () => context.go('/'),
-          child: const Text('Find a beach ↗︎',
-              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13, decoration: TextDecoration.underline)),
+          child: const UnderlinedText('Find a beach ↗︎', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
         ),
         if (!phone) ...[
           const SizedBox(width: 16),

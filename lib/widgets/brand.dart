@@ -14,6 +14,10 @@ class Brand {
   /// Bundled Liberation Sans (same letter widths as Arial).
   static const font = 'LiberationSans';
 
+  /// Bundled DejaVu Sans supplies symbols Liberation Sans lacks (✳ ↗ ☀ ☂ ⚑),
+  /// so iPhones don't swap in colourful emoji.
+  static const fontFallback = ['DejaVuSans'];
+
   /// Phones get the compact layout below this width (same as the CSS breakpoint).
   static const phoneBreakpoint = 760.0;
   static bool isPhone(BuildContext c) => MediaQuery.sizeOf(c).width <= phoneBreakpoint;
@@ -28,6 +32,7 @@ class Brand {
 
   static ThemeData theme() => ThemeData(
         fontFamily: font,
+        fontFamilyFallback: fontFallback,
         scaffoldBackgroundColor: paper,
         colorScheme: ColorScheme.fromSeed(seedColor: ocean, primary: ink, surface: paper),
         textTheme: const TextTheme().apply(bodyColor: ink, displayColor: ink),
@@ -49,5 +54,20 @@ class PageWidth extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 1132),
           child: Padding(padding: EdgeInsets.symmetric(horizontal: 16, vertical: vertical), child: child),
         ),
+      );
+}
+
+/// Link-style text with the underline drawn as a thin line below the text.
+/// (TextDecoration.underline sits too close to the letters on iPhone.)
+class UnderlinedText extends StatelessWidget {
+  const UnderlinedText(this.text, {super.key, this.style});
+  final String text;
+  final TextStyle? style;
+
+  @override
+  Widget build(BuildContext context) => Container(
+        padding: const EdgeInsets.only(bottom: 2),
+        decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Brand.ink, width: 1.5))),
+        child: Text(text, style: style),
       );
 }

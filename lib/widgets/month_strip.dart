@@ -32,15 +32,12 @@ class BestTimeToGo extends StatelessWidget {
         const SizedBox(height: 14),
         // Phones swipe through the months; wider screens show them all as a grid.
         if (Brand.isPhone(context))
-          SizedBox(
-            height: 168,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              clipBehavior: Clip.none,
-              itemCount: months.length,
-              separatorBuilder: (_, _) => const SizedBox(width: 10),
-              itemBuilder: (_, i) => _MonthCard(months[i]),
-            ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            clipBehavior: Clip.none,
+            child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              for (final m in months) Padding(padding: const EdgeInsets.only(right: 10), child: _MonthCard(m)),
+            ]),
           )
         else
           Wrap(spacing: 10, runSpacing: 10, children: [for (final m in months) _MonthCard(m)]),
@@ -56,7 +53,8 @@ class _MonthCard extends StatelessWidget {
     // Warm months get the yellow card so the beach season stands out.
     final warm = m.airF >= 75;
     return Container(
-      width: 104,
+      // Grows with the phone's text size setting so nothing spills out.
+      width: MediaQuery.textScalerOf(context).scale(104),
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.only(bottom: 4, right: 4),
       decoration: Brand.chunky(color: warm ? Brand.yellow : Colors.white, shadow: 4),
@@ -77,8 +75,16 @@ class _MonthCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(top: 4),
           child: Row(children: [
-            SizedBox(width: 18, child: Text(icon, style: const TextStyle(fontSize: 13))),
-            Text(value, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700)),
+            Text(icon, style: const TextStyle(fontSize: 13)),
+            const SizedBox(width: 6),
+            // Shrinks a little instead of spilling out if the phone's text is very large.
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(value, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700)),
+              ),
+            ),
           ]),
         ),
       );

@@ -140,7 +140,7 @@ class _Layer extends StatelessWidget {
               child: Text('✳︎ $label',
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                      fontFamily: Brand.font, color: Brand.paper, fontSize: 42, fontWeight: FontWeight.w900, decoration: TextDecoration.none)),
+                      fontFamily: Brand.font, fontFamilyFallback: Brand.fontFallback, color: Brand.paper, fontSize: 42, fontWeight: FontWeight.w900, decoration: TextDecoration.none)),
             ),
           ),
       ]);

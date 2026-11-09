@@ -22,7 +22,7 @@ An app + website for discovering beaches worldwide.
 ## Current state
 - Focus region: **the Jersey Shore** (10 beaches, Sandy Hook → Cape May) in `assets/data/beaches.json`, gathered from public sources in Nov 2026 (2026 summer badge prices).
 - Design reference: the HTML prototype in `reference/` (its style.css is missing, so styling follows the brand rules below).
-- Brand: ink #123d40, yellow #FFE14D, orange #FF7F50, paper #fff9e9, teal #98d7d0, ocean #0AB0C6, sand #FFE38A; bold Arial-style type (bundled Liberation Sans); thick ink borders with hard offset shadows. Add U+FE0E after symbols like ✳ ↗ so they don't render as emoji.
+- Brand: ink #123d40, yellow #FFE14D, orange #FF7F50, paper #fff9e9, teal #98d7d0, ocean #0AB0C6, sand #FFE38A; bold Arial-style type (bundled Liberation Sans); thick ink borders with hard offset shadows. Symbols (✳ ↗ ☀ ☂ ⚑ ≈) come from the bundled DejaVu Sans fallback font (`Brand.fontFallback`), otherwise iPhones show colourful emoji; keep the U+FE0E after them too. Use `UnderlinedText` instead of `TextDecoration.underline` (iOS draws underlines through the letters). Never give text boxes fixed heights/widths without scaling by `MediaQuery.textScalerOf` — the user's iPhone uses a large text size (`test/month_strip_test.dart` checks this).
 - Routes (go_router, clean web paths): `/` map, `/beach/<slug>` detail, anything else under `/beach/` → fuzzy search, then the "not one of our ten (yet)" page.
 - Amenity booleans are true only when the beach's features list says so; "Family friendly" = lifeguards + (restrooms or food). Nothing lists water sports rentals yet.
 - Real data pipeline (run from the project folder, results written into the app's assets):
