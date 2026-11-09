@@ -31,6 +31,12 @@ An app + website for discovering beaches worldwide.
   - Cloud sessions often can't run these: Open-Meteo's free daily limit and Wikimedia's image servers block the shared cloud IP. Running them on the user's Mac works. `thumb.wikimedia.org` isn't on the cloud allowlist; the scripts use `upload.wikimedia.org` instead.
   - Open-Meteo's free API is non-commercial only; a paid plan is needed once the app has ads or paid features.
 
+## Before launch (remind the user when App Store / launch work starts)
+- **Rotate the MapTiler key**: the current key was pasted in a chat. Delete it in MapTiler (cloud.maptiler.com → API keys), click NEW KEY, and put the new one in `lib/config/secrets.dart` on the Mac only. Never ask for keys in chat; use a secure form.
+- Make a second MapTiler key for the website, restricted to the site's address (Allowed HTTP origins).
+- MapTiler and Open-Meteo free plans are non-commercial: upgrade before adding ads or paid features.
+- Remaining App Store steps: app icon + "Shore Thing" display name, iPhone-only, privacy policy + support page, $99 Apple Developer account, TestFlight, review.
+
 ## Code layout
 ```
 lib/
