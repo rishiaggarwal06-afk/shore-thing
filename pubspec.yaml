@@ -66,6 +66,7 @@ flutter:
   assets:
     - assets/data/beaches.json
     - assets/images/beaches/
+    - assets/images/brand/
 
   fonts:
     - family: LiberationSans

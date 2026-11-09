@@ -1,10 +1,14 @@
-// Template for API keys. To use it:
+// Template for your private keys. To use it:
 //   1. Copy this file to lib/config/secrets.dart
-//   2. Fill in your real keys there.
-// secrets.dart is gitignored, so your keys never get committed.
-// Note: keys shipped in an app can still be extracted from the built app,
-// so only use "public" keys (e.g. Mapbox public tokens restricted by URL/bundle ID).
+//   2. Put your real keys there.
+// secrets.dart is gitignored, so your keys never go to GitHub.
+//
+// Map keys ship inside the app and website, so anyone determined can find them.
+// Protect them in the provider's dashboard instead: restrict the website's key to
+// your site's address and watch usage.
 
 class Secrets {
-  static const mapboxPublicToken = 'YOUR_MAPBOX_PUBLIC_TOKEN';
+  /// MapTiler map key (cloud.maptiler.com → API keys). Leave as-is to fall back
+  /// to free OpenStreetMap tiles while developing.
+  static const maptilerKey = 'YOUR_MAPTILER_KEY';
 }

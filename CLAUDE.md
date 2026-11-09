@@ -14,10 +14,10 @@ An app + website for discovering beaches worldwide.
 ## Tech
 - **Flutter**: one codebase for web, iOS, and Android. The Dart package name is `beach_finder`.
 - **Firebase**: Firestore (data), Auth (accounts), Storage (images), Hosting (website).
-- **Maps**: flutter_map with free OpenStreetMap tiles, recoloured to the brand (sand land, ocean water) by a colour filter in `home_map_screen.dart`. Mapbox was dropped for now.
+- **Maps**: flutter_map with MapTiler `basic-v2` raster tiles (free plan = non-commercial; needs the MapTiler logo + "© MapTiler © OpenStreetMap contributors" on the map), recoloured to the brand (sand land, ocean water) by a colour filter. All in `lib/services/map_tiles.dart`. Key in `lib/config/secrets.dart` (`Secrets.maptilerKey`); without it the app falls back to OpenStreetMap tiles (dev only — not allowed for a public app). One key for the iPhone app (no origin restriction); the future website needs its own key restricted to the site's address.
 - **Open-Meteo**: weather, marine, and climate data.
 - **OpenStreetMap**: seed source for beach locations.
-- **Attribution for OSM, Open-Meteo and each Wikimedia photo must appear in the app.** It's required by their licenses/terms, so don't remove it. The map shows it bottom-right.
+- **Attribution for MapTiler (logo + text), OSM, Open-Meteo and each Wikimedia photo must appear in the app.** It's required by their licenses/terms, so don't remove it. The map shows it in one credit bar bottom-right.
 
 ## Current state
 - Focus region: **the Jersey Shore** (10 beaches, Sandy Hook → Cape May) in `assets/data/beaches.json`, gathered from public sources in Nov 2026 (2026 summer badge prices).

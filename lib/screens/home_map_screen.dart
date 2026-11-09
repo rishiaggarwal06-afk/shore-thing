@@ -3,11 +3,13 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:latlong2/latlong.dart';
 
 import '../models/beach.dart';
 import '../models/beach_filter.dart';
 import '../services/beach_scope.dart';
+import '../services/map_tiles.dart';
 import '../widgets/brand.dart';
 import '../widgets/castle_layer.dart';
 import '../widgets/search_box.dart';
@@ -45,8 +47,10 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
     _fly.addListener(() {
       final t = Curves.easeInOutCubic.transform(_fly.value);
       _map.move(
-        LatLng(_fromC.latitude + (_toC.latitude - _fromC.latitude) * t,
-            _fromC.longitude + (_toC.longitude - _fromC.longitude) * t),
+        LatLng(
+          _fromC.latitude + (_toC.latitude - _fromC.latitude) * t,
+          _fromC.longitude + (_toC.longitude - _fromC.longitude) * t,
+        ),
         _fromZ + (_toZ - _fromZ) * t,
       );
     });
@@ -126,128 +130,146 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
   Widget build(BuildContext context) {
     final phone = Brand.isPhone(context);
     final repo = BeachScope.of(context);
+    final tiles = MapTiles.current;
     final touchDevice = defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.android;
 
     return Title(
       title: 'Shore Thing · ${repo.region.name} beach finder',
       color: Brand.ink,
       child: Scaffold(
-        body: Column(children: [
-          DemoBanner(regionName: repo.region.name),
-          const SiteHeader(),
-          Expanded(
-            child: Stack(key: _mapKey, children: [
-              Positioned.fill(
-                child: Listener(
-                  onPointerDown: (_) {
-                    if (!_touched) setState(() => _touched = true);
-                    _fly.stop();
-                  },
-                  child: FlutterMap(
-                    mapController: _map,
-                    options: MapOptions(
-                      backgroundColor: Brand.ocean,
-                      initialCameraFit: CameraFit.coordinates(
-                        coordinates: [for (final b in repo.beaches) LatLng(b.lat, b.lon)],
-                        padding: const EdgeInsets.all(80),
-                      ),
-                      minZoom: 3,
-                      maxZoom: 18,
-                      interactionOptions: const InteractionOptions(flags: InteractiveFlag.all & ~InteractiveFlag.rotate),
-                      onMapReady: () => WidgetsBinding.instance.addPostFrameCallback((_) {
-                        // Re-fit once the panel has been measured, so it doesn't cover any castles.
-                        final t = _fitTarget(repo.beaches);
-                        _map.move(t.center, t.zoom);
-                        setState(() => _ready = true);
-                      }),
-                    ),
-                    children: [
-                      TileLayer(
-                        urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                        userAgentPackageName: 'com.shorething.beach_finder',
-                        tileBuilder: (context, tile, _) => ColorFiltered(colorFilter: _sandAndSea, child: tile),
-                      ),
-                      if (_ready)
-                        CastleLayer(
-                          beaches: repo.beaches,
-                          visible: {for (final b in _shown) b.slug},
-                          onBeachTap: (b) => openBeach(context, b.slug),
-                          onClusterTap: _openCluster,
+        body: Column(
+          children: [
+            DemoBanner(regionName: repo.region.name),
+            const SiteHeader(),
+            Expanded(
+              child: Stack(
+                key: _mapKey,
+                children: [
+                  Positioned.fill(
+                    child: Listener(
+                      onPointerDown: (_) {
+                        if (!_touched) setState(() => _touched = true);
+                        _fly.stop();
+                      },
+                      child: FlutterMap(
+                        mapController: _map,
+                        options: MapOptions(
+                          backgroundColor: Brand.ocean,
+                          initialCameraFit: CameraFit.coordinates(
+                            coordinates: [for (final b in repo.beaches) LatLng(b.lat, b.lon)],
+                            padding: const EdgeInsets.all(80),
+                          ),
+                          minZoom: 3,
+                          maxZoom: 18,
+                          interactionOptions: const InteractionOptions(
+                            flags: InteractiveFlag.all & ~InteractiveFlag.rotate,
+                          ),
+                          onMapReady: () => WidgetsBinding.instance.addPostFrameCallback((_) {
+                            // Re-fit once the panel has been measured, so it doesn't cover any castles.
+                            final t = _fitTarget(repo.beaches);
+                            _map.move(t.center, t.zoom);
+                            setState(() => _ready = true);
+                          }),
                         ),
-                      const SimpleAttributionWidget(
-                        source: Text('OpenStreetMap contributors'),
-                        backgroundColor: Brand.paper,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              // Floating panel
-              Positioned(
-                left: phone ? 8 : 16,
-                right: phone ? 8 : null,
-                top: phone ? 8 : 16,
-                child: _Panel(
-                  key: _panelKey,
-                  phone: phone,
-                  regionName: repo.region.name,
-                  selected: _filter,
-                  noMatches: _shown.isEmpty,
-                  onFilter: _setFilter,
-                ),
-              ),
-              // Zoom controls
-              Positioned(
-                right: 14,
-                top: phone ? null : 14,
-                bottom: phone ? 34 : null,
-                child: Column(children: [
-                  _RoundButton('+', 'Zoom in', () => _flyTo(_map.camera.center, _map.camera.zoom + 1, ms: 350)),
-                  const SizedBox(height: 7),
-                  _RoundButton('−', 'Zoom out', () => _flyTo(_map.camera.center, _map.camera.zoom - 1, ms: 350)),
-                  const SizedBox(height: 7),
-                  _RoundButton('⟲︎', 'Back to all beaches', () => _flyToFit(repo.beaches)),
-                ]),
-              ),
-              // Hint
-              Positioned(
-                left: 14,
-                bottom: 30, // above the map credit
-                child: IgnorePointer(
-                  child: AnimatedOpacity(
-                    opacity: _touched ? 0 : .9,
-                    duration: const Duration(milliseconds: 400),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
-                      decoration: BoxDecoration(color: Brand.paper, borderRadius: BorderRadius.circular(20)),
-                      child: Text(
-                        touchDevice
-                            ? 'Drag to explore · pinch to zoom · tap a castle'
-                            : 'Drag to explore · scroll to zoom · click a castle',
-                        style: const TextStyle(fontSize: 11, letterSpacing: .3),
+                        children: [
+                          TileLayer(
+                            urlTemplate: tiles.urlTemplate,
+                            retinaMode: RetinaMode.isHighDensity(context), // sharper map on iPhone screens
+                            userAgentPackageName: 'com.shorething.beach_finder',
+                            tileBuilder: (context, tile, _) => ColorFiltered(colorFilter: tiles.tint, child: tile),
+                          ),
+                          if (_ready)
+                            CastleLayer(
+                              beaches: repo.beaches,
+                              visible: {for (final b in _shown) b.slug},
+                              onBeachTap: (b) => openBeach(context, b.slug),
+                              onClusterTap: _openCluster,
+                            ),
+                          // Required credits (and MapTiler's logo, on its free plan), bottom-right.
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              color: Brand.paper.withValues(alpha: .92),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  if (tiles.usesMapTiler) ...[
+                                    Semantics(
+                                      label: 'MapTiler',
+                                      child: SvgPicture.asset('assets/images/brand/maptiler-logo.svg', height: 16),
+                                    ),
+                                    const SizedBox(width: 8),
+                                  ],
+                                  Text(tiles.credit, style: const TextStyle(fontSize: 11)),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                ),
+                  // Floating panel
+                  Positioned(
+                    left: phone ? 8 : 16,
+                    right: phone ? 8 : null,
+                    top: phone ? 8 : 16,
+                    child: _Panel(
+                      key: _panelKey,
+                      phone: phone,
+                      regionName: repo.region.name,
+                      selected: _filter,
+                      noMatches: _shown.isEmpty,
+                      onFilter: _setFilter,
+                    ),
+                  ),
+                  // Zoom controls
+                  Positioned(
+                    right: 14,
+                    top: phone ? null : 14,
+                    bottom: phone ? 34 : null,
+                    child: Column(
+                      children: [
+                        _RoundButton('+', 'Zoom in', () => _flyTo(_map.camera.center, _map.camera.zoom + 1, ms: 350)),
+                        const SizedBox(height: 7),
+                        _RoundButton('−', 'Zoom out', () => _flyTo(_map.camera.center, _map.camera.zoom - 1, ms: 350)),
+                        const SizedBox(height: 7),
+                        _RoundButton('⟲︎', 'Back to all beaches', () => _flyToFit(repo.beaches)),
+                      ],
+                    ),
+                  ),
+                  // Hint
+                  Positioned(
+                    left: 14,
+                    bottom: 36, // above the map credits
+                    child: IgnorePointer(
+                      child: AnimatedOpacity(
+                        opacity: _touched ? 0 : .9,
+                        duration: const Duration(milliseconds: 400),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
+                          decoration: BoxDecoration(color: Brand.paper, borderRadius: BorderRadius.circular(20)),
+                          child: Text(
+                            touchDevice
+                                ? 'Drag to explore · pinch to zoom · tap a castle'
+                                : 'Drag to explore · scroll to zoom · click a castle',
+                            style: const TextStyle(fontSize: 11, letterSpacing: .3),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ]),
-          ),
-          const SloganTicker(),
-        ]),
+            ),
+            const SloganTicker(),
+          ],
+        ),
       ),
     );
   }
 }
-
-/// Recolours standard OpenStreetMap tiles into the brand look: bluish water → ocean,
-/// land → sand, and dark text mostly fades out (minimal labels).
-/// Works off how much redder than blue each pixel is.
-const _sandAndSea = ColorFilter.matrix([
-  3.95, 0, -3.95, 0, 219, //
-  0.82, 0, -0.82, 0, 220,
-  -0.97, 0, 0.97, 0, 147,
-  0, 0, 0, 1, 0,
-]);
 
 class _Panel extends StatelessWidget {
   const _Panel({
@@ -272,65 +294,80 @@ class _Panel extends StatelessWidget {
     ];
     final amenityChips = [for (final f in BeachFilter.amenities) _chip(f)];
 
-    final content = Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
-      if (!phone) ...[
-        const Text('YOUR OUT-OF-OFFICE STARTS HERE', style: Brand.eyebrow),
-        const SizedBox(height: 10),
-      ],
-      Semantics(
-        header: true,
-        child: Text.rich(
-          TextSpan(children: [
-            TextSpan(text: phone ? 'Find your kind of ' : 'Find your\nkind of '),
-            const TextSpan(text: 'beach.', style: TextStyle(color: Brand.orange, fontStyle: FontStyle.italic)),
-          ]),
-          style: TextStyle(fontSize: phone ? 28 : 50, fontWeight: FontWeight.w900, height: 1.02, letterSpacing: -1),
+    final content = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (!phone) ...[const Text('YOUR OUT-OF-OFFICE STARTS HERE', style: Brand.eyebrow), const SizedBox(height: 10)],
+        Semantics(
+          header: true,
+          child: Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(text: phone ? 'Find your kind of ' : 'Find your\nkind of '),
+                const TextSpan(
+                  text: 'beach.',
+                  style: TextStyle(color: Brand.orange, fontStyle: FontStyle.italic),
+                ),
+              ],
+            ),
+            style: TextStyle(fontSize: phone ? 28 : 50, fontWeight: FontWeight.w900, height: 1.02, letterSpacing: -1),
+          ),
         ),
-      ),
-      SizedBox(height: phone ? 6 : 14),
-      Text(
-        phone
-            ? 'Ten $regionName favorites. Tap a sandcastle to dive in.'
-            : 'Ten $regionName favorites, from Sandy Hook to Cape May.\nTap a sandcastle to dive in.',
-        style: TextStyle(fontSize: phone ? 14 : 17, height: 1.4),
-      ),
-      SizedBox(height: phone ? 10 : 18),
-      const SearchBox(),
-      if (!phone) ...[
-        const SizedBox(height: 10),
-        const Text('Try Asbury Park, Island Beach or Cape May.', style: TextStyle(fontSize: 12)),
+        SizedBox(height: phone ? 6 : 14),
+        Text(
+          phone
+              ? 'Ten $regionName favorites. Tap a sandcastle to dive in.'
+              : 'Ten $regionName favorites, from Sandy Hook to Cape May.\nTap a sandcastle to dive in.',
+          style: TextStyle(fontSize: phone ? 14 : 17, height: 1.4),
+        ),
+        SizedBox(height: phone ? 10 : 18),
+        const SearchBox(),
+        if (!phone) ...[
+          const SizedBox(height: 10),
+          const Text('Try Asbury Park, Island Beach or Cape May.', style: TextStyle(fontSize: 12)),
+        ],
+        SizedBox(height: phone ? 10 : 14),
+        if (phone)
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            clipBehavior: Clip.none,
+            child: Row(
+              children: [
+                for (final c in [...chips, ...amenityChips])
+                  Padding(padding: const EdgeInsets.only(right: 6), child: c),
+              ],
+            ),
+          )
+        else ...[
+          Wrap(spacing: 6, runSpacing: 6, children: chips),
+          const SizedBox(height: 10),
+          const Text('AMENITIES', style: Brand.eyebrow),
+          const SizedBox(height: 6),
+          Wrap(spacing: 6, runSpacing: 6, children: amenityChips),
+        ],
+        if (noMatches) ...[
+          const SizedBox(height: 10),
+          Text(
+            'None of our ten list “${selected.label}” yet.',
+            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
+          ),
+        ],
       ],
-      SizedBox(height: phone ? 10 : 14),
-      if (phone)
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          clipBehavior: Clip.none,
-          child: Row(children: [
-            for (final c in [...chips, ...amenityChips]) Padding(padding: const EdgeInsets.only(right: 6), child: c),
-          ]),
-        )
-      else ...[
-        Wrap(spacing: 6, runSpacing: 6, children: chips),
-        const SizedBox(height: 10),
-        const Text('AMENITIES', style: Brand.eyebrow),
-        const SizedBox(height: 6),
-        Wrap(spacing: 6, runSpacing: 6, children: amenityChips),
-      ],
-      if (noMatches) ...[
-        const SizedBox(height: 10),
-        Text('None of our ten list “${selected.label}” yet.', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700)),
-      ],
-    ]);
+    );
 
-    return Stack(clipBehavior: Clip.none, children: [
-      Container(
-        width: phone ? null : 410,
-        padding: EdgeInsets.all(phone ? 14 : 22),
-        decoration: Brand.chunky(color: Brand.paper, shadow: 6),
-        child: content,
-      ),
-      if (!phone) const Positioned(right: -26, top: -20, child: GoodDayStamp()),
-    ]);
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+          width: phone ? null : 410,
+          padding: EdgeInsets.all(phone ? 14 : 22),
+          decoration: Brand.chunky(color: Brand.paper, shadow: 6),
+          child: content,
+        ),
+        if (!phone) const Positioned(right: -26, top: -20, child: GoodDayStamp()),
+      ],
+    );
   }
 
   Widget _chip(BeachFilter f) {
@@ -348,8 +385,10 @@ class _Panel extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Brand.ink, width: 2),
           ),
-          child: Text(f.label,
-              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: on ? Brand.yellow : Brand.ink)),
+          child: Text(
+            f.label,
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: on ? Brand.yellow : Brand.ink),
+          ),
         ),
       ),
     );
@@ -363,24 +402,24 @@ class _RoundButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Semantics(
-        button: true,
-        label: label,
-        excludeSemantics: true,
-        child: InkWell(
-          customBorder: const CircleBorder(),
-          onTap: onTap,
-          child: Container(
-            width: 38,
-            height: 38,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Brand.paper,
-              shape: BoxShape.circle,
-              border: Border.all(color: Brand.ink, width: 1.5),
-              boxShadow: const [BoxShadow(color: Brand.ink, offset: Offset(0, 2))],
-            ),
-            child: Text(symbol, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, height: 1)),
-          ),
+    button: true,
+    label: label,
+    excludeSemantics: true,
+    child: InkWell(
+      customBorder: const CircleBorder(),
+      onTap: onTap,
+      child: Container(
+        width: 38,
+        height: 38,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Brand.paper,
+          shape: BoxShape.circle,
+          border: Border.all(color: Brand.ink, width: 1.5),
+          boxShadow: const [BoxShadow(color: Brand.ink, offset: Offset(0, 2))],
         ),
-      );
+        child: Text(symbol, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, height: 1)),
+      ),
+    ),
+  );
 }
