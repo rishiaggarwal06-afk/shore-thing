@@ -5,7 +5,7 @@
     "airNote": "Typical summer highs · Jun–Aug",
     "waterTemp": "68–75°F",
     "waterNote": "Warmest in August",
-    "sourcesNote": "Gathered from public sources in Nov 2026. Badge and parking prices are 2026 summer rates. Fees, hours and ocean conditions change, so check with the lifeguards and the town’s official site before you swim. Pictures are illustrations, not photos."
+    "sourcesNote": "Gathered from public sources in Nov 2026. Badge and parking prices are 2026 summer rates. Fees, hours and ocean conditions change, so check with the lifeguards and the town’s official site before you swim. Photos are from Wikimedia Commons (credited below); drawings fill in where we don’t have a photo yet."
   },
   "beaches": [
     {
@@ -412,20 +412,7 @@
         }
       ],
       "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
-      "photos": [
-        {
-          "asset": "assets/images/beaches/point-pleasant-beach-1.jpg",
-          "artist": "Jazz Guy from New Jersey, United States",
-          "license": "CC BY 2.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach,_New_Jersey_(2483627837).jpg"
-        },
-        {
-          "asset": "assets/images/beaches/point-pleasant-beach-2.jpg",
-          "artist": "Jazz Guy from New Jersey, United States",
-          "license": "CC BY 2.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach,_New_Jersey_(2815311015).jpg"
-        }
-      ]
+      "photos": []
     },
     {
       "slug": "seaside-heights",
@@ -682,13 +669,13 @@
           "asset": "assets/images/beaches/island-beach-state-park-1.jpg",
           "artist": "AntiCompositeNumber",
           "license": "CC BY-SA 4.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Island_Beach_State_Park_sand_dunes.jpg"
+          "source": "https://commons.wikimedia.org/wiki/File:Island_Beach_State_Park_boardwalk.jpg"
         },
         {
           "asset": "assets/images/beaches/island-beach-state-park-2.jpg",
           "artist": "AntiCompositeNumber",
           "license": "CC BY-SA 4.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Island_Beach_State_Park_boardwalk.jpg"
+          "source": "https://commons.wikimedia.org/wiki/File:Island_Beach_State_Park_sand_dunes.jpg"
         }
       ]
     },
@@ -810,14 +797,7 @@
         }
       ],
       "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
-      "photos": [
-        {
-          "asset": "assets/images/beaches/beach-haven-1.jpg",
-          "artist": "Jim Griffin",
-          "license": "CC0",
-          "source": "https://commons.wikimedia.org/wiki/File:Beach_Haven,_New_Jersey_--_2020_(50249962011).jpg"
-        }
-      ]
+      "photos": []
     },
     {
       "slug": "atlantic-city",
@@ -1212,19 +1192,13 @@
           "asset": "assets/images/beaches/wildwood-1.jpg",
           "artist": "Tomwsulcer",
           "license": "CC0",
-          "source": "https://commons.wikimedia.org/wiki/File:Wildwood_New_Jersey_beach_view_with_motels_and_blue_sky.jpg"
+          "source": "https://commons.wikimedia.org/wiki/File:Wildwood_New_Jersey_beach_scene_with_kids_playing_in_the_tidal_pool.jpg"
         },
         {
           "asset": "assets/images/beaches/wildwood-2.jpg",
           "artist": "Tomwsulcer",
           "license": "CC0",
           "source": "https://commons.wikimedia.org/wiki/File:Beaches_and_hotels_at_Wildwood_New_Jersey_in_early_August.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/wildwood-3.jpg",
-          "artist": "Tomwsulcer",
-          "license": "CC0",
-          "source": "https://commons.wikimedia.org/wiki/File:Wildwood_New_Jersey_beach_scene_with_kids_playing_in_the_tidal_pool.jpg"
         }
       ]
     },
@@ -1352,15 +1326,15 @@
       "photos": [
         {
           "asset": "assets/images/beaches/cape-may-1.jpg",
-          "artist": "8bit12man",
-          "license": "CC BY-SA 4.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Cape_May_Beach_Dusk.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/cape-may-2.jpg",
           "artist": "DimiTalen",
           "license": "CC0",
           "source": "https://commons.wikimedia.org/wiki/File:View_of_Cape_May_Lighthouse_from_the_beach,_near_Cape_May_Point,_2007.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/cape-may-2.jpg",
+          "artist": "8bit12man",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cape_May_Beach_Dusk.jpg"
         }
       ]
     }

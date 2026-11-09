@@ -23,7 +23,9 @@ OUT = ROOT / "assets" / "images" / "beaches"
 UA = "ShoreThingApp/0.1 (https://github.com/rishiaggarwal06-afk/shore-thing; beach guide app)"
 WIDTH = 1280  # big enough for phones, small enough to keep the app light
 
-# Chosen by hand from Commons search results (file titles), first one = main photo.
+# Chosen by hand and checked by eye, first one = main photo. Point Pleasant Beach and
+# Beach Haven have none yet: Commons had no suitable freely licensed beach photos
+# (only food, a train station or a portrait), so they keep the illustrations.
 PHOTOS = {
     "sandy-hook": [
         "File:Sandy Hook Beach at the Gateway National Recreation Area in Highlands, New Jersey.jpg",
@@ -36,18 +38,15 @@ PHOTOS = {
         "File:Asbury Park July 10 Early Morning 16.jpg",
     ],
     "point-pleasant-beach": [
-        "File:Point Pleasant Beach, New Jersey (2483627837).jpg",
-        "File:Point Pleasant Beach, New Jersey (2815311015).jpg",
     ],
     "seaside-heights": [
         "File:Seaside Heights beach north of Funtown Pier.JPG",
     ],
     "island-beach-state-park": [
-        "File:Island Beach State Park sand dunes.jpg",
         "File:Island Beach State Park boardwalk.jpg",
+        "File:Island Beach State Park sand dunes.jpg",
     ],
     "beach-haven": [
-        "File:Beach Haven, New Jersey -- 2020 (50249962011).jpg",
     ],
     "atlantic-city": [
         "File:The beach and boardwalk in Atlantic City.jpg",
@@ -58,13 +57,12 @@ PHOTOS = {
         "File:Ocean City New Jersey beach patrol boat.jpg",
     ],
     "wildwood": [
-        "File:Wildwood New Jersey beach view with motels and blue sky.jpg",
-        "File:Beaches and hotels at Wildwood New Jersey in early August.jpg",
         "File:Wildwood New Jersey beach scene with kids playing in the tidal pool.jpg",
+        "File:Beaches and hotels at Wildwood New Jersey in early August.jpg",
     ],
     "cape-may": [
-        "File:Cape May Beach Dusk.jpg",
         "File:View of Cape May Lighthouse from the beach, near Cape May Point, 2007.jpg",
+        "File:Cape May Beach Dusk.jpg",
     ],
 }
 ALLOWED = re.compile(r"^(CC0|Public domain|PD.*|CC BY(-SA)? [0-9.]+.*)$", re.I)
