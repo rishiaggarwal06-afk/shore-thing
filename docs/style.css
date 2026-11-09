@@ -1,0 +1,37 @@
+/* Shore Thing pages: brand colours, chunky ink borders, hard shadows. */
+:root {
+  --ink: #123d40; --yellow: #FFE14D; --orange: #FF7F50; --paper: #fff9e9;
+  --sand: #FFE38A; --ocean: #0AB0C6; --white: #ffffff;
+  --sans: Arial, "Liberation Sans", Helvetica, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--sans); }
+a { color: var(--ink); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+.top { background: var(--yellow); border-bottom: 3px solid var(--ink); }
+.top .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; padding-block: 14px; }
+.logo { font-weight: 900; font-size: 24px; letter-spacing: -.5px; text-decoration: none; }
+.logo span { color: var(--orange); }
+.top nav { display: flex; gap: 16px; font-weight: 700; font-size: 15px; }
+.wrap { max-width: 760px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main .wrap { padding-block: 32px 48px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(34px, 7vw, 52px); line-height: 1.04; letter-spacing: -1px; margin: 0 0 14px; text-wrap: balance; }
+h2 { font-size: 22px; line-height: 1.2; margin: 36px 0 8px; text-wrap: balance; }
+p, li { max-width: 65ch; }
+ul { padding-left: 1.2em; }
+li { margin: 6px 0; }
+.box { background: var(--white); border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 18px 20px; margin: 24px 0; }
+.box.yellow { background: var(--sand); }
+.box p:first-child { margin-top: 0; } .box p:last-child { margin-bottom: 0; }
+.email { font-weight: 700; font-size: 19px; word-break: break-all; }
+.updated { font-size: 14px; }
+.cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 24px; }
+.cards a { display: block; text-decoration: none; background: var(--white); border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 18px; }
+.cards a:hover { background: var(--sand); }
+.cards strong { display: block; font-size: 20px; }
+footer { background: var(--ink); color: var(--paper); font-size: 14px; }
+footer .wrap { padding-block: 24px; }
+footer a { color: var(--paper); }

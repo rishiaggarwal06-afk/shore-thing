@@ -35,7 +35,13 @@ An app + website for discovering beaches worldwide.
 - **Rotate the MapTiler key**: the current key was pasted in a chat. Delete it in MapTiler (cloud.maptiler.com → API keys), click NEW KEY, and put the new one in `lib/config/secrets.dart` on the Mac only. Never ask for keys in chat; use a secure form.
 - Make a second MapTiler key for the website, restricted to the site's address (Allowed HTTP origins).
 - MapTiler and Open-Meteo free plans are non-commercial: upgrade before adding ads or paid features.
-- Remaining App Store steps: app icon + "Shore Thing" display name, iPhone-only, privacy policy + support page, $99 Apple Developer account, TestFlight, review.
+- Done: "Shore Thing" display name, iPhone-only (TARGETED_DEVICE_FAMILY = 1), privacy policy + support pages.
+- Remaining App Store steps: app icon (the user is designing it: 1024×1024 PNG, no transparency, square corners), $99 Apple Developer account, TestFlight, review.
+
+## Website pages (GitHub Pages, `docs/` folder on main)
+- `docs/index.html`, `docs/privacy.html`, `docs/support.html`, shared `docs/style.css`. Public contact email: shorethingva26@gmail.com.
+- URLs: https://rishiaggarwal06-afk.github.io/shore-thing/privacy.html and …/support.html (App Store Connect needs both).
+- **Keep the privacy policy true**: it says the app collects nothing and only contacts MapTiler. If you add analytics, accounts, ads, location or any new network service, update `docs/privacy.html` (and its date) in the same change.
 
 ## Code layout
 ```
