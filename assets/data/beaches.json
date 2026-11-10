@@ -1460,7 +1460,27 @@
           "rainIn": 2.8
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/siesta-key-beach-1.jpg",
+          "artist": "4net",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(3).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/siesta-key-beach-2.jpg",
+          "artist": "Fred Hsu on en.wikipedia",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2017_Sarasota_View_from_Siesta_Key_Beach_Pavilion_02_FRD_9706.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/siesta-key-beach-3.jpg",
+          "artist": "4net",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(6).jpg"
+        }
+      ]
     },
     {
       "slug": "clearwater-beach",
@@ -1580,7 +1600,27 @@
           "rainIn": 3.2
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/clearwater-beach-1.jpg",
+          "artist": "Michel Rathwell from Cornwall, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35188097760).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/clearwater-beach-2.jpg",
+          "artist": "TampaThings.com",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Clearwater-beach-florida-pier-60.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/clearwater-beach-3.jpg",
+          "artist": "Michel Rathwell from Cornwall, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35188048330).jpg"
+        }
+      ]
     },
     {
       "slug": "south-beach",
@@ -1614,7 +1654,114 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 75,
+          "waterF": 76,
+          "waveFt": "2–4",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Feb",
+          "airF": 77,
+          "waterF": 77,
+          "waveFt": "2–4",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Mar",
+          "airF": 79,
+          "waterF": 77,
+          "waveFt": "2–4",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Apr",
+          "airF": 82,
+          "waterF": 79,
+          "waveFt": "2–4",
+          "rainIn": 3.1
+        },
+        {
+          "month": "May",
+          "airF": 84,
+          "waterF": 83,
+          "waveFt": "1–3",
+          "rainIn": 6.2
+        },
+        {
+          "month": "Jun",
+          "airF": 85,
+          "waterF": 85,
+          "waveFt": "1–2",
+          "rainIn": 9.3
+        },
+        {
+          "month": "Jul",
+          "airF": 87,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 5.5
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 88,
+          "waveFt": "1–2",
+          "rainIn": 6.5
+        },
+        {
+          "month": "Sep",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "1–3",
+          "rainIn": 8.4
+        },
+        {
+          "month": "Oct",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 6.2
+        },
+        {
+          "month": "Nov",
+          "airF": 80,
+          "waterF": 82,
+          "waveFt": "2–4",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Dec",
+          "airF": 77,
+          "waterF": 79,
+          "waveFt": "2–4",
+          "rainIn": 3.4
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/south-beach-1.jpg",
+          "artist": "Sharon Hahn Darlin",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:South_Beach,_Miami_Beach,_Florida_-_at_the_beach,_June_2021.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/south-beach-2.jpg",
+          "artist": "Radomianin",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Lifeguard_stand,_Miami_Beach.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/south-beach-3.jpg",
+          "artist": "P. Hughes",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Beach_scene.jpg"
+        }
+      ]
     },
     {
       "slug": "bahia-honda-state-park",
@@ -1649,7 +1796,114 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 74,
+          "waterF": 75,
+          "waveFt": "3–4",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 75,
+          "waterF": 76,
+          "waveFt": "2–4",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Mar",
+          "airF": 76,
+          "waterF": 78,
+          "waveFt": "2–5",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Apr",
+          "airF": 78,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 1.5
+        },
+        {
+          "month": "May",
+          "airF": 81,
+          "waterF": 84,
+          "waveFt": "1–3",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Jun",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 5.5
+        },
+        {
+          "month": "Jul",
+          "airF": 86,
+          "waterF": 88,
+          "waveFt": "2–3",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Aug",
+          "airF": 86,
+          "waterF": 88,
+          "waveFt": "1–3",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Sep",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "1–3",
+          "rainIn": 6.9
+        },
+        {
+          "month": "Oct",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 4.7
+        },
+        {
+          "month": "Nov",
+          "airF": 79,
+          "waterF": 81,
+          "waveFt": "2–4",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Dec",
+          "airF": 76,
+          "waterF": 78,
+          "waveFt": "2–4",
+          "rainIn": 2.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/bahia-honda-state-park-1.jpg",
+          "artist": "Daniel Di Palma",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bahia_Honda_State_Park_-_Beach_with_palm_trees.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/bahia-honda-state-park-2.jpg",
+          "artist": "Ebyabe",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bahia_Honda_FL_beach01.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/bahia-honda-state-park-3.jpg",
+          "artist": "Ebyabe",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bahia_Honda_FL_beach03.jpg"
+        }
+      ]
     },
     {
       "slug": "daytona-beach",
@@ -1682,7 +1936,114 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 67,
+          "waterF": 63,
+          "waveFt": "2–4",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Feb",
+          "airF": 72,
+          "waterF": 64,
+          "waveFt": "2–4",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Mar",
+          "airF": 75,
+          "waterF": 68,
+          "waveFt": "2–4",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Apr",
+          "airF": 78,
+          "waterF": 73,
+          "waveFt": "2–3",
+          "rainIn": 3.4
+        },
+        {
+          "month": "May",
+          "airF": 82,
+          "waterF": 78,
+          "waveFt": "2–3",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 81,
+          "waveFt": "2",
+          "rainIn": 6.6
+        },
+        {
+          "month": "Jul",
+          "airF": 87,
+          "waterF": 84,
+          "waveFt": "2",
+          "rainIn": 7.5
+        },
+        {
+          "month": "Aug",
+          "airF": 87,
+          "waterF": 85,
+          "waveFt": "2–3",
+          "rainIn": 7.2
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 8.4
+        },
+        {
+          "month": "Oct",
+          "airF": 80,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Nov",
+          "airF": 74,
+          "waterF": 73,
+          "waveFt": "2–5",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Dec",
+          "airF": 70,
+          "waterF": 68,
+          "waveFt": "2–4",
+          "rainIn": 2.3
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/daytona-beach-1.jpg",
+          "artist": "The Eloquent Peasant",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Driving_on_Daytona_Beach.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/daytona-beach-2.jpg",
+          "artist": "Yinan Chen",
+          "license": "Public Domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Gfp-florida-daytona-beach-daytona-beach.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/daytona-beach-3.jpg",
+          "artist": "Ebyabe",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Daytona_Beach_Oceanfront_Park_pano01.jpg"
+        }
+      ]
     },
     {
       "slug": "waikiki-beach",
@@ -1717,7 +2078,114 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 79,
+          "waterF": 77,
+          "waveFt": "3–5",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "4–5",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Mar",
+          "airF": 79,
+          "waterF": 76,
+          "waveFt": "3–5",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Apr",
+          "airF": 80,
+          "waterF": 77,
+          "waveFt": "4–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "May",
+          "airF": 81,
+          "waterF": 77,
+          "waveFt": "4–5",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Jun",
+          "airF": 83,
+          "waterF": 78,
+          "waveFt": "4–5",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "4–5",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Aug",
+          "airF": 85,
+          "waterF": 80,
+          "waveFt": "4–5",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Sep",
+          "airF": 85,
+          "waterF": 80,
+          "waveFt": "4",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 81,
+          "waveFt": "3–4",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Nov",
+          "airF": 81,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Dec",
+          "airF": 79,
+          "waterF": 78,
+          "waveFt": "4–5",
+          "rainIn": 3.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/waikiki-beach-1.jpg",
+          "artist": "Frank Schulenburg",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Waikiki_Beach_(2024)-L1004709.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/waikiki-beach-2.jpg",
+          "artist": "Lianguanlun",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Waikiki_surfers_and_sailboats_at_sunset.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/waikiki-beach-3.jpg",
+          "artist": "Paul Smits",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Waikiki_Beach_and_Diamond_Head_at_night.jpg"
+        }
+      ]
     },
     {
       "slug": "hanauma-bay",
@@ -1754,7 +2222,114 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 78,
+          "waterF": 77,
+          "waveFt": "4–5",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 77,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Mar",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "4–6",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Apr",
+          "airF": 79,
+          "waterF": 77,
+          "waveFt": "5–6",
+          "rainIn": 3.1
+        },
+        {
+          "month": "May",
+          "airF": 80,
+          "waterF": 77,
+          "waveFt": "5–6",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "5–6",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Jul",
+          "airF": 82,
+          "waterF": 79,
+          "waveFt": "5–6",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Aug",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "4–6",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Sep",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "4–5",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Oct",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "4–5",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Nov",
+          "airF": 80,
+          "waterF": 79,
+          "waveFt": "4–6",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Dec",
+          "airF": 78,
+          "waterF": 78,
+          "waveFt": "4–6",
+          "rainIn": 3.3
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/hanauma-bay-1.jpg",
+          "artist": "Diego Delso",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hanauma_Bay,_Oahu,_Hawaii,_USA2.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/hanauma-bay-2.jpg",
+          "artist": "Cristo Vlahos",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hanauma_Bay_View.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/hanauma-bay-3.jpg",
+          "artist": "Akos Kokai",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hanauma_Bay_(8701274230).jpg"
+        }
+      ]
     },
     {
       "slug": "lanikai-beach",
@@ -1788,7 +2363,114 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 78,
+          "waterF": 77,
+          "waveFt": "4–6",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 77,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Mar",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Apr",
+          "airF": 79,
+          "waterF": 76,
+          "waveFt": "5–7",
+          "rainIn": 3.2
+        },
+        {
+          "month": "May",
+          "airF": 80,
+          "waterF": 77,
+          "waveFt": "5–6",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "5–6",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Jul",
+          "airF": 82,
+          "waterF": 79,
+          "waveFt": "5–6",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Aug",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "5–6",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Sep",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "4–6",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Oct",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "4–6",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Nov",
+          "airF": 80,
+          "waterF": 79,
+          "waveFt": "5–7",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Dec",
+          "airF": 78,
+          "waterF": 78,
+          "waveFt": "5–7",
+          "rainIn": 3.4
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/lanikai-beach-1.jpg",
+          "artist": "claralieu",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Lanikai_Beach_09.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/lanikai-beach-2.jpg",
+          "artist": "claralieu",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Lanikai_Beach_14.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/lanikai-beach-3.jpg",
+          "artist": "claralieu",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Lanikai_Beach_22.jpg"
+        }
+      ]
     },
     {
       "slug": "waimea-bay",
@@ -1822,7 +2504,114 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 79,
+          "waterF": 77,
+          "waveFt": "7–11",
+          "rainIn": 2.0
+        },
+        {
+          "month": "Feb",
+          "airF": 77,
+          "waterF": 76,
+          "waveFt": "7–10",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Mar",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "6–8",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Apr",
+          "airF": 80,
+          "waterF": 77,
+          "waveFt": "5–8",
+          "rainIn": 3.0
+        },
+        {
+          "month": "May",
+          "airF": 81,
+          "waterF": 77,
+          "waveFt": "5–6",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Jun",
+          "airF": 83,
+          "waterF": 78,
+          "waveFt": "4–6",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "4–6",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Aug",
+          "airF": 85,
+          "waterF": 80,
+          "waveFt": "4–5",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Sep",
+          "airF": 85,
+          "waterF": 80,
+          "waveFt": "4–5",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 81,
+          "waveFt": "5–8",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Nov",
+          "airF": 82,
+          "waterF": 79,
+          "waveFt": "6–9",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Dec",
+          "airF": 79,
+          "waterF": 78,
+          "waveFt": "7–10",
+          "rainIn": 3.4
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/waimea-bay-1.jpg",
+          "artist": "Travisthurston",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:WaimeaBay.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/waimea-bay-2.jpg",
+          "artist": "AK KAMEDA PHOTOS",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Eddie_Aikau_Big_Wave_Invitational,_Waimea_Bay,_Oahu,_Hawaii.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/waimea-bay-3.jpg",
+          "artist": "Jordan Robinson",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Waimea_Bay_Sunset.JPG"
+        }
+      ]
     },
     {
       "slug": "kailua-beach-park",
@@ -1856,7 +2645,114 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 78,
+          "waterF": 77,
+          "waveFt": "4–6",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Feb",
+          "airF": 77,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Mar",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Apr",
+          "airF": 79,
+          "waterF": 76,
+          "waveFt": "5–7",
+          "rainIn": 4.4
+        },
+        {
+          "month": "May",
+          "airF": 80,
+          "waterF": 77,
+          "waveFt": "5–6",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "5–6",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Jul",
+          "airF": 82,
+          "waterF": 79,
+          "waveFt": "5–6",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Aug",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "5–6",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Sep",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "4–6",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Oct",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "4–6",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Nov",
+          "airF": 80,
+          "waterF": 79,
+          "waveFt": "5–7",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Dec",
+          "airF": 78,
+          "waterF": 78,
+          "waveFt": "5–7",
+          "rainIn": 4.3
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/kailua-beach-park-1.jpg",
+          "artist": "Tony Webster",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_Park_-_Oahu_-_Hawaii.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/kailua-beach-park-2.jpg",
+          "artist": "HelgaVonSlapya",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_lifeguard_tower_at_sunset.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/kailua-beach-park-3.jpg",
+          "artist": "Floyd Manzano from Mililani, United States",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_Sunset_(9193268473).jpg"
+        }
+      ]
     }
   ],
   "sourcesNote": "Gathered from public sources in Nov 2026. Prices, hours and ocean conditions change, so check with the lifeguards and the official site before you swim. Photos are from Wikimedia Commons (credited below); drawings fill in where we don’t have a photo yet.",
