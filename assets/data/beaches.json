@@ -1469,12 +1469,6 @@
           "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(3).jpg"
         },
         {
-          "asset": "assets/images/beaches/siesta-key-beach-2.jpg",
-          "artist": "Fred Hsu on en.wikipedia",
-          "license": "CC BY-SA 3.0",
-          "source": "https://commons.wikimedia.org/wiki/File:2017_Sarasota_View_from_Siesta_Key_Beach_Pavilion_02_FRD_9706.jpg"
-        },
-        {
           "asset": "assets/images/beaches/siesta-key-beach-3.jpg",
           "artist": "4net",
           "license": "CC BY 3.0",
@@ -1613,12 +1607,6 @@
           "artist": "TampaThings.com",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Clearwater-beach-florida-pier-60.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/clearwater-beach-3.jpg",
-          "artist": "Michel Rathwell from Cornwall, Canada",
-          "license": "CC BY 2.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35188048330).jpg"
         }
       ]
     },
@@ -1745,21 +1733,21 @@
       "photos": [
         {
           "asset": "assets/images/beaches/south-beach-1.jpg",
-          "artist": "Sharon Hahn Darlin",
-          "license": "CC BY 2.0",
-          "source": "https://commons.wikimedia.org/wiki/File:South_Beach,_Miami_Beach,_Florida_-_at_the_beach,_June_2021.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/south-beach-2.jpg",
           "artist": "Radomianin",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Lifeguard_stand,_Miami_Beach.jpg"
         },
         {
-          "asset": "assets/images/beaches/south-beach-3.jpg",
+          "asset": "assets/images/beaches/south-beach-2.jpg",
           "artist": "P. Hughes",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Beach_scene.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/south-beach-3.jpg",
+          "artist": "Sharon Hahn Darlin",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:South_Beach,_Miami_Beach,_Florida_-_at_the_beach,_June_2021.jpg"
         }
       ]
     },
@@ -2032,12 +2020,6 @@
           "source": "https://commons.wikimedia.org/wiki/File:Driving_on_Daytona_Beach.jpg"
         },
         {
-          "asset": "assets/images/beaches/daytona-beach-2.jpg",
-          "artist": "Yinan Chen",
-          "license": "Public Domain",
-          "source": "https://commons.wikimedia.org/wiki/File:Gfp-florida-daytona-beach-daytona-beach.jpg"
-        },
-        {
           "asset": "assets/images/beaches/daytona-beach-3.jpg",
           "artist": "Ebyabe",
           "license": "CC BY-SA 3.0",
@@ -2178,12 +2160,6 @@
           "artist": "Lianguanlun",
           "license": "CC BY 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Waikiki_surfers_and_sailboats_at_sunset.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/waikiki-beach-3.jpg",
-          "artist": "Paul Smits",
-          "license": "CC BY 2.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Waikiki_Beach_and_Diamond_Head_at_night.jpg"
         }
       ]
     },
@@ -2600,12 +2576,6 @@
           "source": "https://commons.wikimedia.org/wiki/File:WaimeaBay.jpg"
         },
         {
-          "asset": "assets/images/beaches/waimea-bay-2.jpg",
-          "artist": "AK KAMEDA PHOTOS",
-          "license": "CC BY 2.0",
-          "source": "https://commons.wikimedia.org/wiki/File:The_Eddie_Aikau_Big_Wave_Invitational,_Waimea_Bay,_Oahu,_Hawaii.jpg"
-        },
-        {
           "asset": "assets/images/beaches/waimea-bay-3.jpg",
           "artist": "Jordan Robinson",
           "license": "CC BY-SA 4.0",
@@ -2736,18 +2706,12 @@
       "photos": [
         {
           "asset": "assets/images/beaches/kailua-beach-park-1.jpg",
-          "artist": "Tony Webster",
-          "license": "CC BY 2.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_Park_-_Oahu_-_Hawaii.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/kailua-beach-park-2.jpg",
           "artist": "HelgaVonSlapya",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_lifeguard_tower_at_sunset.jpg"
         },
         {
-          "asset": "assets/images/beaches/kailua-beach-park-3.jpg",
+          "asset": "assets/images/beaches/kailua-beach-park-2.jpg",
           "artist": "Floyd Manzano from Mililani, United States",
           "license": "CC BY 2.0",
           "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_Sunset_(9193268473).jpg"
