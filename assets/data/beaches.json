@@ -1613,12 +1613,6 @@
           "artist": "TampaThings.com",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Clearwater-beach-florida-pier-60.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/clearwater-beach-3.jpg",
-          "artist": "Michel Rathwell from Cornwall, Canada",
-          "license": "CC BY 2.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(34733812204).jpg"
         }
       ]
     },
@@ -2035,12 +2029,6 @@
           "asset": "assets/images/beaches/daytona-beach-2.jpg",
           "artist": "Ebyabe",
           "license": "CC BY-SA 3.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Daytona_Beach_Oceanfront_Park01.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/daytona-beach-3.jpg",
-          "artist": "Ebyabe",
-          "license": "CC BY-SA 3.0",
           "source": "https://commons.wikimedia.org/wiki/File:Daytona_Beach_Oceanfront_Park_pano01.jpg"
         }
       ]
@@ -2178,12 +2166,6 @@
           "artist": "Lianguanlun",
           "license": "CC BY 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Waikiki_surfers_and_sailboats_at_sunset.jpg"
-        },
-        {
-          "asset": "assets/images/beaches/waikiki-beach-3.jpg",
-          "artist": "Vavavis",
-          "license": "CC BY-SA 4.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Panoramic_of_Waikiki_Beach.jpg"
         }
       ]
     },
@@ -2601,12 +2583,6 @@
         },
         {
           "asset": "assets/images/beaches/waimea-bay-2.jpg",
-          "artist": "Stefan Ernst",
-          "license": "CC BY 3.0",
-          "source": "https://commons.wikimedia.org/wiki/File:Waimea_Bay_Oahu_(24250337).jpeg"
-        },
-        {
-          "asset": "assets/images/beaches/waimea-bay-3.jpg",
           "artist": "Jordan Robinson",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Waimea_Bay_Sunset.JPG"

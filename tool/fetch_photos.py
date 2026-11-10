@@ -72,7 +72,9 @@ PHOTOS = {
     "clearwater-beach": [
         "File:Clearwater Beach, Florida (35188097760).jpg",
         "File:Clearwater-beach-florida-pier-60.jpg",
-        "File:Clearwater Beach, Florida (34733812204).jpg",
+        "File:Clearwater-beach-florida-oceanview.jpg",
+        "File:Clearwater Beach, Florida (35188048330).jpg",
+        "File:Clearwater Beach, Florida (35187755240).jpg",
     ],
     "south-beach": [
         "File:Lifeguard stand, Miami Beach.jpg",
@@ -86,13 +88,17 @@ PHOTOS = {
     ],
     "daytona-beach": [
         "File:Driving on Daytona Beach.jpg",
-        "File:Daytona Beach Oceanfront Park01.jpg",
         "File:Daytona Beach Oceanfront Park pano01.jpg",
+        "File:Daytona Beach, Florida (4783857222).jpg",
+        "File:DaytonaBeach-Pier.jpg",
+        "File:Gfp-florida-daytona-beach-beach-shoreline.jpg",
     ],
     "waikiki-beach": [
         "File:Waikiki Beach (2024)-L1004709.jpg",
         "File:Waikiki surfers and sailboats at sunset.jpg",
-        "File:Panoramic of Waikiki Beach.jpg",
+        "File:The Royal Hawaiian Hotel, Waikiki.jpg",
+        "File:Sunset next to Waikiki Beach, Oahu, Hawai, USA1.jpg",
+        "File:Outrigger Waikiki Beach Resort.jpg",
     ],
     "hanauma-bay": [
         "File:Hanauma Bay, Oahu, Hawaii, USA2.jpg",
@@ -106,8 +112,10 @@ PHOTOS = {
     ],
     "waimea-bay": [
         "File:WaimeaBay.jpg",
-        "File:Waimea Bay Oahu (24250337).jpeg",
         "File:Waimea Bay Sunset.JPG",
+        "File:Waimea Bay, Oahu, Hawaii - panoramio.jpg",
+        "File:Waimea Bay Oahu Hawaii Photo Don Ramey Logan.jpg",
+        "File:Sea turtle - North Shore, Oahu (2008) 02.JPG",
     ],
     "kailua-beach-park": [
         "File:Kailua Beach lifeguard tower at sunset.jpg",
