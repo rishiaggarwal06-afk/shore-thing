@@ -8,7 +8,7 @@ import 'screens/home_map_screen.dart';
 /// Web addresses:
 ///   /                     → the map
 ///   /beach/asbury-park    → that beach's page
-///   /beach/(anything else) → fuzzy search, or the "not one of our ten (yet)" page
+///   /beach/(anything else) → fuzzy search, or the "not one of our 20 (yet)" page
 GoRouter buildRouter(BeachRepository repo) => GoRouter(
       routes: [
         GoRoute(path: '/', pageBuilder: (_, _) => const NoTransitionPage(child: HomeMapScreen())),

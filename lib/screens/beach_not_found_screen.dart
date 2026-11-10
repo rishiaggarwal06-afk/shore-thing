@@ -17,33 +17,39 @@ class BeachNotFoundScreen extends StatelessWidget {
       const BackToMap(),
       const SizedBox(height: 14),
       DetailHead(
-        eyebrow: 'NOT ONE OF OUR TEN (YET)',
+        eyebrow: 'NOT ONE OF OUR ${repo.beaches.length} (YET)',
         title: query,
-        text: 'We don’t have a guide for that beach yet. Here are the ten ${repo.region.name} favorites we do cover.',
+        text: 'We don’t have a guide for that beach yet. Here are the ${repo.beaches.length} favorites we do cover, '
+            'across ${repo.regionsLabel}.',
       ),
-      const SizedBox(height: 24),
-      LayoutBuilder(builder: (context, c) {
-        final cols = c.maxWidth < 560 ? 1 : (c.maxWidth < 900 ? 2 : 3);
-        final w = (c.maxWidth - 12.0 * (cols - 1) - 4) / cols;
-        return Wrap(spacing: 12, runSpacing: 12, children: [
-          for (final b in repo.beaches)
-            SizedBox(
-              width: w,
-              child: InkWell(
-                onTap: () => openBeach(context, b.slug),
-                child: Container(
-                  padding: const EdgeInsets.all(14),
-                  decoration: Brand.chunky(shadow: 4),
-                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(b.name, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 17)),
-                    const SizedBox(height: 4),
-                    Text(b.area, style: const TextStyle(fontSize: 13)),
-                  ]),
+      // One group per region: heading, then that region's beaches as cards.
+      for (final region in repo.regions.values) ...[
+        const SizedBox(height: 28),
+        Text(region.name.toUpperCase(), style: Brand.eyebrow.copyWith(fontSize: 13)),
+        const SizedBox(height: 12),
+        LayoutBuilder(builder: (context, c) {
+          final cols = c.maxWidth < 560 ? 1 : (c.maxWidth < 900 ? 2 : 3);
+          final w = (c.maxWidth - 12.0 * (cols - 1) - 4) / cols;
+          return Wrap(spacing: 12, runSpacing: 12, children: [
+            for (final b in repo.beaches.where((b) => b.region == region.id))
+              SizedBox(
+                width: w,
+                child: InkWell(
+                  onTap: () => openBeach(context, b.slug),
+                  child: Container(
+                    padding: const EdgeInsets.all(14),
+                    decoration: Brand.chunky(shadow: 4),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(b.name, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 17)),
+                      const SizedBox(height: 4),
+                      Text(b.area, style: const TextStyle(fontSize: 13)),
+                    ]),
+                  ),
                 ),
               ),
-            ),
-        ]);
-      }),
+          ]);
+        }),
+      ],
     ]);
   }
 }

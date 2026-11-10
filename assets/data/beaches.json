@@ -1,12 +1,4 @@
 {
-  "region": {
-    "name": "Jersey Shore",
-    "airTemp": "80–85°F",
-    "airNote": "Typical summer highs · Jun–Aug",
-    "waterTemp": "68–75°F",
-    "waterNote": "Warmest in August",
-    "sourcesNote": "Gathered from public sources in Nov 2026. Badge and parking prices are 2026 summer rates. Fees, hours and ocean conditions change, so check with the lifeguards and the town’s official site before you swim. Photos are from Wikimedia Commons (credited below); drawings fill in where we don’t have a photo yet."
-  },
   "beaches": [
     {
       "slug": "sandy-hook",
@@ -148,7 +140,8 @@
           "license": "CC0",
           "source": "https://commons.wikimedia.org/wiki/File:Beach_scene_at_Sandy_Hook_NJ.JPG"
         }
-      ]
+      ],
+      "region": "jersey-shore"
     },
     {
       "slug": "asbury-park",
@@ -290,7 +283,8 @@
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Asbury_Park_July_10_Early_Morning_16.jpg"
         }
-      ]
+      ],
+      "region": "jersey-shore"
     },
     {
       "slug": "point-pleasant-beach",
@@ -412,7 +406,8 @@
         }
       ],
       "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
-      "photos": []
+      "photos": [],
+      "region": "jersey-shore"
     },
     {
       "slug": "seaside-heights",
@@ -541,7 +536,8 @@
           "license": "Public domain",
           "source": "https://commons.wikimedia.org/wiki/File:Seaside_Heights_beach_north_of_Funtown_Pier.JPG"
         }
-      ]
+      ],
+      "region": "jersey-shore"
     },
     {
       "slug": "island-beach-state-park",
@@ -677,7 +673,8 @@
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Island_Beach_State_Park_sand_dunes.jpg"
         }
-      ]
+      ],
+      "region": "jersey-shore"
     },
     {
       "slug": "beach-haven",
@@ -797,7 +794,8 @@
         }
       ],
       "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
-      "photos": []
+      "photos": [],
+      "region": "jersey-shore"
     },
     {
       "slug": "atlantic-city",
@@ -937,7 +935,8 @@
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Atlantic_City_Beach_and_Jettty_New_Jersey.jpg"
         }
-      ]
+      ],
+      "region": "jersey-shore"
     },
     {
       "slug": "ocean-city",
@@ -1067,7 +1066,8 @@
           "license": "CC BY-SA 2.0",
           "source": "https://commons.wikimedia.org/wiki/File:Ocean_City_New_Jersey_beach_patrol_boat.jpg"
         }
-      ]
+      ],
+      "region": "jersey-shore"
     },
     {
       "slug": "wildwood",
@@ -1200,7 +1200,8 @@
           "license": "CC0",
           "source": "https://commons.wikimedia.org/wiki/File:Beaches_and_hotels_at_Wildwood_New_Jersey_in_early_August.jpg"
         }
-      ]
+      ],
+      "region": "jersey-shore"
     },
     {
       "slug": "cape-may",
@@ -1336,7 +1337,553 @@
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Cape_May_Beach_Dusk.jpg"
         }
-      ]
+      ],
+      "region": "jersey-shore"
+    },
+    {
+      "slug": "siesta-key-beach",
+      "region": "florida",
+      "name": "Siesta Key Beach",
+      "area": "Siesta Key · Sarasota County",
+      "lat": 27.2659,
+      "lon": -82.5517,
+      "tag": "THE SUGAR SAND",
+      "tags": [
+        "Calm swimming"
+      ],
+      "wave": "0–1 ft",
+      "waveNote": "Usually gentle Gulf water",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Four lifeguard stations; hours vary by season",
+      "entry": "Free",
+      "entryNote": "Public beach park.",
+      "parking": "About 950 free spaces. They fill quickly in peak season (January–April), so arrive early or take the free trolley.",
+      "hours": "Park open 6 a.m.–10 p.m.",
+      "description": "A wide beach of bright white, powder-soft quartz sand with gentle Gulf water, regularly named one of the best beaches in America.",
+      "features": [
+        "Lifeguard stations",
+        "Restrooms",
+        "Concession stand",
+        "Picnic tables & grills",
+        "Playground",
+        "Volleyball & tennis courts"
+      ],
+      "safety": "Swim near a lifeguard station and watch for rip current warnings on windy days.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 70,
+          "waterF": 63,
+          "waveFt": "1–3",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Feb",
+          "airF": 76,
+          "waterF": 67,
+          "waveFt": "1–2",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Mar",
+          "airF": 79,
+          "waterF": 72,
+          "waveFt": "1–3",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Apr",
+          "airF": 82,
+          "waterF": 76,
+          "waveFt": "1–2",
+          "rainIn": 2.8
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 83,
+          "waveFt": "1–2",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Jun",
+          "airF": 87,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 9.1
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 89,
+          "waveFt": "1",
+          "rainIn": 8.6
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 89,
+          "waveFt": "1",
+          "rainIn": 9.8
+        },
+        {
+          "month": "Sep",
+          "airF": 87,
+          "waterF": 86,
+          "waveFt": "1",
+          "rainIn": 8.5
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 80,
+          "waveFt": "1–2",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Nov",
+          "airF": 79,
+          "waterF": 73,
+          "waveFt": "1–2",
+          "rainIn": 2.0
+        },
+        {
+          "month": "Dec",
+          "airF": 74,
+          "waterF": 68,
+          "waveFt": "1–2",
+          "rainIn": 2.8
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+    },
+    {
+      "slug": "clearwater-beach",
+      "region": "florida",
+      "name": "Clearwater Beach",
+      "area": "Clearwater · Pinellas County",
+      "lat": 27.9776,
+      "lon": -82.8284,
+      "tag": "SUNSET AT THE PIER",
+      "tags": [
+        "Calm swimming"
+      ],
+      "wave": "0–1 ft",
+      "waveNote": "Usually calm Gulf water",
+      "lifeguards": "Yes",
+      "lifeguardNote": "10 a.m.–5 p.m. daily; towers staffed by season and weather",
+      "entry": "Free",
+      "entryNote": "Public beach.",
+      "parking": "Paid city lots and garages near Pier 60. Rates vary by lot, so check the meter. Lots fill on weekends.",
+      "description": "Wide, soft white sand on the Gulf, calm water and beachfront restaurants, with Pier 60 at the center for watching the sunset.",
+      "features": [
+        "Lifeguards",
+        "Pier 60 fishing pier",
+        "Pier 60 Park playground",
+        "Beachfront restaurants",
+        "Sunset gatherings at Pier 60"
+      ],
+      "safety": "Swim near a staffed lifeguard tower. Parts of Pier 60 may be closed after storm damage, so check before you go.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 67,
+          "waterF": 60,
+          "waveFt": "2–4",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Feb",
+          "airF": 72,
+          "waterF": 65,
+          "waveFt": "1–3",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Mar",
+          "airF": 75,
+          "waterF": 71,
+          "waveFt": "1–3",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Apr",
+          "airF": 80,
+          "waterF": 76,
+          "waveFt": "1–3",
+          "rainIn": 2.8
+        },
+        {
+          "month": "May",
+          "airF": 84,
+          "waterF": 82,
+          "waveFt": "1–2",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 7.1
+        },
+        {
+          "month": "Jul",
+          "airF": 87,
+          "waterF": 89,
+          "waveFt": "1–2",
+          "rainIn": 8.3
+        },
+        {
+          "month": "Aug",
+          "airF": 87,
+          "waterF": 89,
+          "waveFt": "1–2",
+          "rainIn": 9.5
+        },
+        {
+          "month": "Sep",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 7.5
+        },
+        {
+          "month": "Oct",
+          "airF": 83,
+          "waterF": 79,
+          "waveFt": "1–2",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Nov",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "1–3",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Dec",
+          "airF": 71,
+          "waterF": 66,
+          "waveFt": "1–3",
+          "rainIn": 3.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+    },
+    {
+      "slug": "south-beach",
+      "region": "florida",
+      "name": "South Beach",
+      "area": "Miami Beach · Miami-Dade County",
+      "lat": 25.7781,
+      "lon": -80.1301,
+      "tag": "ART DECO & OCEAN",
+      "tags": [
+        "Calm swimming"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "Usually gentle; rougher with winter fronts",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Miami Beach Ocean Rescue towers staffed daily; check posted hours",
+      "entry": "Free",
+      "entryNote": "Public beach.",
+      "parking": "Paid garages and metered street parking. Rates rise on busy and event weekends, and spaces near the beach fill fast.",
+      "hours": "Lummus Park is open sunrise to midnight.",
+      "description": "Miami’s famous city beach: wide sand and blue-green water in front of the pastel Art Deco hotels of Ocean Drive.",
+      "features": [
+        "Lifeguard towers",
+        "Ocean Drive restaurants & cafés",
+        "Art Deco buildings along Ocean Drive",
+        "Beachwalk path",
+        "Lummus Park"
+      ],
+      "safety": "Swim near a staffed lifeguard tower and check the warning flags before going in.",
+      "color": 2,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": true
+    },
+    {
+      "slug": "bahia-honda-state-park",
+      "region": "florida",
+      "name": "Bahia Honda State Park",
+      "area": "Big Pine Key · Florida Keys",
+      "lat": 24.6588,
+      "lon": -81.278,
+      "tag": "KEYS CLEAR WATER",
+      "tags": [
+        "Snorkeling",
+        "Calm swimming",
+        "Nature & wildlife"
+      ],
+      "wave": "0–1 ft",
+      "waveNote": "Shallow and usually calm",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards; swim at your own risk",
+      "entry": "$8",
+      "entryUnit": "per vehicle",
+      "entryNote": "For 2–8 people, plus a 50¢ per person Monroe County surcharge. Single-person vehicles $4.50; walk-ins and cyclists $2.50.",
+      "parking": "Parking inside the park is included with entry. It can fill on busy days.",
+      "description": "A Florida Keys state park with clear, shallow turquoise water, three beaches on the Atlantic and Florida Bay, and views of the old Bahia Honda Rail Bridge.",
+      "features": [
+        "Three beaches: Sandspur, Loggerhead & Calusa",
+        "Shallow, clear water for snorkeling",
+        "Picnic pavilions at Calusa Beach",
+        "Views of the old Bahia Honda Rail Bridge"
+      ],
+      "safety": "There are no lifeguards. Stay away from the Bahia Honda Channel, where the currents are very strong.",
+      "color": 0,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false
+    },
+    {
+      "slug": "daytona-beach",
+      "region": "florida",
+      "name": "Daytona Beach",
+      "area": "Daytona Beach · Volusia County",
+      "lat": 29.2276,
+      "lon": -81.0072,
+      "tag": "DRIVE ON THE SAND",
+      "tags": [
+        "Boardwalk fun"
+      ],
+      "wave": "1–3 ft",
+      "waveNote": "Atlantic surf; bigger with storms",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Volusia County Beach Safety towers; staffing varies, check the Volusia Beaches app",
+      "entry": "Free",
+      "entryNote": "Free to walk on. Driving and parking on the sand need a pass, with different prices for residents and visitors; check Park Volusia for current rates.",
+      "parking": "Drive-on beach sections (when the tide allows) and off-beach lots, both paid.",
+      "description": "A wide, hard-packed beach where you can still drive and park on the sand in some sections, with the boardwalk and Main Street Pier at its center.",
+      "features": [
+        "Lifeguard towers",
+        "Drive-on beach sections",
+        "Daytona Beach Boardwalk",
+        "Main Street Pier",
+        "Wide, hard-packed sand"
+      ],
+      "safety": "Watch for cars on the drive-on sections and swim near a staffed lifeguard tower; rip currents are common.",
+      "color": 1,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false
+    },
+    {
+      "slug": "waikiki-beach",
+      "region": "hawaii",
+      "name": "Waikīkī Beach",
+      "area": "Waikīkī · South Shore",
+      "lat": 21.2766,
+      "lon": -157.8268,
+      "tag": "THE CLASSIC",
+      "tags": [
+        "Calm swimming",
+        "Surf spots"
+      ],
+      "wave": "1–3 ft",
+      "waveNote": "Gentle rollers; bigger south swells in summer",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Towers staffed daily, daytime",
+      "entry": "Free",
+      "entryNote": "Public beach, open to everyone.",
+      "parking": "Scarce and metered. Use a hotel or shopping garage or the Fort DeRussy lot; most visitors walk from their hotel.",
+      "description": "About two miles of golden sand in front of Diamond Head, with soft rolling waves where beginner surf lessons happen right off the sand. Busy, buzzy and in the heart of Honolulu.",
+      "features": [
+        "Lifeguard towers",
+        "Restrooms & showers at Kūhiō Beach Park",
+        "Board & umbrella rentals",
+        "Beginner surf lessons",
+        "Food & shops steps away",
+        "Diamond Head views"
+      ],
+      "safety": "The water is crowded. Watch for surfers and outrigger canoes in the lesson areas.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": true,
+      "familyFriendly": true
+    },
+    {
+      "slug": "hanauma-bay",
+      "region": "hawaii",
+      "name": "Hanauma Bay",
+      "area": "Hawaiʻi Kai · East Honolulu",
+      "lat": 21.269,
+      "lon": -157.6938,
+      "tag": "THE SNORKEL SPOT",
+      "tags": [
+        "Snorkeling",
+        "Calm swimming"
+      ],
+      "wave": "Calm",
+      "waveNote": "Sheltered by a reef inside an old volcanic crater",
+      "lifeguards": "Yes",
+      "lifeguardNote": "On duty during open hours",
+      "entry": "$25",
+      "entryUnit": "per visitor",
+      "entryNote": "For non-residents, plus an online fee. Free for Hawaiʻi residents, kids 12 and under, and active military. Non-residents need a reservation, released 2 days ahead at 7 a.m. HST.",
+      "parking": "$3 for non-residents, $1 for residents. Cash only, first come first served, even with a reservation.",
+      "hours": "Closed every Monday and Tuesday.",
+      "description": "A protected nature preserve in a volcanic crater, with clear, calm water over coral reef. It’s Oʻahu’s best-known place to snorkel with reef fish and turtles.",
+      "features": [
+        "Lifeguards",
+        "Restrooms & showers",
+        "Snorkel gear rentals",
+        "Visitor education center",
+        "Food concession",
+        "Calm, shallow reef"
+      ],
+      "safety": "Don’t stand on the coral or touch turtles. Book your entry two days ahead.",
+      "color": 2,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": true,
+      "familyFriendly": true
+    },
+    {
+      "slug": "lanikai-beach",
+      "region": "hawaii",
+      "name": "Lanikai Beach",
+      "area": "Lanikai · Kailua",
+      "lat": 21.3931,
+      "lon": -157.7154,
+      "tag": "POSTCARD PERFECT",
+      "tags": [
+        "Quiet escapes",
+        "Calm swimming"
+      ],
+      "wave": "0–1 ft",
+      "waveNote": "Usually calm, reef-protected water",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards here",
+      "entry": "Free",
+      "entryNote": "Reached by public paths between homes.",
+      "parking": "No lot, and street parking is very limited and strictly enforced. Park at Kailua Beach Park and walk.",
+      "description": "A slim ribbon of powder-soft sand facing the twin Mokulua islets. It’s often called the most beautiful beach in Hawaiʻi, and it was No. 9 on Dr. Beach’s 2025 list of top US beaches.",
+      "features": [
+        "Calm, clear water",
+        "Views of the Mokulua islets",
+        "Public access paths",
+        "No restrooms or showers",
+        "No lifeguards"
+      ],
+      "safety": "There are no lifeguards or facilities. Park legally and use the marked public paths.",
+      "color": 0,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false
+    },
+    {
+      "slug": "waimea-bay",
+      "region": "hawaii",
+      "name": "Waimea Bay",
+      "area": "North Shore",
+      "lat": 21.641,
+      "lon": -158.066,
+      "tag": "BIG-WAVE BAY",
+      "tags": [
+        "Surf spots",
+        "Snorkeling"
+      ],
+      "wave": "0–30 ft",
+      "waveNote": "Glassy in summer; winter waves can top 20 ft",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Daytime coverage",
+      "entry": "Free",
+      "entryNote": "Public beach park.",
+      "parking": "Free lot. It fills very early on weekends and big-surf days.",
+      "description": "A deep, sandy bay that’s calm enough to swim and snorkel in summer and home to giant surf in winter. The famous jump rock sits at the south end.",
+      "features": [
+        "Lifeguard tower",
+        "Restrooms & showers",
+        "Picnic tables",
+        "The jump rock",
+        "Summer snorkeling"
+      ],
+      "safety": "Winter surf and currents are deadly. Swim roughly May–Sept, and only jump from the rock when it’s calm and the lifeguards say so.",
+      "color": 2,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": true
+    },
+    {
+      "slug": "kailua-beach-park",
+      "region": "hawaii",
+      "name": "Kailua Beach Park",
+      "area": "Kailua · Windward",
+      "lat": 21.3976,
+      "lon": -157.7271,
+      "tag": "BREEZY & BRIGHT",
+      "tags": [
+        "Calm swimming"
+      ],
+      "wave": "1–2 ft",
+      "waveNote": "Gentle, with steady trade winds",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Daytime coverage",
+      "entry": "Free",
+      "entryNote": "Public beach park.",
+      "parking": "Big free lot.",
+      "description": "Wide, soft sand and turquoise water on Kailua Bay, with an easy kayak launch toward the offshore islets and steady breezes for windsurfers and kiteboarders.",
+      "features": [
+        "Lifeguards",
+        "Restrooms & showers",
+        "Picnic tables",
+        "Big free parking lot",
+        "Easy kayak launch",
+        "Shade trees"
+      ],
+      "safety": "Trade winds can push kayaks and boards offshore. Check the wind before you paddle out.",
+      "color": 1,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": true
     }
-  ]
+  ],
+  "sourcesNote": "Gathered from public sources in Nov 2026. Prices, hours and ocean conditions change, so check with the lifeguards and the official site before you swim. Photos are from Wikimedia Commons (credited below); drawings fill in where we don’t have a photo yet.",
+  "regions": {
+    "jersey-shore": {
+      "name": "Jersey Shore",
+      "state": "New Jersey",
+      "airTemp": "80–85°F",
+      "airNote": "Typical summer highs · Jun–Aug",
+      "waterTemp": "68–75°F",
+      "waterNote": "Warmest in August"
+    },
+    "florida": {
+      "name": "Florida",
+      "state": "Florida",
+      "airTemp": "85–90°F",
+      "airNote": "Typical summer highs · Jun–Aug",
+      "waterTemp": "84–88°F",
+      "waterNote": "Warmest Jul–Sept"
+    },
+    "hawaii": {
+      "name": "Hawaiʻi",
+      "state": "Hawaiʻi",
+      "airTemp": "80–89°F",
+      "airNote": "Typical highs · coolest Jan–Feb",
+      "waterTemp": "73–81°F",
+      "waterNote": "Warmest Aug–Sept"
+    }
+  }
 }

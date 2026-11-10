@@ -6,16 +6,33 @@ import '../models/beach.dart';
 
 /// Loads the beach list from assets/data/beaches.json and answers searches.
 class BeachRepository {
-  BeachRepository(this.region, this.beaches);
+  BeachRepository(this.regions, this.sourcesNote, this.beaches);
 
-  final Region region;
+  /// Regions in display order, by id.
+  final Map<String, Region> regions;
+
+  /// Shared "where this info comes from" note shown on beach pages.
+  final String sourcesNote;
   final List<Beach> beaches;
+
+  Region regionOf(Beach b) => regions[b.region]!;
+
+  /// "the Jersey Shore, Florida and Hawaiʻi"
+  String get regionsLabel {
+    final names = [for (final r in regions.values) r.name == 'Jersey Shore' ? 'the Jersey Shore' : r.name];
+    if (names.length < 2) return names.join();
+    return '${names.sublist(0, names.length - 1).join(', ')} and ${names.last}';
+  }
 
   static Future<BeachRepository> load() async {
     final raw = await rootBundle.loadString('assets/data/beaches.json');
     final json = jsonDecode(raw) as Map<String, dynamic>;
     return BeachRepository(
-      Region.fromJson(json['region'] as Map<String, dynamic>),
+      {
+        for (final e in (json['regions'] as Map<String, dynamic>).entries)
+          e.key: Region.fromJson(e.key, e.value as Map<String, dynamic>),
+      },
+      json['sourcesNote'] as String,
       [for (final b in json['beaches'] as List) Beach.fromJson(b as Map<String, dynamic>)],
     );
   }

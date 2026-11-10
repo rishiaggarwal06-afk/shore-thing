@@ -11,7 +11,7 @@ class BeachFilter {
 
   /// Activity filters (from each beach's tags).
   static final activities = [
-    for (final t in ['Boardwalk fun', 'Surf spots', 'Quiet escapes', 'Nature & wildlife'])
+    for (final t in ['Calm swimming', 'Snorkeling', 'Surf spots', 'Quiet escapes', 'Boardwalk fun', 'Nature & wildlife'])
       BeachFilter(t, (b) => b.tags.contains(t)),
   ];
 

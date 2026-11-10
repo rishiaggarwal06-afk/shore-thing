@@ -13,7 +13,7 @@ class MapTiles {
   final String urlTemplate;
 
   /// Turns the map's colours into Shore Thing's sand land and ocean water,
-  /// and fades labels and roads way back.
+  /// with place names in dark ink.
   final ColorFilter tint;
 
   /// Required credit line shown on the map.
@@ -28,12 +28,14 @@ class MapTiles {
 
   static final _mapTiler = MapTiles._(
     urlTemplate: 'https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}{r}.png?key=${Secrets.maptilerKey}',
-    // Tuned on basic-v2: its water (148,193,224) → ocean #0AB0C6, its land (224,224,209) → sand #FFE38A.
-    // Each pixel's colour depends on how much redder than blue it is.
+    // Tuned on basic-v2 from three sample colours: its water (148,193,224) → ocean #0AB0C6,
+    // its land (224,224,209) → sand #FFE38A, and its near-black label text (2,2,1) → ink #123D40,
+    // so place names stay dark and readable. Each colour depends on how much redder than blue
+    // a pixel is and how bright it is.
     tint: const ColorFilter.matrix([
-      2.849, 0, -2.849, 0, 226.5, //
-      0.593, 0, -0.593, 0, 221.1,
-      -0.698, 0, 0.698, 0, 145,
+      2.689, 0.312, -2.064, 0, 14.06, //
+      0.558, 0.248, -0.062, 0, 59.45,
+      -0.661, 0.130, 0.922, 0, 64.14,
       0, 0, 0, 1, 0,
     ]),
     credit: '© MapTiler © OpenStreetMap contributors',

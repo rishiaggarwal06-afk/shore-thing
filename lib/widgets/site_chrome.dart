@@ -27,8 +27,8 @@ class Logo extends StatelessWidget {
 
 /// Thin dark strip at the very top of every page.
 class DemoBanner extends StatelessWidget {
-  const DemoBanner({super.key, required this.regionName});
-  final String regionName;
+  const DemoBanner({super.key, required this.beachCount});
+  final int beachCount;
 
   @override
   Widget build(BuildContext context) => Container(
@@ -38,7 +38,7 @@ class DemoBanner extends StatelessWidget {
         child: Text.rich(
           TextSpan(children: [
             TextSpan(
-                text: 'TEN ${regionName.toUpperCase()} FAVORITES, ONE BIG BLUE OCEAN. ',
+                text: '$beachCount FAVORITE BEACHES, ONE BIG BLUE OCEAN. ',
                 style: const TextStyle(fontWeight: FontWeight.w700, letterSpacing: .6)),
             const TextSpan(text: 'Info from public sources · conditions are typical, not live.'),
           ]),

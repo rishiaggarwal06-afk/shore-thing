@@ -20,7 +20,7 @@ class SitePage extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
         body: SingleChildScrollView(
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-            DemoBanner(regionName: BeachScope.of(context).region.name),
+            DemoBanner(beachCount: BeachScope.of(context).beaches.length),
             const SiteHeader(),
             PageWidth(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: children),
@@ -79,7 +79,8 @@ class BeachDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final b = beach;
-    final region = BeachScope.of(context).region;
+    final repo = BeachScope.of(context);
+    final region = repo.regionOf(b);
     final phone = Brand.isPhone(context);
     const gap = SizedBox(height: 22);
 
@@ -89,7 +90,7 @@ class BeachDetailScreen extends StatelessWidget {
       child: SitePage(children: [
         const BackToMap(),
         const SizedBox(height: 14),
-        DetailHead(eyebrow: '${b.area} · NEW JERSEY', title: b.name, text: b.description),
+        DetailHead(eyebrow: '${b.area} · ${region.state}', title: b.name, text: b.description),
         gap,
         _Gallery(b, phone: phone),
         gap,
@@ -106,7 +107,7 @@ class BeachDetailScreen extends StatelessWidget {
         const SizedBox(height: 30),
         BestTimeToGo(climate: const ClimateService().monthlyFor(b)),
         gap,
-        Text(region.sourcesNote, style: const TextStyle(fontSize: 12, height: 1.5)),
+        Text(repo.sourcesNote, style: const TextStyle(fontSize: 12, height: 1.5)),
         if (b.photos.isNotEmpty) _PhotoCredits(b.photos),
       ]),
     );

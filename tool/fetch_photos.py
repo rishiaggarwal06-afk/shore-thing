@@ -64,6 +64,56 @@ PHOTOS = {
         "File:View of Cape May Lighthouse from the beach, near Cape May Point, 2007.jpg",
         "File:Cape May Beach Dusk.jpg",
     ],
+    "siesta-key-beach": [
+        "File:Siesta Key Beach. Sarasota - panoramio - 4net (3).jpg",
+        "File:2017 Sarasota View from Siesta Key Beach Pavilion 02 FRD 9706.jpg",
+        "File:Siesta Key Beach. Sarasota - panoramio - 4net (6).jpg",
+    ],
+    "clearwater-beach": [
+        "File:Clearwater Beach, Florida (35188097760).jpg",
+        "File:Clearwater-beach-florida-pier-60.jpg",
+        "File:Clearwater Beach, Florida (35188048330).jpg",
+    ],
+    "south-beach": [
+        "File:South Beach, Miami Beach, Florida - at the beach, June 2021.jpg",
+        "File:Lifeguard stand, Miami Beach.jpg",
+        "File:Miami Beach - Beach scene.jpg",
+    ],
+    "bahia-honda-state-park": [
+        "File:Bahia Honda State Park - Beach with palm trees.jpg",
+        "File:Bahia Honda FL beach01.jpg",
+        "File:Bahia Honda FL beach03.jpg",
+    ],
+    "daytona-beach": [
+        "File:Driving on Daytona Beach.jpg",
+        "File:Gfp-florida-daytona-beach-daytona-beach.jpg",
+        "File:Daytona Beach Oceanfront Park pano01.jpg",
+    ],
+    "waikiki-beach": [
+        "File:Waikiki Beach (2024)-L1004709.jpg",
+        "File:Waikiki surfers and sailboats at sunset.jpg",
+        "File:Waikiki Beach and Diamond Head at night.jpg",
+    ],
+    "hanauma-bay": [
+        "File:Hanauma Bay, Oahu, Hawaii, USA2.jpg",
+        "File:Hanauma Bay View.JPG",
+        "File:Hanauma Bay (8701274230).jpg",
+    ],
+    "lanikai-beach": [
+        "File:Lanikai Beach 09.jpg",
+        "File:Lanikai Beach 14.jpg",
+        "File:Lanikai Beach 22.jpg",
+    ],
+    "waimea-bay": [
+        "File:WaimeaBay.jpg",
+        "File:The Eddie Aikau Big Wave Invitational, Waimea Bay, Oahu, Hawaii.jpg",
+        "File:Waimea Bay Sunset.JPG",
+    ],
+    "kailua-beach-park": [
+        "File:Kailua Beach Park - Oahu - Hawaii.jpg",
+        "File:Kailua Beach lifeguard tower at sunset.jpg",
+        "File:Kailua Beach Sunset (9193268473).jpg",
+    ],
 }
 ALLOWED = re.compile(r"^(CC0|Public domain|PD.*|CC BY(-SA)? [0-9.]+.*)$", re.I)
 

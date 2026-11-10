@@ -6,10 +6,16 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('loads all ten beaches with their amenity flags', () async {
+  test('loads all beaches with their amenity flags', () async {
     final repo = await BeachRepository.load();
-    expect(repo.beaches, hasLength(10));
+    expect(repo.beaches, hasLength(20));
     expect(repo.bySlug('island-beach-state-park')!.shacksFood, isFalse);
+    // Every beach belongs to a known region, and slugs are unique.
+    for (final b in repo.beaches) {
+      expect(repo.regions.containsKey(b.region), isTrue, reason: b.slug);
+    }
+    expect(repo.beaches.map((b) => b.slug).toSet(), hasLength(20));
+    expect(repo.regionOf(repo.bySlug('hanauma-bay')!).state, 'Hawaiʻi');
   });
 
   test('search ignores accents, case and apostrophes', () async {
@@ -20,6 +26,11 @@ void main() {
     expect(repo.find('Asbury')!.slug, 'asbury-park');
     expect(repo.find('island beach')!.slug, 'island-beach-state-park');
     expect(repo.find('myrtle beach'), isNull);
+    expect(repo.find('waikiki')!.slug, 'waikiki-beach');
+    expect(repo.find('Hanauma')!.slug, 'hanauma-bay');
+    expect(repo.find('siesta key')!.slug, 'siesta-key-beach');
+    expect(repo.find('south beach')!.slug, 'south-beach');
+    expect(repo.find('daytona')!.slug, 'daytona-beach');
   });
 
   test('uses real monthly data and photos when a beach has them', () async {
@@ -41,7 +52,7 @@ void main() {
 }
 
 Map<String, dynamic> _asJson(Beach b) => {
-      'slug': b.slug, 'name': b.name, 'area': b.area, 'lat': b.lat, 'lon': b.lon, 'tag': b.tag, 'tags': b.tags,
+      'slug': b.slug, 'region': b.region, 'name': b.name, 'area': b.area, 'lat': b.lat, 'lon': b.lon, 'tag': b.tag, 'tags': b.tags,
       'wave': b.wave, 'waveNote': b.waveNote, 'lifeguards': b.lifeguards, 'lifeguardNote': b.lifeguardNote,
       'entry': b.entry, 'entryUnit': b.entryUnit, 'entryNote': b.entryNote, 'parking': b.parking, 'hours': b.hours,
       'description': b.description, 'features': b.features, 'safety': b.safety, 'color': b.color,

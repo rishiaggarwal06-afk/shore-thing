@@ -134,12 +134,12 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
     final touchDevice = defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.android;
 
     return Title(
-      title: 'Shore Thing · ${repo.region.name} beach finder',
+      title: 'Shore Thing · beach finder',
       color: Brand.ink,
       child: Scaffold(
         body: Column(
           children: [
-            DemoBanner(regionName: repo.region.name),
+            DemoBanner(beachCount: repo.beaches.length),
             const SiteHeader(),
             Expanded(
               child: Stack(
@@ -218,7 +218,8 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                     child: _Panel(
                       key: _panelKey,
                       phone: phone,
-                      regionName: repo.region.name,
+                      beachCount: repo.beaches.length,
+                  regionsLabel: repo.regionsLabel,
                       selected: _filter,
                       noMatches: _shown.isEmpty,
                       onFilter: _setFilter,
@@ -275,14 +276,16 @@ class _Panel extends StatelessWidget {
   const _Panel({
     super.key,
     required this.phone,
-    required this.regionName,
+    required this.beachCount,
+    required this.regionsLabel,
     required this.selected,
     required this.noMatches,
     required this.onFilter,
   });
 
   final bool phone;
-  final String regionName;
+  final int beachCount;
+  final String regionsLabel;
   final BeachFilter selected;
   final bool noMatches;
   final ValueChanged<BeachFilter> onFilter;
@@ -317,15 +320,15 @@ class _Panel extends StatelessWidget {
         SizedBox(height: phone ? 6 : 14),
         Text(
           phone
-              ? 'Ten $regionName favorites. Tap a sandcastle to dive in.'
-              : 'Ten $regionName favorites, from Sandy Hook to Cape May.\nTap a sandcastle to dive in.',
+              ? '$beachCount favorites across $regionsLabel. Tap a sandcastle to dive in.'
+              : '$beachCount favorites across $regionsLabel.\nTap a sandcastle to dive in.',
           style: TextStyle(fontSize: phone ? 14 : 17, height: 1.4),
         ),
         SizedBox(height: phone ? 10 : 18),
         const SearchBox(),
         if (!phone) ...[
           const SizedBox(height: 10),
-          const Text('Try Asbury Park, Island Beach or Cape May.', style: TextStyle(fontSize: 12)),
+          const Text('Try Asbury Park, Siesta Key or Waikīkī.', style: TextStyle(fontSize: 12)),
         ],
         SizedBox(height: phone ? 10 : 14),
         if (phone)
@@ -349,7 +352,7 @@ class _Panel extends StatelessWidget {
         if (noMatches) ...[
           const SizedBox(height: 10),
           Text(
-            'None of our ten list “${selected.label}” yet.',
+            'None of our $beachCount list “${selected.label}” yet.',
             style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
           ),
         ],

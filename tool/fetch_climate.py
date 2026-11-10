@@ -6,7 +6,8 @@ Uses Open-Meteo's free APIs (data licensed CC BY 4.0, attribution shown in the a
   - Marine API: daily max wave height and sea surface temperature
 
 Run from the project folder:   python3 tool/fetch_climate.py
-It makes about 2 requests per beach and rewrites the "monthly" field of each beach.
+It fills in beaches that don't have monthly data yet (about 2 requests each).
+To redo every beach:            python3 tool/fetch_climate.py --all
 """
 import json
 import statistics
@@ -59,7 +60,7 @@ def land(beach):
         "latitude": beach["lat"], "longitude": beach["lon"],
         "start_date": f"{START_YEAR}-01-01", "end_date": f"{END_YEAR}-12-31",
         "daily": "temperature_2m_max,precipitation_sum",
-        "temperature_unit": "fahrenheit", "precipitation_unit": "inch", "timezone": "America/New_York",
+        "temperature_unit": "fahrenheit", "precipitation_unit": "inch", "timezone": "auto",
     })["daily"]
     highs = by_month(data["time"], data["temperature_2m_max"])
     rain = by_month(data["time"], data["precipitation_sum"])
@@ -72,16 +73,23 @@ def land(beach):
     return air, rain_totals
 
 
+# Where to look for open ocean: a little offshore in each direction, nearest first.
+# (East works for the Jersey Shore, but Florida's Gulf beaches face west and some
+# Hawaiian beaches face north or south.)
+OFFSHORE = [(0, d) for d in (0.05, -0.05)] + [(d, 0) for d in (0.05, -0.05)] + \
+           [(0, d) for d in (0.1, -0.1)] + [(d, 0) for d in (0.1, -0.1)]
+
+
 def sea(beach):
     """Wave height and water temperature from the nearest ocean grid cell (a little offshore)."""
-    for offset in (0.05, 0.1, 0.2):
+    for dlat, dlon in OFFSHORE:
         for start in (START_YEAR, 2022):
             try:
                 data = get("https://marine-api.open-meteo.com/v1/marine", {
-                    "latitude": beach["lat"], "longitude": round(beach["lon"] + offset, 4),
+                    "latitude": round(beach["lat"] + dlat, 4), "longitude": round(beach["lon"] + dlon, 4),
                     "start_date": f"{start}-01-01", "end_date": f"{END_YEAR}-12-31",
                     "daily": "wave_height_max", "hourly": "sea_surface_temperature",
-                    "timezone": "America/New_York",
+                    "timezone": "auto",
                 })
             except ValueError:
                 continue  # that date range isn't available; try a shorter one
@@ -101,7 +109,10 @@ def wave_range(days_m):
 
 def main():
     doc = json.loads(DATA.read_text(encoding="utf-8"))
+    redo_all = "--all" in sys.argv
     for beach in doc["beaches"]:
+        if beach.get("monthly") and not redo_all:
+            continue
         print(beach["name"], file=sys.stderr)
         air, rain = land(beach)
         time.sleep(2)
@@ -123,6 +134,7 @@ def main():
             f"Averages of daily data: air and rain {START_YEAR}–{END_YEAR}, "
             f"waves and water {sea_from}–{END_YEAR}. Weather data by Open-Meteo.com (CC BY 4.0)."
         )
+        DATA.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     DATA.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Updated", DATA, file=sys.stderr)
 

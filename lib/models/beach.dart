@@ -5,6 +5,7 @@ import 'month_conditions.dart';
 class Beach {
   const Beach({
     required this.slug,
+    required this.region,
     required this.name,
     required this.area,
     required this.lat,
@@ -35,6 +36,9 @@ class Beach {
 
   /// URL-friendly name, used in web addresses like /beach/asbury-park.
   final String slug;
+
+  /// Region id, e.g. "jersey-shore", "florida", "hawaii" (see BeachRepository.regions).
+  final String region;
   final String name;
   final String area;
   final double lat;
@@ -76,6 +80,7 @@ class Beach {
 
   factory Beach.fromJson(Map<String, dynamic> j) => Beach(
         slug: j['slug'] as String,
+        region: j['region'] as String,
         name: j['name'] as String,
         area: j['area'] as String,
         lat: (j['lat'] as num).toDouble(),
@@ -105,30 +110,34 @@ class Beach {
       );
 }
 
-/// Facts shared by every beach in the region (shown on the stat cards).
+/// A region (Jersey Shore, Florida, Hawaiʻi): its names, plus typical temperatures
+/// shown on the stat cards for a beach that has no monthly data yet.
 class Region {
   const Region({
+    required this.id,
     required this.name,
+    required this.state,
     required this.airTemp,
     required this.airNote,
     required this.waterTemp,
     required this.waterNote,
-    required this.sourcesNote,
   });
 
-  final String name;
+  final String id;
+  final String name; // "Jersey Shore"
+  final String state; // "New Jersey"
   final String airTemp;
   final String airNote;
   final String waterTemp;
   final String waterNote;
-  final String sourcesNote;
 
-  factory Region.fromJson(Map<String, dynamic> j) => Region(
+  factory Region.fromJson(String id, Map<String, dynamic> j) => Region(
+        id: id,
         name: j['name'] as String,
+        state: j['state'] as String,
         airTemp: j['airTemp'] as String,
         airNote: j['airNote'] as String,
         waterTemp: j['waterTemp'] as String,
         waterNote: j['waterNote'] as String,
-        sourcesNote: j['sourcesNote'] as String,
       );
 }
