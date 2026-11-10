@@ -1469,6 +1469,12 @@
           "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(3).jpg"
         },
         {
+          "asset": "assets/images/beaches/siesta-key-beach-2.jpg",
+          "artist": "Fred Hsu on en.wikipedia",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2017_Sarasota_Enormity_of_Siesta_Beach_on_Siesta_Key_at_Sunset_03_FRD_9744.jpg"
+        },
+        {
           "asset": "assets/images/beaches/siesta-key-beach-3.jpg",
           "artist": "4net",
           "license": "CC BY 3.0",
@@ -1607,6 +1613,12 @@
           "artist": "TampaThings.com",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Clearwater-beach-florida-pier-60.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/clearwater-beach-3.jpg",
+          "artist": "Michel Rathwell from Cornwall, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(34733812204).jpg"
         }
       ]
     },
@@ -2020,6 +2032,12 @@
           "source": "https://commons.wikimedia.org/wiki/File:Driving_on_Daytona_Beach.jpg"
         },
         {
+          "asset": "assets/images/beaches/daytona-beach-2.jpg",
+          "artist": "Ebyabe",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Daytona_Beach_Oceanfront_Park01.jpg"
+        },
+        {
           "asset": "assets/images/beaches/daytona-beach-3.jpg",
           "artist": "Ebyabe",
           "license": "CC BY-SA 3.0",
@@ -2160,6 +2178,12 @@
           "artist": "Lianguanlun",
           "license": "CC BY 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Waikiki_surfers_and_sailboats_at_sunset.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/waikiki-beach-3.jpg",
+          "artist": "Vavavis",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Panoramic_of_Waikiki_Beach.jpg"
         }
       ]
     },
@@ -2576,6 +2600,12 @@
           "source": "https://commons.wikimedia.org/wiki/File:WaimeaBay.jpg"
         },
         {
+          "asset": "assets/images/beaches/waimea-bay-2.jpg",
+          "artist": "Stefan Ernst",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Waimea_Bay_Oahu_(24250337).jpeg"
+        },
+        {
           "asset": "assets/images/beaches/waimea-bay-3.jpg",
           "artist": "Jordan Robinson",
           "license": "CC BY-SA 4.0",
@@ -2715,6 +2745,12 @@
           "artist": "Floyd Manzano from Mililani, United States",
           "license": "CC BY 2.0",
           "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_Sunset_(9193268473).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/kailua-beach-park-3.jpg",
+          "artist": "Floyd Manzano from Mililani, United States",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_Sunset_Too_(9193276101).jpg"
         }
       ]
     }
