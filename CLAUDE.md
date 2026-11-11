@@ -37,7 +37,8 @@ An app + website for discovering beaches worldwide.
 - Make a second MapTiler key for the website, restricted to the site's address (Allowed HTTP origins).
 - MapTiler and Open-Meteo free plans are non-commercial: upgrade before adding ads or paid features.
 - Done: "Shore Thing" display name, iPhone-only (TARGETED_DEVICE_FAMILY = 1), privacy policy + support pages.
-- Remaining App Store steps: app icon (the user is designing it: 1024×1024 PNG, no transparency, square corners), $99 Apple Developer account, TestFlight, review.
+- App icon: a **placeholder** sandcastle icon is in place (`assets/images/brand/app-icon.svg` → `app-icon-1024.png`). The user is designing their own: run `python3 tool/make_icons.py path/to/logo.png` to regenerate every iOS/web/Android size from it (1024×1024 PNG, no transparency, square corners).
+- Remaining App Store steps: the user's final icon, $99 Apple Developer account, TestFlight, review.
 
 ## Website pages (GitHub Pages, `docs/` folder on main)
 - `docs/index.html`, `docs/privacy.html`, `docs/support.html`, shared `docs/style.css`. Public contact email: shorethingva26@gmail.com.
