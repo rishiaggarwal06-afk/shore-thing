@@ -10,6 +10,7 @@ import '../models/beach.dart';
 import '../models/beach_filter.dart';
 import '../services/beach_scope.dart';
 import '../services/map_tiles.dart';
+import '../widgets/basemap_layers.dart';
 import '../widgets/brand.dart';
 import '../widgets/castle_layer.dart';
 import '../widgets/search_box.dart';
@@ -172,12 +173,16 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                           }),
                         ),
                         children: [
-                          TileLayer(
-                            urlTemplate: tiles.urlTemplate,
-                            retinaMode: RetinaMode.isHighDensity(context), // sharper map on iPhone screens
-                            userAgentPackageName: 'com.shorething.beach_finder',
-                            tileBuilder: (context, tile, _) => ColorFiltered(colorFilter: tiles.tint, child: tile),
-                          ),
+                          // No MapTiler key (e.g. the shared web preview): draw the built-in map.
+                          if (tiles.builtIn)
+                            const BasemapLayers()
+                          else
+                            TileLayer(
+                              urlTemplate: tiles.urlTemplate,
+                              retinaMode: RetinaMode.isHighDensity(context), // sharper map on iPhone screens
+                              userAgentPackageName: 'com.shorething.beach_finder',
+                              tileBuilder: (context, tile, _) => ColorFiltered(colorFilter: tiles.tint, child: tile),
+                            ),
                           if (_ready)
                             CastleLayer(
                               beaches: repo.beaches,
@@ -219,7 +224,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                       key: _panelKey,
                       phone: phone,
                       beachCount: repo.beaches.length,
-                  regionsLabel: repo.regionsLabel,
+                      regionsLabel: repo.regionsLabel,
                       selected: _filter,
                       noMatches: _shown.isEmpty,
                       onFilter: _setFilter,

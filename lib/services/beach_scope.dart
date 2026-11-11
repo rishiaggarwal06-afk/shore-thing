@@ -9,8 +9,7 @@ class BeachScope extends InheritedWidget {
 
   final BeachRepository repo;
 
-  static BeachRepository of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<BeachScope>()!.repo;
+  static BeachRepository of(BuildContext context) => context.dependOnInheritedWidgetOfExactType<BeachScope>()!.repo;
 
   @override
   bool updateShouldNotify(BeachScope oldWidget) => repo != oldWidget.repo;

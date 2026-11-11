@@ -5,8 +5,8 @@ import '../config/secrets.dart';
 /// Where the map images ("tiles") come from, and how they're tinted to the brand.
 ///
 /// With a MapTiler key in lib/config/secrets.dart the app uses MapTiler's
-/// "basic-v2" map, which is allowed in published apps. Without one it falls
-/// back to free OpenStreetMap tiles, which are fine for development only.
+/// "basic-v2" map, which is allowed in published apps. Without one it draws a
+/// built-in map (Natural Earth, see Basemap): used by the shared web preview.
 class MapTiles {
   const MapTiles._({required this.urlTemplate, required this.tint, required this.credit, required this.usesMapTiler});
 
@@ -24,7 +24,10 @@ class MapTiles {
 
   static bool get hasMapTilerKey => Secrets.maptilerKey.isNotEmpty && !Secrets.maptilerKey.startsWith('YOUR_');
 
-  static MapTiles get current => hasMapTilerKey ? _mapTiler : _openStreetMap;
+  static MapTiles get current => hasMapTilerKey ? _mapTiler : _builtIn;
+
+  /// True when the app draws its own built-in map instead of downloading map images.
+  bool get builtIn => urlTemplate.isEmpty;
 
   static final _mapTiler = MapTiles._(
     urlTemplate: 'https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}{r}.png?key=${Secrets.maptilerKey}',
@@ -42,15 +45,11 @@ class MapTiles {
     usesMapTiler: true,
   );
 
-  static const _openStreetMap = MapTiles._(
-    urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-    tint: ColorFilter.matrix([
-      3.95, 0, -3.95, 0, 219, //
-      0.82, 0, -0.82, 0, 220,
-      -0.97, 0, 0.97, 0, 147,
-      0, 0, 0, 1, 0,
-    ]),
-    credit: '© OpenStreetMap contributors',
+  /// No key: draw the built-in Natural Earth map instead (no outside requests).
+  static const _builtIn = MapTiles._(
+    urlTemplate: '',
+    tint: ColorFilter.mode(Color(0x00000000), BlendMode.dst),
+    credit: 'Map data: Natural Earth',
     usesMapTiler: false,
   );
 }

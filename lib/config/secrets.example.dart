@@ -8,7 +8,7 @@
 // your site's address and watch usage.
 
 class Secrets {
-  /// MapTiler map key (cloud.maptiler.com → API keys). Leave as-is to fall back
-  /// to free OpenStreetMap tiles while developing.
+  /// MapTiler map key (cloud.maptiler.com → API keys). Leave as-is to use the
+  /// built-in Natural Earth map instead (no key, no outside requests).
   static const maptilerKey = 'YOUR_MAPTILER_KEY';
 }

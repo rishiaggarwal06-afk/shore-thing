@@ -65,6 +65,7 @@ flutter:
 
   assets:
     - assets/data/beaches.json
+    - assets/data/basemap.json
     - assets/images/beaches/
     - assets/images/brand/
 
