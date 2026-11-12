@@ -45,6 +45,14 @@ An app + website for discovering beaches worldwide.
 - URLs: https://rishiaggarwal06-afk.github.io/shore-thing/privacy.html and …/support.html (App Store Connect needs both). No custom domain: the user doesn't own one (shorething.com was tried by mistake and removed). If they buy one later, set it in GitHub → Settings → Pages and add the DNS records.
 - **Keep the privacy policy true**: it says the app collects nothing and only contacts MapTiler. If you add analytics, accounts, ads, location or any new network service, update `docs/privacy.html` (and its date) in the same change.
 
+## Where we left off (update this at the end of each session)
+- **Photo candidates pending**: `tool/fetch_photos.py` lists 3 candidate photos for the open spot at Clearwater, Daytona, Waikīkī and Waimea Bay (5 titles each; those beaches currently have 2 photos). The user runs the script on the Mac and pushes; then pull, make a contact sheet of the new files (PIL), keep the best real beach photo per beach (no food, portraits, buildings-only, crowds/stages, night shots), delete the rest, renumber files 1–3, update `beaches.json` `photos` and trim the script's lists to the kept titles.
+- **Apple Developer enrollment** failed on the website ("We are unable to process your request. An unknown error occurred."). Suggested: enroll in the Apple Developer app on iPhone, accept the agreement at developer.apple.com/account, or contact Apple (Program Enrollment). Not done yet.
+- Free Personal Team installs expire after 7 days: reinstall with `cd ~/dev/shore-thing && git pull && flutter run --release`, then Settings → General → VPN & Device Management → Trust.
+- Shareable web preview: https://claude.ai/artifact/Dgxzdhyz8ReCH1TB7xzfiv (public link; built without the MapTiler key, uses the built-in map). Old prototype link https://claude.ai/artifact/FSYdHJBacKwSAvF6zC1esM now points to it.
+- Ideas the user is considering: OpenStreetMap "things to do"/rentals per beach (no key; fills the Water sports rentals filter), Viator affiliate tour links later (needs privacy policy update), saved favorites.
+- Cloud sessions start without Flutter: `git clone --depth 1 -b stable https://github.com/flutter/flutter.git /opt/flutter` then use `/opt/flutter/bin/flutter`. The real MapTiler key is only on the user's Mac (cloud copies of `lib/config/secrets.dart` won't have it unless recreated from `secrets.example.dart`).
+
 ## Code layout
 ```
 lib/
