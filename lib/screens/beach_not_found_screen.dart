@@ -14,10 +14,8 @@ class BeachNotFoundScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final repo = BeachScope.of(context);
     return SitePage(children: [
-      const BackToMap(),
-      const SizedBox(height: 14),
       DetailHead(
-        eyebrow: 'NOT ONE OF OUR ${repo.beaches.length} (YET)',
+        eyebrow: 'Not one of our ${repo.beaches.length} beaches (yet)',
         title: query,
         text: 'We don’t have a guide for that beach yet. Here are the ${repo.beaches.length} favorites we do cover, '
             'across ${repo.regionsLabel}.',

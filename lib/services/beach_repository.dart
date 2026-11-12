@@ -44,6 +44,20 @@ class BeachRepository {
     return null;
   }
 
+  /// Search page: every word typed must appear in the beach's name, town or region.
+  /// An empty search returns every beach.
+  List<Beach> search(String query) {
+    final words = normalize(query).split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+    if (words.isEmpty) return beaches;
+    final hits = [
+      for (final b in beaches)
+        if (words.every(normalize('${b.name} ${b.area} ${regionOf(b).name} ${regionOf(b).state}').contains)) b,
+    ];
+    // Beaches whose own name matches come first ("cape may" → Cape May before Ocean City, Cape May County).
+    bool byName(Beach b) => words.every(normalize(b.name).contains);
+    return [...hits.where(byName), ...hits.where((b) => !byName(b))];
+  }
+
   /// Same matching as the prototype: an exact name first, then a partial match.
   /// Accents and the ʻokina are ignored, so "waikiki" would find "Waikīkī".
   Beach? find(String query) {

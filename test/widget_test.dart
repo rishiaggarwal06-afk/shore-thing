@@ -33,6 +33,16 @@ void main() {
     expect(repo.find('daytona')!.slug, 'daytona-beach');
   });
 
+  test('search page matches names, towns and regions', () async {
+    final repo = await BeachRepository.load();
+    expect(repo.search(''), hasLength(20));
+    expect(repo.search('waikiki').map((b) => b.slug), ['waikiki-beach']);
+    expect(repo.search('hawaii'), hasLength(5)); // region "Hawaiʻi"
+    expect(repo.search('FLORIDA'), hasLength(5));
+    expect(repo.search('cape may').first.slug, 'cape-may');
+    expect(repo.search('myrtle'), isEmpty);
+  });
+
   test('uses real monthly data and photos when a beach has them', () async {
     final repo = await BeachRepository.load();
     final json = {

@@ -13,12 +13,10 @@ import '../services/map_tiles.dart';
 import '../widgets/basemap_layers.dart';
 import '../widgets/brand.dart';
 import '../widgets/castle_layer.dart';
-import '../widgets/search_box.dart';
 import '../widgets/site_chrome.dart';
-import '../widgets/stamp_and_ticker.dart';
 import '../widgets/tide_transition.dart';
 
-/// Home: full-screen map of sandcastles with the floating search/filter panel on top.
+/// Home: the map of sandcastles, with the filter chips in a strip above it.
 class HomeMapScreen extends StatefulWidget {
   const HomeMapScreen({super.key});
 
@@ -28,8 +26,6 @@ class HomeMapScreen extends StatefulWidget {
 
 class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProviderStateMixin {
   final _map = MapController();
-  final _panelKey = GlobalKey();
-  final _mapKey = GlobalKey();
   late final _fly = AnimationController(vsync: this);
   BeachFilter _filter = BeachFilter.all;
   bool _touched = false; // hides the "drag to explore" hint after the first touch
@@ -63,29 +59,15 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
     super.dispose();
   }
 
-  /// Space (px) covered by the panel, which castles should stay clear of.
-  EdgeInsets _overlayPadding() {
-    final mapBox = _mapKey.currentContext?.findRenderObject() as RenderBox?;
-    final panelBox = _panelKey.currentContext?.findRenderObject() as RenderBox?;
-    if (mapBox == null || panelBox == null) return EdgeInsets.zero;
-    final size = mapBox.size;
-    final panel = panelBox.localToGlobal(Offset.zero, ancestor: mapBox) & panelBox.size;
-    var p = Brand.isPhone(context)
-        ? EdgeInsets.only(top: panel.bottom + 8)
-        : EdgeInsets.only(left: panel.right + 12, right: 64);
-    // Never squeeze the free area below a usable size.
-    if (size.width - p.horizontal < 200) p = p.copyWith(left: 0, right: 0);
-    if (size.height - p.vertical < 160) p = p.copyWith(top: 0, bottom: 0);
-    return p;
-  }
-
   /// Camera that fits [list] inside the free area, leaving room for castles and name tags.
   ({LatLng center, double zoom}) _fitTarget(List<Beach> list) {
     if (list.isEmpty) list = _beaches;
-    final p = _overlayPadding();
     final fit = CameraFit.coordinates(
       coordinates: [for (final b in list) LatLng(b.lat, b.lon)],
-      padding: EdgeInsets.fromLTRB(p.left + 80, p.top + 65, p.right + 80, p.bottom + 65),
+      // Room around the edges for castles and their name tags (and the zoom buttons).
+      padding: Brand.isPhone(context)
+          ? const EdgeInsets.fromLTRB(56, 50, 56, 60) // phones: tighter, so Hawaiʻi and Florida both fit
+          : const EdgeInsets.fromLTRB(70, 60, 100, 70), // right: clear of the zoom buttons
       maxZoom: list.length > 1 ? 16 : 13, // one castle gets a neighbourhood view
     ).fit(_map.camera);
     return (center: fit.center, zoom: fit.zoom);
@@ -93,7 +75,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
 
   void _flyTo(LatLng center, double zoom, {int ms = 650}) {
     final cam = _map.camera;
-    zoom = zoom.clamp(3.0, 18.0);
+    zoom = zoom.clamp(2.0, 18.0);
     if (MediaQuery.disableAnimationsOf(context)) {
       _map.move(center, zoom);
       return;
@@ -132,6 +114,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
     final phone = Brand.isPhone(context);
     final repo = BeachScope.of(context);
     final tiles = MapTiles.current;
+    final safeBottom = MediaQuery.paddingOf(context).bottom; // iPhone home-indicator strip
     final touchDevice = defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.android;
 
     return Title(
@@ -140,11 +123,19 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
       child: Scaffold(
         body: Column(
           children: [
-            DemoBanner(beachCount: repo.beaches.length),
-            const SiteHeader(),
+            const TopBar(leading: Logo(), trailing: SearchButton()),
+            _FilterBar(
+              phone: phone,
+              filters: [
+                for (final f in [BeachFilter.all, ...BeachFilter.activities, ...BeachFilter.amenities])
+                  // A chip that would show an empty map isn't worth a tap.
+                  if (repo.beaches.any(f.matches)) f,
+              ],
+              selected: _filter,
+              onFilter: _setFilter,
+            ),
             Expanded(
               child: Stack(
-                key: _mapKey,
                 children: [
                   Positioned.fill(
                     child: Listener(
@@ -160,13 +151,13 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                             coordinates: [for (final b in repo.beaches) LatLng(b.lat, b.lon)],
                             padding: const EdgeInsets.all(80),
                           ),
-                          minZoom: 3,
+                          minZoom: 2,
                           maxZoom: 18,
                           interactionOptions: const InteractionOptions(
                             flags: InteractiveFlag.all & ~InteractiveFlag.rotate,
                           ),
                           onMapReady: () => WidgetsBinding.instance.addPostFrameCallback((_) {
-                            // Re-fit once the panel has been measured, so it doesn't cover any castles.
+                            // Re-fit once the map knows its real size.
                             final t = _fitTarget(repo.beaches);
                             _map.move(t.center, t.zoom);
                             setState(() => _ready = true);
@@ -194,7 +185,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                           Align(
                             alignment: Alignment.bottomRight,
                             child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              padding: EdgeInsets.fromLTRB(8, 4, 8, 4 + safeBottom),
                               color: Brand.paper.withValues(alpha: .92),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
@@ -215,26 +206,25 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                       ),
                     ),
                   ),
-                  // Floating panel
-                  Positioned(
-                    left: phone ? 8 : 16,
-                    right: phone ? 8 : null,
-                    top: phone ? 8 : 16,
-                    child: _Panel(
-                      key: _panelKey,
-                      phone: phone,
-                      beachCount: repo.beaches.length,
-                      regionsLabel: repo.regionsLabel,
-                      selected: _filter,
-                      noMatches: _shown.isEmpty,
-                      onFilter: _setFilter,
+                  if (_shown.isEmpty)
+                    Positioned(
+                      top: 12,
+                      left: 12,
+                      right: 12,
+                      child: Center(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                          decoration: Brand.chunky(color: Brand.paper, shadow: 3),
+                          child: Text('None of our beaches are listed for “${_filter.label}” yet.',
+                              style: const TextStyle(fontWeight: FontWeight.w700)),
+                        ),
+                      ),
                     ),
-                  ),
                   // Zoom controls
                   Positioned(
                     right: 14,
                     top: phone ? null : 14,
-                    bottom: phone ? 34 : null,
+                    bottom: phone ? 40 + safeBottom : null,
                     child: Column(
                       children: [
                         _RoundButton('+', 'Zoom in', () => _flyTo(_map.camera.center, _map.camera.zoom + 1, ms: 350)),
@@ -248,7 +238,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                   // Hint
                   Positioned(
                     left: 14,
-                    bottom: 36, // above the map credits
+                    bottom: 36 + safeBottom, // above the map credits
                     child: IgnorePointer(
                       child: AnimatedOpacity(
                         opacity: _touched ? 0 : .9,
@@ -269,7 +259,6 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                 ],
               ),
             ),
-            const SloganTicker(),
           ],
         ),
       ),
@@ -277,104 +266,36 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
   }
 }
 
-class _Panel extends StatelessWidget {
-  const _Panel({
-    super.key,
-    required this.phone,
-    required this.beachCount,
-    required this.regionsLabel,
-    required this.selected,
-    required this.noMatches,
-    required this.onFilter,
-  });
+/// Strip of filter chips under the top bar. Scrolls sideways on phones, wraps on wide screens.
+class _FilterBar extends StatelessWidget {
+  const _FilterBar({required this.phone, required this.filters, required this.selected, required this.onFilter});
 
   final bool phone;
-  final int beachCount;
-  final String regionsLabel;
+  final List<BeachFilter> filters;
   final BeachFilter selected;
-  final bool noMatches;
   final ValueChanged<BeachFilter> onFilter;
 
   @override
   Widget build(BuildContext context) {
-    final chips = [
-      for (final f in [BeachFilter.all, ...BeachFilter.activities]) _chip(f),
-    ];
-    final amenityChips = [for (final f in BeachFilter.amenities) _chip(f)];
-
-    final content = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        if (!phone) ...[const Text('YOUR OUT-OF-OFFICE STARTS HERE', style: Brand.eyebrow), const SizedBox(height: 10)],
-        Semantics(
-          header: true,
-          child: Text.rich(
-            TextSpan(
-              children: [
-                TextSpan(text: phone ? 'Find your kind of ' : 'Find your\nkind of '),
-                const TextSpan(
-                  text: 'beach.',
-                  style: TextStyle(color: Brand.orange, fontStyle: FontStyle.italic),
-                ),
-              ],
+    final chips = [for (final f in filters) _chip(f)];
+    return Container(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        color: Brand.paper,
+        border: Border(bottom: BorderSide(color: Brand.ink, width: 3)),
+      ),
+      child: phone
+          ? SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              child: Row(children: [
+                for (final c in chips) Padding(padding: const EdgeInsets.only(right: 6), child: c),
+              ]),
+            )
+          : Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              child: Wrap(spacing: 6, runSpacing: 6, children: chips),
             ),
-            style: TextStyle(fontSize: phone ? 28 : 50, fontWeight: FontWeight.w900, height: 1.02, letterSpacing: -1),
-          ),
-        ),
-        SizedBox(height: phone ? 6 : 14),
-        Text(
-          phone
-              ? '$beachCount favorites across $regionsLabel. Tap a sandcastle to dive in.'
-              : '$beachCount favorites across $regionsLabel.\nTap a sandcastle to dive in.',
-          style: TextStyle(fontSize: phone ? 14 : 17, height: 1.4),
-        ),
-        SizedBox(height: phone ? 10 : 18),
-        const SearchBox(),
-        if (!phone) ...[
-          const SizedBox(height: 10),
-          const Text('Try Asbury Park, Siesta Key or Waikīkī.', style: TextStyle(fontSize: 12)),
-        ],
-        SizedBox(height: phone ? 10 : 14),
-        if (phone)
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            clipBehavior: Clip.none,
-            child: Row(
-              children: [
-                for (final c in [...chips, ...amenityChips])
-                  Padding(padding: const EdgeInsets.only(right: 6), child: c),
-              ],
-            ),
-          )
-        else ...[
-          Wrap(spacing: 6, runSpacing: 6, children: chips),
-          const SizedBox(height: 10),
-          const Text('AMENITIES', style: Brand.eyebrow),
-          const SizedBox(height: 6),
-          Wrap(spacing: 6, runSpacing: 6, children: amenityChips),
-        ],
-        if (noMatches) ...[
-          const SizedBox(height: 10),
-          Text(
-            'None of our $beachCount list “${selected.label}” yet.',
-            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
-          ),
-        ],
-      ],
-    );
-
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        Container(
-          width: phone ? null : 410,
-          padding: EdgeInsets.all(phone ? 14 : 22),
-          decoration: Brand.chunky(color: Brand.paper, shadow: 6),
-          child: content,
-        ),
-        if (!phone) const Positioned(right: -26, top: -20, child: GoodDayStamp()),
-      ],
     );
   }
 

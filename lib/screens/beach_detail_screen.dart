@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import '../models/beach.dart';
 import '../models/beach_photo.dart';
@@ -8,40 +7,32 @@ import '../services/climate_service.dart';
 import '../widgets/beach_scene.dart';
 import '../widgets/brand.dart';
 import '../widgets/month_strip.dart';
-import '../widgets/search_box.dart';
 import '../widgets/site_chrome.dart';
 
-/// Shared scrolling page frame: banner, header, centred content, footer.
+/// Shared page frame: the top bar (Map button + Search) stays put while the page scrolls.
 class SitePage extends StatelessWidget {
   const SitePage({super.key, required this.children});
   final List<Widget> children;
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: SingleChildScrollView(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-            DemoBanner(beachCount: BeachScope.of(context).beaches.length),
-            const SiteHeader(),
-            PageWidth(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: children),
+        body: Column(children: [
+          const TopBar(leading: HomeButton(), trailing: SearchButton()),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+                PageWidth(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: children),
+                ),
+                const SiteFooter(),
+              ]),
             ),
-            const SiteFooter(),
-          ]),
-        ),
+          ),
+        ]),
       );
 }
 
-class BackToMap extends StatelessWidget {
-  const BackToMap({super.key});
-
-  @override
-  Widget build(BuildContext context) => InkWell(
-        onTap: () => context.go('/'),
-        child: const UnderlinedText('← Back to the map', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
-      );
-}
-
-/// Eyebrow + big title + paragraph on the left, search on the right (stacked on phones).
+/// Small label + big title + paragraph at the top of a page.
 class DetailHead extends StatelessWidget {
   const DetailHead({super.key, required this.eyebrow, required this.title, required this.text});
   final String eyebrow, title, text;
@@ -49,9 +40,9 @@ class DetailHead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final phone = Brand.isPhone(context);
-    final words = Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(eyebrow.toUpperCase(), style: Brand.eyebrow),
-      const SizedBox(height: 8),
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(eyebrow, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+      const SizedBox(height: 6),
       Semantics(
         header: true,
         child: Text(title,
@@ -59,15 +50,9 @@ class DetailHead extends StatelessWidget {
       ),
       const SizedBox(height: 12),
       ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 640),
+        constraints: const BoxConstraints(maxWidth: 680),
         child: Text(text, style: const TextStyle(fontSize: 17, height: 1.45)),
       ),
-    ]);
-    if (phone) return Column(children: [words, const SizedBox(height: 20), const SearchBox()]);
-    return Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
-      Expanded(flex: 2, child: words),
-      const SizedBox(width: 28),
-      const Expanded(child: SearchBox()),
     ]);
   }
 }
@@ -88,8 +73,6 @@ class BeachDetailScreen extends StatelessWidget {
       title: '${b.name} · Shore Thing',
       color: Brand.ink,
       child: SitePage(children: [
-        const BackToMap(),
-        const SizedBox(height: 14),
         DetailHead(eyebrow: '${b.area} · ${region.state}', title: b.name, text: b.description),
         gap,
         _Gallery(b, phone: phone),
@@ -218,7 +201,7 @@ class _StatusLine extends StatelessWidget {
           border: Border.symmetric(horizontal: BorderSide(color: Brand.ink, width: 3)),
         ),
         child: Wrap(alignment: WrapAlignment.spaceBetween, runSpacing: 6, spacing: 16, children: [
-          Text('✳︎ $tag', style: Brand.eyebrow.copyWith(fontSize: 12)),
+          Text(tag, style: Brand.eyebrow.copyWith(fontSize: 12)),
           Text('TYPICAL CONDITIONS · NOT A LIVE FORECAST', style: Brand.eyebrow.copyWith(fontSize: 12)),
         ]),
       );
