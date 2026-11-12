@@ -23,10 +23,12 @@ class CastleLayer extends StatefulWidget {
     required this.visible,
     required this.onBeachTap,
     required this.onClusterTap,
+    this.selected,
   });
 
   final List<Beach> beaches;
   final Set<String> visible; // slugs that pass the current filter
+  final String? selected; // slug of the beach whose card is showing
   final void Function(Beach) onBeachTap;
 
   /// Called with the cluster's members and how far apart (px) they are on screen.
@@ -126,9 +128,10 @@ class _CastleLayerState extends State<CastleLayer> with SingleTickerProviderStat
       return SandcastleMarker(
         key: ValueKey(first.slug),
         label: label,
-        semanticLabel: '${first.name}, open details',
+        semanticLabel: '${first.name}, show its card',
         pop: pop,
         labelHidden: labelHidden,
+        selected: first.slug == widget.selected,
         onTap: () => widget.onBeachTap(first),
       );
     }
@@ -146,6 +149,7 @@ class _CastleLayerState extends State<CastleLayer> with SingleTickerProviderStat
       semanticLabel: '${members.length} beaches: ${members.map((b) => b.name).join(', ')}. Zoom in',
       pop: pop,
       labelHidden: labelHidden,
+      selected: members.any((b) => b.slug == widget.selected),
       onTap: () => widget.onClusterTap(members, spread),
     );
   }

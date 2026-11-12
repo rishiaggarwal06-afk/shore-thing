@@ -28,7 +28,7 @@ void main() {
     }
   });
 
-  for (final path in ['/search', '/beach/asbury-park', '/beach/myrtle-beach']) {
+  for (final path in ['/', '/search', '/beach/asbury-park', '/beach/myrtle-beach']) {
     testWidgets('$path fits on an iPhone at large text sizes', (tester) async {
       final repo = (await tester.runAsync(BeachRepository.load))!;
       tester.view.physicalSize = const Size(390 * 3, 844 * 3);

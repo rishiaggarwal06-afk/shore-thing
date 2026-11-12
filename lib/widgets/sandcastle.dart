@@ -120,6 +120,7 @@ class SandcastleMarker extends StatefulWidget {
     this.count,
     this.pop = 1,
     this.labelHidden = false,
+    this.selected = false,
   });
 
   final String label;
@@ -132,6 +133,9 @@ class SandcastleMarker extends StatefulWidget {
 
   /// Name tag hidden because it would overlap another castle (shown again on hover).
   final bool labelHidden;
+
+  /// The beach whose card is showing: castle stands raised with a yellow name tag.
+  final bool selected;
 
   static const castleSize = Size(46, 50);
   static const baseFromTop = 44.0; // the castle's base, measured from the top of the widget
@@ -163,7 +167,8 @@ class _SandcastleMarkerState extends State<SandcastleMarker> with SingleTickerPr
   @override
   Widget build(BuildContext context) {
     final pop = widget.pop;
-    final showLabel = !widget.labelHidden || _hover;
+    final showLabel = !widget.labelHidden || _hover || widget.selected;
+    final up = _hover || widget.selected;
     return Semantics(
       button: true,
       label: widget.semanticLabel,
@@ -181,11 +186,11 @@ class _SandcastleMarkerState extends State<SandcastleMarker> with SingleTickerPr
             child: Column(mainAxisSize: MainAxisSize.min, children: [
               Stack(clipBehavior: Clip.none, children: [
                 AnimatedSlide(
-                  offset: Offset(0, _hover ? -.06 : 0),
+                  offset: Offset(0, up ? -.06 : 0),
                   duration: const Duration(milliseconds: 300),
                   curve: const Cubic(.3, 1.7, .5, 1),
                   child: AnimatedScale(
-                    scale: _hover ? 1.12 : 1,
+                    scale: up ? 1.12 : 1,
                     alignment: const Alignment(0, .76),
                     duration: const Duration(milliseconds: 300),
                     curve: const Cubic(.3, 1.7, .5, 1),
@@ -232,7 +237,7 @@ class _SandcastleMarkerState extends State<SandcastleMarker> with SingleTickerPr
                   margin: const EdgeInsets.only(top: 2),
                   padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 1),
                   decoration: BoxDecoration(
-                    color: Brand.paper,
+                    color: widget.selected ? Brand.yellow : Brand.paper,
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(color: Brand.ink, width: 1.5),
                     boxShadow: const [BoxShadow(color: Brand.ink, offset: Offset(0, 2))],
