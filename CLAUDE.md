@@ -40,9 +40,9 @@ An app + website for discovering beaches worldwide.
 - App icon: a **placeholder** sandcastle icon is in place (`assets/images/brand/app-icon.svg` → `app-icon-1024.png`). The user is designing their own: run `python3 tool/make_icons.py path/to/logo.png` to regenerate every iOS/web/Android size from it (1024×1024 PNG, no transparency, square corners).
 - Remaining App Store steps: the user's final icon, $99 Apple Developer account, TestFlight, review.
 
-## Website pages (GitHub Pages, `docs/` folder on main)
+## Website pages (GitHub Pages, `docs/` folder on main) — LIVE since Nov 2026
 - `docs/index.html`, `docs/privacy.html`, `docs/support.html`, shared `docs/style.css`. Public contact email: shorethingva26@gmail.com.
-- URLs: https://rishiaggarwal06-afk.github.io/shore-thing/privacy.html and …/support.html (App Store Connect needs both).
+- URLs: https://rishiaggarwal06-afk.github.io/shore-thing/privacy.html and …/support.html (App Store Connect needs both). No custom domain: the user doesn't own one (shorething.com was tried by mistake and removed). If they buy one later, set it in GitHub → Settings → Pages and add the DNS records.
 - **Keep the privacy policy true**: it says the app collects nothing and only contacts MapTiler. If you add analytics, accounts, ads, location or any new network service, update `docs/privacy.html` (and its date) in the same change.
 
 ## Code layout
