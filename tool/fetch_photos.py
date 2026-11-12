@@ -93,8 +93,6 @@ PHOTOS = {
         "File:Waikiki Beach (2024)-L1004709.jpg",
         "File:Waikiki surfers and sailboats at sunset.jpg",
         "File:The Royal Hawaiian Hotel, Waikiki.jpg",
-        "File:Sunset next to Waikiki Beach, Oahu, Hawai, USA1.jpg",
-        "File:Outrigger Waikiki Beach Resort.jpg",
     ],
     "hanauma-bay": [
         "File:Hanauma Bay, Oahu, Hawaii, USA2.jpg",
@@ -109,9 +107,7 @@ PHOTOS = {
     "waimea-bay": [
         "File:WaimeaBay.jpg",
         "File:Waimea Bay Sunset.JPG",
-        "File:Waimea Bay, Oahu, Hawaii - panoramio.jpg",
         "File:Waimea Bay Oahu Hawaii Photo Don Ramey Logan.jpg",
-        "File:Sea turtle - North Shore, Oahu (2008) 02.JPG",
     ],
     "kailua-beach-park": [
         "File:Kailua Beach lifeguard tower at sunset.jpg",

@@ -2178,6 +2178,12 @@
           "artist": "Lianguanlun",
           "license": "CC BY 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Waikiki_surfers_and_sailboats_at_sunset.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/waikiki-beach-3.jpg",
+          "artist": "Seagerthomas",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_Hotel,_Waikiki.jpg"
         }
       ]
     },
@@ -2598,6 +2604,12 @@
           "artist": "Jordan Robinson",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Waimea_Bay_Sunset.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/waimea-bay-3.jpg",
+          "artist": "Don Ramey Logan",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Waimea_Bay_Oahu_Hawaii_Photo_Don_Ramey_Logan.jpg"
         }
       ]
     },
