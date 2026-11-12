@@ -1613,6 +1613,12 @@
           "artist": "TampaThings.com",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Clearwater-beach-florida-pier-60.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/clearwater-beach-3.jpg",
+          "artist": "TampaThings.com",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Clearwater-beach-florida-oceanview.jpg"
         }
       ]
     },
@@ -2030,6 +2036,12 @@
           "artist": "Ebyabe",
           "license": "CC BY-SA 3.0",
           "source": "https://commons.wikimedia.org/wiki/File:Daytona_Beach_Oceanfront_Park_pano01.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/daytona-beach-3.jpg",
+          "artist": "Pat Williams from Commerce Twp, MI, USA",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Daytona_Beach,_Florida_(4783857222).jpg"
         }
       ]
     },

@@ -73,8 +73,6 @@ PHOTOS = {
         "File:Clearwater Beach, Florida (35188097760).jpg",
         "File:Clearwater-beach-florida-pier-60.jpg",
         "File:Clearwater-beach-florida-oceanview.jpg",
-        "File:Clearwater Beach, Florida (35188048330).jpg",
-        "File:Clearwater Beach, Florida (35187755240).jpg",
     ],
     "south-beach": [
         "File:Lifeguard stand, Miami Beach.jpg",
@@ -90,8 +88,6 @@ PHOTOS = {
         "File:Driving on Daytona Beach.jpg",
         "File:Daytona Beach Oceanfront Park pano01.jpg",
         "File:Daytona Beach, Florida (4783857222).jpg",
-        "File:DaytonaBeach-Pier.jpg",
-        "File:Gfp-florida-daytona-beach-beach-shoreline.jpg",
     ],
     "waikiki-beach": [
         "File:Waikiki Beach (2024)-L1004709.jpg",
