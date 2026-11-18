@@ -32,7 +32,7 @@ class BeachCard extends StatelessWidget {
     final b = beach;
     return Semantics(
       button: true,
-      label: '${b.name}, ${b.area}. ${b.tags.join(', ')}. $_entry, $_guards. Open beach page',
+      label: '${b.name}, ${b.area}. ${b.tags.join(', ')}. $_entry, $_guards. Show preview',
       excludeSemantics: true,
       child: GestureDetector(
         onTap: onTap,

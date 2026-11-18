@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:beach_finder/main.dart';
 import 'package:beach_finder/services/beach_repository.dart';
+import 'package:beach_finder/widgets/beach_card.dart';
+import 'package:beach_finder/widgets/beach_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -47,4 +49,31 @@ void main() {
       tester.platformDispatcher.clearTextScaleFactorTestValue();
     });
   }
+
+  testWidgets('tapping a map card opens the mini preview, and Back closes it', (tester) async {
+    final repo = (await tester.runAsync(BeachRepository.load))!;
+    tester.view.physicalSize = const Size(390 * 3, 844 * 3);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    for (final scale in [1.0, 2.0]) {
+      tester.platformDispatcher.textScaleFactorTestValue = scale;
+      await tester.pumpWidget(ShoreThingApp(repo: repo));
+      for (var i = 0; i < 10; i++) {
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+      expect(find.byType(BeachCard), findsWidgets);
+      await tester.tap(find.byType(BeachCard).hitTestable().first);
+      for (var i = 0; i < 10; i++) {
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+      expect(find.byType(BeachPreview), findsOneWidget);
+      expect(tester.takeException(), isNull, reason: 'preview at text scale $scale');
+      await tester.tap(find.text('Back'));
+      for (var i = 0; i < 5; i++) {
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+      expect(find.byType(BeachPreview), findsNothing);
+    }
+    tester.platformDispatcher.clearTextScaleFactorTestValue();
+  });
 }
