@@ -2788,7 +2788,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 64,
+          "waterF": 58,
+          "waveFt": "2–4",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Feb",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "2–4",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Mar",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 59,
+          "waveFt": "2–4",
+          "rainIn": 0.7
+        },
+        {
+          "month": "May",
+          "airF": 69,
+          "waterF": 63,
+          "waveFt": "2–3",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Jun",
+          "airF": 74,
+          "waterF": 66,
+          "waveFt": "2–3",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Jul",
+          "airF": 78,
+          "waterF": 69,
+          "waveFt": "2–3",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 80,
+          "waterF": 71,
+          "waveFt": "2–3",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 70,
+          "waveFt": "2–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Oct",
+          "airF": 77,
+          "waterF": 66,
+          "waveFt": "2–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Nov",
+          "airF": 71,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Dec",
+          "airF": 65,
+          "waterF": 61,
+          "waveFt": "2–4",
+          "rainIn": 3.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "la-jolla-cove",
@@ -2823,7 +2910,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 64,
+          "waterF": 59,
+          "waveFt": "3–5",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Feb",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Mar",
+          "airF": 65,
+          "waterF": 59,
+          "waveFt": "3–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Apr",
+          "airF": 68,
+          "waterF": 60,
+          "waveFt": "3–4",
+          "rainIn": 1.0
+        },
+        {
+          "month": "May",
+          "airF": 69,
+          "waterF": 64,
+          "waveFt": "3–4",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Jun",
+          "airF": 73,
+          "waterF": 67,
+          "waveFt": "3–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Jul",
+          "airF": 77,
+          "waterF": 70,
+          "waveFt": "3–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Aug",
+          "airF": 79,
+          "waterF": 71,
+          "waveFt": "3–4",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Sep",
+          "airF": 78,
+          "waterF": 70,
+          "waveFt": "3–4",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Oct",
+          "airF": 76,
+          "waterF": 66,
+          "waveFt": "3–4",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Nov",
+          "airF": 71,
+          "waterF": 63,
+          "waveFt": "3–4",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Dec",
+          "airF": 66,
+          "waterF": 61,
+          "waveFt": "2–5",
+          "rainIn": 2.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "huntington-beach",
@@ -2859,7 +3033,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 64,
+          "waterF": 59,
+          "waveFt": "3–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Feb",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Mar",
+          "airF": 64,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 59,
+          "waveFt": "3–4",
+          "rainIn": 0.6
+        },
+        {
+          "month": "May",
+          "airF": 69,
+          "waterF": 63,
+          "waveFt": "3–4",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Jun",
+          "airF": 74,
+          "waterF": 66,
+          "waveFt": "3–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Jul",
+          "airF": 77,
+          "waterF": 69,
+          "waveFt": "3",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 79,
+          "waterF": 71,
+          "waveFt": "3",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 70,
+          "waveFt": "3–4",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Oct",
+          "airF": 76,
+          "waterF": 67,
+          "waveFt": "3–4",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Nov",
+          "airF": 71,
+          "waterF": 63,
+          "waveFt": "3–4",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Dec",
+          "airF": 65,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.7
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "grace-bay",
@@ -2894,7 +3155,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 78,
+          "waterF": 78,
+          "waveFt": "3–4",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Feb",
+          "airF": 78,
+          "waterF": 78,
+          "waveFt": "3–4",
+          "rainIn": 1.1
+        },
+        {
+          "month": "Mar",
+          "airF": 78,
+          "waterF": 79,
+          "waveFt": "3–4",
+          "rainIn": 1.2
+        },
+        {
+          "month": "Apr",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "3–4",
+          "rainIn": 1.5
+        },
+        {
+          "month": "May",
+          "airF": 81,
+          "waterF": 83,
+          "waveFt": "2–3",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Jun",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "2–3",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Aug",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "2–4",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Sep",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Nov",
+          "airF": 82,
+          "waterF": 82,
+          "waveFt": "2–4",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Dec",
+          "airF": 80,
+          "waterF": 80,
+          "waveFt": "3–4",
+          "rainIn": 1.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "seven-mile-beach",
@@ -2930,7 +3278,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": true,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Feb",
+          "airF": 82,
+          "waterF": 81,
+          "waveFt": "3–5",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Mar",
+          "airF": 83,
+          "waterF": 81,
+          "waveFt": "3–4",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Apr",
+          "airF": 84,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 2.1
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 85,
+          "waveFt": "3–5",
+          "rainIn": 5.8
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 86,
+          "waveFt": "3–4",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Sep",
+          "airF": 88,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Oct",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "2–4",
+          "rainIn": 6.0
+        },
+        {
+          "month": "Nov",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "3–5",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Dec",
+          "airF": 82,
+          "waterF": 83,
+          "waveFt": "4–6",
+          "rainIn": 2.0
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "eagle-beach",
@@ -2965,7 +3400,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "3–5",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Feb",
+          "airF": 83,
+          "waterF": 79,
+          "waveFt": "4–5",
+          "rainIn": 1.2
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 1.1
+        },
+        {
+          "month": "Apr",
+          "airF": 85,
+          "waterF": 80,
+          "waveFt": "3–4",
+          "rainIn": 0.7
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 0.9
+        },
+        {
+          "month": "Jun",
+          "airF": 87,
+          "waterF": 81,
+          "waveFt": "4–5",
+          "rainIn": 1.1
+        },
+        {
+          "month": "Jul",
+          "airF": 87,
+          "waterF": 81,
+          "waveFt": "4–5",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 83,
+          "waveFt": "3–4",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Sep",
+          "airF": 89,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Oct",
+          "airF": 88,
+          "waterF": 86,
+          "waveFt": "2–4",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Nov",
+          "airF": 85,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Dec",
+          "airF": 84,
+          "waterF": 82,
+          "waveFt": "4",
+          "rainIn": 2.3
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "tulum-beach",
@@ -3000,7 +3522,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "3–5",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Feb",
+          "airF": 82,
+          "waterF": 80,
+          "waveFt": "3–5",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Mar",
+          "airF": 83,
+          "waterF": 81,
+          "waveFt": "3–5",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Apr",
+          "airF": 85,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 1.8
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "3–5",
+          "rainIn": 9.8
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 86,
+          "waveFt": "3–4",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 6.6
+        },
+        {
+          "month": "Sep",
+          "airF": 87,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 6.8
+        },
+        {
+          "month": "Oct",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "2–4",
+          "rainIn": 7.7
+        },
+        {
+          "month": "Nov",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Dec",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 3.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "bavaro-beach",
@@ -3034,7 +3643,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "5–7",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Feb",
+          "airF": 81,
+          "waterF": 80,
+          "waveFt": "6–7",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Mar",
+          "airF": 81,
+          "waterF": 80,
+          "waveFt": "5–7",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Apr",
+          "airF": 83,
+          "waterF": 81,
+          "waveFt": "5–7",
+          "rainIn": 4.2
+        },
+        {
+          "month": "May",
+          "airF": 84,
+          "waterF": 82,
+          "waveFt": "4–5",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Jun",
+          "airF": 85,
+          "waterF": 83,
+          "waveFt": "4–5",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Jul",
+          "airF": 85,
+          "waterF": 84,
+          "waveFt": "5–6",
+          "rainIn": 5.4
+        },
+        {
+          "month": "Aug",
+          "airF": 86,
+          "waterF": 85,
+          "waveFt": "4–6",
+          "rainIn": 5.8
+        },
+        {
+          "month": "Sep",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "4–6",
+          "rainIn": 6.5
+        },
+        {
+          "month": "Oct",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "4–6",
+          "rainIn": 6.2
+        },
+        {
+          "month": "Nov",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "5–7",
+          "rainIn": 7.3
+        },
+        {
+          "month": "Dec",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "5–8",
+          "rainIn": 3.4
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "copacabana",
@@ -3069,7 +3765,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 86,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 6.1
+        },
+        {
+          "month": "Feb",
+          "airF": 86,
+          "waterF": 82,
+          "waveFt": "3–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Apr",
+          "airF": 81,
+          "waterF": 77,
+          "waveFt": "4–6",
+          "rainIn": 3.4
+        },
+        {
+          "month": "May",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Jun",
+          "airF": 77,
+          "waterF": 73,
+          "waveFt": "3–6",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Jul",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Aug",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "4–7",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 73,
+          "waveFt": "4–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Oct",
+          "airF": 79,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Nov",
+          "airF": 80,
+          "waterF": 74,
+          "waveFt": "4–5",
+          "rainIn": 5.1
+        },
+        {
+          "month": "Dec",
+          "airF": 83,
+          "waterF": 76,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "ipanema",
@@ -3104,7 +3887,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 86,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 6.1
+        },
+        {
+          "month": "Feb",
+          "airF": 86,
+          "waterF": 82,
+          "waveFt": "3–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Apr",
+          "airF": 81,
+          "waterF": 77,
+          "waveFt": "4–6",
+          "rainIn": 3.4
+        },
+        {
+          "month": "May",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Jun",
+          "airF": 77,
+          "waterF": 73,
+          "waveFt": "3–6",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Jul",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Aug",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "4–7",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 73,
+          "waveFt": "4–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Oct",
+          "airF": 79,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Nov",
+          "airF": 80,
+          "waterF": 74,
+          "waveFt": "4–5",
+          "rainIn": 5.1
+        },
+        {
+          "month": "Dec",
+          "airF": 83,
+          "waterF": 76,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "baia-do-sancho",
@@ -3138,7 +4008,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 82,
+          "waterF": 83,
+          "waveFt": "5–6",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Feb",
+          "airF": 82,
+          "waterF": 83,
+          "waveFt": "5–6",
+          "rainIn": 7.1
+        },
+        {
+          "month": "Mar",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "5–6",
+          "rainIn": 11.1
+        },
+        {
+          "month": "Apr",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "5–7",
+          "rainIn": 11.6
+        },
+        {
+          "month": "May",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "6–7",
+          "rainIn": 7.7
+        },
+        {
+          "month": "Jun",
+          "airF": 82,
+          "waterF": 83,
+          "waveFt": "6–8",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Jul",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "6–8",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Aug",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "7–8",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Sep",
+          "airF": 80,
+          "waterF": 80,
+          "waveFt": "6–8",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Oct",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "6–7",
+          "rainIn": 0.8
+        },
+        {
+          "month": "Nov",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "6–7",
+          "rainIn": 0.7
+        },
+        {
+          "month": "Dec",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "5–7",
+          "rainIn": 1.8
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "praia-da-marinha",
@@ -3173,7 +4130,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 61,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 63,
+          "waterF": 61,
+          "waveFt": "2–3",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Mar",
+          "airF": 65,
+          "waterF": 60,
+          "waveFt": "2–4",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 1.8
+        },
+        {
+          "month": "May",
+          "airF": 76,
+          "waterF": 61,
+          "waveFt": "1–2",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 64,
+          "waveFt": "2",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 64,
+          "waveFt": "1–2",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 89,
+          "waterF": 64,
+          "waveFt": "1–2",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Sep",
+          "airF": 82,
+          "waterF": 63,
+          "waveFt": "1–2",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Oct",
+          "airF": 75,
+          "waterF": 65,
+          "waveFt": "1–3",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Nov",
+          "airF": 67,
+          "waterF": 64,
+          "waveFt": "1–3",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Dec",
+          "airF": 63,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "praia-do-camilo",
@@ -3208,7 +4252,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 61,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 63,
+          "waterF": 61,
+          "waveFt": "2–4",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Mar",
+          "airF": 64,
+          "waterF": 60,
+          "waveFt": "2–4",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Apr",
+          "airF": 68,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 1.9
+        },
+        {
+          "month": "May",
+          "airF": 74,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Jun",
+          "airF": 78,
+          "waterF": 64,
+          "waveFt": "2–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Jul",
+          "airF": 83,
+          "waterF": 63,
+          "waveFt": "2",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 85,
+          "waterF": 63,
+          "waveFt": "2",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Sep",
+          "airF": 80,
+          "waterF": 63,
+          "waveFt": "2",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Oct",
+          "airF": 75,
+          "waterF": 65,
+          "waveFt": "2–3",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Nov",
+          "airF": 67,
+          "waterF": 64,
+          "waveFt": "2–3",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Dec",
+          "airF": 63,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "la-concha",
@@ -3243,7 +4374,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 54,
+          "waterF": 57,
+          "waveFt": "3–8",
+          "rainIn": 8.1
+        },
+        {
+          "month": "Feb",
+          "airF": 58,
+          "waterF": 56,
+          "waveFt": "4–8",
+          "rainIn": 5.9
+        },
+        {
+          "month": "Mar",
+          "airF": 60,
+          "waterF": 56,
+          "waveFt": "3–7",
+          "rainIn": 6.1
+        },
+        {
+          "month": "Apr",
+          "airF": 63,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 4.8
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Jun",
+          "airF": 72,
+          "waterF": 69,
+          "waveFt": "2–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Jul",
+          "airF": 75,
+          "waterF": 73,
+          "waveFt": "2–4",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Aug",
+          "airF": 77,
+          "waterF": 74,
+          "waveFt": "2–5",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Sep",
+          "airF": 74,
+          "waterF": 72,
+          "waveFt": "3–6",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Oct",
+          "airF": 70,
+          "waterF": 67,
+          "waveFt": "3–6",
+          "rainIn": 5.4
+        },
+        {
+          "month": "Nov",
+          "airF": 61,
+          "waterF": 63,
+          "waveFt": "4–8",
+          "rainIn": 9.0
+        },
+        {
+          "month": "Dec",
+          "airF": 57,
+          "waterF": 59,
+          "waveFt": "4–8",
+          "rainIn": 7.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "navagio",
@@ -3277,7 +4495,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 57,
+          "waterF": 63,
+          "waveFt": "3–6",
+          "rainIn": 4.9
+        },
+        {
+          "month": "Feb",
+          "airF": 59,
+          "waterF": 62,
+          "waveFt": "3–6",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Mar",
+          "airF": 61,
+          "waterF": 62,
+          "waveFt": "3–6",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Apr",
+          "airF": 67,
+          "waterF": 63,
+          "waveFt": "2–5",
+          "rainIn": 1.2
+        },
+        {
+          "month": "May",
+          "airF": 74,
+          "waterF": 67,
+          "waveFt": "2–4",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Jun",
+          "airF": 83,
+          "waterF": 74,
+          "waveFt": "1–2",
+          "rainIn": 0.7
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 78,
+          "waveFt": "2–4",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 80,
+          "waveFt": "2–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Sep",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "2–4",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Oct",
+          "airF": 74,
+          "waterF": 74,
+          "waveFt": "2–4",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Nov",
+          "airF": 67,
+          "waterF": 71,
+          "waveFt": "3–6",
+          "rainIn": 6.4
+        },
+        {
+          "month": "Dec",
+          "airF": 60,
+          "waterF": 66,
+          "waveFt": "3–6",
+          "rainIn": 5.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "elafonissi",
@@ -3312,7 +4617,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 58,
+          "waterF": 64,
+          "waveFt": "3–7",
+          "rainIn": 5.5
+        },
+        {
+          "month": "Feb",
+          "airF": 59,
+          "waterF": 62,
+          "waveFt": "3–7",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Mar",
+          "airF": 62,
+          "waterF": 63,
+          "waveFt": "4–7",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 64,
+          "waveFt": "3–6",
+          "rainIn": 1.5
+        },
+        {
+          "month": "May",
+          "airF": 77,
+          "waterF": 67,
+          "waveFt": "2–4",
+          "rainIn": 0.8
+        },
+        {
+          "month": "Jun",
+          "airF": 85,
+          "waterF": 74,
+          "waveFt": "2–3",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Jul",
+          "airF": 90,
+          "waterF": 78,
+          "waveFt": "2–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Aug",
+          "airF": 89,
+          "waterF": 80,
+          "waveFt": "2–4",
+          "rainIn": 0.2
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "2–4",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Oct",
+          "airF": 76,
+          "waterF": 75,
+          "waveFt": "2–5",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Nov",
+          "airF": 69,
+          "waterF": 71,
+          "waveFt": "3–6",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Dec",
+          "airF": 62,
+          "waterF": 67,
+          "waveFt": "3–7",
+          "rainIn": 5.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "myrtos",
@@ -3346,7 +4738,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 57,
+          "waterF": 63,
+          "waveFt": "2–4",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Feb",
+          "airF": 58,
+          "waterF": 61,
+          "waveFt": "2–3",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Mar",
+          "airF": 61,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Apr",
+          "airF": 67,
+          "waterF": 63,
+          "waveFt": "1–3",
+          "rainIn": 1.4
+        },
+        {
+          "month": "May",
+          "airF": 73,
+          "waterF": 67,
+          "waveFt": "1–2",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Jun",
+          "airF": 83,
+          "waterF": 75,
+          "waveFt": "1–2",
+          "rainIn": 0.9
+        },
+        {
+          "month": "Jul",
+          "airF": 87,
+          "waterF": 80,
+          "waveFt": "1–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 80,
+          "waveFt": "1–2",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Sep",
+          "airF": 81,
+          "waterF": 79,
+          "waveFt": "1–3",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Oct",
+          "airF": 74,
+          "waterF": 74,
+          "waveFt": "1–3",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Nov",
+          "airF": 67,
+          "waterF": 71,
+          "waveFt": "2–4",
+          "rainIn": 6.6
+        },
+        {
+          "month": "Dec",
+          "airF": 60,
+          "waterF": 66,
+          "waveFt": "2–4",
+          "rainIn": 5.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "spiaggia-dei-conigli",
@@ -3381,7 +4860,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 60,
+          "waterF": 63,
+          "waveFt": "3–6",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 60,
+          "waterF": 61,
+          "waveFt": "3–6",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Mar",
+          "airF": 61,
+          "waterF": 61,
+          "waveFt": "4–6",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Apr",
+          "airF": 63,
+          "waterF": 63,
+          "waveFt": "3–7",
+          "rainIn": 0.6
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 66,
+          "waveFt": "3–5",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Jun",
+          "airF": 74,
+          "waterF": 74,
+          "waveFt": "1–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Jul",
+          "airF": 80,
+          "waterF": 80,
+          "waveFt": "1–3",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "1–3",
+          "rainIn": 0.2
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 81,
+          "waveFt": "2–4",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Oct",
+          "airF": 75,
+          "waterF": 77,
+          "waveFt": "2–5",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Nov",
+          "airF": 70,
+          "waterF": 73,
+          "waveFt": "3–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Dec",
+          "airF": 64,
+          "waterF": 67,
+          "waveFt": "3–7",
+          "rainIn": 2.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "maya-bay",
@@ -3415,7 +4981,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "1–2",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Feb",
+          "airF": 85,
+          "waterF": 84,
+          "waveFt": "1–2",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Mar",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Apr",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 5.3
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 88,
+          "waveFt": "1–3",
+          "rainIn": 9.6
+        },
+        {
+          "month": "Jun",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 7.8
+        },
+        {
+          "month": "Jul",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 7.5
+        },
+        {
+          "month": "Aug",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 8.1
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "2–4",
+          "rainIn": 9.9
+        },
+        {
+          "month": "Oct",
+          "airF": 83,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 11.3
+        },
+        {
+          "month": "Nov",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "1–2",
+          "rainIn": 10.1
+        },
+        {
+          "month": "Dec",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "1–2",
+          "rainIn": 4.9
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "railay-west",
@@ -3450,7 +5103,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 87,
+          "waterF": 84,
+          "waveFt": "1",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Feb",
+          "airF": 90,
+          "waterF": 85,
+          "waveFt": "1",
+          "rainIn": 2.0
+        },
+        {
+          "month": "Mar",
+          "airF": 91,
+          "waterF": 87,
+          "waveFt": "1",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Apr",
+          "airF": 89,
+          "waterF": 89,
+          "waveFt": "1",
+          "rainIn": 6.8
+        },
+        {
+          "month": "May",
+          "airF": 87,
+          "waterF": 89,
+          "waveFt": "1",
+          "rainIn": 12.3
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 8.9
+        },
+        {
+          "month": "Jul",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 9.2
+        },
+        {
+          "month": "Aug",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 9.7
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 11.6
+        },
+        {
+          "month": "Oct",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "1",
+          "rainIn": 11.8
+        },
+        {
+          "month": "Nov",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "1",
+          "rainIn": 10.6
+        },
+        {
+          "month": "Dec",
+          "airF": 86,
+          "waterF": 85,
+          "waveFt": "1",
+          "rainIn": 6.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "kuta-beach",
@@ -3484,7 +5224,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": false,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "4–5",
+          "rainIn": 12.1
+        },
+        {
+          "month": "Feb",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "4–5",
+          "rainIn": 12.4
+        },
+        {
+          "month": "Mar",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "4–5",
+          "rainIn": 8.7
+        },
+        {
+          "month": "Apr",
+          "airF": 85,
+          "waterF": 85,
+          "waveFt": "4–5",
+          "rainIn": 5.5
+        },
+        {
+          "month": "May",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "4–5",
+          "rainIn": 4.9
+        },
+        {
+          "month": "Jun",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "4–6",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Jul",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "5–6",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Aug",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "5–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Sep",
+          "airF": 82,
+          "waterF": 82,
+          "waveFt": "4–6",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "4–5",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Nov",
+          "airF": 85,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 8.4
+        },
+        {
+          "month": "Dec",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "4–5",
+          "rainIn": 10.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "white-beach-boracay",
@@ -3518,7 +5345,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "3–4",
+          "rainIn": 9.6
+        },
+        {
+          "month": "Feb",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "2–4",
+          "rainIn": 6.7
+        },
+        {
+          "month": "Mar",
+          "airF": 83,
+          "waterF": 82,
+          "waveFt": "2–3",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Apr",
+          "airF": 85,
+          "waterF": 85,
+          "waveFt": "1–2",
+          "rainIn": 3.2
+        },
+        {
+          "month": "May",
+          "airF": 87,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 8.2
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "1–4",
+          "rainIn": 12.9
+        },
+        {
+          "month": "Aug",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "1–3",
+          "rainIn": 10.4
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "1–3",
+          "rainIn": 13.4
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "1–3",
+          "rainIn": 14.2
+        },
+        {
+          "month": "Nov",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "2–3",
+          "rainIn": 10.7
+        },
+        {
+          "month": "Dec",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 13.9
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "bondi-beach",
@@ -3555,7 +5469,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 80,
+          "waterF": 73,
+          "waveFt": "4–5",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Feb",
+          "airF": 79,
+          "waterF": 74,
+          "waveFt": "4–6",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Mar",
+          "airF": 77,
+          "waterF": 74,
+          "waveFt": "3–6",
+          "rainIn": 6.4
+        },
+        {
+          "month": "Apr",
+          "airF": 73,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 3.2
+        },
+        {
+          "month": "May",
+          "airF": 68,
+          "waterF": 70,
+          "waveFt": "4–6",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Jun",
+          "airF": 63,
+          "waterF": 67,
+          "waveFt": "3–5",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Jul",
+          "airF": 63,
+          "waterF": 65,
+          "waveFt": "3–6",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Aug",
+          "airF": 65,
+          "waterF": 65,
+          "waveFt": "3–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Sep",
+          "airF": 70,
+          "waterF": 66,
+          "waveFt": "3–5",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Oct",
+          "airF": 73,
+          "waterF": 67,
+          "waveFt": "4–5",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Nov",
+          "airF": 75,
+          "waterF": 69,
+          "waveFt": "3–5",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Dec",
+          "airF": 79,
+          "waterF": 70,
+          "waveFt": "3–5",
+          "rainIn": 2.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "manly-beach",
@@ -3591,7 +5592,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 80,
+          "waterF": 73,
+          "waveFt": "4–6",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Feb",
+          "airF": 79,
+          "waterF": 74,
+          "waveFt": "4–6",
+          "rainIn": 4.7
+        },
+        {
+          "month": "Mar",
+          "airF": 77,
+          "waterF": 74,
+          "waveFt": "4–7",
+          "rainIn": 7.4
+        },
+        {
+          "month": "Apr",
+          "airF": 73,
+          "waterF": 72,
+          "waveFt": "5–8",
+          "rainIn": 3.2
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 70,
+          "waveFt": "4–7",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Jun",
+          "airF": 62,
+          "waterF": 67,
+          "waveFt": "3–6",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Jul",
+          "airF": 63,
+          "waterF": 64,
+          "waveFt": "4–7",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Aug",
+          "airF": 65,
+          "waterF": 64,
+          "waveFt": "3–6",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Sep",
+          "airF": 70,
+          "waterF": 66,
+          "waveFt": "4–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Oct",
+          "airF": 73,
+          "waterF": 67,
+          "waveFt": "4–6",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Nov",
+          "airF": 75,
+          "waterF": 69,
+          "waveFt": "4–5",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Dec",
+          "airF": 78,
+          "waterF": 70,
+          "waveFt": "4–6",
+          "rainIn": 2.9
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "whitehaven-beach",
@@ -3626,7 +5714,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "1–3",
+          "rainIn": 12.4
+        },
+        {
+          "month": "Feb",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "2–3",
+          "rainIn": 10.8
+        },
+        {
+          "month": "Mar",
+          "airF": 83,
+          "waterF": 83,
+          "waveFt": "2–4",
+          "rainIn": 10.0
+        },
+        {
+          "month": "Apr",
+          "airF": 80,
+          "waterF": 82,
+          "waveFt": "2–4",
+          "rainIn": 6.1
+        },
+        {
+          "month": "May",
+          "airF": 75,
+          "waterF": 77,
+          "waveFt": "2–4",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Jun",
+          "airF": 72,
+          "waterF": 75,
+          "waveFt": "2–3",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Jul",
+          "airF": 71,
+          "waterF": 73,
+          "waveFt": "2–3",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Aug",
+          "airF": 72,
+          "waterF": 72,
+          "waveFt": "1–3",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Sep",
+          "airF": 75,
+          "waterF": 74,
+          "waveFt": "1–3",
+          "rainIn": 0.9
+        },
+        {
+          "month": "Oct",
+          "airF": 79,
+          "waterF": 77,
+          "waveFt": "1–2",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Nov",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "1–2",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Dec",
+          "airF": 83,
+          "waterF": 82,
+          "waveFt": "1–3",
+          "rainIn": 7.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "byron-bay",
@@ -3662,7 +5837,94 @@
       "shacksFood": true,
       "waterSportsRentals": true,
       "restrooms": true,
-      "familyFriendly": true
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "4–7",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Feb",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "5–7",
+          "rainIn": 7.3
+        },
+        {
+          "month": "Mar",
+          "airF": 79,
+          "waterF": 79,
+          "waveFt": "4–8",
+          "rainIn": 10.0
+        },
+        {
+          "month": "Apr",
+          "airF": 75,
+          "waterF": 77,
+          "waveFt": "5–8",
+          "rainIn": 5.2
+        },
+        {
+          "month": "May",
+          "airF": 71,
+          "waterF": 73,
+          "waveFt": "5–8",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Jun",
+          "airF": 67,
+          "waterF": 71,
+          "waveFt": "4–6",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Jul",
+          "airF": 67,
+          "waterF": 69,
+          "waveFt": "4–6",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Aug",
+          "airF": 69,
+          "waterF": 69,
+          "waveFt": "4–6",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Sep",
+          "airF": 72,
+          "waterF": 70,
+          "waveFt": "4–6",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Oct",
+          "airF": 75,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Nov",
+          "airF": 77,
+          "waterF": 72,
+          "waveFt": "4–5",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Dec",
+          "airF": 80,
+          "waterF": 74,
+          "waveFt": "4–6",
+          "rainIn": 5.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "anse-source-dargent",
@@ -3696,7 +5958,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 10.4
+        },
+        {
+          "month": "Feb",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 7.1
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 5.7
+        },
+        {
+          "month": "Apr",
+          "airF": 84,
+          "waterF": 87,
+          "waveFt": "3–4",
+          "rainIn": 7.2
+        },
+        {
+          "month": "May",
+          "airF": 83,
+          "waterF": 86,
+          "waveFt": "4–5",
+          "rainIn": 6.9
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 83,
+          "waveFt": "5–7",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Jul",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "6–7",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Aug",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "6–7",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Sep",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "5–7",
+          "rainIn": 5.9
+        },
+        {
+          "month": "Oct",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "4–5",
+          "rainIn": 5.1
+        },
+        {
+          "month": "Nov",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 6.8
+        },
+        {
+          "month": "Dec",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 12.0
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "anse-lazio",
@@ -3729,7 +6078,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": false,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 10.2
+        },
+        {
+          "month": "Feb",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 6.6
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 5.4
+        },
+        {
+          "month": "Apr",
+          "airF": 84,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 6.9
+        },
+        {
+          "month": "May",
+          "airF": 83,
+          "waterF": 86,
+          "waveFt": "3–4",
+          "rainIn": 6.7
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 83,
+          "waveFt": "4–6",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Jul",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "5–7",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Aug",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "5–6",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Sep",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "5–6",
+          "rainIn": 5.3
+        },
+        {
+          "month": "Oct",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "3–4",
+          "rainIn": 5.4
+        },
+        {
+          "month": "Nov",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "2–3",
+          "rainIn": 6.9
+        },
+        {
+          "month": "Dec",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 12.0
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "camps-bay",
@@ -3762,7 +6198,94 @@
       "shacksFood": true,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 78,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Feb",
+          "airF": 79,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Mar",
+          "airF": 75,
+          "waterF": 59,
+          "waveFt": "6–9",
+          "rainIn": 1.2
+        },
+        {
+          "month": "Apr",
+          "airF": 72,
+          "waterF": 57,
+          "waveFt": "6–10",
+          "rainIn": 1.6
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 57,
+          "waveFt": "7–12",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Jun",
+          "airF": 64,
+          "waterF": 57,
+          "waveFt": "7–12",
+          "rainIn": 5.1
+        },
+        {
+          "month": "Jul",
+          "airF": 62,
+          "waterF": 57,
+          "waveFt": "8–14",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Aug",
+          "airF": 62,
+          "waterF": 57,
+          "waveFt": "8–14",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Sep",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "7–11",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Oct",
+          "airF": 70,
+          "waterF": 58,
+          "waveFt": "6–10",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Nov",
+          "airF": 73,
+          "waterF": 57,
+          "waveFt": "6–9",
+          "rainIn": 0.8
+        },
+        {
+          "month": "Dec",
+          "airF": 75,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 1.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     },
     {
       "slug": "boulders-beach",
@@ -3797,7 +6320,94 @@
       "shacksFood": false,
       "waterSportsRentals": false,
       "restrooms": true,
-      "familyFriendly": false
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 75,
+          "waterF": 62,
+          "waveFt": "5–7",
+          "rainIn": 0.7
+        },
+        {
+          "month": "Feb",
+          "airF": 75,
+          "waterF": 63,
+          "waveFt": "5–7",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Mar",
+          "airF": 72,
+          "waterF": 61,
+          "waveFt": "5–8",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 59,
+          "waveFt": "5–8",
+          "rainIn": 1.4
+        },
+        {
+          "month": "May",
+          "airF": 66,
+          "waterF": 60,
+          "waveFt": "6–8",
+          "rainIn": 2.0
+        },
+        {
+          "month": "Jun",
+          "airF": 63,
+          "waterF": 59,
+          "waveFt": "6–9",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Jul",
+          "airF": 61,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Aug",
+          "airF": 61,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Sep",
+          "airF": 63,
+          "waterF": 59,
+          "waveFt": "6–8",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Oct",
+          "airF": 67,
+          "waterF": 60,
+          "waveFt": "5–8",
+          "rainIn": 1.2
+        },
+        {
+          "month": "Nov",
+          "airF": 70,
+          "waterF": 60,
+          "waveFt": "5–7",
+          "rainIn": 0.9
+        },
+        {
+          "month": "Dec",
+          "airF": 72,
+          "waterF": 63,
+          "waveFt": "6–7",
+          "rainIn": 1.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
     }
   ],
   "sourcesNote": "Gathered from public sources in Nov 2026. Prices, hours and ocean conditions change, so check with the lifeguards and the official site before you swim. Photos are from Wikimedia Commons (credited below); drawings fill in where we don’t have a photo yet.",
