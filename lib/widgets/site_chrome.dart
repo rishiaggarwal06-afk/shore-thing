@@ -4,63 +4,94 @@ import 'package:go_router/go_router.dart';
 import 'brand.dart';
 
 /// "shore thing" wordmark. Tapping it goes home.
+/// [onStripes]: sits on the striped awning, so it gets a cream pill behind it.
 class Logo extends StatelessWidget {
-  const Logo({super.key, this.color = Brand.ink});
+  const Logo({super.key, this.color = Brand.ink, this.onStripes = false});
   final Color color;
+  final bool onStripes;
 
   @override
-  Widget build(BuildContext context) => Semantics(
-    label: 'Shore Thing home',
-    button: true,
-    excludeSemantics: true,
-    child: InkWell(
-      onTap: () => context.go('/'),
-      child: Text.rich(
-        TextSpan(
-          children: [
-            const TextSpan(text: 'shore'),
-            TextSpan(
-              text: ' thing',
-              style: TextStyle(color: color == Brand.ink ? Brand.ocean : color),
-            ),
-          ],
-        ),
-        style: Brand.title(28, color: color).copyWith(height: 1),
+  Widget build(BuildContext context) {
+    final text = Text.rich(
+      TextSpan(children: [
+        const TextSpan(text: 'shore '),
+        TextSpan(text: 'thing', style: TextStyle(color: color == Brand.ink ? Brand.ocean : color)),
+      ]),
+      style: Brand.title(onStripes ? 22 : 26, color: color).copyWith(height: 1),
+    );
+    return Semantics(
+      label: 'Shore Thing home',
+      button: true,
+      excludeSemantics: true,
+      child: InkWell(
+        customBorder: const StadiumBorder(),
+        onTap: () => context.go('/'),
+        child: onStripes
+            ? Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                decoration: Brand.card(color: Brand.paper, shadow: 2, radius: 999),
+                child: text,
+              )
+            : text,
       ),
-    ),
-  );
+    );
+  }
 }
 
-/// Bar at the top of every screen, on the sand background with a soft line under it. It reaches up under the iPhone's
-/// status bar (SafeArea keeps the buttons below the clock and notch).
+/// Bar at the top of every screen: a striped beach-umbrella awning with a scalloped
+/// edge. It reaches up under the iPhone's status bar (SafeArea keeps the buttons below
+/// the clock and notch).
 class TopBar extends StatelessWidget {
   const TopBar({super.key, required this.leading, this.trailing});
   final Widget leading;
   final Widget? trailing;
 
   @override
-  Widget build(BuildContext context) => Container(
-    decoration: BoxDecoration(
-      color: Brand.paper,
-      border: const Border(bottom: BorderSide(color: Brand.teal, width: 1)),
-      boxShadow: [BoxShadow(color: Brand.ink.withValues(alpha: .05), blurRadius: 8, offset: const Offset(0, 2))],
-    ),
-    child: SafeArea(
-      bottom: false,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
-        // With a very large text size the two sides shrink a little rather than spill off the screen.
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(child: _Shrink(leading, Alignment.centerLeft)),
-            const SizedBox(width: 12),
-            if (trailing != null) Flexible(child: _Shrink(trailing!, Alignment.centerRight)),
-          ],
+  Widget build(BuildContext context) => CustomPaint(
+        painter: const _AwningPainter(),
+        child: SafeArea(
+          bottom: false,
+          child: Padding(
+            // The bottom padding leaves room for the scallops.
+            padding: const EdgeInsets.fromLTRB(12, 10, 12, 10 + _AwningPainter.scallop),
+            // With a very large text size the two sides shrink a little rather than spill off the screen.
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Flexible(child: _Shrink(leading, Alignment.centerLeft)),
+              const SizedBox(width: 12),
+              if (trailing != null) Flexible(child: _Shrink(trailing!, Alignment.centerRight)),
+            ]),
+          ),
         ),
-      ),
-    ),
-  );
+      );
+}
+
+/// Teal and cream stripes, each ending in a rounded scallop, over the page background.
+class _AwningPainter extends CustomPainter {
+  const _AwningPainter();
+  static const stripe = 26.0; // width of one stripe
+  static const scallop = 10.0; // how far the scallops hang down
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawRect(Offset.zero & size, Paint()..color = Brand.paper);
+    final body = size.height - scallop;
+    final colors = [Brand.ocean, const Color(0xFFFDFBF6)];
+    var i = 0;
+    for (var x = 0.0; x < size.width; x += stripe, i++) {
+      final p = Paint()..color = colors[i % 2];
+      canvas.drawRect(Rect.fromLTWH(x, 0, stripe + .5, body), p);
+      // Rounded flap hanging below each stripe.
+      canvas.drawArc(Rect.fromLTWH(x, body - scallop, stripe, scallop * 2), 0, 3.14159, true, p);
+    }
+    // A soft shadow line where the awning meets the page.
+    canvas.drawRect(
+      Rect.fromLTWH(0, body - 1, size.width, 1),
+      Paint()..color = Brand.ink.withValues(alpha: .06),
+    );
+  }
+
+  @override
+  bool shouldRepaint(_AwningPainter oldDelegate) => false;
 }
 
 class _Shrink extends StatelessWidget {
@@ -89,7 +120,7 @@ class BarButton extends StatelessWidget {
       customBorder: const StadiumBorder(),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
-        decoration: Brand.card(shadow: 2, radius: 999),
+        decoration: Brand.card(color: Brand.paper, shadow: 2, radius: 999),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [

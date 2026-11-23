@@ -48,3 +48,36 @@ class Basemap {
     return _cached = Basemap(rings('land'), rings('states'), labels);
   }
 }
+
+/// Ocean depth areas for the map's sea shading (Natural Earth bathymetry, public domain),
+/// from assets/data/bathymetry.json (made by tool/make_bathymetry.py). Each level is
+/// "sea deeper than N metres": 200, 1,000, 3,000 and 5,000. Each area is an outline plus
+/// holes (islands and shallower patches inside it).
+class Bathymetry {
+  Bathymetry(this.levels);
+
+  final List<({int depth, List<({List<LatLng> outline, List<List<LatLng>> holes})> areas})> levels;
+
+  static Bathymetry? _cached;
+
+  static Future<Bathymetry> load() async {
+    if (_cached != null) return _cached!;
+    final j = jsonDecode(await rootBundle.loadString('assets/data/bathymetry.json')) as Map<String, dynamic>;
+    List<LatLng> ring(List r) => [
+      for (var i = 0; i + 1 < r.length; i += 2) LatLng((r[i] as num).toDouble(), (r[i + 1] as num).toDouble()),
+    ];
+    return _cached = Bathymetry([
+      for (final l in j['levels'] as List)
+        (
+          depth: l['depth'] as int,
+          areas: [
+            for (final p in l['polygons'] as List)
+              (
+                outline: ring((p as List).first as List),
+                holes: [for (final h in p.skip(1)) ring(h as List)],
+              ),
+          ],
+        ),
+    ]);
+  }
+}

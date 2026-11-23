@@ -31,14 +31,14 @@ class MapTiles {
 
   static final _mapTiler = MapTiles._(
     urlTemplate: 'https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}{r}.png?key=${Secrets.maptilerKey}',
-    // Tuned on basic-v2 from three sample colours: its water (148,193,224) → ocean #0AB0C6,
-    // its land (224,224,209) → sand #FFE38A, and its near-black label text (2,2,1) → ink #123D40,
-    // so place names stay dark and readable. Each colour depends on how much redder than blue
-    // a pixel is and how bright it is.
+    // Tuned on basic-v2's colours: its water (148,193,224) → the shallow-sea colour #A9E4E8
+    // (DepthLayers then darkens the open ocean), its land (224,224,209) → sand #EFD9A7, its
+    // near-black label text (2,2,1) → ink #23302F, and white roads → cream. Worked out from
+    // the earlier "sunlit coast" filter, so parks and roads keep the same soft look.
     tint: const ColorFilter.matrix([
-      2.689, 0.312, -2.064, 0, 14.06, //
-      0.558, 0.248, -0.062, 0, 59.45,
-      -0.661, 0.130, 0.922, 0, 64.14,
+      0.723, 0.234, -0.122, 0, 33.12, //
+      -0.160, 0.210, 0.691, 0, 47.14,
+      -0.723, 0.193, 1.130, 0, 46.92,
       0, 0, 0, 1, 0,
     ]),
     credit: '© MapTiler © OpenStreetMap contributors',

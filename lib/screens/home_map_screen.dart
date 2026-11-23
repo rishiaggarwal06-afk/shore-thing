@@ -225,7 +225,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
       child: Scaffold(
         body: Column(
           children: [
-            const TopBar(leading: Logo(), trailing: SearchButton()),
+            const TopBar(leading: Logo(onStripes: true), trailing: SearchButton()),
             _FilterBar(
               phone: phone,
               filters: [
@@ -251,7 +251,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                           child: FlutterMap(
                             mapController: _map,
                             options: MapOptions(
-                              backgroundColor: Brand.ocean,
+                              backgroundColor: Brand.sea.first, // shallow water; DepthLayers darkens the deep sea
                               initialCameraFit: CameraFit.coordinates(
                                 coordinates: [for (final b in repo.beaches) LatLng(b.lat, b.lon)],
                                 padding: const EdgeInsets.all(80),
@@ -271,6 +271,8 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                             ),
                             children: [
                               // No MapTiler key (e.g. the shared web preview): draw the built-in map.
+                              // The sea gets darker the deeper it is (drawn under the land).
+                              if (tiles.builtIn) const DepthLayers(),
                               if (tiles.builtIn)
                                 const BasemapLayers()
                               else
@@ -281,6 +283,8 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                                   tileBuilder: (context, tile, _) =>
                                       ColorFiltered(colorFilter: tiles.tint, child: tile),
                                 ),
+                              // On MapTiler's map: see-through depth shading on top of its flat water.
+                              if (!tiles.builtIn) const DepthLayers(overlay: true),
                               if (_ready)
                                 CastleLayer(
                                   beaches: repo.beaches,
@@ -489,10 +493,10 @@ class _FilterBar extends StatelessWidget {
         onTap: () => onFilter(f),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-          decoration: on ? Brand.card(color: Brand.ink, shadow: 2, radius: 999) : Brand.card(shadow: 1.5, radius: 999),
+          decoration: on ? Brand.card(color: Brand.orange, shadow: 2, radius: 999) : Brand.card(shadow: 1.5, radius: 999),
           child: Text(
             f.label,
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: on ? Colors.white : Brand.ink),
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Brand.ink),
           ),
         ),
       ),

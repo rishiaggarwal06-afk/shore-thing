@@ -1,34 +1,38 @@
 import 'package:flutter/material.dart';
 
-/// Shore Thing's look: colours, the serif headline font, and soft rounded cards.
+/// Shore Thing's look: "cabana stripes". Colours, the headline font, and soft rounded cards.
 ///
-/// Nov 2026 redesign: the old thick ink outlines and hard offset shadows (a "neo-brutalist"
-/// look) made every screen feel boxy and generated, so cards are now rounded with soft,
-/// diffused shadows, headings use a serif display font, and the yellow is an accent
-/// (highlights like "Today") instead of a slab on every screen.
+/// The user picked this direction (Nov 2026) from the samples page: a striped umbrella awning
+/// across the top, pool-tile teal, mango orange, friendly rounded type, and a map whose water
+/// gets deeper and darker offshore. Cards are rounded with soft shadows and no outlines (the
+/// old thick-outline, hard-shadow style made every screen feel boxy and generated).
 class Brand {
-  // Colours ("sunlit coast").
-  static const ink = Color(0xFF12343B); // deep sea green: text and dark surfaces
-  static const inkSoft = Color(0xFF55696D); // secondary text
-  static const yellow = Color(0xFFFFD84D); // sun: highlights only
-  static const orange = Color(0xFFFF7A59); // coral accent
-  static const paper = Color(0xFFFBF7EF); // sand-cream page background
-  static const teal = Color(0xFFCFE9E6); // light lagoon: dividers, quiet fills
-  static const ocean = Color(0xFF14A3B4); // sea
-  static const sand = Color(0xFFF4E2B8);
-  static const sandDark = Color(0xFFD9A94F);
+  // Colours.
+  static const ink = Color(0xFF23302F); // dark green-grey: text and dark surfaces
+  static const inkSoft = Color(0xFF5E6B69); // secondary text
+  static const ocean = Color(0xFF2E8C99); // pool-tile teal: the main brand colour, awning stripes
+  static const orange = Color(0xFFF2A541); // mango: selected chips, flags, counts
+  static const yellow = Color(0xFFFFD166); // sun: highlights like the selected name tag
+  static const paper = Color(0xFFF7F3EA); // warm off-white page background
+  static const teal = Color(0xFFD5ECEC); // light lagoon: dividers, quiet fills
+  static const sand = Color(0xFFEFD9A7); // land on the map, photo placeholders
+  static const sandDark = Color(0xFFC9A86A);
 
   // Soft tints for icon bubbles and highlighted cards.
-  static const sunTint = Color(0xFFFFF1BF);
-  static const lagoonTint = Color(0xFFDDF2F0);
-  static const coralTint = Color(0xFFFFE4DB);
-  static const sandTint = Color(0xFFF6ECD6);
+  static const sunTint = Color(0xFFFFF0CC);
+  static const lagoonTint = Color(0xFFDDF1F2);
+  static const coralTint = Color(0xFFFDE6CC);
+  static const sandTint = Color(0xFFF3EAD6);
+
+  /// Sea colours from the shallows to the deep ocean (depth shading on the map):
+  /// coast, deeper than 200 m, 1,000 m, 3,000 m and 5,000 m.
+  static const sea = [Color(0xFFA9E4E8), Color(0xFF7FD0D8), Color(0xFF4FB3C3), Color(0xFF2F93AA), Color(0xFF1F6F86)];
 
   /// Bundled Liberation Sans (same letter widths as Arial) for body text.
   static const font = 'LiberationSans';
 
-  /// Bundled DM Serif Display (SIL Open Font License) for headings and the wordmark.
-  static const display = 'DMSerifDisplay';
+  /// Bundled Bricolage Grotesque (SIL Open Font License) for headings and the wordmark.
+  static const display = 'BricolageGrotesque';
 
   /// Bundled DejaVu Sans supplies symbols Liberation Sans lacks (✳ ↗ ☀ ☂ ⚑),
   /// so iPhones don't swap in colourful emoji.
@@ -38,9 +42,17 @@ class Brand {
   static const phoneBreakpoint = 760.0;
   static bool isPhone(BuildContext c) => MediaQuery.sizeOf(c).width <= phoneBreakpoint;
 
-  /// Serif heading at [size]: page titles ~34, section titles ~26, card titles ~20.
-  static TextStyle title(double size, {Color color = ink}) =>
-      TextStyle(fontFamily: display, fontSize: size, height: 1.1, color: color, fontWeight: FontWeight.w400);
+  /// Heading at [size]: page titles ~38, section titles ~28, card titles ~22.
+  /// Bricolage is a variable font, so its boldness is set with a font variation.
+  static TextStyle title(double size, {Color color = ink}) => TextStyle(
+        fontFamily: display,
+        fontSize: size,
+        height: 1.05,
+        letterSpacing: -.3,
+        color: color,
+        fontWeight: FontWeight.w800,
+        fontVariations: const [FontVariation('wght', 800)],
+      );
 
   /// Rounded card with a soft shadow and no outline.
   /// [shadow] sets how lifted it looks (0 = flat); [radius] the corner rounding.

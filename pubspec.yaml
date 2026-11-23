@@ -67,6 +67,7 @@ flutter:
   assets:
     - assets/data/beaches.json
     - assets/data/basemap.json
+    - assets/data/bathymetry.json
     - assets/images/beaches/
     - assets/images/brand/
 
@@ -81,10 +82,11 @@ flutter:
         - asset: assets/fonts/LiberationSans-BoldItalic.ttf
           weight: 700
           style: italic
-    # Serif headings and the wordmark (SIL Open Font License, see LICENSE-DMSerifDisplay.txt).
-    - family: DMSerifDisplay
+    # Headings and the wordmark: a variable font (weight set in Brand.title).
+    # SIL Open Font License, see LICENSE-BricolageGrotesque.txt.
+    - family: BricolageGrotesque
       fonts:
-        - asset: assets/fonts/DMSerifDisplay-Regular.ttf
+        - asset: assets/fonts/BricolageGrotesque.ttf
     # Symbols (✳ ↗ ☀ ☂ ⚑ ≈) so phones don't swap in colourful emoji.
     - family: DejaVuSans
       fonts:
