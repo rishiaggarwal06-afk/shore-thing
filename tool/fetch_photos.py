@@ -23,9 +23,9 @@ OUT = ROOT / "assets" / "images" / "beaches"
 UA = "ShoreThingApp/0.1 (https://github.com/rishiaggarwal06-afk/shore-thing; beach guide app)"
 WIDTH = 1280  # big enough for phones, small enough to keep the app light
 
-# Chosen by hand and checked by eye, first one = main photo. Point Pleasant Beach and
-# Beach Haven have none yet: Commons had no suitable freely licensed beach photos
-# (only food, a train station or a portrait), so they keep the illustrations.
+# Chosen by hand and checked by eye, first one = main photo. Beach Haven has none yet:
+# Commons had no suitable freely licensed beach photos (only old postcards and street
+# scenes), so it keeps the illustrations.
 PHOTOS = {
     "sandy-hook": [
         "File:Sandy Hook Beach at the Gateway National Recreation Area in Highlands, New Jersey.jpg",
@@ -38,6 +38,9 @@ PHOTOS = {
         "File:Asbury Park July 10 Early Morning 16.jpg",
     ],
     "point-pleasant-beach": [
+        "File:Point Pleasant Beach boardw.jpg",
+        "File:Point Pleasant Beach north of Jenkinson's Aquarium.jpg",
+        "File:Bay Head and Point Pleasant Beach from over the Atlantic, August 2025 (Aerial).jpg",
     ],
     "seaside-heights": [
         "File:Seaside Heights beach north of Funtown Pier.JPG",
@@ -113,6 +116,156 @@ PHOTOS = {
         "File:Kailua Beach lifeguard tower at sunset.jpg",
         "File:Kailua Beach Sunset (9193268473).jpg",
         "File:Kailua Beach Sunset Too (9193276101).jpg",
+    ],
+    "santa-monica": [
+        "File:Los Angeles (California, USA), Santa Monica Beach -- 2012 -- 5301.jpg",
+        "File:Santa Monica – Lifeguard tower (narrow) 2017.jpg",
+        "File:Santa Monica Pier from Santa Monica State Beach 03.jpg",
+    ],
+    "la-jolla-cove": [
+        "File:La Jolla Cove, San Diego.jpg",
+        "File:La Jolla Cove from the south.JPG",
+        "File:California sea lion in La Jolla (70568).jpg",
+    ],
+    "huntington-beach": [
+        "File:Huntington Beach Municipal Pier - 89001203.jpg",
+        "File:Surfer at Huntington Beach Pier.jpg",
+        "File:Ruby's, Huntington Beach pier, California.jpg",
+    ],
+    "grace-bay": [
+        "File:Grace Bay - panoramio.jpg",
+        "File:Turks and Caicos (45316031582).jpg",
+        "File:Turks and Caicos (43864066082).jpg",
+    ],
+    "seven-mile-beach": [
+        "File:Seven Mile Beach Facing North.jpg",
+        "File:Resorts on Seven Mile Beach, Grand Cayman.jpg",
+        "File:Seven Mile Beach Facing West.jpg",
+    ],
+    "eagle-beach": [
+        "File:Mangrove tree (Conocarpus erectus) Aruba Eagle Beach (2896882763).jpg",
+        "File:Eagle Beach, Aruba 1.jpg",
+        "File:Eagle beach Passions On The Beach Noord Aruba.jpg",
+    ],
+    "tulum-beach": [
+        "File:Tulum - God of the Winds Temple 03.JPG",
+        "File:Tulum Beach, Quintana Roo, Mexico.jpg",
+        "File:Maya ruins at Tulum 2023 - beach.jpg",
+    ],
+    "bavaro-beach": [
+        "File:Playa Bavaro.JPG",
+        "File:Playa Bavaro 293.jpg",
+        "File:2023 - Playa Bavaro Punta Cana - 11.jpg",
+    ],
+    "copacabana": [
+        "File:Rio de janeiro copacabana beach 2010.JPG",
+        "File:Copacabana Sunny Day -) - panoramio.jpg",
+        "File:Copacabana beach (40486873483).jpg",
+    ],
+    "ipanema": [
+        "File:Praia de Ipanema e Leblon vista da Pedra do Arpoador.jpg",
+        "File:1 ipanema beach vidigal sunset.jpg",
+        "File:Ipanema Beach Rio.jpg",
+    ],
+    "baia-do-sancho": [
+        "File:Baía do sancho e vegetação.jpg",
+        "File:Baía do Sancho vista do alto.JPG",
+        "File:PE - Parque Nacional Marinho de Fernando de Noronha - Baía do Sancho - Praia do Sancho.jpg",
+    ],
+    "praia-da-marinha": [
+        "File:Praia da Marinha 2017.jpg",
+        "File:Praia da Marinha-Algarve-Portugal.jpg",
+        "File:Praia da Marinha Tor.JPG",
+    ],
+    "praia-do-camilo": [
+        "File:Praia do camilo (48454069281).jpg",
+        "File:Praia do Camilo (48608303172).jpg",
+        "File:Praia do Camilo (48471577097).jpg",
+    ],
+    "la-concha": [
+        "File:San Sebastian Kontxa beach 1190650.jpg",
+        "File:San Sebastian Kontxa beach 190363.jpg",
+        "File:San Sebastian Playa de La Concha 06 2012 2505.jpg",
+    ],
+    "navagio": [
+        "File:Navagio, Zante 01.jpg",
+        "File:Navagio Beach aerial Zakynthos Greece (46470564281).jpg",
+        "File:Panagiotis Shipwreck at Navagio Beach Zakynthos Greece (31530321957).jpg",
+    ],
+    "elafonissi": [
+        "File:Ελαφονήσι 1275.jpg",
+        "File:Elafonissi - panoramio (1).jpg",
+        "File:Ελαφονήσι 8547.jpg",
+    ],
+    "myrtos": [
+        "File:Myrtos Beach 5 (9344634826).jpg",
+        "File:Myrtos Beach, Kefalonia.jpg",
+        "File:Myrtos Beach 2 (9341821409).jpg",
+    ],
+    "spiaggia-dei-conigli": [
+        "File:Isola dei Conigli.JPG",
+        "File:SPIAGGIA DEI CONIGLI LAMPEDUSA 1.jpg",
+        "File:Isola e spiaggia di Coniglie-Lampedusa.JPG",
+    ],
+    "maya-bay": [
+        "File:Maya Bay, Koh Phi Phi, Krabi, Thailand.jpg",
+        "File:Maya Bay enclosed limestone cliffs and turquoise water Ko Phi Phi Le.jpg",
+        "File:Playa Maya, Ko Phi Phi, Tailandia, 2013-08-19, DD 13.JPG",
+    ],
+    "railay-west": [
+        "File:Railay Beach 5.jpg",
+        "File:Krabi, Railay West Beach (6218118271).jpg",
+        "File:West Railay Beach 03.jpg",
+    ],
+    "kuta-beach": [
+        "File:Kuta Beach, Bali, 20220827 0842 1083.jpg",
+        "File:Jerman Beach, Kuta, Bali, Indonesia, 20220825 1207 0816.jpg",
+        "File:Sunset, Kuta, Bali, Indonesia, 20220825 1752 0877.jpg",
+    ],
+    "white-beach-boracay": [
+        "File:Boracay White Beach - panoramio - Tuderna.jpg",
+        "File:\"White Beach\" Boracay, Philippinen.jpg",
+        "File:Boracay White Beach in day (985286231).jpg",
+    ],
+    "bondi-beach": [
+        "File:Sydney (AU), Bondi Beach -- 2019 -- 2354.jpg",
+        "File:Bondi Beach, southwest view 20230224 2.jpg",
+        "File:Bondi Beach in January 2023.jpg",
+    ],
+    "manly-beach": [
+        "File:2020-10-24 Manly Beach 8.jpg",
+        "File:Manly Beach.jpg",
+        "File:2020-10-24 Manly Beach 6.jpg",
+    ],
+    "whitehaven-beach": [
+        "File:Whitsunday Island - Whitehaven Beach 05.jpg",
+        "File:DSC122 Australia Queensland Whitsunday Islands Whitehaven bay (5491401519).jpg",
+        "File:North of Whitehaven Beach - panoramio (2).jpg",
+    ],
+    "byron-bay": [
+        "File:Main Beach and Cape Byron, Byron Bay, New South Wales, Australia (Ank Kumar, Infosys Limited) 02.jpg",
+        "File:Main Beach and Cape Byron, Byron Bay, New South Wales, Australia (Ank Kumar, Infosys Limited) 05.jpg",
+        "File:Main Beach and Cape Byron, Byron Bay, New South Wales, Australia (Ank Kumar, Infosys Limited) 04.jpg",
+    ],
+    "anse-source-dargent": [
+        "File:Anse Source d'Argent 2-La Digue.jpg",
+        "File:Anse Source d'Argent - La Digue - Seychelles - 03.jpg",
+        "File:Anse Source d'Argent 3-La Digue.jpg",
+    ],
+    "anse-lazio": [
+        "File:Anse Lazio-rama 2015.JPG",
+        "File:Anse Lazio-Praslin-Seychellen.jpg",
+        "File:Anse Lazio beach Praslin Seychelles.jpg",
+    ],
+    "camps-bay": [
+        "File:Camps Bay beach 6.jpg",
+        "File:Camps Bay Beach ..., Cape Town.jpg",
+        "File:Camps Bay Beach at sunset 04.jpg",
+    ],
+    "boulders-beach": [
+        "File:Penguins at Boulders Beach 04.jpg",
+        "File:Simon’s Town (ZA), Boulders Beach, Penguin Colony -- 2024 -- 3420.jpg",
+        "File:Penguins at Boulders Beach 2018 05.jpg",
     ],
 }
 ALLOWED = re.compile(r"^(CC0|Public domain|PD.*|CC BY(-SA)? [0-9.]+.*)$", re.I)
