@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import 'brand.dart';
 
-/// "shore thing ✳︎" wordmark. Tapping it goes home.
+/// "shore thing" wordmark. Tapping it goes home.
 class Logo extends StatelessWidget {
   const Logo({super.key, this.color = Brand.ink});
   final Color color;
@@ -15,12 +15,9 @@ class Logo extends StatelessWidget {
         excludeSemantics: true,
         child: InkWell(
           onTap: () => context.go('/'),
-          child: Text.rich(
-            TextSpan(children: [
-              TextSpan(text: 'shore thing', style: TextStyle(color: color)),
-              const TextSpan(text: '✳︎', style: TextStyle(color: Brand.orange)),
-            ]),
-            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900, letterSpacing: -.5),
+          child: Text(
+            'shore thing',
+            style: TextStyle(color: color, fontSize: 24, fontWeight: FontWeight.w900, letterSpacing: -.5),
           ),
         ),
       );

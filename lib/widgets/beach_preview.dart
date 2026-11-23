@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../models/beach.dart';
+import '../models/forecast.dart';
+import '../services/forecast_service.dart';
 import 'brand.dart';
+import 'forecast_strip.dart';
 
 /// Mini card that pops up over the bottom of the map when a preview card is tapped:
 /// photo, the basics, typical conditions this month, and Back / View full page.
@@ -98,13 +101,21 @@ class BeachPreview extends StatelessWidget {
                         if (b.shacksFood) const _Fact(Icons.restaurant_rounded, 'Food'),
                       ],
                     ),
-                    if (now != null) ...[
-                      const SizedBox(height: 10),
-                      Text(
-                        'Typical in $month: ${now.airF}°F air · ${now.waterF}°F water',
-                        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-                      ),
-                    ],
+                    const SizedBox(height: 10),
+                    // Today's real forecast when it arrives; the typical numbers until then (or offline).
+                    FutureBuilder<BeachForecast>(
+                      future: ForecastService.instance.forBeach(b),
+                      builder: (context, snap) {
+                        final today = snap.data?.days.firstOrNull;
+                        final text = today != null
+                            ? 'Today: ${today.highF}°F, ${describeWeather(today.weatherCode).label.toLowerCase()}'
+                                  '${today.waveFt != null ? ' · waves ${today.waveFt! < 1 ? 'under 1' : today.waveFt!.round()} ft' : ''}'
+                            : now != null
+                            ? 'Typical in $month: ${now.airF}°F air · ${now.waterF}°F water'
+                            : '';
+                        return Text(text, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700));
+                      },
+                    ),
                   ],
                 ),
               ),
