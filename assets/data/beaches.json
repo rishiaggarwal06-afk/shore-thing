@@ -406,7 +406,26 @@
         }
       ],
       "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
-      "photos": [],
+      "photos": [
+        {
+          "asset": "assets/images/beaches/point-pleasant-beach-1.jpg",
+          "artist": "Unknown",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach_boardw.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/point-pleasant-beach-2.jpg",
+          "artist": "Dough4872",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach_north_of_Jenkinson%27s_Aquarium.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/point-pleasant-beach-3.jpg",
+          "artist": "Szeremeta",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bay_Head_and_Point_Pleasant_Beach_from_over_the_Atlantic,_August_2025_(Aerial).jpg"
+        }
+      ],
       "region": "jersey-shore"
     },
     {
@@ -2875,7 +2894,27 @@
           "rainIn": 3.6
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/santa-monica-1.jpg",
+          "artist": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Los_Angeles_(California,_USA),_Santa_Monica_Beach_--_2012_--_5301.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/santa-monica-2.jpg",
+          "artist": "Cayambe",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Santa_Monica_%E2%80%93_Lifeguard_tower_(narrow)_2017.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/santa-monica-3.jpg",
+          "artist": "Cayambe",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Santa_Monica_Pier_from_Santa_Monica_State_Beach_03.jpg"
+        }
+      ]
     },
     {
       "slug": "la-jolla-cove",
@@ -2997,7 +3036,27 @@
           "rainIn": 2.2
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/la-jolla-cove-1.jpg",
+          "artist": "Stephen Bay",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:La_Jolla_Cove,_San_Diego.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/la-jolla-cove-2.jpg",
+          "artist": "Invertzoo",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:La_Jolla_Cove_from_the_south.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/la-jolla-cove-3.jpg",
+          "artist": "Rhododendrites",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:California_sea_lion_in_La_Jolla_(70568).jpg"
+        }
+      ]
     },
     {
       "slug": "huntington-beach",
@@ -3120,7 +3179,27 @@
           "rainIn": 2.7
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/huntington-beach-1.jpg",
+          "artist": "Imscarr",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Huntington_Beach_Municipal_Pier_-_89001203.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/huntington-beach-2.jpg",
+          "artist": "Mcclane2010",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Surfer_at_Huntington_Beach_Pier.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/huntington-beach-3.jpg",
+          "artist": "Photograph by Mike Peel (www.mikepeel.net).",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ruby%27s,_Huntington_Beach_pier,_California.jpg"
+        }
+      ]
     },
     {
       "slug": "grace-bay",
@@ -3242,7 +3321,27 @@
           "rainIn": 1.5
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/grace-bay-1.jpg",
+          "artist": "Csouthard",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Grace_Bay_-_panoramio.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/grace-bay-2.jpg",
+          "artist": "VV Nincic from Toronto, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Turks_and_Caicos_(45316031582).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/grace-bay-3.jpg",
+          "artist": "VV Nincic from Toronto, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Turks_and_Caicos_(43864066082).jpg"
+        }
+      ]
     },
     {
       "slug": "seven-mile-beach",
@@ -3365,7 +3464,27 @@
           "rainIn": 2.0
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/seven-mile-beach-1.jpg",
+          "artist": "Coolcaesar",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Seven_Mile_Beach_Facing_North.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/seven-mile-beach-2.jpg",
+          "artist": "RoadTripWarrior",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Resorts_on_Seven_Mile_Beach,_Grand_Cayman.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/seven-mile-beach-3.jpg",
+          "artist": "Coolcaesar",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Seven_Mile_Beach_Facing_West.jpg"
+        }
+      ]
     },
     {
       "slug": "eagle-beach",
@@ -3487,7 +3606,27 @@
           "rainIn": 2.3
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/eagle-beach-1.jpg",
+          "artist": "Serge Melki from Indianapolis, USA",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Mangrove_tree_(Conocarpus_erectus)_Aruba_Eagle_Beach_(2896882763).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/eagle-beach-2.jpg",
+          "artist": "DDJJ",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Eagle_Beach,_Aruba_1.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/eagle-beach-3.jpg",
+          "artist": "EgorovaSvetlana",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Eagle_beach_Passions_On_The_Beach_Noord_Aruba.jpg"
+        }
+      ]
     },
     {
       "slug": "tulum-beach",
@@ -3609,7 +3748,27 @@
           "rainIn": 3.1
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/tulum-beach-1.jpg",
+          "artist": "Martin Falbisoner",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Tulum_-_God_of_the_Winds_Temple_03.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/tulum-beach-2.jpg",
+          "artist": "Didier Moïse",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Tulum_Beach,_Quintana_Roo,_Mexico.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/tulum-beach-3.jpg",
+          "artist": "Erik Cleves Kristensen",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Maya_ruins_at_Tulum_2023_-_beach.jpg"
+        }
+      ]
     },
     {
       "slug": "bavaro-beach",
@@ -3730,7 +3889,27 @@
           "rainIn": 3.4
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/bavaro-beach-1.jpg",
+          "artist": "Andreas Volkmer",
+          "license": "CC BY 2.5",
+          "source": "https://commons.wikimedia.org/wiki/File:Playa_Bavaro.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/bavaro-beach-2.jpg",
+          "artist": "Hans Buch",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Playa_Bavaro_293.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/bavaro-beach-3.jpg",
+          "artist": "Oleg Yunakov",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2023_-_Playa_Bavaro_Punta_Cana_-_11.jpg"
+        }
+      ]
     },
     {
       "slug": "copacabana",
@@ -3852,7 +4031,27 @@
           "rainIn": 5.2
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/copacabana-1.jpg",
+          "artist": "chensiyuan",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Rio_de_janeiro_copacabana_beach_2010.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/copacabana-2.jpg",
+          "artist": "Yas.Iwamoto",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Copacabana_Sunny_Day_-)_-_panoramio.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/copacabana-3.jpg",
+          "artist": "Boris Kasimov from Toronto, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Copacabana_beach_(40486873483).jpg"
+        }
+      ]
     },
     {
       "slug": "ipanema",
@@ -3974,7 +4173,27 @@
           "rainIn": 5.2
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/ipanema-1.jpg",
+          "artist": "Rafaelkatz",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_de_Ipanema_e_Leblon_vista_da_Pedra_do_Arpoador.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/ipanema-2.jpg",
+          "artist": "chensiyuan",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:1_ipanema_beach_vidigal_sunset.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/ipanema-3.jpg",
+          "artist": "Cesvieira",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ipanema_Beach_Rio.jpg"
+        }
+      ]
     },
     {
       "slug": "baia-do-sancho",
@@ -4095,7 +4314,27 @@
           "rainIn": 1.8
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/baia-do-sancho-1.jpg",
+          "artist": "Alyson Abreu",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ba%C3%ADa_do_sancho_e_vegeta%C3%A7%C3%A3o.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/baia-do-sancho-2.jpg",
+          "artist": "Osaki",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ba%C3%ADa_do_Sancho_vista_do_alto.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/baia-do-sancho-3.jpg",
+          "artist": "Rafa Tecchio",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:PE_-_Parque_Nacional_Marinho_de_Fernando_de_Noronha_-_Ba%C3%ADa_do_Sancho_-_Praia_do_Sancho.jpg"
+        }
+      ]
     },
     {
       "slug": "praia-da-marinha",
@@ -4217,7 +4456,27 @@
           "rainIn": 2.5
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/praia-da-marinha-1.jpg",
+          "artist": "Mimihitam",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_da_Marinha_2017.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/praia-da-marinha-2.jpg",
+          "artist": "Tobi 87",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_da_Marinha-Algarve-Portugal.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/praia-da-marinha-3.jpg",
+          "artist": "Va.sc.",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_da_Marinha_Tor.JPG"
+        }
+      ]
     },
     {
       "slug": "praia-do-camilo",
@@ -4339,7 +4598,27 @@
           "rainIn": 2.6
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/praia-do-camilo-1.jpg",
+          "artist": "Theo Crazzolara",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_do_camilo_(48454069281).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/praia-do-camilo-2.jpg",
+          "artist": "Theo Crazzolara",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_do_Camilo_(48608303172).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/praia-do-camilo-3.jpg",
+          "artist": "Theo Crazzolara",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_do_Camilo_(48471577097).jpg"
+        }
+      ]
     },
     {
       "slug": "la-concha",
@@ -4461,7 +4740,27 @@
           "rainIn": 7.5
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/la-concha-1.jpg",
+          "artist": "Ermell",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:San_Sebastian_Kontxa_beach_1190650.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/la-concha-2.jpg",
+          "artist": "Ermell",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:San_Sebastian_Kontxa_beach_190363.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/la-concha-3.jpg",
+          "artist": "Mariordo (Mario Roberto Durán Ortiz)",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:San_Sebastian_Playa_de_La_Concha_06_2012_2505.jpg"
+        }
+      ]
     },
     {
       "slug": "navagio",
@@ -4582,7 +4881,27 @@
           "rainIn": 5.1
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/navagio-1.jpg",
+          "artist": "Wilnel José Verdú Guerrero",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Navagio,_Zante_01.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/navagio-2.jpg",
+          "artist": "dronepicr",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Navagio_Beach_aerial_Zakynthos_Greece_(46470564281).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/navagio-3.jpg",
+          "artist": "dronepicr",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Panagiotis_Shipwreck_at_Navagio_Beach_Zakynthos_Greece_(31530321957).jpg"
+        }
+      ]
     },
     {
       "slug": "elafonissi",
@@ -4704,7 +5023,27 @@
           "rainIn": 5.1
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/elafonissi-1.jpg",
+          "artist": "C messier",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_1275.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/elafonissi-2.jpg",
+          "artist": "Maurizio Ceol",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Elafonissi_-_panoramio_(1).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/elafonissi-3.jpg",
+          "artist": "C messier",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_8547.jpg"
+        }
+      ]
     },
     {
       "slug": "myrtos",
@@ -4825,7 +5164,27 @@
           "rainIn": 5.1
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/myrtos-1.jpg",
+          "artist": "Tony Hisgett from Birmingham, UK",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Myrtos_Beach_5_(9344634826).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/myrtos-2.jpg",
+          "artist": "Matt Sims",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Myrtos_Beach,_Kefalonia.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/myrtos-3.jpg",
+          "artist": "Tony Hisgett from Birmingham, UK",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Myrtos_Beach_2_(9341821409).jpg"
+        }
+      ]
     },
     {
       "slug": "spiaggia-dei-conigli",
@@ -4947,7 +5306,27 @@
           "rainIn": 2.6
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/spiaggia-dei-conigli-1.jpg",
+          "artist": "No machine-readable author provided. Ezio55 assumed (based on copyright claims).",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Isola_dei_Conigli.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/spiaggia-dei-conigli-2.jpg",
+          "artist": "ALY MOHAMED YOUSSEF",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:SPIAGGIA_DEI_CONIGLI_LAMPEDUSA_1.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/spiaggia-dei-conigli-3.jpg",
+          "artist": "Hein56didden",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Isola_e_spiaggia_di_Coniglie-Lampedusa.JPG"
+        }
+      ]
     },
     {
       "slug": "maya-bay",
@@ -5068,7 +5447,27 @@
           "rainIn": 4.9
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/maya-bay-1.jpg",
+          "artist": "Vyacheslav Argenberg",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Maya_Bay,_Koh_Phi_Phi,_Krabi,_Thailand.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/maya-bay-2.jpg",
+          "artist": "Nnthurber",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Maya_Bay_enclosed_limestone_cliffs_and_turquoise_water_Ko_Phi_Phi_Le.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/maya-bay-3.jpg",
+          "artist": "Diego Delso",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Playa_Maya,_Ko_Phi_Phi,_Tailandia,_2013-08-19,_DD_13.JPG"
+        }
+      ]
     },
     {
       "slug": "railay-west",
@@ -5190,7 +5589,27 @@
           "rainIn": 6.2
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/railay-west-1.jpg",
+          "artist": "kallerna",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Railay_Beach_5.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/railay-west-2.jpg",
+          "artist": "Fabio Achilli from Milano, Italy",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Krabi,_Railay_West_Beach_(6218118271).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/railay-west-3.jpg",
+          "artist": "Krzysztof Golik",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:West_Railay_Beach_03.jpg"
+        }
+      ]
     },
     {
       "slug": "kuta-beach",
@@ -5311,7 +5730,27 @@
           "rainIn": 10.5
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/kuta-beach-1.jpg",
+          "artist": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Kuta_Beach,_Bali,_20220827_0842_1083.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/kuta-beach-2.jpg",
+          "artist": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Jerman_Beach,_Kuta,_Bali,_Indonesia,_20220825_1207_0816.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/kuta-beach-3.jpg",
+          "artist": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Sunset,_Kuta,_Bali,_Indonesia,_20220825_1752_0877.jpg"
+        }
+      ]
     },
     {
       "slug": "white-beach-boracay",
@@ -5432,7 +5871,27 @@
           "rainIn": 13.9
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/white-beach-boracay-1.jpg",
+          "artist": "Tuderna",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Boracay_White_Beach_-_panoramio_-_Tuderna.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/white-beach-boracay-2.jpg",
+          "artist": "Grunderfam",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:%22White_Beach%22_Boracay,_Philippinen.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/white-beach-boracay-3.jpg",
+          "artist": "Angelo Juan Ramos from Makati City, Philippines",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Boracay_White_Beach_in_day_(985286231).jpg"
+        }
+      ]
     },
     {
       "slug": "bondi-beach",
@@ -5556,7 +6015,27 @@
           "rainIn": 2.6
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/bondi-beach-1.jpg",
+          "artist": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Sydney_(AU),_Bondi_Beach_--_2019_--_2354.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/bondi-beach-2.jpg",
+          "artist": "DXR",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bondi_Beach,_southwest_view_20230224_2.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/bondi-beach-3.jpg",
+          "artist": "Uploaded",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bondi_Beach_in_January_2023.jpg"
+        }
+      ]
     },
     {
       "slug": "manly-beach",
@@ -5679,7 +6158,27 @@
           "rainIn": 2.9
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/manly-beach-1.jpg",
+          "artist": "Maksym Kozlenko",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2020-10-24_Manly_Beach_8.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/manly-beach-2.jpg",
+          "artist": "No machine-readable author provided. Enochlau assumed (based on copyright claims).",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Manly_Beach.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/manly-beach-3.jpg",
+          "artist": "Maksym Kozlenko",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2020-10-24_Manly_Beach_6.jpg"
+        }
+      ]
     },
     {
       "slug": "whitehaven-beach",
@@ -5801,7 +6300,27 @@
           "rainIn": 7.6
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/whitehaven-beach-1.jpg",
+          "artist": "Damien Dempsey from Melbourne, Australia",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Whitsunday_Island_-_Whitehaven_Beach_05.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/whitehaven-beach-2.jpg",
+          "artist": "DANIEL JULIE from Paris, France",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:DSC122_Australia_Queensland_Whitsunday_Islands_Whitehaven_bay_(5491401519).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/whitehaven-beach-3.jpg",
+          "artist": "Neil Parley",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:North_of_Whitehaven_Beach_-_panoramio_(2).jpg"
+        }
+      ]
     },
     {
       "slug": "byron-bay",
@@ -5924,7 +6443,27 @@
           "rainIn": 5.1
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/byron-bay-1.jpg",
+          "artist": "Ank Kumar",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Main_Beach_and_Cape_Byron,_Byron_Bay,_New_South_Wales,_Australia_(Ank_Kumar,_Infosys_Limited)_02.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/byron-bay-2.jpg",
+          "artist": "Ank Kumar",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Main_Beach_and_Cape_Byron,_Byron_Bay,_New_South_Wales,_Australia_(Ank_Kumar,_Infosys_Limited)_05.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/byron-bay-3.jpg",
+          "artist": "Ank Kumar",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Main_Beach_and_Cape_Byron,_Byron_Bay,_New_South_Wales,_Australia_(Ank_Kumar,_Infosys_Limited)_04.jpg"
+        }
+      ]
     },
     {
       "slug": "anse-source-dargent",
@@ -6045,7 +6584,27 @@
           "rainIn": 12.0
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/anse-source-dargent-1.jpg",
+          "artist": "Tobias Alt, Tobi 87",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Source_d%27Argent_2-La_Digue.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/anse-source-dargent-2.jpg",
+          "artist": "NorbertNagel",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Source_d%27Argent_-_La_Digue_-_Seychelles_-_03.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/anse-source-dargent-3.jpg",
+          "artist": "Tobias Alt, Tobi 87",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Source_d%27Argent_3-La_Digue.jpg"
+        }
+      ]
     },
     {
       "slug": "anse-lazio",
@@ -6165,7 +6724,27 @@
           "rainIn": 12.0
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/anse-lazio-1.jpg",
+          "artist": "Bjørn Christian Tørrissen",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Lazio-rama_2015.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/anse-lazio-2.jpg",
+          "artist": "Tobias Alt, Tobi 87",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Lazio-Praslin-Seychellen.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/anse-lazio-3.jpg",
+          "artist": "Svein-Magne Tunli - tunliweb.no",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Lazio_beach_Praslin_Seychelles.jpg"
+        }
+      ]
     },
     {
       "slug": "camps-bay",
@@ -6285,7 +6864,27 @@
           "rainIn": 1.1
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/camps-bay-1.jpg",
+          "artist": "HelenOnline",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Camps_Bay_beach_6.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/camps-bay-2.jpg",
+          "artist": "Nithin bolar k",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Camps_Bay_Beach_...,_Cape_Town.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/camps-bay-3.jpg",
+          "artist": "Capsol",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Camps_Bay_Beach_at_sunset_04.jpg"
+        }
+      ]
     },
     {
       "slug": "boulders-beach",
@@ -6407,7 +7006,27 @@
           "rainIn": 1.2
         }
       ],
-      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0)."
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/boulders-beach-1.jpg",
+          "artist": "Satdeep Gill",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Penguins_at_Boulders_Beach_04.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/boulders-beach-2.jpg",
+          "artist": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Simon%E2%80%99s_Town_(ZA),_Boulders_Beach,_Penguin_Colony_--_2024_--_3420.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/boulders-beach-3.jpg",
+          "artist": "Jopparn",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Penguins_at_Boulders_Beach_2018_05.jpg"
+        }
+      ]
     }
   ],
   "sourcesNote": "Gathered from public sources in Nov 2026. Prices, hours and ocean conditions change, so check with the lifeguards and the official site before you swim. Photos are from Wikimedia Commons (credited below); drawings fill in where we don’t have a photo yet.",
