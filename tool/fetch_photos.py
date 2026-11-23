@@ -26,6 +26,16 @@ WIDTH = 1280  # big enough for phones, small enough to keep the app light
 # Chosen by hand and checked by eye, first one = main photo. Beach Haven has none yet:
 # Commons had no suitable freely licensed beach photos (only old postcards and street
 # scenes), so it keeps the illustrations.
+# Photographer names that Commons' machine-readable data gets wrong, checked by hand
+# on each file's page (the licenses require the real name).
+ARTIST_FIX = {
+    "File:Bondi Beach in January 2023.jpg": "Marcus Grbac",
+    "File:Point Pleasant Beach boardw.jpg": "Leif Knutsen",
+    "File:Ruby's, Huntington Beach pier, California.jpg": "Mike Peel",
+    "File:Isola dei Conigli.JPG": "Ezio55",
+    "File:Manly Beach.jpg": "Enochlau",
+}
+
 PHOTOS = {
     "sandy-hook": [
         "File:Sandy Hook Beach at the Gateway National Recreation Area in Highlands, New Jersey.jpg",
@@ -323,7 +333,7 @@ def main():
                 time.sleep(2)
             photos.append({
                 "asset": f"assets/images/beaches/{dest.name}",
-                "artist": plain(meta.get("Artist", {}).get("value")) or "Unknown",
+                "artist": ARTIST_FIX.get(title, plain(meta.get("Artist", {}).get("value")) or "Unknown"),
                 "license": license_name,
                 "source": ii["descriptionurl"],
             })

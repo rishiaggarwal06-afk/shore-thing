@@ -81,6 +81,10 @@ flutter:
         - asset: assets/fonts/LiberationSans-BoldItalic.ttf
           weight: 700
           style: italic
+    # Serif headings and the wordmark (SIL Open Font License, see LICENSE-DMSerifDisplay.txt).
+    - family: DMSerifDisplay
+      fonts:
+        - asset: assets/fonts/DMSerifDisplay-Regular.ttf
     # Symbols (✳ ↗ ☀ ☂ ⚑ ≈) so phones don't swap in colourful emoji.
     - family: DejaVuSans
       fonts:

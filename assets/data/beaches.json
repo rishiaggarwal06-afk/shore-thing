@@ -409,7 +409,7 @@
       "photos": [
         {
           "asset": "assets/images/beaches/point-pleasant-beach-1.jpg",
-          "artist": "Unknown",
+          "artist": "Leif Knutsen",
           "license": "CC BY-SA 3.0",
           "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach_boardw.jpg"
         },
@@ -3195,7 +3195,7 @@
         },
         {
           "asset": "assets/images/beaches/huntington-beach-3.jpg",
-          "artist": "Photograph by Mike Peel (www.mikepeel.net).",
+          "artist": "Mike Peel",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Ruby%27s,_Huntington_Beach_pier,_California.jpg"
         }
@@ -5310,7 +5310,7 @@
       "photos": [
         {
           "asset": "assets/images/beaches/spiaggia-dei-conigli-1.jpg",
-          "artist": "No machine-readable author provided. Ezio55 assumed (based on copyright claims).",
+          "artist": "Ezio55",
           "license": "Public domain",
           "source": "https://commons.wikimedia.org/wiki/File:Isola_dei_Conigli.JPG"
         },
@@ -6031,7 +6031,7 @@
         },
         {
           "asset": "assets/images/beaches/bondi-beach-3.jpg",
-          "artist": "Uploaded",
+          "artist": "Marcus Grbac",
           "license": "CC BY 2.0",
           "source": "https://commons.wikimedia.org/wiki/File:Bondi_Beach_in_January_2023.jpg"
         }
@@ -6168,7 +6168,7 @@
         },
         {
           "asset": "assets/images/beaches/manly-beach-2.jpg",
-          "artist": "No machine-readable author provided. Enochlau assumed (based on copyright claims).",
+          "artist": "Enochlau",
           "license": "CC BY-SA 3.0",
           "source": "https://commons.wikimedia.org/wiki/File:Manly_Beach.jpg"
         },

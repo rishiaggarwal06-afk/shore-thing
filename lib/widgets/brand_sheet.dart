@@ -16,45 +16,55 @@ Future<void> showBrandSheet(BuildContext context, {required String title, String
         constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * .85, maxWidth: 640),
         child: Container(
           margin: const EdgeInsets.fromLTRB(8, 0, 8, 8),
-          decoration: Brand.chunky(color: Brand.paper, shadow: 0, radius: 14),
+          decoration: Brand.card(color: Brand.paper, shadow: 0, radius: 24),
           child: SafeArea(
             top: false,
-            child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-              // Grab handle
-              Center(
-                child: Container(
-                  margin: const EdgeInsets.only(top: 10),
-                  width: 44,
-                  height: 5,
-                  decoration: BoxDecoration(color: Brand.ink.withValues(alpha: .35), borderRadius: BorderRadius.circular(3)),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                // Grab handle
+                Center(
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10),
+                    width: 44,
+                    height: 5,
+                    decoration: BoxDecoration(
+                      color: Brand.ink.withValues(alpha: .35),
+                      borderRadius: BorderRadius.circular(3),
+                    ),
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 12, 8, 4),
-                child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Expanded(
-                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Semantics(
-                        header: true,
-                        child: Text(title, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900, height: 1.15)),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 12, 8, 4),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Semantics(header: true, child: Text(title, style: Brand.title(28))),
+                            if (subtitle != null) ...[
+                              const SizedBox(height: 2),
+                              Text(subtitle, style: const TextStyle(fontSize: 14)),
+                            ],
+                          ],
+                        ),
                       ),
-                      if (subtitle != null) ...[
-                        const SizedBox(height: 2),
-                        Text(subtitle, style: const TextStyle(fontSize: 14)),
-                      ],
-                    ]),
+                      IconButton(
+                        tooltip: 'Close',
+                        icon: const Icon(Icons.close_rounded, color: Brand.ink),
+                        onPressed: () => Navigator.of(context).pop(),
+                      ),
+                    ],
                   ),
-                  IconButton(
-                    tooltip: 'Close',
-                    icon: const Icon(Icons.close_rounded, color: Brand.ink),
-                    onPressed: () => Navigator.of(context).pop(),
-                  ),
-                ]),
-              ),
-              Flexible(
-                child: SingleChildScrollView(padding: const EdgeInsets.fromLTRB(20, 8, 20, 20), child: child),
-              ),
-            ]),
+                ),
+                Flexible(
+                  child: SingleChildScrollView(padding: const EdgeInsets.fromLTRB(20, 8, 20, 20), child: child),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -69,17 +79,24 @@ class SheetRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Brand.teal, width: 1.5))),
-        child: Row(children: [
-          Icon(icon, size: 22, color: Brand.ink),
-          const SizedBox(width: 12),
-          Expanded(child: Text(label, style: const TextStyle(fontSize: 16))),
-          const SizedBox(width: 12),
-          Flexible(
-            child: Text(value,
-                textAlign: TextAlign.right, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+    padding: const EdgeInsets.symmetric(vertical: 10),
+    decoration: const BoxDecoration(
+      border: Border(bottom: BorderSide(color: Brand.teal, width: 1.5)),
+    ),
+    child: Row(
+      children: [
+        Icon(icon, size: 22, color: Brand.ink),
+        const SizedBox(width: 12),
+        Expanded(child: Text(label, style: const TextStyle(fontSize: 16))),
+        const SizedBox(width: 12),
+        Flexible(
+          child: Text(
+            value,
+            textAlign: TextAlign.right,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
           ),
-        ]),
-      );
+        ),
+      ],
+    ),
+  );
 }

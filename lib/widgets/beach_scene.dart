@@ -13,7 +13,7 @@ String sceneSvg(int palette, int view) {
   final umbX = view == 1 ? 90 : 660, umbY = view == 2 ? 275 : 370, umbRot = view == 1 ? -15 : 12;
   final boat = view == 2
       ? '<path d="M100 460l65-160 20 165" fill="#FF7F50"/><path d="M165 300l90 166-70-1" fill="#FFE14D"/>'
-          '<path d="M65 465h230l-45 25H95Z" fill="#123d40"/>'
+            '<path d="M65 465h230l-45 25H95Z" fill="#123d40"/>'
       : '';
   return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">'
       '<rect width="900" height="600" fill="$sky"/>'
@@ -41,11 +41,15 @@ class BeachScene extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Semantics(
-        image: true,
-        label: label,
-        child: Container(
-          decoration: Brand.chunky(shadow: 0),
-          child: AspectRatio(aspectRatio: 3 / 2, child: SvgPicture.string(sceneSvg(palette, view), fit: BoxFit.cover)),
-        ),
-      );
+    image: true,
+    label: label,
+    child: Container(
+      decoration: Brand.card(shadow: 0),
+      clipBehavior: Clip.antiAlias,
+      child: AspectRatio(
+        aspectRatio: 3 / 2,
+        child: SvgPicture.string(sceneSvg(palette, view), fit: BoxFit.cover),
+      ),
+    ),
+  );
 }

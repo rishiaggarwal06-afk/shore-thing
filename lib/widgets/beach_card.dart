@@ -42,40 +42,42 @@ class BeachCard extends StatelessWidget {
           padding: const EdgeInsets.all(_pad),
           decoration: Brand.chunky(color: selected ? Brand.yellow : Colors.white, shadow: _shadow),
           child: LayoutBuilder(
-            builder: (context, c) => Row(children: [
-              // Square photo as tall as the card's text.
-              Container(
-                width: c.maxHeight,
-                height: c.maxHeight,
-                decoration: BoxDecoration(color: Brand.sand, border: Border.all(color: Brand.ink, width: 2)),
-                clipBehavior: Clip.antiAlias,
-                child: b.photos.isEmpty
-                    ? const Icon(Icons.beach_access_rounded, color: Brand.ink)
-                    : Image.asset(
-                        b.photos.first.asset,
-                        fit: BoxFit.cover,
-                        cacheWidth: 240, // small copy in memory, it's only a thumbnail
-                        excludeFromSemantics: true,
-                        errorBuilder: (_, _, _) => const Icon(Icons.beach_access_rounded, color: Brand.ink),
-                      ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _line(b.name, _name),
-                    const SizedBox(height: 2),
-                    _line(b.area, _small),
-                    const SizedBox(height: 6),
-                    _line(b.tags.join(' · '), _small.copyWith(fontWeight: FontWeight.w700)),
-                    _line('$_entry · $_guards', _small),
-                  ],
+            builder: (context, c) => Row(
+              children: [
+                // Square photo as tall as the card's text.
+                Container(
+                  width: c.maxHeight,
+                  height: c.maxHeight,
+                  decoration: BoxDecoration(color: Brand.sand, borderRadius: BorderRadius.circular(12)),
+                  clipBehavior: Clip.antiAlias,
+                  child: b.photos.isEmpty
+                      ? const Icon(Icons.beach_access_rounded, color: Brand.ink)
+                      : Image.asset(
+                          b.photos.first.asset,
+                          fit: BoxFit.cover,
+                          cacheWidth: 240, // small copy in memory, it's only a thumbnail
+                          excludeFromSemantics: true,
+                          errorBuilder: (_, _, _) => const Icon(Icons.beach_access_rounded, color: Brand.ink),
+                        ),
                 ),
-              ),
-              const Icon(Icons.chevron_right_rounded, color: Brand.ink),
-            ]),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _line(b.name, _name),
+                      const SizedBox(height: 2),
+                      _line(b.area, _small),
+                      const SizedBox(height: 6),
+                      _line(b.tags.join(' · '), _small.copyWith(fontWeight: FontWeight.w700)),
+                      _line('$_entry · $_guards', _small),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.chevron_right_rounded, color: Brand.ink),
+              ],
+            ),
           ),
         ),
       ),

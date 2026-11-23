@@ -16,7 +16,7 @@ class BestTimeToGo extends StatelessWidget {
   Widget build(BuildContext context) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      const Text('Best time to go', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900)),
+      Text('Best time to go', style: Brand.title(30)),
       const SizedBox(height: 4),
       Text(
         climate.placeholder
@@ -112,14 +112,11 @@ class _MonthCard extends StatelessWidget {
         width: MediaQuery.textScalerOf(context).scale(104),
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.only(bottom: 4, right: 4),
-        decoration: Brand.chunky(color: warm ? Brand.yellow : Colors.white, shadow: 4),
+        decoration: Brand.card(color: warm ? Brand.sunTint : Colors.white, shadow: 3),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              m.month.toUpperCase(),
-              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15, letterSpacing: 1),
-            ),
+            Text(m.month, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
             const SizedBox(height: 8),
             _row(Icons.wb_sunny_outlined, '${m.airF}°F', 'Air temperature'),
             _row(Icons.pool_rounded, '${m.waterF}°F', 'Water temperature'),

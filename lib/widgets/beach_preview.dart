@@ -32,7 +32,7 @@ class BeachPreview extends StatelessWidget {
       label: 'Preview of ${b.name}',
       child: Container(
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
-        decoration: Brand.chunky(color: Brand.paper, shadow: 5),
+        decoration: Brand.card(color: Brand.paper, shadow: 6, radius: 24),
         // The info scrolls if it doesn't fit (big text sizes); the two buttons always stay in view.
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -49,10 +49,7 @@ class BeachPreview extends StatelessWidget {
                         Container(
                           width: thumb,
                           height: thumb,
-                          decoration: BoxDecoration(
-                            color: Brand.sand,
-                            border: Border.all(color: Brand.ink, width: 2),
-                          ),
+                          decoration: BoxDecoration(color: Brand.sand, borderRadius: BorderRadius.circular(14)),
                           clipBehavior: Clip.antiAlias,
                           child: b.photos.isEmpty
                               ? const Icon(Icons.beach_access_rounded, color: Brand.ink)
@@ -68,13 +65,7 @@ class BeachPreview extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Semantics(
-                                header: true,
-                                child: Text(
-                                  b.name,
-                                  style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, height: 1.15),
-                                ),
-                              ),
+                              Semantics(header: true, child: Text(b.name, style: Brand.title(26))),
                               const SizedBox(height: 4),
                               Text(b.area, style: const TextStyle(fontSize: 14)),
                             ],
@@ -144,11 +135,7 @@ class _Fact extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-    decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(20),
-      border: Border.all(color: Brand.ink, width: 1.5),
-    ),
+    decoration: BoxDecoration(color: Brand.lagoonTint, borderRadius: BorderRadius.circular(20)),
     child: Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -176,7 +163,7 @@ class _Button extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
         alignment: Alignment.center,
-        decoration: Brand.chunky(color: color, shadow: 3, border: 2.5),
+        decoration: Brand.card(color: color, shadow: 2, radius: 999),
         child: Text(
           label,
           textAlign: TextAlign.center,

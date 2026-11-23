@@ -52,13 +52,7 @@ class DetailHead extends StatelessWidget {
       children: [
         Text(eyebrow, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
         const SizedBox(height: 6),
-        Semantics(
-          header: true,
-          child: Text(
-            title,
-            style: TextStyle(fontSize: phone ? 34 : 52, fontWeight: FontWeight.w900, height: 1.02, letterSpacing: -1),
-          ),
-        ),
+        Semantics(header: true, child: Text(title, style: Brand.title(phone ? 40 : 56))),
         const SizedBox(height: 12),
         ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 680),
@@ -138,12 +132,18 @@ class _FactTiles extends StatelessWidget {
     final entry = b.entry;
     final entryFull = b.entryUnit == null ? b.entry : '${b.entry} ${b.entryUnit}';
     final tiles = [
-      (Icons.confirmation_number_outlined, 'Entry', entry, entryFull == entry ? b.entryNote : '$entryFull. ${b.entryNote}'),
-      (Icons.pool_rounded, 'Lifeguards', b.lifeguards, b.lifeguardNote),
-      (Icons.waves_rounded, 'Waves', b.wave, b.waveNote),
-      (Icons.local_parking_rounded, 'Parking', 'Details', b.parking),
-      if (b.hours != null) (Icons.schedule_rounded, 'Hours', 'Details', b.hours!),
-      (Icons.health_and_safety_outlined, 'Safety', 'Tips', b.safety),
+      (
+        Icons.confirmation_number_outlined,
+        Brand.sunTint,
+        'Entry',
+        entry,
+        entryFull == entry ? b.entryNote : '$entryFull. ${b.entryNote}',
+      ),
+      (Icons.pool_rounded, Brand.lagoonTint, 'Lifeguards', b.lifeguards, b.lifeguardNote),
+      (Icons.waves_rounded, Brand.lagoonTint, 'Waves', b.wave, b.waveNote),
+      (Icons.local_parking_rounded, Brand.sandTint, 'Parking', 'Details', b.parking),
+      if (b.hours != null) (Icons.schedule_rounded, Brand.sandTint, 'Hours', 'Details', b.hours!),
+      (Icons.health_and_safety_outlined, Brand.coralTint, 'Safety', 'Tips', b.safety),
     ];
     return LayoutBuilder(
       builder: (context, c) {
@@ -154,7 +154,7 @@ class _FactTiles extends StatelessWidget {
           spacing: gap,
           runSpacing: gap,
           children: [
-            for (final (icon, title, value, note) in tiles)
+            for (final (icon, tint, title, value, note) in tiles)
               SizedBox(
                 width: w,
                 child: Semantics(
@@ -162,6 +162,7 @@ class _FactTiles extends StatelessWidget {
                   label: '$title: $value. Show details',
                   excludeSemantics: true,
                   child: InkWell(
+                    borderRadius: BorderRadius.circular(18),
                     onTap: () => showBrandSheet(
                       context,
                       title: title,
@@ -172,7 +173,7 @@ class _FactTiles extends StatelessWidget {
                           if (value != 'Details' && value != 'Tips')
                             Padding(
                               padding: const EdgeInsets.only(bottom: 8),
-                              child: Text(value, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900)),
+                              child: Text(value, style: Brand.title(32)),
                             ),
                           Text(note, style: const TextStyle(fontSize: 17, height: 1.45)),
                         ],
@@ -180,26 +181,31 @@ class _FactTiles extends StatelessWidget {
                     ),
                     child: Container(
                       padding: const EdgeInsets.all(12),
-                      decoration: Brand.chunky(shadow: 4),
+                      decoration: Brand.card(shadow: 3),
                       child: Row(
                         children: [
-                          Icon(icon, size: 26, color: Brand.ink),
+                          // Icon in a soft coloured bubble.
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(color: tint, shape: BoxShape.circle),
+                            child: Icon(icon, size: 22, color: Brand.ink),
+                          ),
                           const SizedBox(width: 10),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(title, style: const TextStyle(fontSize: 13)),
+                                Text(title, style: const TextStyle(fontSize: 13, color: Brand.inkSoft)),
                                 Text(
                                   value,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, height: 1.15),
+                                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, height: 1.15),
                                 ),
                               ],
                             ),
                           ),
-                          const Icon(Icons.chevron_right_rounded, color: Brand.ink),
+                          const Icon(Icons.chevron_right_rounded, color: Brand.inkSoft),
                         ],
                       ),
                     ),
@@ -222,11 +228,11 @@ class _WhatsThere extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     width: double.infinity,
     padding: const EdgeInsets.all(20),
-    decoration: Brand.chunky(),
+    decoration: Brand.card(shadow: 3, radius: 22),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('What’s there', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900)),
+        Text('What’s there', style: Brand.title(28)),
         const SizedBox(height: 14),
         LayoutBuilder(
           builder: (context, c) {

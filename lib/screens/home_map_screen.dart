@@ -382,7 +382,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                           child: Center(
                             child: Container(
                               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                              decoration: Brand.chunky(color: Brand.paper, shadow: 3),
+                              decoration: Brand.card(color: Colors.white, shadow: 3),
                               child: Text(
                                 'None of our beaches are listed for “${_filter.label}” yet.',
                                 style: const TextStyle(fontWeight: FontWeight.w700),
@@ -398,18 +398,18 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                         child: Column(
                           children: [
                             _RoundButton(
-                              '+',
+                              Icons.add_rounded,
                               'Zoom in',
                               () => _flyTo(_map.camera.center, _map.camera.zoom + 1, ms: 350),
                             ),
                             const SizedBox(height: 7),
                             _RoundButton(
-                              '−',
+                              Icons.remove_rounded,
                               'Zoom out',
                               () => _flyTo(_map.camera.center, _map.camera.zoom - 1, ms: 350),
                             ),
                             const SizedBox(height: 7),
-                            _RoundButton('⟲︎', 'Back to all beaches', () {
+                            _RoundButton(Icons.zoom_out_map_rounded, 'Back to all beaches', () {
                               _closePreview();
                               _flyToFit(shown);
                             }),
@@ -426,7 +426,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                             duration: const Duration(milliseconds: 400),
                             child: Container(
                               padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
-                              decoration: BoxDecoration(color: Brand.paper, borderRadius: BorderRadius.circular(20)),
+                              decoration: Brand.card(color: Colors.white.withValues(alpha: .92), shadow: 2, radius: 20),
                               child: Text(
                                 touchDevice
                                     ? 'Drag to explore · pinch to zoom · tap a castle'
@@ -463,10 +463,7 @@ class _FilterBar extends StatelessWidget {
     final chips = [for (final f in filters) _chip(f)];
     return Container(
       width: double.infinity,
-      decoration: const BoxDecoration(
-        color: Brand.paper,
-        border: Border(bottom: BorderSide(color: Brand.ink, width: 3)),
-      ),
+      decoration: const BoxDecoration(color: Brand.paper),
       child: phone
           ? SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -491,15 +488,11 @@ class _FilterBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         onTap: () => onFilter(f),
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6),
-          decoration: BoxDecoration(
-            color: on ? Brand.ink : Colors.white,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Brand.ink, width: 2),
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+          decoration: on ? Brand.card(color: Brand.ink, shadow: 2, radius: 999) : Brand.card(shadow: 1.5, radius: 999),
           child: Text(
             f.label,
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: on ? Brand.yellow : Brand.ink),
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: on ? Colors.white : Brand.ink),
           ),
         ),
       ),
@@ -508,8 +501,9 @@ class _FilterBar extends StatelessWidget {
 }
 
 class _RoundButton extends StatelessWidget {
-  const _RoundButton(this.symbol, this.label, this.onTap);
-  final String symbol, label;
+  const _RoundButton(this.icon, this.label, this.onTap);
+  final IconData icon;
+  final String label;
   final VoidCallback onTap;
 
   @override
@@ -521,16 +515,11 @@ class _RoundButton extends StatelessWidget {
       customBorder: const CircleBorder(),
       onTap: onTap,
       child: Container(
-        width: 38,
-        height: 38,
+        width: 42,
+        height: 42,
         alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: Brand.paper,
-          shape: BoxShape.circle,
-          border: Border.all(color: Brand.ink, width: 1.5),
-          boxShadow: const [BoxShadow(color: Brand.ink, offset: Offset(0, 2))],
-        ),
-        child: Text(symbol, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, height: 1)),
+        decoration: Brand.card(shadow: 3, radius: 21),
+        child: Icon(icon, size: 22, color: Brand.ink),
       ),
     ),
   );

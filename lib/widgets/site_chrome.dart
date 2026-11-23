@@ -10,20 +10,28 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Semantics(
-        label: 'Shore Thing home',
-        button: true,
-        excludeSemantics: true,
-        child: InkWell(
-          onTap: () => context.go('/'),
-          child: Text(
-            'shore thing',
-            style: TextStyle(color: color, fontSize: 24, fontWeight: FontWeight.w900, letterSpacing: -.5),
-          ),
+    label: 'Shore Thing home',
+    button: true,
+    excludeSemantics: true,
+    child: InkWell(
+      onTap: () => context.go('/'),
+      child: Text.rich(
+        TextSpan(
+          children: [
+            const TextSpan(text: 'shore'),
+            TextSpan(
+              text: ' thing',
+              style: TextStyle(color: color == Brand.ink ? Brand.ocean : color),
+            ),
+          ],
         ),
-      );
+        style: Brand.title(28, color: color).copyWith(height: 1),
+      ),
+    ),
+  );
 }
 
-/// Yellow bar at the top of every screen. It reaches up under the iPhone's
+/// Bar at the top of every screen, on the sand background with a soft line under it. It reaches up under the iPhone's
 /// status bar (SafeArea keeps the buttons below the clock and notch).
 class TopBar extends StatelessWidget {
   const TopBar({super.key, required this.leading, this.trailing});
@@ -32,23 +40,27 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        decoration: const BoxDecoration(
-          color: Brand.yellow,
-          border: Border(bottom: BorderSide(color: Brand.ink, width: 3)),
+    decoration: BoxDecoration(
+      color: Brand.paper,
+      border: const Border(bottom: BorderSide(color: Brand.teal, width: 1)),
+      boxShadow: [BoxShadow(color: Brand.ink.withValues(alpha: .05), blurRadius: 8, offset: const Offset(0, 2))],
+    ),
+    child: SafeArea(
+      bottom: false,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+        // With a very large text size the two sides shrink a little rather than spill off the screen.
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(child: _Shrink(leading, Alignment.centerLeft)),
+            const SizedBox(width: 12),
+            if (trailing != null) Flexible(child: _Shrink(trailing!, Alignment.centerRight)),
+          ],
         ),
-        child: SafeArea(
-          bottom: false,
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
-            // With a very large text size the two sides shrink a little rather than spill off the screen.
-            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              Flexible(child: _Shrink(leading, Alignment.centerLeft)),
-              const SizedBox(width: 12),
-              if (trailing != null) Flexible(child: _Shrink(trailing!, Alignment.centerRight)),
-            ]),
-          ),
-        ),
-      );
+      ),
+    ),
+  );
 }
 
 class _Shrink extends StatelessWidget {
@@ -57,11 +69,10 @@ class _Shrink extends StatelessWidget {
   final Alignment alignment;
 
   @override
-  Widget build(BuildContext context) =>
-      FittedBox(fit: BoxFit.scaleDown, alignment: alignment, child: child);
+  Widget build(BuildContext context) => FittedBox(fit: BoxFit.scaleDown, alignment: alignment, child: child);
 }
 
-/// Small white button with an icon and a word, in the chunky brand style.
+/// Small white pill-shaped button with an icon and a word.
 class BarButton extends StatelessWidget {
   const BarButton({super.key, required this.icon, required this.label, required this.onTap});
   final IconData icon;
@@ -70,22 +81,26 @@ class BarButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Semantics(
-        button: true,
-        label: label,
-        excludeSemantics: true,
-        child: InkWell(
-          onTap: onTap,
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            decoration: Brand.chunky(shadow: 3, border: 2.5),
-            child: Row(mainAxisSize: MainAxisSize.min, children: [
-              Icon(icon, size: 20, color: Brand.ink),
-              const SizedBox(width: 6),
-              Text(label, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
-            ]),
-          ),
+    button: true,
+    label: label,
+    excludeSemantics: true,
+    child: InkWell(
+      onTap: onTap,
+      customBorder: const StadiumBorder(),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+        decoration: Brand.card(shadow: 2, radius: 999),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 20, color: Brand.ink),
+            const SizedBox(width: 6),
+            Text(label, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
+          ],
         ),
-      );
+      ),
+    ),
+  );
 }
 
 /// Goes back to the map (the first screen).
@@ -93,8 +108,7 @@ class HomeButton extends StatelessWidget {
   const HomeButton({super.key});
 
   @override
-  Widget build(BuildContext context) =>
-      BarButton(icon: Icons.home_rounded, label: 'Map', onTap: () => context.go('/'));
+  Widget build(BuildContext context) => BarButton(icon: Icons.home_rounded, label: 'Map', onTap: () => context.go('/'));
 }
 
 /// Opens the search page.
@@ -112,19 +126,22 @@ class SiteFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        width: double.infinity,
-        color: Brand.ink,
-        padding: EdgeInsets.only(bottom: MediaQuery.paddingOf(context).bottom),
-        child: const PageWidth(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Logo(color: Brand.yellow),
-            SizedBox(height: 12),
-            Text(
-              'Beach info gathered from public sources, Nov 2026. Fees, hours and conditions change, '
-              'so always check with lifeguards and official sites. Map © MapTiler © OpenStreetMap contributors. Weather data by Open-Meteo.com (CC BY 4.0). Beach photos from Wikimedia Commons, credited on each beach page.',
-              style: TextStyle(color: Brand.paper, fontSize: 12, height: 1.5),
-            ),
-          ]),
-        ),
-      );
+    width: double.infinity,
+    color: Brand.ink,
+    padding: EdgeInsets.only(bottom: MediaQuery.paddingOf(context).bottom),
+    child: const PageWidth(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Logo(color: Brand.yellow),
+          SizedBox(height: 12),
+          Text(
+            'Beach info gathered from public sources, Nov 2026. Fees, hours and conditions change, '
+            'so always check with lifeguards and official sites. Map © MapTiler © OpenStreetMap contributors. Weather data by Open-Meteo.com (CC BY 4.0). Beach photos from Wikimedia Commons, credited on each beach page.',
+            style: TextStyle(color: Brand.paper, fontSize: 12, height: 1.5),
+          ),
+        ],
+      ),
+    ),
+  );
 }
