@@ -135,9 +135,11 @@ class _FactTiles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final entry = b.entry == 'Free' ? 'Free' : '${b.entry} ${b.entryUnit ?? ''}'.trim();
+    // The tile shows just the price; the panel adds what it's per (car, person, day...).
+    final entry = b.entry;
+    final entryFull = b.entryUnit == null ? b.entry : '${b.entry} ${b.entryUnit}';
     final tiles = [
-      (Icons.confirmation_number_outlined, 'Entry', entry, b.entryNote),
+      (Icons.confirmation_number_outlined, 'Entry', entry, entryFull == entry ? b.entryNote : '$entryFull. ${b.entryNote}'),
       (Icons.pool_rounded, 'Lifeguards', b.lifeguards, b.lifeguardNote),
       (Icons.waves_rounded, 'Waves', b.wave, b.waveNote),
       (Icons.local_parking_rounded, 'Parking', 'Details', b.parking),
@@ -191,9 +193,9 @@ class _FactTiles extends StatelessWidget {
                                 Text(title, style: const TextStyle(fontSize: 13)),
                                 Text(
                                   value,
-                                  maxLines: 1,
+                                  maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, height: 1.15),
                                 ),
                               ],
                             ),

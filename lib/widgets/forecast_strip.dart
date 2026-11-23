@@ -14,8 +14,8 @@ import 'brand_sheet.dart';
       3 => (label: 'Cloudy', icon: Icons.cloud_rounded),
       45 || 48 => (label: 'Fog', icon: Icons.foggy),
       51 || 53 || 55 || 56 || 57 => (label: 'Drizzle', icon: Icons.grain_rounded),
-      61 || 63 || 66 || 80 || 81 => (label: 'Rain', icon: Icons.umbrella_rounded),
-      65 || 67 || 82 => (label: 'Heavy rain', icon: Icons.umbrella_rounded),
+      61 || 63 || 66 || 80 || 81 => (label: 'Rain', icon: Icons.water_drop_outlined),
+      65 || 67 || 82 => (label: 'Heavy rain', icon: Icons.water_drop_outlined),
       71 || 73 || 75 || 77 || 85 || 86 => (label: 'Snow', icon: Icons.ac_unit_rounded),
       95 || 96 || 99 => (label: 'Thunderstorms', icon: Icons.thunderstorm_rounded),
       _ => (label: 'Mixed', icon: Icons.wb_cloudy_outlined),
@@ -114,7 +114,7 @@ class _ForecastStripState extends State<ForecastStrip> {
       child: Column(children: [
         SheetRow(w.icon, 'Sky', w.label),
         SheetRow(Icons.thermostat_rounded, 'High / low', '${d.highF}°F / ${d.lowF}°F'),
-        if (d.rainChance != null) SheetRow(Icons.umbrella_rounded, 'Chance of rain', '${d.rainChance}%'),
+        if (d.rainChance != null) SheetRow(Icons.water_drop_outlined, 'Chance of rain', '${d.rainChance}%'),
         if (d.rainIn != null && d.rainIn! > 0) SheetRow(Icons.water_drop_outlined, 'Rain', '${d.rainIn!.toStringAsFixed(2)} in'),
         if (d.windMph != null) SheetRow(Icons.air_rounded, 'Wind (strongest)', '${d.windMph} mph'),
         if (d.uvIndex != null) SheetRow(Icons.wb_sunny_outlined, 'UV index', _uv(d.uvIndex!)),
@@ -169,7 +169,7 @@ class _DayCard extends StatelessWidget {
             Text('Low ${d.lowF}°', style: const TextStyle(fontSize: 13)),
             if (d.rainChance != null) ...[
               const SizedBox(height: 6),
-              _mini(Icons.umbrella_rounded, '${d.rainChance}%'),
+              _mini(Icons.water_drop_outlined, '${d.rainChance}%'),
             ],
             if (d.waveFt != null) _mini(Icons.waves_rounded, d.waveFt! < 1 ? '<1 ft' : '${d.waveFt!.round()} ft'),
           ]),

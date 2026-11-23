@@ -85,7 +85,7 @@ class BestTimeToGo extends StatelessWidget {
           SheetRow(Icons.wb_sunny_outlined, 'Daytime high', '${m.airF}°F'),
           SheetRow(Icons.pool_rounded, 'Water temperature', '${m.waterF}°F'),
           SheetRow(Icons.waves_rounded, 'Typical waves', '${m.waveFt} ft'),
-          SheetRow(Icons.umbrella_rounded, 'Rain in the month', '${m.rainIn.toStringAsFixed(1)} in'),
+          SheetRow(Icons.water_drop_outlined, 'Rain in the month', '${m.rainIn.toStringAsFixed(1)} in'),
         ],
       ),
     );
@@ -120,7 +120,7 @@ class _MonthCard extends StatelessWidget {
             _row(Icons.wb_sunny_outlined, '${m.airF}°F', 'Air temperature'),
             _row(Icons.pool_rounded, '${m.waterF}°F', 'Water temperature'),
             _row(Icons.waves_rounded, '${m.waveFt} ft', 'Wave size'),
-            _row(Icons.umbrella_rounded, '${m.rainIn.toStringAsFixed(1)} in', 'Rain'),
+            _row(Icons.water_drop_outlined, '${m.rainIn.toStringAsFixed(1)} in', 'Rain'),
           ],
         ),
       ),
