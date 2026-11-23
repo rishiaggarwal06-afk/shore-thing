@@ -25,7 +25,7 @@ class BeachCard extends StatelessWidget {
   }
 
   String get _entry => beach.entry == 'Free' ? 'Free entry' : '${beach.entry} ${beach.entryUnit ?? ''}'.trim();
-  String get _guards => beach.lifeguards.startsWith('Yes') ? 'Lifeguards' : 'No lifeguards';
+  String get _guards => beach.lifeguardsShort;
 
   @override
   Widget build(BuildContext context) {

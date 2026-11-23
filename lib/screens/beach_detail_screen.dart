@@ -77,7 +77,6 @@ class BeachDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final b = beach;
     final repo = BeachScope.of(context);
-    final region = repo.regionOf(b);
     const gap = SizedBox(height: 28);
 
     return Title(
@@ -87,7 +86,7 @@ class BeachDetailScreen extends StatelessWidget {
         children: [
           PhotoGallery(beach: b),
           const SizedBox(height: 20),
-          DetailHead(eyebrow: '${b.area} · ${region.state}', title: b.name, text: b.description),
+          DetailHead(eyebrow: '${b.area} · ${repo.placeOf(b)}', title: b.name, text: b.description),
           gap,
           _FactTiles(b),
           gap,

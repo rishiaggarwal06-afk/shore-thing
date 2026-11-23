@@ -20,26 +20,30 @@ class BestTimeToGo extends StatelessWidget {
       const SizedBox(height: 4),
       Text(
         climate.placeholder
-            ? 'Rough estimates until this beach’s averages are added · tap a month'
+            ? 'Month-by-month averages for this beach are coming soon. Until then, see the 7-day forecast above.'
             : 'Typical conditions from 10-year averages · tap a month',
-        style: const TextStyle(fontSize: 14),
+        style: const TextStyle(fontSize: 14, height: 1.4),
       ),
-      const SizedBox(height: 14),
-      // Phones swipe through the months; wider screens show them all as a grid.
-      if (Brand.isPhone(context))
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          clipBehavior: Clip.none,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              for (final m in months) Padding(padding: const EdgeInsets.only(right: 10), child: _card(context, m)),
-            ],
-          ),
-        )
-      else
-        Wrap(spacing: 10, runSpacing: 10, children: [for (final m in months) _card(context, m)]),
+      // No real averages yet: show nothing rather than made-up numbers.
+      if (!climate.placeholder) ...[
+        const SizedBox(height: 14),
+        // Phones swipe through the months; wider screens show them all as a grid.
+        if (Brand.isPhone(context))
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            clipBehavior: Clip.none,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (final m in months) Padding(padding: const EdgeInsets.only(right: 10), child: _card(context, m)),
+              ],
+            ),
+          )
+        else
+          Wrap(spacing: 10, runSpacing: 10, children: [for (final m in months) _card(context, m)]),
+      ],
       if (climate.source != null) ...[
+        const SizedBox(height: 8),
         const SizedBox(height: 8),
         Text(climate.source!, style: const TextStyle(fontSize: 11.5)),
       ],

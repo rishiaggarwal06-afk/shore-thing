@@ -114,7 +114,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
 
   void _flyTo(LatLng center, double zoom, {int ms = 650}) {
     final cam = _map.camera;
-    zoom = zoom.clamp(2.0, 18.0);
+    zoom = zoom.clamp(1.0, 18.0);
     if (MediaQuery.disableAnimationsOf(context)) {
       _map.move(center, zoom);
       return;
@@ -256,7 +256,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                                 coordinates: [for (final b in repo.beaches) LatLng(b.lat, b.lon)],
                                 padding: const EdgeInsets.all(80),
                               ),
-                              minZoom: 2,
+                              minZoom: 1,
                               maxZoom: 18,
                               interactionOptions: const InteractionOptions(
                                 flags: InteractiveFlag.all & ~InteractiveFlag.rotate,

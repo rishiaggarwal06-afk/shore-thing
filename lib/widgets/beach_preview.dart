@@ -95,7 +95,7 @@ class BeachPreview extends StatelessWidget {
                       runSpacing: 6,
                       children: [
                         _Fact(Icons.confirmation_number_outlined, entry),
-                        _Fact(Icons.pool_rounded, b.lifeguards.startsWith('Yes') ? 'Lifeguards' : 'No lifeguards'),
+                        _Fact(Icons.pool_rounded, b.lifeguardsShort),
                         _Fact(Icons.waves_rounded, b.wave == 'Calm' ? 'Calm water' : 'Waves ${b.wave}'),
                         if (b.restrooms) const _Fact(Icons.wc_rounded, 'Restrooms'),
                         if (b.shacksFood) const _Fact(Icons.restaurant_rounded, 'Food'),
