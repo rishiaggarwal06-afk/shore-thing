@@ -52,7 +52,7 @@ class _ForecastStripState extends State<ForecastStrip> {
   Widget build(BuildContext context) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text('Next 7 days', style: Brand.title(30)),
+      Text('Next 7 days', style: Brand.title(24)),
       const SizedBox(height: 4),
       const Text('Live forecast · tap a day for details', style: TextStyle(fontSize: 14)),
       const SizedBox(height: 12),
@@ -195,7 +195,7 @@ class _DayCard extends StatelessWidget {
           width: MediaQuery.textScalerOf(context).scale(96),
           padding: const EdgeInsets.all(10),
           margin: const EdgeInsets.only(bottom: 4, right: 4),
-          decoration: Brand.card(color: today ? Brand.sunTint : Colors.white, shadow: 3),
+          decoration: today ? Brand.card(color: Brand.sunTint, shadow: 0, radius: 16) : const BoxDecoration(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

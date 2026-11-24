@@ -16,7 +16,7 @@ class BestTimeToGo extends StatelessWidget {
   Widget build(BuildContext context) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text('Best time to go', style: Brand.title(30)),
+      Text('Best time to go', style: Brand.title(24)),
       const SizedBox(height: 4),
       Text(
         climate.placeholder
@@ -108,7 +108,7 @@ class _MonthCard extends StatelessWidget {
         width: MediaQuery.textScalerOf(context).scale(104),
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.only(bottom: 4, right: 4),
-        decoration: Brand.card(color: warm ? Brand.sunTint : Colors.white, shadow: 3),
+        decoration: warm ? Brand.card(color: Brand.sunTint, shadow: 0, radius: 16) : const BoxDecoration(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

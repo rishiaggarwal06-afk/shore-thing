@@ -9,8 +9,11 @@ import 'brand.dart';
 /// Tapping a photo opens [PhotoViewer] (full screen, pinch to zoom).
 /// Beaches without photos yet show the three illustrated scenes instead.
 class PhotoGallery extends StatefulWidget {
-  const PhotoGallery({super.key, required this.beach});
+  const PhotoGallery({super.key, required this.beach, this.edgeToEdge = false});
   final Beach beach;
+
+  /// Full width with square edges (the top of a beach page) instead of a rounded card.
+  final bool edgeToEdge;
 
   @override
   State<PhotoGallery> createState() => _PhotoGalleryState();
@@ -37,10 +40,10 @@ class _PhotoGalleryState extends State<PhotoGallery> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Container(
-          decoration: Brand.card(shadow: 6, radius: 22),
+          decoration: widget.edgeToEdge ? const BoxDecoration(color: Brand.sand) : Brand.card(shadow: 6, radius: 22),
           clipBehavior: Clip.antiAlias,
           child: AspectRatio(
-            aspectRatio: phone ? 4 / 3 : 16 / 9,
+            aspectRatio: phone ? 4 / 3 : (widget.edgeToEdge ? 21 / 9 : 16 / 9),
             child: Stack(
               fit: StackFit.expand,
               children: [
