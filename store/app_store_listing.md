@@ -6,7 +6,7 @@ Copy each field into App Store Connect. Character limits are Apple's.
 Shore Thing: Beach Finder
 
 ## Subtitle (max 30)
-Beaches, forecasts & what's there
+Beach guide Beaches, forecasts & what's there live forecasts
 
 ## Category
 Primary: Travel · Secondary: Weather
