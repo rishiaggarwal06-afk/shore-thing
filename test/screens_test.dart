@@ -86,7 +86,8 @@ void main() {
     await tester.pumpWidget(ShoreThingApp(repo: repo));
     await tester.pump(const Duration(milliseconds: 500));
     expect(find.byType(WaveIntro), findsOneWidget);
-    for (var i = 0; i < 30; i++) {
+    // 3 s of intro, plus a moment for it to start once the first frames are drawn.
+    for (var i = 0; i < 40; i++) {
       await tester.pump(const Duration(milliseconds: 100));
     }
     expect(find.byType(WaveIntro), findsNothing);
