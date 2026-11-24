@@ -2,6 +2,7 @@
 """Find local businesses near each beach that publish a contact email, for partner outreach.
 
 Run from the project folder:   python3 tool/find_businesses.py
+Stop it any time with Ctrl+C: it saves after every beach and carries on where it left off.
 Writes (into tool/outreach/, which git ignores, so the list never goes public):
   businesses.csv   every business picked, 5 per beach where possible
   group_A.csv      half of them (email WITHOUT a price)
@@ -142,8 +143,16 @@ def pick(cands):
 def main():
     beaches = json.loads(DATA.read_text(encoding="utf-8"))["beaches"]
     OUT.mkdir(parents=True, exist_ok=True)
-    used, rows = set(), []
+    # Progress is saved after every beach, so stopping (Ctrl+C) and running again carries on.
+    progress_file = OUT / "progress.json"
+    progress = json.loads(progress_file.read_text(encoding="utf-8")) if progress_file.exists() else {}
+    used = {r["email"].lower() for rs in progress.values() for r in rs}
+    rows = []
     for b in beaches:
+        if b["slug"] in progress:
+            rows += progress[b["slug"]]
+            print(f"{b['name']}: {len(progress[b['slug']])} businesses (already done)", file=sys.stderr)
+            continue
         chosen = []
         for radius in (3000, 8000):  # widen the search for remote beaches
             chosen = pick(candidates(b, radius, used))
@@ -153,6 +162,9 @@ def main():
         for c in chosen:
             used.add(c["email"].lower())
         rows += chosen
+        if chosen:  # an empty result is usually a busy server: try that beach again next run
+            progress[b["slug"]] = chosen
+            progress_file.write_text(json.dumps(progress, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"{b['name']}: {len(chosen)} businesses", file=sys.stderr)
         time.sleep(5)  # be polite to the free Overpass servers
 

@@ -24,7 +24,8 @@ class ForecastService {
   Future<BeachForecast> forBeach(Beach b, {bool refresh = false}) {
     final hit = _cache[b.slug];
     if (!refresh && hit != null && DateTime.now().difference(hit.at) < _keepFor) return hit.forecast;
-    final f = _fetch(b);
+    // Never wait forever: if the network is stuck, give up after 20 seconds and say so.
+    final f = _fetch(b).timeout(const Duration(seconds: 20));
     _cache[b.slug] = (at: DateTime.now(), forecast: f);
     f.catchError((Object _) {
       _cache.remove(b.slug); // don't remember a failure; try again next time

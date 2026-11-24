@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../models/beach.dart';
@@ -58,16 +60,7 @@ class _ForecastStripState extends State<ForecastStrip> {
         future: _future,
         builder: (context, snap) {
           if (snap.connectionState != ConnectionState.done) {
-            return const Padding(
-              padding: EdgeInsets.symmetric(vertical: 24),
-              child: Row(
-                children: [
-                  SizedBox(width: 22, height: 22, child: CircularProgressIndicator(strokeWidth: 3, color: Brand.ink)),
-                  SizedBox(width: 12),
-                  Text('Getting the forecast…', style: TextStyle(fontSize: 15)),
-                ],
-              ),
-            );
+            return const _Waiting();
           }
           final days = snap.data?.days ?? const <DayForecast>[];
           if (snap.hasError || days.isEmpty) {
@@ -80,7 +73,18 @@ class _ForecastStripState extends State<ForecastStrip> {
                 runSpacing: 10,
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: [
-                  const Text('Couldn’t load the forecast. Check your connection.', style: TextStyle(fontSize: 15)),
+                  Text.rich(
+                    TextSpan(children: [
+                      const TextSpan(text: 'Couldn’t load the forecast. Check your connection.'),
+                      // The technical reason, small, so a screenshot says what went wrong.
+                      if (snap.hasError)
+                        TextSpan(
+                          text: '\n${_reason(snap.error!)}',
+                          style: const TextStyle(fontSize: 12, color: Brand.inkSoft),
+                        ),
+                    ]),
+                    style: const TextStyle(fontSize: 15, height: 1.4),
+                  ),
                   OutlinedButton(
                     onPressed: _retry,
                     style: OutlinedButton.styleFrom(
@@ -225,4 +229,50 @@ class _DayCard extends StatelessWidget {
       ],
     ),
   );
+}
+
+/// Short description of why the forecast failed (shown in small print).
+String _reason(Object e) {
+  final text = e.toString().replaceAll('\n', ' ');
+  return text.length > 120 ? '${text.substring(0, 120)}…' : text;
+}
+
+/// Spinner while the forecast loads; after a few seconds it says it's still trying.
+class _Waiting extends StatefulWidget {
+  const _Waiting();
+
+  @override
+  State<_Waiting> createState() => _WaitingState();
+}
+
+class _WaitingState extends State<_Waiting> {
+  bool _slow = false;
+  late final Timer _timer = Timer(const Duration(seconds: 6), () => setState(() => _slow = true));
+
+  @override
+  void initState() {
+    super.initState();
+    _timer; // start the timer
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24),
+        child: Row(children: [
+          const SizedBox(width: 22, height: 22, child: CircularProgressIndicator(strokeWidth: 3, color: Brand.ink)),
+          const SizedBox(width: 12),
+          Flexible(
+            child: Text(
+              _slow ? 'Still waiting for the forecast… (slow connection?)' : 'Getting the forecast…',
+              style: const TextStyle(fontSize: 15),
+            ),
+          ),
+        ]),
+      );
 }
