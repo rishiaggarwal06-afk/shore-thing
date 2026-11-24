@@ -4,6 +4,7 @@ import 'package:beach_finder/main.dart';
 import 'package:beach_finder/services/beach_repository.dart';
 import 'package:beach_finder/widgets/beach_card.dart';
 import 'package:beach_finder/widgets/beach_preview.dart';
+import 'package:beach_finder/widgets/wave_intro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -38,7 +39,7 @@ void main() {
       addTearDown(tester.view.reset);
       for (final scale in [1.0, 2.0]) {
         tester.platformDispatcher.textScaleFactorTestValue = scale;
-        await tester.pumpWidget(ShoreThingApp(repo: repo));
+        await tester.pumpWidget(ShoreThingApp(repo: repo, intro: false));
         await tester.pump();
         GoRouter.of(tester.element(find.byType(Scaffold).first)).go(path);
         for (var i = 0; i < 10; i++) {
@@ -57,7 +58,7 @@ void main() {
     addTearDown(tester.view.reset);
     for (final scale in [1.0, 2.0]) {
       tester.platformDispatcher.textScaleFactorTestValue = scale;
-      await tester.pumpWidget(ShoreThingApp(repo: repo));
+      await tester.pumpWidget(ShoreThingApp(repo: repo, intro: false));
       for (var i = 0; i < 10; i++) {
         await tester.pump(const Duration(milliseconds: 100));
       }
@@ -75,5 +76,20 @@ void main() {
       expect(find.byType(BeachPreview), findsNothing);
     }
     tester.platformDispatcher.clearTextScaleFactorTestValue();
+  });
+
+  testWidgets('wave intro plays over the map, then goes away', (tester) async {
+    final repo = (await tester.runAsync(BeachRepository.load))!;
+    tester.view.physicalSize = const Size(390 * 3, 844 * 3);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(ShoreThingApp(repo: repo));
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(find.byType(WaveIntro), findsOneWidget);
+    for (var i = 0; i < 30; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
+    expect(find.byType(WaveIntro), findsNothing);
+    expect(tester.takeException(), isNull);
   });
 }
