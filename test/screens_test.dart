@@ -18,7 +18,7 @@ void main() {
   // Tests normally draw every letter as a wide square; load the app's real fonts so widths match a phone.
   setUpAll(() async {
     for (final (family, files) in [
-      ('LiberationSans', ['Regular', 'Bold', 'Italic', 'BoldItalic'].map((w) => 'assets/fonts/LiberationSans-$w.ttf')),
+      ('PlusJakartaSans', ['Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold'].map((w) => 'assets/fonts/PlusJakartaSans-$w.ttf')),
       ('DejaVuSans', ['assets/fonts/DejaVuSans.ttf', 'assets/fonts/DejaVuSans-Bold.ttf']),
       ('MaterialIcons', ['${Platform.environment['FLUTTER_ROOT']}/bin/cache/artifacts/material_fonts/MaterialIcons-Regular.otf']),
     ]) {

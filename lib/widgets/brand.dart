@@ -26,11 +26,11 @@ class Brand {
   /// Map water: one flat sea colour.
   static const water = Color(0xFF5BBFC9);
 
-  /// Bundled Liberation Sans (same letter widths as Arial) for body text.
-  static const font = 'LiberationSans';
+  /// Bundled Plus Jakarta Sans (SIL Open Font License): one clean font for all text.
+  static const font = 'PlusJakartaSans';
 
-  /// Bundled Bricolage Grotesque (SIL Open Font License) for headings and the wordmark.
-  static const display = 'BricolageGrotesque';
+  /// Headings use the same font, extra bold.
+  static const display = font;
 
   /// Bundled DejaVu Sans supplies symbols Liberation Sans lacks (✳ ↗ ☀ ☂ ⚑),
   /// so iPhones don't swap in colourful emoji.
@@ -40,16 +40,14 @@ class Brand {
   static const phoneBreakpoint = 760.0;
   static bool isPhone(BuildContext c) => MediaQuery.sizeOf(c).width <= phoneBreakpoint;
 
-  /// Heading at [size]: page titles ~38, section titles ~28, card titles ~22.
-  /// Bricolage is a variable font, so its boldness is set with a font variation.
+  /// Heading at [size]: page titles ~34, section titles ~24, card titles ~20.
   static TextStyle title(double size, {Color color = ink}) => TextStyle(
         fontFamily: display,
         fontSize: size,
-        height: 1.05,
-        letterSpacing: -.3,
+        height: 1.15,
+        letterSpacing: -.4,
         color: color,
         fontWeight: FontWeight.w800,
-        fontVariations: const [FontVariation('wght', 800)],
       );
 
   /// Rounded card with a soft shadow and no outline.

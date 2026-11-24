@@ -71,21 +71,19 @@ flutter:
     - assets/images/brand/
 
   fonts:
-    - family: LiberationSans
+    # Plus Jakarta Sans for all text, headings included (SIL Open Font License,
+    # see LICENSE-PlusJakartaSans.txt). One file per weight.
+    - family: PlusJakartaSans
       fonts:
-        - asset: assets/fonts/LiberationSans-Regular.ttf
-        - asset: assets/fonts/LiberationSans-Bold.ttf
+        - asset: assets/fonts/PlusJakartaSans-Regular.ttf
+        - asset: assets/fonts/PlusJakartaSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/PlusJakartaSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/PlusJakartaSans-Bold.ttf
           weight: 700
-        - asset: assets/fonts/LiberationSans-Italic.ttf
-          style: italic
-        - asset: assets/fonts/LiberationSans-BoldItalic.ttf
-          weight: 700
-          style: italic
-    # Headings and the wordmark: a variable font (weight set in Brand.title).
-    # SIL Open Font License, see LICENSE-BricolageGrotesque.txt.
-    - family: BricolageGrotesque
-      fonts:
-        - asset: assets/fonts/BricolageGrotesque.ttf
+        - asset: assets/fonts/PlusJakartaSans-ExtraBold.ttf
+          weight: 800
     # Symbols (✳ ↗ ☀ ☂ ⚑ ≈) so phones don't swap in colourful emoji.
     - family: DejaVuSans
       fonts:
