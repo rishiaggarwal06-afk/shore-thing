@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/beach.dart';
 import '../services/beach_scope.dart';
+import '../widgets/beach_list_row.dart';
 import '../widgets/brand.dart';
 import '../widgets/site_chrome.dart';
 import '../widgets/tide_transition.dart';
@@ -48,7 +49,10 @@ class _SearchScreenState extends State<SearchScreen> {
       // Nothing typed: every beach, under its region's name.
       for (final region in repo.regions.values) {
         rows.add(_RegionHeading(region.name));
-        rows.addAll([for (final b in repo.beaches.where((b) => b.region == region.id)) _BeachRow(b)]);
+        rows.addAll([
+          for (final b in repo.beaches.where((b) => b.region == region.id))
+            BeachListRow(beach: b, onTap: () => openBeach(context, b.slug)),
+        ]);
       }
     } else if (results.isEmpty) {
       rows.add(
@@ -62,7 +66,7 @@ class _SearchScreenState extends State<SearchScreen> {
       );
     } else {
       rows.add(_RegionHeading(results.length == 1 ? '1 beach' : '${results.length} beaches'));
-      rows.addAll([for (final b in results) _BeachRow(b)]);
+      rows.addAll([for (final b in results) BeachListRow(beach: b, onTap: () => openBeach(context, b.slug))]);
     }
 
     return Title(
@@ -129,56 +133,4 @@ class _RegionHeading extends StatelessWidget {
     padding: const EdgeInsets.only(top: 22, bottom: 4),
     child: Semantics(header: true, child: Text(text, style: Brand.title(24))),
   );
-}
-
-/// One beach in the list: small photo, name, town and state. Tapping opens its page.
-class _BeachRow extends StatelessWidget {
-  const _BeachRow(this.b);
-  final Beach b;
-
-  @override
-  Widget build(BuildContext context) {
-    // The thumbnail grows with the user's text size so rows stay balanced.
-    final thumb = MediaQuery.textScalerOf(context).scale(56);
-    return InkWell(
-      onTap: () => openBeach(context, b.slug),
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(color: Brand.teal, width: 1.5)),
-        ),
-        child: Row(
-          children: [
-            Container(
-              width: thumb,
-              height: thumb,
-              decoration: BoxDecoration(color: Brand.sand, borderRadius: BorderRadius.circular(12)),
-              clipBehavior: Clip.antiAlias,
-              child: b.photos.isEmpty
-                  ? const Icon(Icons.beach_access_rounded, color: Brand.ink)
-                  : Image.asset(
-                      b.photos.first.asset,
-                      fit: BoxFit.cover,
-                      cacheWidth: 200, // small copy in memory, it's only a thumbnail
-                      excludeFromSemantics: true,
-                      errorBuilder: (_, _, _) => const Icon(Icons.beach_access_rounded, color: Brand.ink),
-                    ),
-            ),
-            const SizedBox(width: 14),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(b.name, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
-                  const SizedBox(height: 2),
-                  Text(b.area, style: const TextStyle(fontSize: 14)),
-                ],
-              ),
-            ),
-            const Icon(Icons.chevron_right_rounded, color: Brand.ink),
-          ],
-        ),
-      ),
-    );
-  }
 }

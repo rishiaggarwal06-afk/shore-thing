@@ -1,4 +1,5 @@
 import 'package:beach_finder/models/beach.dart';
+import 'package:beach_finder/services/beach_of_the_week.dart';
 import 'package:beach_finder/services/beach_repository.dart';
 import 'package:beach_finder/services/climate_service.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -61,6 +62,17 @@ void main() {
     expect(c.months, hasLength(12));
     expect(b.photos.single.credit, 'Photo: A · CC0 · Wikimedia Commons');
     expect(const ClimateService().monthlyFor(repo.beaches.first).placeholder, repo.beaches.first.monthly.isEmpty);
+  });
+
+  test('beaches of the week: 6 picks, same all week, new the next week', () async {
+    final repo = await BeachRepository.load();
+    final monday = DateTime(2026, 11, 23), sunday = DateTime(2026, 11, 29), next = DateTime(2026, 11, 30);
+    final a = beachesOfTheWeek(repo.beaches, monday).map((b) => b.slug).toList();
+    expect(a, hasLength(6));
+    expect(beachesOfTheWeek(repo.beaches, sunday).map((b) => b.slug), a);
+    expect(beachesOfTheWeek(repo.beaches, next).map((b) => b.slug), isNot(a));
+    expect(weekNumber(DateTime(2026, 1, 1)), 1);
+    expect(weekNumber(DateTime(2026, 11, 23)), 48);
   });
 }
 

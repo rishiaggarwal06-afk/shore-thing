@@ -1,10 +1,7 @@
-import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart' show PointerDeviceKind;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:latlong2/latlong.dart';
@@ -14,16 +11,18 @@ import '../models/beach_filter.dart';
 import '../services/beach_scope.dart';
 import '../services/map_tiles.dart';
 import '../widgets/basemap_layers.dart';
-import '../widgets/beach_card.dart';
-import '../widgets/beach_preview.dart';
+import '../services/beach_of_the_week.dart';
+import '../widgets/beach_list_row.dart';
 import '../widgets/brand.dart';
+import '../widgets/brand_sheet.dart';
 import '../widgets/castle_layer.dart';
 import '../widgets/site_chrome.dart';
 import '../widgets/tide_transition.dart';
 
-/// Home: the map of sandcastles, the filter chips in a strip above it, and a
-/// rotating row of up to 10 beach cards along the bottom. Tapping a castle opens
-/// that beach's page; tapping a card opens a mini preview with Back / View full page.
+/// Home: the map of sandcastles with the filter chips above it, and as much map as
+/// possible. Tapping a castle opens that beach; tapping a numbered castle lists the
+/// beaches in it (two taps to any beach). A "Beaches of the week" button at the bottom
+/// opens this week's 6 picks.
 class HomeMapScreen extends StatefulWidget {
   const HomeMapScreen({super.key});
 
@@ -37,25 +36,9 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
   BeachFilter _filter = BeachFilter.all;
   bool _touched = false; // hides the "drag to explore" hint after the first touch
   bool _ready = false;
-  Beach? _preview; // beach whose mini card is open
-  double _previewH = 0; // its measured height, so the map can keep the castle above it
-  final _previewKey = GlobalKey();
 
-  // The card row: up to 10 beaches, picked at random from the ones the filter lets through.
-  static const _maxCards = 10;
-  List<Beach> _picks = const [];
-  String _picksFor = '';
-  PageController? _cards; // remade when the card width changes (phone ↔ wide screen)
-  double _cardsFraction = 0;
-  Timer? _rotate;
-  DateTime _pauseUntil = DateTime(0); // a touch on the cards pauses the rotation for a bit
-
-  /// The row loops forever, so it starts far from page 0 and can be swiped either way.
-  int get _basePage => _picks.length * 500;
-
-  /// Space the cards and credits take at the bottom of the map; the map keeps castles clear of it.
+  /// Space the credits and the "Beaches of the week" button take at the bottom of the map.
   double _bottomInset = 0;
-  double _cardsBottom = 0; // where the card row / preview starts, above the credits
 
   // Current fly-to animation.
   LatLng _fromC = const LatLng(0, 0), _toC = const LatLng(0, 0);
@@ -68,7 +51,6 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
   @override
   void initState() {
     super.initState();
-    _rotate = Timer.periodic(const Duration(seconds: 5), _tick);
     _fly.addListener(() {
       final t = Curves.easeInOutCubic.transform(_fly.value);
       _map.move(
@@ -81,19 +63,9 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
     });
   }
 
-  /// Every 5 seconds, slide to the next card (unless someone's using the row or a preview is open).
-  void _tick(Timer _) {
-    final c = _cards;
-    if (!mounted || c == null || !c.hasClients || _preview != null || _picks.length < 2) return;
-    if (MediaQuery.disableAnimationsOf(context) || DateTime.now().isBefore(_pauseUntil)) return;
-    c.nextPage(duration: const Duration(milliseconds: 700), curve: Curves.easeInOutCubic);
-  }
-
   @override
   void dispose() {
-    _rotate?.cancel();
     _fly.dispose();
-    _cards?.dispose();
     super.dispose();
   }
 
@@ -140,57 +112,75 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
   }
 
   void _setFilter(BeachFilter f) {
-    setState(() {
-      _filter = f;
-      _preview = null;
-    });
+    setState(() => _filter = f);
     final shown = _shown;
     if (shown.isNotEmpty) _flyToFit(shown);
   }
 
-  /// Pick up to 10 beaches for the card row (new picks each time the filter changes).
-  void _pickCards(List<Beach> shown) {
-    if (_picksFor == _filter.label && _picks.isNotEmpty) return;
-    _picks = ([...shown]..shuffle()).take(_maxCards).toList();
-    _picksFor = _filter.label;
-    if (_cards?.hasClients ?? false) {
-      WidgetsBinding.instance.addPostFrameCallback((_) => _cards?.jumpToPage(_basePage));
-    }
+  /// A list of beaches in a panel; tapping one closes the panel and opens the beach.
+  void _showList(String title, String subtitle, List<Beach> list, {Widget? top}) {
+    final repo = BeachScope.of(context);
+    showBrandSheet(
+      context,
+      title: title,
+      subtitle: subtitle,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          ?top,
+          for (final b in list)
+            BeachListRow(
+              beach: b,
+              subtitle: '${b.area} · ${repo.placeOf(b)}',
+              onTap: () {
+                Navigator.of(context).pop();
+                openBeach(context, b.slug);
+              },
+            ),
+        ],
+      ),
+    );
   }
 
-  /// A card was tapped: open its mini preview and fly the map to the beach, above the preview.
-  void _openPreview(Beach b) {
-    HapticFeedback.selectionClick();
-    setState(() {
-      _preview = b;
-      _touched = true;
-    });
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!mounted || _preview != b) return;
-      final box = _previewKey.currentContext?.findRenderObject() as RenderBox?;
-      setState(() => _previewH = box?.size.height ?? 0);
-      _bottomInset = _cardsBottom + _previewH; // so the fly-to below keeps the castle above the preview
-      // Close enough to see the town, or closer if the user has already zoomed in.
-      final t = _fitTarget([b], maxZoom: math.max(10, _map.camera.zoom));
-      _flyTo(t.center, t.zoom, ms: 800);
-    });
+  void _showBeachesOfTheWeek() {
+    setState(() => _touched = true);
+    _showList(
+      'Beaches of the week',
+      'Six picks from around the world · new every Monday',
+      beachesOfTheWeek(_beaches, DateTime.now()),
+    );
   }
 
-  void _closePreview() => setState(() => _preview = null);
-
-  PageController _cardsController(double fraction) {
-    if (_cards == null || fraction != _cardsFraction) {
-      final old = _cards;
-      final page = (old?.hasClients ?? false) ? old!.page?.round() ?? _basePage : _basePage;
-      _cards = PageController(viewportFraction: fraction, initialPage: page);
-      _cardsFraction = fraction;
-      if (old != null) WidgetsBinding.instance.addPostFrameCallback((_) => old.dispose());
-    }
-    return _cards!;
+  /// A numbered castle: list its beaches (one more tap opens any of them),
+  /// with a button to zoom in on them instead.
+  void _openCluster(List<Beach> members, double spreadPx) {
+    setState(() => _touched = true);
+    _showList(
+      '${members.length} beaches here',
+      'Tap one to open it',
+      members,
+      top: Padding(
+        padding: const EdgeInsets.only(bottom: 6),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton.icon(
+            onPressed: () {
+              Navigator.of(context).pop();
+              _zoomToCluster(members, spreadPx);
+            },
+            icon: const Icon(Icons.zoom_in_rounded, color: Brand.ocean),
+            label: const Text(
+              'Zoom in on the map instead',
+              style: TextStyle(fontWeight: FontWeight.w700, color: Brand.ocean),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Zoom in just far enough for a cluster's castles to stand apart.
-  void _openCluster(List<Beach> members, double spreadPx) {
+  void _zoomToCluster(List<Beach> members, double spreadPx) {
     setState(() => _touched = true);
     final factor = math.min(8.0, math.max(1.6, 150 / math.max(spreadPx, 1)));
     final lat = members.fold(0.0, (s, b) => s + b.lat) / members.length;
@@ -204,19 +194,12 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
     final repo = BeachScope.of(context);
     final tiles = MapTiles.current;
     final safeBottom = MediaQuery.paddingOf(context).bottom; // iPhone home-indicator strip
-    final width = MediaQuery.sizeOf(context).width;
     final shown = _shown;
-    _pickCards(shown);
-    // Bottom of the map, from the bottom up: credits bar, then the card row.
+    // Bottom of the map, from the bottom up: credits bar, then the "Beaches of the week" button.
     final textScale = MediaQuery.textScalerOf(context);
     final creditsH = math.max(16.0, textScale.scale(11) * 1.25) + 8 + safeBottom;
-    final cardH = BeachCard.heightFor(context);
-    final cardsBottom = _cardsBottom = creditsH + 4;
-    _bottomInset = _preview != null
-        ? cardsBottom + _previewH
-        : shown.isEmpty
-        ? creditsH
-        : cardsBottom + cardH;
+    final buttonBottom = creditsH + 10;
+    _bottomInset = buttonBottom + textScale.scale(15) * 1.3 + 24;
     final touchDevice = defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.android;
 
     return Title(
@@ -239,7 +222,6 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
             Expanded(
               child: LayoutBuilder(
                 builder: (context, box) {
-                  final mapH = box.maxHeight;
                   return Stack(
                     children: [
                       Positioned.fill(
@@ -261,7 +243,6 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                               interactionOptions: const InteractionOptions(
                                 flags: InteractiveFlag.all & ~InteractiveFlag.rotate,
                               ),
-                              onTap: (_, _) => _closePreview(), // tapping the map closes the preview
                               onMapReady: () => WidgetsBinding.instance.addPostFrameCallback((_) {
                                 // Re-fit once the map knows its real size.
                                 final t = _fitTarget(repo.beaches);
@@ -285,7 +266,6 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                                 CastleLayer(
                                   beaches: repo.beaches,
                                   visible: {for (final b in shown) b.slug},
-                                  selected: _preview?.slug,
                                   onBeachTap: (b) => openBeach(context, b.slug), // straight to the beach page
                                   onClusterTap: _openCluster,
                                 ),
@@ -314,62 +294,32 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                           ),
                         ),
                       ),
-                      // The card row: up to 10 beaches, sliding along every few seconds. Hidden while a preview is open.
-                      if (shown.isNotEmpty)
-                        Positioned(
-                          left: 0,
-                          right: 0,
-                          bottom: cardsBottom,
-                          height: cardH,
-                          // Offstage hides the row under the preview but keeps its place, so Back returns to the same card.
-                          child: Offstage(
-                            offstage: _preview != null,
-                            child: Listener(
-                              // Touching the row pauses the rotation, so it never slides away under a finger.
-                              onPointerDown: (_) => _pauseUntil = DateTime.now().add(const Duration(seconds: 12)),
-                              // Let a mouse drag the cards too (on the website), not just fingers and trackpads.
-                              child: ScrollConfiguration(
-                                behavior: ScrollConfiguration.of(context)
-                                    .copyWith(dragDevices: PointerDeviceKind.values.toSet()),
-                                child: PageView.builder(
-                                  controller: _cardsController(phone ? .9 : math.min(.9, 420 / width)),
-                                  // No itemCount: the row loops, so card 10 is followed by card 1 again.
-                                  itemBuilder: (context, i) {
-                                    final b = _picks[i % _picks.length];
-                                    return Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                                      child: BeachCard(beach: b, selected: false, onTap: () => _openPreview(b)),
-                                    );
-                                  },
+                      // "Beaches of the week": a small pill at the bottom, so the map stays clear.
+                      Positioned(
+                        left: 0,
+                        right: 0,
+                        bottom: buttonBottom,
+                        child: Center(
+                          child: Semantics(
+                            button: true,
+                            child: InkWell(
+                              customBorder: const StadiumBorder(),
+                              onTap: _showBeachesOfTheWeek,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                                decoration: Brand.card(color: Brand.ink, shadow: 4, radius: 999),
+                                child: const Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(Icons.wb_sunny_rounded, size: 18, color: Brand.yellow),
+                                    SizedBox(width: 8),
+                                    Text(
+                                      'Beaches of the week',
+                                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ),
-                          ),
-                        ),
-                      // The mini preview: covers the bottom part of the map only (never the top 12%).
-                      Positioned(
-                        left: 10,
-                        right: 10,
-                        bottom: cardsBottom,
-                        top: mapH * .12,
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: ConstrainedBox(
-                            constraints: const BoxConstraints(maxWidth: 560),
-                            child: AnimatedSwitcher(
-                              duration: const Duration(milliseconds: 250),
-                              transitionBuilder: (child, a) => SlideTransition(
-                                position: Tween(begin: const Offset(0, .25), end: Offset.zero).animate(a),
-                                child: FadeTransition(opacity: a, child: child),
-                              ),
-                              child: _preview == null
-                                  ? const SizedBox.shrink()
-                                  : BeachPreview(
-                                      key: _previewKey,
-                                      beach: _preview!,
-                                      onBack: _closePreview,
-                                      onOpen: () => openBeach(context, _preview!.slug),
-                                    ),
                             ),
                           ),
                         ),
@@ -409,10 +359,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                               () => _flyTo(_map.camera.center, _map.camera.zoom - 1, ms: 350),
                             ),
                             const SizedBox(height: 7),
-                            _RoundButton(Icons.zoom_out_map_rounded, 'Back to all beaches', () {
-                              _closePreview();
-                              _flyToFit(shown);
-                            }),
+                            _RoundButton(Icons.zoom_out_map_rounded, 'Back to all beaches', () => _flyToFit(shown)),
                           ],
                         ),
                       ),
@@ -489,7 +436,9 @@ class _FilterBar extends StatelessWidget {
         onTap: () => onFilter(f),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-          decoration: on ? Brand.card(color: Brand.orange, shadow: 2, radius: 999) : Brand.card(shadow: 1.5, radius: 999),
+          decoration: on
+              ? Brand.card(color: Brand.orange, shadow: 2, radius: 999)
+              : Brand.card(shadow: 1.5, radius: 999),
           child: Text(
             f.label,
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Brand.ink),
