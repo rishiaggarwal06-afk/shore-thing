@@ -47,6 +47,9 @@ Support URL: https://rishiaggarwal06-afk.github.io/shore-thing/support.html
 Privacy Policy URL: https://rishiaggarwal06-afk.github.io/shore-thing/privacy.html
 Marketing URL (optional): https://rishiaggarwal06-afk.github.io/shore-thing/
 
+## Availability
+All countries **except China mainland** (China needs a security assessment and AI-content filings first).
+
 ## Copyright
 2026 Rishi Aggarwal
 
@@ -63,6 +66,8 @@ Answer "None" / "No" to every question → 4+.
 - Contact: your name, phone number and shorethingva26@gmail.com.
 
 ## Screenshots
+Two sets (Apple asks for both): `store/screenshots/` (1290 × 2796) for the 6.9" / 6.7" display, and `store/screenshots-6.3/` (1206 × 2622) for "iPhone with Dynamic Island (medium display)", 6.3".
+
 `store/screenshots/` (1290 × 2796, the 6.7"/6.9" iPhone size Apple asks for). Upload in this order:
 1. 1-map.png
 2. 2-beaches-of-the-week.png
