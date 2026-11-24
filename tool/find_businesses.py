@@ -17,17 +17,22 @@ import json
 import math
 import random
 import re
+import subprocess
 import sys
 import time
 import urllib.parse
-import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "assets" / "data" / "beaches.json"
 OUT = ROOT / "tool" / "outreach"
 UA = "ShoreThingApp/0.1 (https://github.com/rishiaggarwal06-afk/shore-thing; beach guide app)"
-SERVERS = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter"]
+SERVERS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
+    "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+]
 PER_BEACH = 5
 EMAIL = re.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$")
 
@@ -60,17 +65,23 @@ def query(lat, lon, radius):
   nwr(around:{radius},{lat},{lon})["contact:email"];
 );
 out tags center;"""
-    body = urllib.parse.urlencode({"data": q}).encode()
-    for attempt in range(6):
+    body = urllib.parse.urlencode({"data": q})
+    for attempt in range(8):
         server = SERVERS[attempt % len(SERVERS)]
         try:
-            req = urllib.request.Request(server, data=body, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=120) as r:
-                return json.load(r)["elements"]
-        except Exception as e:  # noqa: BLE001 - busy server: wait and try again
-            wait = 15 * (attempt + 1)
-            print(f"  server busy ({e}); waiting {wait}s", file=sys.stderr)
+            # curl, not Python's own downloader: the Python that comes with Xcode uses an old
+            # encryption library that some servers refuse ("SSLV3_ALERT_HANDSHAKE_FAILURE").
+            out = subprocess.run(
+                ["curl", "-sS", "--fail", "--max-time", "120", "-A", UA, "--data", body, server],
+                capture_output=True, text=True, check=True,
+            ).stdout
+            return json.loads(out)["elements"]
+        except Exception as e:  # noqa: BLE001 - busy or unreachable server: try the next one
+            msg = getattr(e, "stderr", "") or str(e)
+            wait = 5 if attempt < len(SERVERS) else 30
+            print(f"  {server.split('/')[2]} didn't answer ({msg.strip()[:80]}); trying again in {wait}s", file=sys.stderr)
             time.sleep(wait)
+    print("  couldn't reach any OpenStreetMap server for this beach; skipping it", file=sys.stderr)
     return []
 
 
