@@ -41,23 +41,28 @@ class SandcastlePainter extends CustomPainter {
 
     final ink = Paint()..color = Brand.ink;
     // Shadow
-    canvas.drawOval(Rect.fromCenter(center: const Offset(0, 1.5), width: 46, height: 8),
-        Paint()..color = Brand.ink.withValues(alpha: .2));
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(0, 1.5), width: 46, height: 8),
+      Paint()..color = Brand.ink.withValues(alpha: .2),
+    );
     // Pole
     canvas.drawLine(
-        const Offset(0, -33),
-        const Offset(0, -46),
-        Paint()
-          ..color = Brand.ink
-          ..strokeWidth = 1.8
-          ..strokeCap = StrokeCap.round);
+      const Offset(0, -33),
+      const Offset(0, -46),
+      Paint()
+        ..color = Brand.ink
+        ..strokeWidth = 1.8
+        ..strokeCap = StrokeCap.round,
+    );
     // Flag (waves around its left edge)
     canvas.save();
     canvas.translate(0, -42.8);
-    canvas.transform((Matrix4.identity()
-          ..setEntry(1, 0, math.tan(9 * math.pi / 180) * flagWave) // skewY
-          ..scaleByDouble(1 - .28 * flagWave, 1, 1, 1))
-        .storage);
+    canvas.transform(
+      (Matrix4.identity()
+            ..setEntry(1, 0, math.tan(9 * math.pi / 180) * flagWave) // skewY
+            ..scaleByDouble(1 - .28 * flagWave, 1, 1, 1))
+          .storage,
+    );
     final flag = Path()
       ..moveTo(0, -3.2)
       ..lineTo(10, 0)
@@ -65,22 +70,24 @@ class SandcastlePainter extends CustomPainter {
       ..close();
     canvas.drawPath(flag, Paint()..color = Brand.orange);
     canvas.drawPath(
-        flag,
-        Paint()
-          ..color = Brand.ink
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 1.3
-          ..strokeJoin = StrokeJoin.round);
+      flag,
+      Paint()
+        ..color = Brand.ink
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.3
+        ..strokeJoin = StrokeJoin.round,
+    );
     canvas.restore();
     // Thick ink outline, then sand fill on top
     canvas.drawPath(_bodyPath, ink);
     canvas.drawPath(
-        _bodyPath,
-        Paint()
-          ..color = Brand.ink
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 3.4
-          ..strokeJoin = StrokeJoin.round);
+      _bodyPath,
+      Paint()
+        ..color = Brand.ink
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3.4
+        ..strokeJoin = StrokeJoin.round,
+    );
     canvas.drawPath(_bodyPath, Paint()..color = Brand.sand);
     // Sand details
     final detail = Paint()
@@ -120,6 +127,7 @@ class SandcastleMarker extends StatefulWidget {
     this.count,
     this.pop = 1,
     this.labelHidden = false,
+    this.selected = false,
   });
 
   final String label;
@@ -132,6 +140,9 @@ class SandcastleMarker extends StatefulWidget {
 
   /// Name tag hidden because it would overlap another castle (shown again on hover).
   final bool labelHidden;
+
+  /// The beach whose card is showing: castle stands raised with a yellow name tag.
+  final bool selected;
 
   static const castleSize = Size(46, 50);
   static const baseFromTop = 44.0; // the castle's base, measured from the top of the widget
@@ -163,7 +174,8 @@ class _SandcastleMarkerState extends State<SandcastleMarker> with SingleTickerPr
   @override
   Widget build(BuildContext context) {
     final pop = widget.pop;
-    final showLabel = !widget.labelHidden || _hover;
+    final showLabel = !widget.labelHidden || _hover || widget.selected;
+    final up = _hover || widget.selected;
     return Semantics(
       button: true,
       label: widget.semanticLabel,
@@ -178,69 +190,78 @@ class _SandcastleMarkerState extends State<SandcastleMarker> with SingleTickerPr
             behavior: HitTestBehavior.opaque,
             onTapDown: (_) => _setHover(true),
             onTap: widget.onTap,
-            child: Column(mainAxisSize: MainAxisSize.min, children: [
-              Stack(clipBehavior: Clip.none, children: [
-                AnimatedSlide(
-                  offset: Offset(0, _hover ? -.06 : 0),
-                  duration: const Duration(milliseconds: 300),
-                  curve: const Cubic(.3, 1.7, .5, 1),
-                  child: AnimatedScale(
-                    scale: _hover ? 1.12 : 1,
-                    alignment: const Alignment(0, .76),
-                    duration: const Duration(milliseconds: 300),
-                    curve: const Cubic(.3, 1.7, .5, 1),
-                    child: Transform(
-                      alignment: const Alignment(0, .76),
-                      transform: Matrix4.translationValues(0, 10 * (1 - pop), 0)
-                        ..scaleByDouble(.2 + .8 * pop, .2 + .8 * pop, 1, 1),
-                      child: Opacity(
-                        opacity: pop.clamp(0.0, 1.0),
-                        child: AnimatedBuilder(
-                          animation: _wave,
-                          builder: (_, _) => CustomPaint(
-                            size: SandcastleMarker.castleSize,
-                            painter: SandcastlePainter(flagWave: _wave.value),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    AnimatedSlide(
+                      offset: Offset(0, up ? -.06 : 0),
+                      duration: const Duration(milliseconds: 300),
+                      curve: const Cubic(.3, 1.7, .5, 1),
+                      child: AnimatedScale(
+                        scale: up ? 1.12 : 1,
+                        alignment: const Alignment(0, .76),
+                        duration: const Duration(milliseconds: 300),
+                        curve: const Cubic(.3, 1.7, .5, 1),
+                        child: Transform(
+                          alignment: const Alignment(0, .76),
+                          transform: Matrix4.translationValues(0, 10 * (1 - pop), 0)
+                            ..scaleByDouble(.2 + .8 * pop, .2 + .8 * pop, 1, 1),
+                          child: Opacity(
+                            opacity: pop.clamp(0.0, 1.0),
+                            child: AnimatedBuilder(
+                              animation: _wave,
+                              builder: (_, _) => CustomPaint(
+                                size: SandcastleMarker.castleSize,
+                                painter: SandcastlePainter(flagWave: _wave.value),
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ),
-                if (widget.count != null)
-                  Positioned(
-                    top: -4,
-                    left: 23 + 9,
-                    child: Container(
-                      constraints: const BoxConstraints(minWidth: 22),
-                      height: 22,
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: Brand.orange,
-                        borderRadius: BorderRadius.circular(11),
-                        border: Border.all(color: Brand.ink, width: 1.5),
+                    if (widget.count != null)
+                      Positioned(
+                        top: -4,
+                        left: 23 + 9,
+                        child: Container(
+                          constraints: const BoxConstraints(minWidth: 22),
+                          height: 22,
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Brand.orange,
+                            borderRadius: BorderRadius.circular(11),
+                            border: Border.all(color: Colors.white, width: 2),
+                          ),
+                          child: Text(
+                            '${widget.count}',
+                            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, height: 1),
+                          ),
+                        ),
                       ),
-                      child: Text('${widget.count}',
-                          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, height: 1)),
-                    ),
-                  ),
-              ]),
-              AnimatedOpacity(
-                opacity: showLabel ? 1 : 0,
-                duration: const Duration(milliseconds: 200),
-                child: Container(
-                  margin: const EdgeInsets.only(top: 2),
-                  padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 1),
-                  decoration: BoxDecoration(
-                    color: Brand.paper,
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Brand.ink, width: 1.5),
-                    boxShadow: const [BoxShadow(color: Brand.ink, offset: Offset(0, 2))],
-                  ),
-                  child: Text(widget.label, style: castleLabelStyle),
+                  ],
                 ),
-              ),
-            ]),
+                AnimatedOpacity(
+                  opacity: showLabel ? 1 : 0,
+                  duration: const Duration(milliseconds: 200),
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 2),
+                    padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 1),
+                    decoration: BoxDecoration(
+                      color: widget.selected ? Brand.yellow : Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(color: Brand.ink.withValues(alpha: .18), blurRadius: 6, offset: const Offset(0, 2)),
+                      ],
+                    ),
+                    child: Text(widget.label, style: castleLabelStyle),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

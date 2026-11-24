@@ -17,8 +17,12 @@ class BeachRepository {
 
   Region regionOf(Beach b) => regions[b.region]!;
 
+  /// Where a beach is, for display: its own country if it has one, else the region's state.
+  String placeOf(Beach b) => b.country ?? regionOf(b).state;
+
   /// "the Jersey Shore, Florida and Hawaiʻi"
   String get regionsLabel {
+    if (regions.length > 3) return '${regions.length} regions around the world';
     final names = [for (final r in regions.values) r.name == 'Jersey Shore' ? 'the Jersey Shore' : r.name];
     if (names.length < 2) return names.join();
     return '${names.sublist(0, names.length - 1).join(', ')} and ${names.last}';
@@ -42,6 +46,23 @@ class BeachRepository {
       if (b.slug == slug) return b;
     }
     return null;
+  }
+
+  /// Search page: every word typed must appear in the beach's name, town or region.
+  /// An empty search returns every beach.
+  List<Beach> search(String query) {
+    final words = normalize(query).split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+    if (words.isEmpty) return beaches;
+    final hits = [
+      for (final b in beaches)
+        if (words.every(
+          normalize('${b.name} ${b.area} ${regionOf(b).name} ${regionOf(b).state} ${b.country ?? ''}').contains,
+        ))
+          b,
+    ];
+    // Beaches whose own name matches come first ("cape may" → Cape May before Ocean City, Cape May County).
+    bool byName(Beach b) => words.every(normalize(b.name).contains);
+    return [...hits.where(byName), ...hits.where((b) => !byName(b))];
   }
 
   /// Same matching as the prototype: an exact name first, then a partial match.

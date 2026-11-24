@@ -49,3 +49,6 @@ app.*.map.json
 
 # Secrets: API keys live here, never commit them
 lib/config/secrets.dart
+
+# Business outreach lists (other people's email addresses): keep them off GitHub
+tool/outreach/

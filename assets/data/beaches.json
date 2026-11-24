@@ -406,7 +406,26 @@
         }
       ],
       "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
-      "photos": [],
+      "photos": [
+        {
+          "asset": "assets/images/beaches/point-pleasant-beach-1.jpg",
+          "artist": "Leif Knutsen",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach_boardw.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/point-pleasant-beach-2.jpg",
+          "artist": "Dough4872",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Point_Pleasant_Beach_north_of_Jenkinson%27s_Aquarium.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/point-pleasant-beach-3.jpg",
+          "artist": "Szeremeta",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bay_Head_and_Point_Pleasant_Beach_from_over_the_Atlantic,_August_2025_(Aerial).jpg"
+        }
+      ],
       "region": "jersey-shore"
     },
     {
@@ -1613,6 +1632,12 @@
           "artist": "TampaThings.com",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Clearwater-beach-florida-pier-60.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/clearwater-beach-3.jpg",
+          "artist": "TampaThings.com",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Clearwater-beach-florida-oceanview.jpg"
         }
       ]
     },
@@ -2030,6 +2055,12 @@
           "artist": "Ebyabe",
           "license": "CC BY-SA 3.0",
           "source": "https://commons.wikimedia.org/wiki/File:Daytona_Beach_Oceanfront_Park_pano01.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/daytona-beach-3.jpg",
+          "artist": "Pat Williams from Commerce Twp, MI, USA",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Daytona_Beach,_Florida_(4783857222).jpg"
         }
       ]
     },
@@ -2166,6 +2197,12 @@
           "artist": "Lianguanlun",
           "license": "CC BY 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Waikiki_surfers_and_sailboats_at_sunset.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/waikiki-beach-3.jpg",
+          "artist": "Seagerthomas",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_Hotel,_Waikiki.jpg"
         }
       ]
     },
@@ -2586,6 +2623,12 @@
           "artist": "Jordan Robinson",
           "license": "CC BY-SA 4.0",
           "source": "https://commons.wikimedia.org/wiki/File:Waimea_Bay_Sunset.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/waimea-bay-3.jpg",
+          "artist": "Don Ramey Logan",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Waimea_Bay_Oahu_Hawaii_Photo_Don_Ramey_Logan.jpg"
         }
       ]
     },
@@ -2729,9 +2772,4264 @@
           "source": "https://commons.wikimedia.org/wiki/File:Kailua_Beach_Sunset_Too_(9193276101).jpg"
         }
       ]
+    },
+    {
+      "slug": "santa-monica",
+      "region": "california",
+      "name": "Santa Monica",
+      "area": "Santa Monica · Los Angeles County",
+      "lat": 34.0094,
+      "lon": -118.4973,
+      "tag": "THE PIER ONE",
+      "tags": [
+        "Boardwalk fun",
+        "Calm swimming"
+      ],
+      "wave": "1–3 ft",
+      "waveNote": "Gentle surf most days; bigger swells in winter",
+      "lifeguards": "Yes",
+      "lifeguardNote": "LA County lifeguards all year, with more towers staffed in summer",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "A public state beach, open to everyone.",
+      "parking": "Paid beach lots and metered street parking. Prices go up on summer weekends; the Metro E Line ends a few blocks away.",
+      "description": "A wide, sandy city beach next to Santa Monica Pier, with its Ferris wheel and arcade, and a beach bike path that runs south to Venice.",
+      "features": [
+        "Lifeguards",
+        "Restrooms",
+        "Pier & amusement park",
+        "Beach bike path",
+        "Food stands",
+        "Beach volleyball"
+      ],
+      "safety": "Swim near a staffed lifeguard tower and away from the pier pilings. Skip swimming for a few days after heavy rain (runoff).",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 64,
+          "waterF": 58,
+          "waveFt": "2–4",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Feb",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "2–4",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Mar",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 59,
+          "waveFt": "2–4",
+          "rainIn": 0.7
+        },
+        {
+          "month": "May",
+          "airF": 69,
+          "waterF": 63,
+          "waveFt": "2–3",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Jun",
+          "airF": 74,
+          "waterF": 66,
+          "waveFt": "2–3",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Jul",
+          "airF": 78,
+          "waterF": 69,
+          "waveFt": "2–3",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 80,
+          "waterF": 71,
+          "waveFt": "2–3",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 70,
+          "waveFt": "2–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Oct",
+          "airF": 77,
+          "waterF": 66,
+          "waveFt": "2–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Nov",
+          "airF": 71,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Dec",
+          "airF": 65,
+          "waterF": 61,
+          "waveFt": "2–4",
+          "rainIn": 3.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/santa-monica-1.jpg",
+          "artist": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Los_Angeles_(California,_USA),_Santa_Monica_Beach_--_2012_--_5301.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/santa-monica-2.jpg",
+          "artist": "Cayambe",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Santa_Monica_%E2%80%93_Lifeguard_tower_(narrow)_2017.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/santa-monica-3.jpg",
+          "artist": "Cayambe",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Santa_Monica_Pier_from_Santa_Monica_State_Beach_03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "la-jolla-cove",
+      "region": "california",
+      "name": "La Jolla Cove",
+      "area": "La Jolla · San Diego",
+      "lat": 32.8503,
+      "lon": -117.2713,
+      "tag": "THE SEA LION ONE",
+      "tags": [
+        "Snorkeling",
+        "Nature & wildlife"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "Small, sheltered cove; calmest in summer and early fall",
+      "lifeguards": "Yes",
+      "lifeguardNote": "City lifeguards watch the cove from a tower on the cliff",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and open to the public.",
+      "parking": "Limited free street parking that fills early; paid lots in La Jolla village.",
+      "description": "A tiny sandy cove below sandstone cliffs, inside a protected marine reserve: clear water for snorkeling with bright orange garibaldi fish, and sea lions and seals on the rocks nearby.",
+      "features": [
+        "Lifeguards",
+        "Restrooms & showers",
+        "Protected marine reserve",
+        "Sea lions & seals nearby",
+        "Grassy park above"
+      ],
+      "safety": "Give sea lions and seals lots of space. Nothing may be taken from the reserve. The cove gets rough when big swells arrive.",
+      "color": 1,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 64,
+          "waterF": 59,
+          "waveFt": "3–5",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Feb",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Mar",
+          "airF": 65,
+          "waterF": 59,
+          "waveFt": "3–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Apr",
+          "airF": 68,
+          "waterF": 60,
+          "waveFt": "3–4",
+          "rainIn": 1.0
+        },
+        {
+          "month": "May",
+          "airF": 69,
+          "waterF": 64,
+          "waveFt": "3–4",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Jun",
+          "airF": 73,
+          "waterF": 67,
+          "waveFt": "3–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Jul",
+          "airF": 77,
+          "waterF": 70,
+          "waveFt": "3–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Aug",
+          "airF": 79,
+          "waterF": 71,
+          "waveFt": "3–4",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Sep",
+          "airF": 78,
+          "waterF": 70,
+          "waveFt": "3–4",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Oct",
+          "airF": 76,
+          "waterF": 66,
+          "waveFt": "3–4",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Nov",
+          "airF": 71,
+          "waterF": 63,
+          "waveFt": "3–4",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Dec",
+          "airF": 66,
+          "waterF": 61,
+          "waveFt": "2–5",
+          "rainIn": 2.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/la-jolla-cove-1.jpg",
+          "artist": "Stephen Bay",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:La_Jolla_Cove,_San_Diego.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/la-jolla-cove-2.jpg",
+          "artist": "Invertzoo",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:La_Jolla_Cove_from_the_south.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/la-jolla-cove-3.jpg",
+          "artist": "Rhododendrites",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:California_sea_lion_in_La_Jolla_(70568).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "huntington-beach",
+      "region": "california",
+      "name": "Huntington Beach",
+      "area": "Huntington Beach · Orange County",
+      "lat": 33.6553,
+      "lon": -117.9988,
+      "tag": "SURF CITY USA",
+      "tags": [
+        "Surf spots",
+        "Boardwalk fun"
+      ],
+      "wave": "2–5 ft",
+      "waveNote": "Consistent surf, especially around the pier",
+      "lifeguards": "Yes",
+      "lifeguardNote": "City and state lifeguards all year, with more towers in summer",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and open to the public.",
+      "parking": "Metered street parking and paid beach lots along Pacific Coast Highway.",
+      "description": "Miles of wide sand around a long wooden pier, with steady surf, beach fire rings, a bike path and Main Street's shops and restaurants right behind the beach.",
+      "features": [
+        "Lifeguards",
+        "Restrooms & showers",
+        "Pier",
+        "Fire rings",
+        "Bike path",
+        "Surf lessons & board rentals"
+      ],
+      "safety": "Swim between lifeguard towers and well away from the pier. Watch for rip currents and surfers.",
+      "color": 2,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": true,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 64,
+          "waterF": 59,
+          "waveFt": "3–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Feb",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Mar",
+          "airF": 64,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 59,
+          "waveFt": "3–4",
+          "rainIn": 0.6
+        },
+        {
+          "month": "May",
+          "airF": 69,
+          "waterF": 63,
+          "waveFt": "3–4",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Jun",
+          "airF": 74,
+          "waterF": 66,
+          "waveFt": "3–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Jul",
+          "airF": 77,
+          "waterF": 69,
+          "waveFt": "3",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 79,
+          "waterF": 71,
+          "waveFt": "3",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 70,
+          "waveFt": "3–4",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Oct",
+          "airF": 76,
+          "waterF": 67,
+          "waveFt": "3–4",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Nov",
+          "airF": 71,
+          "waterF": 63,
+          "waveFt": "3–4",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Dec",
+          "airF": 65,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.7
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/huntington-beach-1.jpg",
+          "artist": "Imscarr",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Huntington_Beach_Municipal_Pier_-_89001203.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/huntington-beach-2.jpg",
+          "artist": "Mcclane2010",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Surfer_at_Huntington_Beach_Pier.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/huntington-beach-3.jpg",
+          "artist": "Mike Peel",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ruby%27s,_Huntington_Beach_pier,_California.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "grace-bay",
+      "region": "caribbean",
+      "name": "Grace Bay",
+      "area": "Providenciales",
+      "country": "Turks and Caicos Islands",
+      "lat": 21.7965,
+      "lon": -72.2006,
+      "tag": "THE TURQUOISE ONE",
+      "tags": [
+        "Calm swimming",
+        "Snorkeling"
+      ],
+      "wave": "Calm",
+      "waveNote": "Sheltered by a barrier reef offshore",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards on most of the beach",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "All beaches in the Turks and Caicos are public.",
+      "parking": "Free public access paths along the beach, some with small parking areas.",
+      "description": "A long, soft white-sand beach with very calm, clear turquoise water, sheltered by a barrier reef. Snorkel the reef at Bight Reef (Coral Gardens) at the western end.",
+      "features": [
+        "Calm, clear water",
+        "Snorkeling at Bight Reef",
+        "Resorts & restaurants along the sand",
+        "Public access paths"
+      ],
+      "safety": "There are no lifeguards. Don't stand on or touch the coral, and use reef-safe sunscreen.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 78,
+          "waterF": 78,
+          "waveFt": "3–4",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Feb",
+          "airF": 78,
+          "waterF": 78,
+          "waveFt": "3–4",
+          "rainIn": 1.1
+        },
+        {
+          "month": "Mar",
+          "airF": 78,
+          "waterF": 79,
+          "waveFt": "3–4",
+          "rainIn": 1.2
+        },
+        {
+          "month": "Apr",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "3–4",
+          "rainIn": 1.5
+        },
+        {
+          "month": "May",
+          "airF": 81,
+          "waterF": 83,
+          "waveFt": "2–3",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Jun",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "2–3",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Aug",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "2–4",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Sep",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 3.8
+        },
+        {
+          "month": "Nov",
+          "airF": 82,
+          "waterF": 82,
+          "waveFt": "2–4",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Dec",
+          "airF": 80,
+          "waterF": 80,
+          "waveFt": "3–4",
+          "rainIn": 1.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/grace-bay-1.jpg",
+          "artist": "Csouthard",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Grace_Bay_-_panoramio.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/grace-bay-2.jpg",
+          "artist": "VV Nincic from Toronto, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Turks_and_Caicos_(45316031582).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/grace-bay-3.jpg",
+          "artist": "VV Nincic from Toronto, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Turks_and_Caicos_(43864066082).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "seven-mile-beach",
+      "region": "caribbean",
+      "name": "Seven Mile Beach",
+      "area": "West Bay Road · Grand Cayman",
+      "country": "Cayman Islands",
+      "lat": 19.3364,
+      "lon": -81.387,
+      "tag": "THE LONG WHITE ONE",
+      "tags": [
+        "Calm swimming",
+        "Snorkeling"
+      ],
+      "wave": "Calm",
+      "waveNote": "Usually calm on Grand Cayman's sheltered west side",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards on most of the beach",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free. Public Beach and Governor's Beach are easy public access points.",
+      "parking": "Free parking at Public Beach and Governor's Beach.",
+      "description": "A long curve of soft white coral sand along Grand Cayman's calm west coast, lined with hotels and beach bars. Snorkel the reef off Cemetery Beach at the north end.",
+      "features": [
+        "Calm, clear water",
+        "Public Beach with restrooms & shade",
+        "Snorkeling at Cemetery Reef",
+        "Water sports rentals",
+        "Beach bars"
+      ],
+      "safety": "No lifeguards. Watch for boats and jet skis offshore; swim close to the beach.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": true,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Feb",
+          "airF": 82,
+          "waterF": 81,
+          "waveFt": "3–5",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Mar",
+          "airF": 83,
+          "waterF": 81,
+          "waveFt": "3–4",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Apr",
+          "airF": 84,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 2.1
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 85,
+          "waveFt": "3–5",
+          "rainIn": 5.8
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 86,
+          "waveFt": "3–4",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Sep",
+          "airF": 88,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Oct",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "2–4",
+          "rainIn": 6.0
+        },
+        {
+          "month": "Nov",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "3–5",
+          "rainIn": 4.5
+        },
+        {
+          "month": "Dec",
+          "airF": 82,
+          "waterF": 83,
+          "waveFt": "4–6",
+          "rainIn": 2.0
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/seven-mile-beach-1.jpg",
+          "artist": "Coolcaesar",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Seven_Mile_Beach_Facing_North.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/seven-mile-beach-2.jpg",
+          "artist": "RoadTripWarrior",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Resorts_on_Seven_Mile_Beach,_Grand_Cayman.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/seven-mile-beach-3.jpg",
+          "artist": "Coolcaesar",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Seven_Mile_Beach_Facing_West.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "eagle-beach",
+      "region": "caribbean",
+      "name": "Eagle Beach",
+      "area": "Near Oranjestad",
+      "country": "Aruba",
+      "lat": 12.5546,
+      "lon": -70.0573,
+      "tag": "THE FOFOTI TREE ONE",
+      "tags": [
+        "Calm swimming",
+        "Quiet escapes"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "Usually gentle on Aruba's sheltered west coast",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Free parking along the road behind the beach.",
+      "description": "One of the widest beaches in the Caribbean, with powdery white sand, calm water and Aruba's famous wind-bent fofoti trees. Sea turtles nest here in season.",
+      "features": [
+        "Wide, soft sand",
+        "Fofoti trees",
+        "Shade huts (palapas)",
+        "Sea turtle nesting area"
+      ],
+      "safety": "No lifeguards. Stay clear of marked turtle nests.",
+      "color": 2,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 83,
+          "waterF": 80,
+          "waveFt": "3–5",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Feb",
+          "airF": 83,
+          "waterF": 79,
+          "waveFt": "4–5",
+          "rainIn": 1.2
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 1.1
+        },
+        {
+          "month": "Apr",
+          "airF": 85,
+          "waterF": 80,
+          "waveFt": "3–4",
+          "rainIn": 0.7
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 0.9
+        },
+        {
+          "month": "Jun",
+          "airF": 87,
+          "waterF": 81,
+          "waveFt": "4–5",
+          "rainIn": 1.1
+        },
+        {
+          "month": "Jul",
+          "airF": 87,
+          "waterF": 81,
+          "waveFt": "4–5",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 83,
+          "waveFt": "3–4",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Sep",
+          "airF": 89,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Oct",
+          "airF": 88,
+          "waterF": 86,
+          "waveFt": "2–4",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Nov",
+          "airF": 85,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Dec",
+          "airF": 84,
+          "waterF": 82,
+          "waveFt": "4",
+          "rainIn": 2.3
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/eagle-beach-1.jpg",
+          "artist": "Serge Melki from Indianapolis, USA",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Mangrove_tree_(Conocarpus_erectus)_Aruba_Eagle_Beach_(2896882763).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/eagle-beach-2.jpg",
+          "artist": "DDJJ",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Eagle_Beach,_Aruba_1.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/eagle-beach-3.jpg",
+          "artist": "EgorovaSvetlana",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Eagle_beach_Passions_On_The_Beach_Noord_Aruba.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "tulum-beach",
+      "region": "caribbean",
+      "name": "Tulum Beach",
+      "area": "Tulum · Quintana Roo",
+      "country": "Mexico",
+      "lat": 20.2003,
+      "lon": -87.465,
+      "tag": "THE RUINS ONE",
+      "tags": [
+        "Quiet escapes",
+        "Nature & wildlife"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "Small waves; the reef offshore softens the swell",
+      "lifeguards": "Varies",
+      "lifeguardNote": "Lifeguards at some public beaches; many stretches have none",
+      "entry": "Varies",
+      "entryUnit": null,
+      "entryNote": "Some beach entrances, including those inside the national park around the ruins, charge an entry fee. Check current prices locally.",
+      "parking": "Paid lots near the ruins and the beach clubs.",
+      "description": "Powdery white sand and turquoise water below Tulum's clifftop Maya ruins, with laid-back beach clubs stretching south along the coast.",
+      "features": [
+        "Maya ruins on the cliff",
+        "Beach clubs",
+        "Cenotes nearby",
+        "Bike-friendly beach road"
+      ],
+      "safety": "Seaweed (sargassum) can pile up in spring and summer, so check conditions before you go. Swim only where it's calm.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "3–5",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Feb",
+          "airF": 82,
+          "waterF": 80,
+          "waveFt": "3–5",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Mar",
+          "airF": 83,
+          "waterF": 81,
+          "waveFt": "3–5",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Apr",
+          "airF": 85,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 1.8
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "3–5",
+          "rainIn": 9.8
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 86,
+          "waveFt": "3–4",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 6.6
+        },
+        {
+          "month": "Sep",
+          "airF": 87,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 6.8
+        },
+        {
+          "month": "Oct",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "2–4",
+          "rainIn": 7.7
+        },
+        {
+          "month": "Nov",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Dec",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "3–5",
+          "rainIn": 3.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/tulum-beach-1.jpg",
+          "artist": "Martin Falbisoner",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Tulum_-_God_of_the_Winds_Temple_03.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/tulum-beach-2.jpg",
+          "artist": "Didier Moïse",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Tulum_Beach,_Quintana_Roo,_Mexico.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/tulum-beach-3.jpg",
+          "artist": "Erik Cleves Kristensen",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Maya_ruins_at_Tulum_2023_-_beach.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bavaro-beach",
+      "region": "caribbean",
+      "name": "Bávaro Beach",
+      "area": "Punta Cana",
+      "country": "Dominican Republic",
+      "lat": 18.687,
+      "lon": -68.444,
+      "tag": "THE PALM-LINED ONE",
+      "tags": [
+        "Calm swimming"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "A reef offshore keeps it fairly gentle",
+      "lifeguards": "Varies",
+      "lifeguardNote": "Some resort stretches have lifeguards; check the flags",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Beaches in the Dominican Republic are public.",
+      "parking": "Little public parking; most visitors come from nearby resorts or by taxi.",
+      "description": "A long stretch of soft white sand lined with coconut palms and resorts on the Dominican Republic's east coast.",
+      "features": [
+        "Coconut palms",
+        "Water sports & boat trips",
+        "Beach bars & restaurants",
+        "Calm, clear water"
+      ],
+      "safety": "Follow the beach flags, and swim near lifeguards where there are some.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "5–7",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Feb",
+          "airF": 81,
+          "waterF": 80,
+          "waveFt": "6–7",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Mar",
+          "airF": 81,
+          "waterF": 80,
+          "waveFt": "5–7",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Apr",
+          "airF": 83,
+          "waterF": 81,
+          "waveFt": "5–7",
+          "rainIn": 4.2
+        },
+        {
+          "month": "May",
+          "airF": 84,
+          "waterF": 82,
+          "waveFt": "4–5",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Jun",
+          "airF": 85,
+          "waterF": 83,
+          "waveFt": "4–5",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Jul",
+          "airF": 85,
+          "waterF": 84,
+          "waveFt": "5–6",
+          "rainIn": 5.4
+        },
+        {
+          "month": "Aug",
+          "airF": 86,
+          "waterF": 85,
+          "waveFt": "4–6",
+          "rainIn": 5.8
+        },
+        {
+          "month": "Sep",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "4–6",
+          "rainIn": 6.5
+        },
+        {
+          "month": "Oct",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "4–6",
+          "rainIn": 6.2
+        },
+        {
+          "month": "Nov",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "5–7",
+          "rainIn": 7.3
+        },
+        {
+          "month": "Dec",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "5–8",
+          "rainIn": 3.4
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/bavaro-beach-1.jpg",
+          "artist": "Andreas Volkmer",
+          "license": "CC BY 2.5",
+          "source": "https://commons.wikimedia.org/wiki/File:Playa_Bavaro.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/bavaro-beach-2.jpg",
+          "artist": "Hans Buch",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Playa_Bavaro_293.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/bavaro-beach-3.jpg",
+          "artist": "Oleg Yunakov",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2023_-_Playa_Bavaro_Punta_Cana_-_11.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "copacabana",
+      "region": "brazil",
+      "name": "Copacabana",
+      "area": "Rio de Janeiro",
+      "lat": -22.9711,
+      "lon": -43.1822,
+      "tag": "THE FAMOUS PROMENADE",
+      "tags": [
+        "Boardwalk fun"
+      ],
+      "wave": "2–5 ft",
+      "waveNote": "Open Atlantic beach; waves and currents can be strong",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Lifeguard posts (postos) all along the beach",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Street parking is scarce; take the metro to Cardeal Arcoverde, Siqueira Campos or Cantagalo.",
+      "description": "Rio's famous 2.5-mile beach curving along Avenida Atlântica, with its wave-pattern promenade, beach kiosks, volleyball and views of Sugarloaf Mountain.",
+      "features": [
+        "Lifeguard posts",
+        "Beach kiosks",
+        "Promenade & bike path",
+        "Beach volleyball",
+        "Chair & umbrella rentals",
+        "Paid restrooms at the posts"
+      ],
+      "safety": "Bring only what you need and keep valuables close. Swim near a lifeguard post and follow the flags.",
+      "color": 2,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 86,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 6.1
+        },
+        {
+          "month": "Feb",
+          "airF": 86,
+          "waterF": 82,
+          "waveFt": "3–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Apr",
+          "airF": 81,
+          "waterF": 77,
+          "waveFt": "4–6",
+          "rainIn": 3.4
+        },
+        {
+          "month": "May",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Jun",
+          "airF": 77,
+          "waterF": 73,
+          "waveFt": "3–6",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Jul",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Aug",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "4–7",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 73,
+          "waveFt": "4–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Oct",
+          "airF": 79,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Nov",
+          "airF": 80,
+          "waterF": 74,
+          "waveFt": "4–5",
+          "rainIn": 5.1
+        },
+        {
+          "month": "Dec",
+          "airF": 83,
+          "waterF": 76,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/copacabana-1.jpg",
+          "artist": "chensiyuan",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Rio_de_janeiro_copacabana_beach_2010.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/copacabana-2.jpg",
+          "artist": "Yas.Iwamoto",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Copacabana_Sunny_Day_-)_-_panoramio.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/copacabana-3.jpg",
+          "artist": "Boris Kasimov from Toronto, Canada",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Copacabana_beach_(40486873483).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ipanema",
+      "region": "brazil",
+      "name": "Ipanema",
+      "area": "Rio de Janeiro",
+      "lat": -22.9868,
+      "lon": -43.205,
+      "tag": "THE SUNSET ONE",
+      "tags": [
+        "Surf spots",
+        "Boardwalk fun"
+      ],
+      "wave": "2–6 ft",
+      "waveNote": "Stronger waves, especially at the Arpoador end",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Lifeguard posts (postos) along the beach",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Very little parking; the metro stops at General Osório and Nossa Senhora da Paz.",
+      "description": "A lively, stylish beach between the Arpoador rocks and the twin peaks of Dois Irmãos. At sunset, crowds on Arpoador rock clap as the sun goes down.",
+      "features": [
+        "Lifeguard posts",
+        "Beach kiosks",
+        "Arpoador sunset rock",
+        "Surfing at Arpoador",
+        "Chair & umbrella rentals"
+      ],
+      "safety": "Waves and rip currents can be strong: swim near a lifeguard post. Keep valuables out of sight.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 86,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 6.1
+        },
+        {
+          "month": "Feb",
+          "airF": 86,
+          "waterF": 82,
+          "waveFt": "3–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Apr",
+          "airF": 81,
+          "waterF": 77,
+          "waveFt": "4–6",
+          "rainIn": 3.4
+        },
+        {
+          "month": "May",
+          "airF": 78,
+          "waterF": 76,
+          "waveFt": "4–7",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Jun",
+          "airF": 77,
+          "waterF": 73,
+          "waveFt": "3–6",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Jul",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 1.6
+        },
+        {
+          "month": "Aug",
+          "airF": 76,
+          "waterF": 72,
+          "waveFt": "4–7",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 73,
+          "waveFt": "4–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Oct",
+          "airF": 79,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Nov",
+          "airF": 80,
+          "waterF": 74,
+          "waveFt": "4–5",
+          "rainIn": 5.1
+        },
+        {
+          "month": "Dec",
+          "airF": 83,
+          "waterF": 76,
+          "waveFt": "3–5",
+          "rainIn": 5.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/ipanema-1.jpg",
+          "artist": "Rafaelkatz",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_de_Ipanema_e_Leblon_vista_da_Pedra_do_Arpoador.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/ipanema-2.jpg",
+          "artist": "chensiyuan",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:1_ipanema_beach_vidigal_sunset.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/ipanema-3.jpg",
+          "artist": "Cesvieira",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ipanema_Beach_Rio.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "baia-do-sancho",
+      "region": "brazil",
+      "name": "Baía do Sancho",
+      "area": "Fernando de Noronha · Pernambuco",
+      "lat": -3.8545,
+      "lon": -32.4426,
+      "tag": "THE HIDDEN COVE",
+      "tags": [
+        "Snorkeling",
+        "Nature & wildlife"
+      ],
+      "wave": "Calm",
+      "waveNote": "Calmest from about April to November; big swells can arrive from December to March",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards",
+      "entry": "Fees",
+      "entryUnit": null,
+      "entryNote": "Every visitor to Fernando de Noronha pays a daily environmental fee, and Sancho is inside the marine national park, which needs its own ticket. Daily visitor numbers are limited.",
+      "parking": "No cars at the beach: get to the trailhead by buggy, bus or taxi, then climb down ladders through the cliff (or arrive by boat).",
+      "description": "A small cove of golden sand below green cliffs in Fernando de Noronha's marine national park, often voted one of the best beaches in the world. Clear water, sea turtles and reef fish.",
+      "features": [
+        "Snorkeling",
+        "Sea turtles",
+        "Cliff-top viewpoints",
+        "Protected national park"
+      ],
+      "safety": "The way down is steep ladders inside a crack in the cliff. There are no lifeguards; ask park staff about sea conditions.",
+      "color": 1,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 82,
+          "waterF": 83,
+          "waveFt": "5–6",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Feb",
+          "airF": 82,
+          "waterF": 83,
+          "waveFt": "5–6",
+          "rainIn": 7.1
+        },
+        {
+          "month": "Mar",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "5–6",
+          "rainIn": 11.1
+        },
+        {
+          "month": "Apr",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "5–7",
+          "rainIn": 11.6
+        },
+        {
+          "month": "May",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "6–7",
+          "rainIn": 7.7
+        },
+        {
+          "month": "Jun",
+          "airF": 82,
+          "waterF": 83,
+          "waveFt": "6–8",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Jul",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "6–8",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Aug",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "7–8",
+          "rainIn": 1.8
+        },
+        {
+          "month": "Sep",
+          "airF": 80,
+          "waterF": 80,
+          "waveFt": "6–8",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Oct",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "6–7",
+          "rainIn": 0.8
+        },
+        {
+          "month": "Nov",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "6–7",
+          "rainIn": 0.7
+        },
+        {
+          "month": "Dec",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "5–7",
+          "rainIn": 1.8
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/baia-do-sancho-1.jpg",
+          "artist": "Alyson Abreu",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ba%C3%ADa_do_sancho_e_vegeta%C3%A7%C3%A3o.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/baia-do-sancho-2.jpg",
+          "artist": "Osaki",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ba%C3%ADa_do_Sancho_vista_do_alto.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/baia-do-sancho-3.jpg",
+          "artist": "Rafa Tecchio",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:PE_-_Parque_Nacional_Marinho_de_Fernando_de_Noronha_-_Ba%C3%ADa_do_Sancho_-_Praia_do_Sancho.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "praia-da-marinha",
+      "region": "iberia",
+      "name": "Praia da Marinha",
+      "area": "Lagoa · Algarve",
+      "country": "Portugal",
+      "lat": 37.0899,
+      "lon": -8.4122,
+      "tag": "THE CLIFFS AND ARCHES",
+      "tags": [
+        "Snorkeling",
+        "Nature & wildlife"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "Usually calm in summer on the sheltered south coast",
+      "lifeguards": "Summer only",
+      "lifeguardNote": "Lifeguards during the official bathing season (roughly June to September)",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Free car park at the top of the cliff; it fills by late morning in summer.",
+      "description": "Golden sand framed by tall limestone cliffs, sea arches and caves. The cliff-top Seven Hanging Valleys trail runs east toward Benagil.",
+      "features": [
+        "Cliff-top trail",
+        "Sea caves & arches",
+        "Clear water for snorkeling",
+        "Steps down to the beach"
+      ],
+      "safety": "Keep away from the base of the cliffs (falling rocks). The path down is steep.",
+      "color": 2,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 61,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 63,
+          "waterF": 61,
+          "waveFt": "2–3",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Mar",
+          "airF": 65,
+          "waterF": 60,
+          "waveFt": "2–4",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 1.8
+        },
+        {
+          "month": "May",
+          "airF": 76,
+          "waterF": 61,
+          "waveFt": "1–2",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 64,
+          "waveFt": "2",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 64,
+          "waveFt": "1–2",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 89,
+          "waterF": 64,
+          "waveFt": "1–2",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Sep",
+          "airF": 82,
+          "waterF": 63,
+          "waveFt": "1–2",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Oct",
+          "airF": 75,
+          "waterF": 65,
+          "waveFt": "1–3",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Nov",
+          "airF": 67,
+          "waterF": 64,
+          "waveFt": "1–3",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Dec",
+          "airF": 63,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/praia-da-marinha-1.jpg",
+          "artist": "Mimihitam",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_da_Marinha_2017.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/praia-da-marinha-2.jpg",
+          "artist": "Tobi 87",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_da_Marinha-Algarve-Portugal.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/praia-da-marinha-3.jpg",
+          "artist": "Va.sc.",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_da_Marinha_Tor.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "praia-do-camilo",
+      "region": "iberia",
+      "name": "Praia do Camilo",
+      "area": "Lagos · Algarve",
+      "country": "Portugal",
+      "lat": 37.087,
+      "lon": -8.6688,
+      "tag": "THE 200 STEPS ONE",
+      "tags": [
+        "Snorkeling",
+        "Quiet escapes"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "Small, sheltered cove",
+      "lifeguards": "Summer only",
+      "lifeguardNote": "Lifeguards during the official bathing season",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Small car park at the top; Lagos town is about a 30-minute walk.",
+      "description": "A small cove of golden sand reached by a long wooden staircase down the cliffs, with clear water and rock formations near Ponta da Piedade.",
+      "features": [
+        "Wooden staircase with views",
+        "Clear water",
+        "Rock formations & grottoes",
+        "Restaurant at the top"
+      ],
+      "safety": "It's about 200 steps each way. The beach is small and shrinks a lot at high tide.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 61,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 63,
+          "waterF": 61,
+          "waveFt": "2–4",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Mar",
+          "airF": 64,
+          "waterF": 60,
+          "waveFt": "2–4",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Apr",
+          "airF": 68,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 1.9
+        },
+        {
+          "month": "May",
+          "airF": 74,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Jun",
+          "airF": 78,
+          "waterF": 64,
+          "waveFt": "2–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Jul",
+          "airF": 83,
+          "waterF": 63,
+          "waveFt": "2",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 85,
+          "waterF": 63,
+          "waveFt": "2",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Sep",
+          "airF": 80,
+          "waterF": 63,
+          "waveFt": "2",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Oct",
+          "airF": 75,
+          "waterF": 65,
+          "waveFt": "2–3",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Nov",
+          "airF": 67,
+          "waterF": 64,
+          "waveFt": "2–3",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Dec",
+          "airF": 63,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 2.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/praia-do-camilo-1.jpg",
+          "artist": "Theo Crazzolara",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_do_camilo_(48454069281).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/praia-do-camilo-2.jpg",
+          "artist": "Theo Crazzolara",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_do_Camilo_(48608303172).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/praia-do-camilo-3.jpg",
+          "artist": "Theo Crazzolara",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Praia_do_Camilo_(48471577097).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "la-concha",
+      "region": "iberia",
+      "name": "La Concha",
+      "area": "San Sebastián · Basque Country",
+      "country": "Spain",
+      "lat": 43.318,
+      "lon": -1.989,
+      "tag": "THE CITY BAY",
+      "tags": [
+        "Calm swimming",
+        "Boardwalk fun"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "Sheltered by the bay and Santa Clara island",
+      "lifeguards": "Summer only",
+      "lifeguardNote": "Lifeguards during the summer season",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Paid underground car parks in the city center.",
+      "description": "A shell-shaped city beach on a sheltered bay, with an elegant promenade and its famous white railing, Santa Clara island in the middle of the bay, and the old town's pintxos bars a short walk away.",
+      "features": [
+        "Promenade",
+        "Changing rooms & showers",
+        "Calm bay",
+        "Old town & pintxos nearby"
+      ],
+      "safety": "The water is cool even in summer, around 68–72°F.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 54,
+          "waterF": 57,
+          "waveFt": "3–8",
+          "rainIn": 8.1
+        },
+        {
+          "month": "Feb",
+          "airF": 58,
+          "waterF": 56,
+          "waveFt": "4–8",
+          "rainIn": 5.9
+        },
+        {
+          "month": "Mar",
+          "airF": 60,
+          "waterF": 56,
+          "waveFt": "3–7",
+          "rainIn": 6.1
+        },
+        {
+          "month": "Apr",
+          "airF": 63,
+          "waterF": 58,
+          "waveFt": "3–5",
+          "rainIn": 4.8
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 62,
+          "waveFt": "2–4",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Jun",
+          "airF": 72,
+          "waterF": 69,
+          "waveFt": "2–4",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Jul",
+          "airF": 75,
+          "waterF": 73,
+          "waveFt": "2–4",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Aug",
+          "airF": 77,
+          "waterF": 74,
+          "waveFt": "2–5",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Sep",
+          "airF": 74,
+          "waterF": 72,
+          "waveFt": "3–6",
+          "rainIn": 5.0
+        },
+        {
+          "month": "Oct",
+          "airF": 70,
+          "waterF": 67,
+          "waveFt": "3–6",
+          "rainIn": 5.4
+        },
+        {
+          "month": "Nov",
+          "airF": 61,
+          "waterF": 63,
+          "waveFt": "4–8",
+          "rainIn": 9.0
+        },
+        {
+          "month": "Dec",
+          "airF": 57,
+          "waterF": 59,
+          "waveFt": "4–8",
+          "rainIn": 7.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/la-concha-1.jpg",
+          "artist": "Ermell",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:San_Sebastian_Kontxa_beach_1190650.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/la-concha-2.jpg",
+          "artist": "Ermell",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:San_Sebastian_Kontxa_beach_190363.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/la-concha-3.jpg",
+          "artist": "Mariordo (Mario Roberto Durán Ortiz)",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:San_Sebastian_Playa_de_La_Concha_06_2012_2505.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "navagio",
+      "region": "mediterranean",
+      "name": "Navagio (Shipwreck Beach)",
+      "area": "Zakynthos",
+      "country": "Greece",
+      "lat": 37.8597,
+      "lon": 20.6247,
+      "tag": "THE SHIPWRECK BEACH",
+      "tags": [
+        "Nature & wildlife",
+        "Quiet escapes"
+      ],
+      "wave": "Calm",
+      "waveNote": "Calm in summer; boats don't run in rough weather",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards",
+      "entry": "Boat trip",
+      "entryUnit": null,
+      "entryNote": "Reachable only by boat. Because of rockfall risk, boats have often not been allowed to land in recent years, so many trips only view it from the water. Check the latest rules before you book.",
+      "parking": "Parking near the cliff-top viewpoint above the cove.",
+      "description": "A white-pebble cove with a rusting shipwreck, enclosed by towering limestone cliffs and bright blue water: one of the most photographed places in Greece.",
+      "features": [
+        "Shipwreck",
+        "Boat tours",
+        "Cliff-top viewpoint"
+      ],
+      "safety": "Rockfall risk: follow any landing ban and keep away from the cliffs.",
+      "color": 2,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 57,
+          "waterF": 63,
+          "waveFt": "3–6",
+          "rainIn": 4.9
+        },
+        {
+          "month": "Feb",
+          "airF": 59,
+          "waterF": 62,
+          "waveFt": "3–6",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Mar",
+          "airF": 61,
+          "waterF": 62,
+          "waveFt": "3–6",
+          "rainIn": 2.7
+        },
+        {
+          "month": "Apr",
+          "airF": 67,
+          "waterF": 63,
+          "waveFt": "2–5",
+          "rainIn": 1.2
+        },
+        {
+          "month": "May",
+          "airF": 74,
+          "waterF": 67,
+          "waveFt": "2–4",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Jun",
+          "airF": 83,
+          "waterF": 74,
+          "waveFt": "1–2",
+          "rainIn": 0.7
+        },
+        {
+          "month": "Jul",
+          "airF": 88,
+          "waterF": 78,
+          "waveFt": "2–4",
+          "rainIn": 0.3
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 80,
+          "waveFt": "2–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Sep",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "2–4",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Oct",
+          "airF": 74,
+          "waterF": 74,
+          "waveFt": "2–4",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Nov",
+          "airF": 67,
+          "waterF": 71,
+          "waveFt": "3–6",
+          "rainIn": 6.4
+        },
+        {
+          "month": "Dec",
+          "airF": 60,
+          "waterF": 66,
+          "waveFt": "3–6",
+          "rainIn": 5.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/navagio-1.jpg",
+          "artist": "Wilnel José Verdú Guerrero",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Navagio,_Zante_01.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/navagio-2.jpg",
+          "artist": "dronepicr",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Navagio_Beach_aerial_Zakynthos_Greece_(46470564281).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/navagio-3.jpg",
+          "artist": "dronepicr",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Panagiotis_Shipwreck_at_Navagio_Beach_Zakynthos_Greece_(31530321957).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "elafonissi",
+      "region": "mediterranean",
+      "name": "Elafonissi",
+      "area": "Chania · Crete",
+      "country": "Greece",
+      "lat": 35.2718,
+      "lon": 23.5395,
+      "tag": "THE PINK SAND ONE",
+      "tags": [
+        "Calm swimming",
+        "Nature & wildlife"
+      ],
+      "wave": "0–1 ft",
+      "waveNote": "A shallow, warm lagoon",
+      "lifeguards": "Varies",
+      "lifeguardNote": "Lifeguards on the main beach in summer; check locally",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free. The area is a protected nature reserve.",
+      "parking": "Paid parking near the beach in summer.",
+      "description": "A shallow turquoise lagoon and sandbar with pink-tinted sand (from crushed shells), in a protected nature area at Crete's southwest tip.",
+      "features": [
+        "Shallow lagoon",
+        "Pink-tinted sand",
+        "Sunbed & umbrella rentals (summer)",
+        "Snack bars (summer)"
+      ],
+      "safety": "Don't take any sand or shells: the area is protected. There's little natural shade.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 58,
+          "waterF": 64,
+          "waveFt": "3–7",
+          "rainIn": 5.5
+        },
+        {
+          "month": "Feb",
+          "airF": 59,
+          "waterF": 62,
+          "waveFt": "3–7",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Mar",
+          "airF": 62,
+          "waterF": 63,
+          "waveFt": "4–7",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 64,
+          "waveFt": "3–6",
+          "rainIn": 1.5
+        },
+        {
+          "month": "May",
+          "airF": 77,
+          "waterF": 67,
+          "waveFt": "2–4",
+          "rainIn": 0.8
+        },
+        {
+          "month": "Jun",
+          "airF": 85,
+          "waterF": 74,
+          "waveFt": "2–3",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Jul",
+          "airF": 90,
+          "waterF": 78,
+          "waveFt": "2–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Aug",
+          "airF": 89,
+          "waterF": 80,
+          "waveFt": "2–4",
+          "rainIn": 0.2
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 79,
+          "waveFt": "2–4",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Oct",
+          "airF": 76,
+          "waterF": 75,
+          "waveFt": "2–5",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Nov",
+          "airF": 69,
+          "waterF": 71,
+          "waveFt": "3–6",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Dec",
+          "airF": 62,
+          "waterF": 67,
+          "waveFt": "3–7",
+          "rainIn": 5.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/elafonissi-1.jpg",
+          "artist": "C messier",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_1275.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/elafonissi-2.jpg",
+          "artist": "Maurizio Ceol",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Elafonissi_-_panoramio_(1).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/elafonissi-3.jpg",
+          "artist": "C messier",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_8547.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "myrtos",
+      "region": "mediterranean",
+      "name": "Myrtos",
+      "area": "Kefalonia",
+      "country": "Greece",
+      "lat": 38.3428,
+      "lon": 20.5357,
+      "tag": "THE VIEWPOINT ONE",
+      "tags": [
+        "Nature & wildlife"
+      ],
+      "wave": "0–3 ft",
+      "waveNote": "Deep water close to shore; waves when the wind blows from the west",
+      "lifeguards": "Varies",
+      "lifeguardNote": "Check locally",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Free car park at the bottom of a steep, winding road.",
+      "description": "A long curve of white pebbles below green cliffs, with unusually bright blue water. The view from the road above is one of the most famous in the Ionian Islands.",
+      "features": [
+        "Bright blue water",
+        "Famous viewpoint",
+        "Sunbed rentals (summer)",
+        "Snack bar (summer)"
+      ],
+      "safety": "The water gets deep quickly and the pebbles shift underfoot; take care with kids.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 57,
+          "waterF": 63,
+          "waveFt": "2–4",
+          "rainIn": 4.8
+        },
+        {
+          "month": "Feb",
+          "airF": 58,
+          "waterF": 61,
+          "waveFt": "2–3",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Mar",
+          "airF": 61,
+          "waterF": 62,
+          "waveFt": "2–3",
+          "rainIn": 2.9
+        },
+        {
+          "month": "Apr",
+          "airF": 67,
+          "waterF": 63,
+          "waveFt": "1–3",
+          "rainIn": 1.4
+        },
+        {
+          "month": "May",
+          "airF": 73,
+          "waterF": 67,
+          "waveFt": "1–2",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Jun",
+          "airF": 83,
+          "waterF": 75,
+          "waveFt": "1–2",
+          "rainIn": 0.9
+        },
+        {
+          "month": "Jul",
+          "airF": 87,
+          "waterF": 80,
+          "waveFt": "1–3",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Aug",
+          "airF": 88,
+          "waterF": 80,
+          "waveFt": "1–2",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Sep",
+          "airF": 81,
+          "waterF": 79,
+          "waveFt": "1–3",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Oct",
+          "airF": 74,
+          "waterF": 74,
+          "waveFt": "1–3",
+          "rainIn": 3.7
+        },
+        {
+          "month": "Nov",
+          "airF": 67,
+          "waterF": 71,
+          "waveFt": "2–4",
+          "rainIn": 6.6
+        },
+        {
+          "month": "Dec",
+          "airF": 60,
+          "waterF": 66,
+          "waveFt": "2–4",
+          "rainIn": 5.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/myrtos-1.jpg",
+          "artist": "Tony Hisgett from Birmingham, UK",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Myrtos_Beach_5_(9344634826).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/myrtos-2.jpg",
+          "artist": "Matt Sims",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Myrtos_Beach,_Kefalonia.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/myrtos-3.jpg",
+          "artist": "Tony Hisgett from Birmingham, UK",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Myrtos_Beach_2_(9341821409).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "spiaggia-dei-conigli",
+      "region": "mediterranean",
+      "name": "Rabbit Beach",
+      "area": "Lampedusa · Sicily",
+      "country": "Italy",
+      "lat": 35.513,
+      "lon": 12.558,
+      "tag": "THE TURTLE ONE",
+      "tags": [
+        "Snorkeling",
+        "Nature & wildlife"
+      ],
+      "wave": "Calm",
+      "waveNote": "A sheltered cove with shallow, clear water",
+      "lifeguards": "Varies",
+      "lifeguardNote": "Check locally",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free, inside a nature reserve. In summer, visitor numbers are limited and you may need a free booking. It's closed at night because turtles nest here.",
+      "parking": "Small car park at the top, then a 10–15 minute walk down a path.",
+      "description": "A small white-sand cove facing Rabbit Island (Spiaggia dei Conigli), with very clear, shallow water. Loggerhead sea turtles nest here in summer.",
+      "features": [
+        "Nature reserve",
+        "Sea turtle nesting",
+        "Shallow, clear water",
+        "Footpath down"
+      ],
+      "safety": "Follow the reserve rules: some areas are closed for turtle nests. Bring water and shade.",
+      "color": 2,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 60,
+          "waterF": 63,
+          "waveFt": "3–6",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Feb",
+          "airF": 60,
+          "waterF": 61,
+          "waveFt": "3–6",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Mar",
+          "airF": 61,
+          "waterF": 61,
+          "waveFt": "4–6",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Apr",
+          "airF": 63,
+          "waterF": 63,
+          "waveFt": "3–7",
+          "rainIn": 0.6
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 66,
+          "waveFt": "3–5",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Jun",
+          "airF": 74,
+          "waterF": 74,
+          "waveFt": "1–4",
+          "rainIn": 0.1
+        },
+        {
+          "month": "Jul",
+          "airF": 80,
+          "waterF": 80,
+          "waveFt": "1–3",
+          "rainIn": 0.0
+        },
+        {
+          "month": "Aug",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "1–3",
+          "rainIn": 0.2
+        },
+        {
+          "month": "Sep",
+          "airF": 79,
+          "waterF": 81,
+          "waveFt": "2–4",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Oct",
+          "airF": 75,
+          "waterF": 77,
+          "waveFt": "2–5",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Nov",
+          "airF": 70,
+          "waterF": 73,
+          "waveFt": "3–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Dec",
+          "airF": 64,
+          "waterF": 67,
+          "waveFt": "3–7",
+          "rainIn": 2.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/spiaggia-dei-conigli-1.jpg",
+          "artist": "Ezio55",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Isola_dei_Conigli.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/spiaggia-dei-conigli-2.jpg",
+          "artist": "ALY MOHAMED YOUSSEF",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:SPIAGGIA_DEI_CONIGLI_LAMPEDUSA_1.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/spiaggia-dei-conigli-3.jpg",
+          "artist": "Hein56didden",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Isola_e_spiaggia_di_Coniglie-Lampedusa.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "maya-bay",
+      "region": "southeast-asia",
+      "name": "Maya Bay",
+      "area": "Koh Phi Phi Leh · Krabi",
+      "country": "Thailand",
+      "lat": 7.678,
+      "lon": 98.766,
+      "tag": "THE ONE FROM THE MOVIE",
+      "tags": [
+        "Nature & wildlife"
+      ],
+      "wave": "Calm",
+      "waveNote": "An enclosed bay ringed by cliffs",
+      "lifeguards": "No",
+      "lifeguardNote": "Park rangers patrol; swimming isn't allowed",
+      "entry": "Park fee",
+      "entryUnit": null,
+      "entryNote": "Inside a national park that charges foreign visitors an entry fee. You arrive on a boat tour; boats dock at the back of the island and you walk in on a boardwalk.",
+      "parking": "No cars: boat tours leave from Phi Phi Don, Phuket and Krabi.",
+      "hours": "Closed every year from about August to September so the bay can recover.",
+      "description": "The cliff-ringed bay made famous by the film The Beach. It closed for years so the coral could recover, and now has strict limits: you can walk on the sand, but swimming isn't allowed.",
+      "features": [
+        "Boardwalk from the pier",
+        "Viewing areas",
+        "Blacktip reef sharks in the bay"
+      ],
+      "safety": "No swimming. Stay on the boardwalk and marked areas.",
+      "color": 0,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "1–2",
+          "rainIn": 2.4
+        },
+        {
+          "month": "Feb",
+          "airF": 85,
+          "waterF": 84,
+          "waveFt": "1–2",
+          "rainIn": 1.0
+        },
+        {
+          "month": "Mar",
+          "airF": 86,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 2.1
+        },
+        {
+          "month": "Apr",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 5.3
+        },
+        {
+          "month": "May",
+          "airF": 86,
+          "waterF": 88,
+          "waveFt": "1–3",
+          "rainIn": 9.6
+        },
+        {
+          "month": "Jun",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 7.8
+        },
+        {
+          "month": "Jul",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 7.5
+        },
+        {
+          "month": "Aug",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 8.1
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "2–4",
+          "rainIn": 9.9
+        },
+        {
+          "month": "Oct",
+          "airF": 83,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 11.3
+        },
+        {
+          "month": "Nov",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "1–2",
+          "rainIn": 10.1
+        },
+        {
+          "month": "Dec",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "1–2",
+          "rainIn": 4.9
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/maya-bay-1.jpg",
+          "artist": "Vyacheslav Argenberg",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Maya_Bay,_Koh_Phi_Phi,_Krabi,_Thailand.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/maya-bay-2.jpg",
+          "artist": "Nnthurber",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Maya_Bay_enclosed_limestone_cliffs_and_turquoise_water_Ko_Phi_Phi_Le.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/maya-bay-3.jpg",
+          "artist": "Diego Delso",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Playa_Maya,_Ko_Phi_Phi,_Tailandia,_2013-08-19,_DD_13.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "railay-west",
+      "region": "southeast-asia",
+      "name": "Railay West",
+      "area": "Railay · Krabi",
+      "country": "Thailand",
+      "lat": 8.011,
+      "lon": 98.837,
+      "tag": "THE CLIFFS ONE",
+      "tags": [
+        "Calm swimming",
+        "Nature & wildlife"
+      ],
+      "wave": "Calm",
+      "waveNote": "Calm most of the year; rougher in the monsoon (about May–October)",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free. Railay can only be reached by longtail boat, from Ao Nang or Krabi town.",
+      "parking": "No cars: park in Ao Nang and take a longtail boat.",
+      "description": "A crescent of soft sand between giant limestone cliffs, reachable only by boat. World-famous for rock climbing, with sunsets over the Andaman Sea.",
+      "features": [
+        "Rock climbing",
+        "Kayak rentals",
+        "Resorts & restaurants",
+        "Sunsets"
+      ],
+      "safety": "No lifeguards. Watch for longtail boats near the shore.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 87,
+          "waterF": 84,
+          "waveFt": "1",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Feb",
+          "airF": 90,
+          "waterF": 85,
+          "waveFt": "1",
+          "rainIn": 2.0
+        },
+        {
+          "month": "Mar",
+          "airF": 91,
+          "waterF": 87,
+          "waveFt": "1",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Apr",
+          "airF": 89,
+          "waterF": 89,
+          "waveFt": "1",
+          "rainIn": 6.8
+        },
+        {
+          "month": "May",
+          "airF": 87,
+          "waterF": 89,
+          "waveFt": "1",
+          "rainIn": 12.3
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 8.9
+        },
+        {
+          "month": "Jul",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 9.2
+        },
+        {
+          "month": "Aug",
+          "airF": 85,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 9.7
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "1–2",
+          "rainIn": 11.6
+        },
+        {
+          "month": "Oct",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "1",
+          "rainIn": 11.8
+        },
+        {
+          "month": "Nov",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "1",
+          "rainIn": 10.6
+        },
+        {
+          "month": "Dec",
+          "airF": 86,
+          "waterF": 85,
+          "waveFt": "1",
+          "rainIn": 6.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/railay-west-1.jpg",
+          "artist": "kallerna",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Railay_Beach_5.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/railay-west-2.jpg",
+          "artist": "Fabio Achilli from Milano, Italy",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Krabi,_Railay_West_Beach_(6218118271).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/railay-west-3.jpg",
+          "artist": "Krzysztof Golik",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:West_Railay_Beach_03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "kuta-beach",
+      "region": "southeast-asia",
+      "name": "Kuta Beach",
+      "area": "Kuta · Bali",
+      "country": "Indonesia",
+      "lat": -8.7184,
+      "lon": 115.1686,
+      "tag": "THE LEARN-TO-SURF ONE",
+      "tags": [
+        "Surf spots"
+      ],
+      "wave": "2–5 ft",
+      "waveNote": "A sandy-bottom beach break, popular for surf lessons",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Lifeguards with towers and flags along the main stretch",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Paid car and scooter parking near the beach; traffic is heavy.",
+      "description": "Bali's best-known surf beach: a long stretch of sand with friendly beach-break waves for beginners, board rentals everywhere and famous sunsets.",
+      "features": [
+        "Lifeguards",
+        "Surf lessons & board rentals",
+        "Sunbeds & drinks",
+        "Sunsets"
+      ],
+      "safety": "Swim between the red-and-yellow flags: rip currents are common. Rubbish washes up in the wet season (about November to March).",
+      "color": 2,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": false,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "4–5",
+          "rainIn": 12.1
+        },
+        {
+          "month": "Feb",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "4–5",
+          "rainIn": 12.4
+        },
+        {
+          "month": "Mar",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "4–5",
+          "rainIn": 8.7
+        },
+        {
+          "month": "Apr",
+          "airF": 85,
+          "waterF": 85,
+          "waveFt": "4–5",
+          "rainIn": 5.5
+        },
+        {
+          "month": "May",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "4–5",
+          "rainIn": 4.9
+        },
+        {
+          "month": "Jun",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "4–6",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Jul",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "5–6",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Aug",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "5–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Sep",
+          "airF": 82,
+          "waterF": 82,
+          "waveFt": "4–6",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 84,
+          "waveFt": "4–5",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Nov",
+          "airF": 85,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 8.4
+        },
+        {
+          "month": "Dec",
+          "airF": 85,
+          "waterF": 86,
+          "waveFt": "4–5",
+          "rainIn": 10.5
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/kuta-beach-1.jpg",
+          "artist": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Kuta_Beach,_Bali,_20220827_0842_1083.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/kuta-beach-2.jpg",
+          "artist": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Jerman_Beach,_Kuta,_Bali,_Indonesia,_20220825_1207_0816.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/kuta-beach-3.jpg",
+          "artist": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Sunset,_Kuta,_Bali,_Indonesia,_20220825_1752_0877.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "white-beach-boracay",
+      "region": "southeast-asia",
+      "name": "White Beach",
+      "area": "Boracay · Aklan",
+      "country": "Philippines",
+      "lat": 11.961,
+      "lon": 121.927,
+      "tag": "THE POWDER SAND ONE",
+      "tags": [
+        "Calm swimming"
+      ],
+      "wave": "Calm",
+      "waveNote": "Calm in the dry season; choppier during the southwest monsoon (about June–September)",
+      "lifeguards": "Varies",
+      "lifeguardNote": "Lifeguard stations along the beach; check locally",
+      "entry": "Island fees",
+      "entryUnit": null,
+      "entryNote": "Visitors to Boracay pay an environmental fee and a port terminal fee, and need a booking at an accredited hotel.",
+      "parking": "No car needed: arrive by boat from Caticlan and get around by e-trike.",
+      "description": "Four kilometers of powder-soft white sand with calm, shallow water, famous for sunset sailing on traditional paraw boats.",
+      "features": [
+        "Sunset sailing (paraw)",
+        "Water sports",
+        "Restaurants & bars on the beach path",
+        "Calm, shallow water"
+      ],
+      "safety": "Follow the beach flags. Don't drink or smoke on the sand: Boracay has strict beach rules.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "3–4",
+          "rainIn": 9.6
+        },
+        {
+          "month": "Feb",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "2–4",
+          "rainIn": 6.7
+        },
+        {
+          "month": "Mar",
+          "airF": 83,
+          "waterF": 82,
+          "waveFt": "2–3",
+          "rainIn": 4.2
+        },
+        {
+          "month": "Apr",
+          "airF": 85,
+          "waterF": 85,
+          "waveFt": "1–2",
+          "rainIn": 3.2
+        },
+        {
+          "month": "May",
+          "airF": 87,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 4.4
+        },
+        {
+          "month": "Jun",
+          "airF": 86,
+          "waterF": 87,
+          "waveFt": "1–2",
+          "rainIn": 8.2
+        },
+        {
+          "month": "Jul",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "1–4",
+          "rainIn": 12.9
+        },
+        {
+          "month": "Aug",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "1–3",
+          "rainIn": 10.4
+        },
+        {
+          "month": "Sep",
+          "airF": 84,
+          "waterF": 85,
+          "waveFt": "1–3",
+          "rainIn": 13.4
+        },
+        {
+          "month": "Oct",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "1–3",
+          "rainIn": 14.2
+        },
+        {
+          "month": "Nov",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "2–3",
+          "rainIn": 10.7
+        },
+        {
+          "month": "Dec",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "2–4",
+          "rainIn": 13.9
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/white-beach-boracay-1.jpg",
+          "artist": "Tuderna",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Boracay_White_Beach_-_panoramio_-_Tuderna.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/white-beach-boracay-2.jpg",
+          "artist": "Grunderfam",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:%22White_Beach%22_Boracay,_Philippinen.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/white-beach-boracay-3.jpg",
+          "artist": "Angelo Juan Ramos from Makati City, Philippines",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Boracay_White_Beach_in_day_(985286231).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bondi-beach",
+      "region": "australia",
+      "name": "Bondi Beach",
+      "area": "Bondi · Sydney",
+      "country": "New South Wales",
+      "lat": -33.8915,
+      "lon": 151.2767,
+      "tag": "THE SYDNEY CLASSIC",
+      "tags": [
+        "Surf spots",
+        "Boardwalk fun"
+      ],
+      "wave": "2–5 ft",
+      "waveNote": "Open surf beach; usually bigger at the south end",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Professional lifeguards all year",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Paid street and lot parking; buses from Bondi Junction station are easier.",
+      "description": "Sydney's most famous beach: a golden crescent of surf, the Bondi Icebergs ocean pool and the start of the Bondi to Coogee coastal walk.",
+      "features": [
+        "Lifeguards",
+        "Restrooms & showers",
+        "Ocean pool (Bondi Icebergs, paid)",
+        "Coastal walk",
+        "Surf lessons",
+        "Cafés"
+      ],
+      "safety": "Always swim between the red-and-yellow flags: Bondi has strong rip currents.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": true,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 80,
+          "waterF": 73,
+          "waveFt": "4–5",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Feb",
+          "airF": 79,
+          "waterF": 74,
+          "waveFt": "4–6",
+          "rainIn": 4.3
+        },
+        {
+          "month": "Mar",
+          "airF": 77,
+          "waterF": 74,
+          "waveFt": "3–6",
+          "rainIn": 6.4
+        },
+        {
+          "month": "Apr",
+          "airF": 73,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 3.2
+        },
+        {
+          "month": "May",
+          "airF": 68,
+          "waterF": 70,
+          "waveFt": "4–6",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Jun",
+          "airF": 63,
+          "waterF": 67,
+          "waveFt": "3–5",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Jul",
+          "airF": 63,
+          "waterF": 65,
+          "waveFt": "3–6",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Aug",
+          "airF": 65,
+          "waterF": 65,
+          "waveFt": "3–5",
+          "rainIn": 2.8
+        },
+        {
+          "month": "Sep",
+          "airF": 70,
+          "waterF": 66,
+          "waveFt": "3–5",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Oct",
+          "airF": 73,
+          "waterF": 67,
+          "waveFt": "4–5",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Nov",
+          "airF": 75,
+          "waterF": 69,
+          "waveFt": "3–5",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Dec",
+          "airF": 79,
+          "waterF": 70,
+          "waveFt": "3–5",
+          "rainIn": 2.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/bondi-beach-1.jpg",
+          "artist": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Sydney_(AU),_Bondi_Beach_--_2019_--_2354.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/bondi-beach-2.jpg",
+          "artist": "DXR",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bondi_Beach,_southwest_view_20230224_2.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/bondi-beach-3.jpg",
+          "artist": "Marcus Grbac",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bondi_Beach_in_January_2023.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "manly-beach",
+      "region": "australia",
+      "name": "Manly Beach",
+      "area": "Manly · Sydney",
+      "country": "New South Wales",
+      "lat": -33.7969,
+      "lon": 151.288,
+      "tag": "THE FERRY RIDE ONE",
+      "tags": [
+        "Surf spots",
+        "Snorkeling"
+      ],
+      "wave": "1–4 ft",
+      "waveNote": "Surf on the main beach; calm water at Shelly Beach around the corner",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Lifeguards all year",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free. The ferry from Circular Quay is the classic way to get there.",
+      "parking": "Paid parking near the beach; the ferry is easier.",
+      "description": "A lively surf beach lined with Norfolk pines, a 30-minute ferry ride from central Sydney. Walk around to Shelly Beach, a protected cove for snorkeling with big blue groper fish.",
+      "features": [
+        "Lifeguards",
+        "Restrooms & showers",
+        "The Corso shops & cafés",
+        "Snorkeling at Shelly Beach",
+        "Surf lessons & board hire"
+      ],
+      "safety": "Swim between the flags.",
+      "color": 2,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": true,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 80,
+          "waterF": 73,
+          "waveFt": "4–6",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Feb",
+          "airF": 79,
+          "waterF": 74,
+          "waveFt": "4–6",
+          "rainIn": 4.7
+        },
+        {
+          "month": "Mar",
+          "airF": 77,
+          "waterF": 74,
+          "waveFt": "4–7",
+          "rainIn": 7.4
+        },
+        {
+          "month": "Apr",
+          "airF": 73,
+          "waterF": 72,
+          "waveFt": "5–8",
+          "rainIn": 3.2
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 70,
+          "waveFt": "4–7",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Jun",
+          "airF": 62,
+          "waterF": 67,
+          "waveFt": "3–6",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Jul",
+          "airF": 63,
+          "waterF": 64,
+          "waveFt": "4–7",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Aug",
+          "airF": 65,
+          "waterF": 64,
+          "waveFt": "3–6",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Sep",
+          "airF": 70,
+          "waterF": 66,
+          "waveFt": "4–6",
+          "rainIn": 2.3
+        },
+        {
+          "month": "Oct",
+          "airF": 73,
+          "waterF": 67,
+          "waveFt": "4–6",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Nov",
+          "airF": 75,
+          "waterF": 69,
+          "waveFt": "4–5",
+          "rainIn": 3.3
+        },
+        {
+          "month": "Dec",
+          "airF": 78,
+          "waterF": 70,
+          "waveFt": "4–6",
+          "rainIn": 2.9
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/manly-beach-1.jpg",
+          "artist": "Maksym Kozlenko",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2020-10-24_Manly_Beach_8.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/manly-beach-2.jpg",
+          "artist": "Enochlau",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Manly_Beach.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/manly-beach-3.jpg",
+          "artist": "Maksym Kozlenko",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2020-10-24_Manly_Beach_6.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "whitehaven-beach",
+      "region": "australia",
+      "name": "Whitehaven Beach",
+      "area": "Whitsunday Island · Queensland",
+      "country": "Queensland",
+      "lat": -20.2843,
+      "lon": 149.037,
+      "tag": "THE PUREST SAND",
+      "tags": [
+        "Quiet escapes",
+        "Nature & wildlife"
+      ],
+      "wave": "Calm",
+      "waveNote": "Sheltered, with small waves",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards: it's inside a national park",
+      "entry": "Boat or seaplane",
+      "entryUnit": null,
+      "entryNote": "No road access: visit on a day trip by boat, seaplane or helicopter from Airlie Beach or Hamilton Island. Tour prices vary.",
+      "parking": "No cars: tours leave from Airlie Beach and Hamilton Island.",
+      "description": "Seven kilometers of brilliant white, almost pure silica sand in Whitsunday Islands National Park. From the Hill Inlet lookout, sand and water swirl together at low tide.",
+      "features": [
+        "Silica sand",
+        "Hill Inlet lookout",
+        "National park campground",
+        "Day trips"
+      ],
+      "safety": "Marine stingers (box jellyfish) are around from about November to May, so wear a stinger suit. Bring water and sun protection.",
+      "color": 0,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "1–3",
+          "rainIn": 12.4
+        },
+        {
+          "month": "Feb",
+          "airF": 83,
+          "waterF": 84,
+          "waveFt": "2–3",
+          "rainIn": 10.8
+        },
+        {
+          "month": "Mar",
+          "airF": 83,
+          "waterF": 83,
+          "waveFt": "2–4",
+          "rainIn": 10.0
+        },
+        {
+          "month": "Apr",
+          "airF": 80,
+          "waterF": 82,
+          "waveFt": "2–4",
+          "rainIn": 6.1
+        },
+        {
+          "month": "May",
+          "airF": 75,
+          "waterF": 77,
+          "waveFt": "2–4",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Jun",
+          "airF": 72,
+          "waterF": 75,
+          "waveFt": "2–3",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Jul",
+          "airF": 71,
+          "waterF": 73,
+          "waveFt": "2–3",
+          "rainIn": 3.0
+        },
+        {
+          "month": "Aug",
+          "airF": 72,
+          "waterF": 72,
+          "waveFt": "1–3",
+          "rainIn": 1.4
+        },
+        {
+          "month": "Sep",
+          "airF": 75,
+          "waterF": 74,
+          "waveFt": "1–3",
+          "rainIn": 0.9
+        },
+        {
+          "month": "Oct",
+          "airF": 79,
+          "waterF": 77,
+          "waveFt": "1–2",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Nov",
+          "airF": 81,
+          "waterF": 81,
+          "waveFt": "1–2",
+          "rainIn": 3.1
+        },
+        {
+          "month": "Dec",
+          "airF": 83,
+          "waterF": 82,
+          "waveFt": "1–3",
+          "rainIn": 7.6
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/whitehaven-beach-1.jpg",
+          "artist": "Damien Dempsey from Melbourne, Australia",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Whitsunday_Island_-_Whitehaven_Beach_05.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/whitehaven-beach-2.jpg",
+          "artist": "DANIEL JULIE from Paris, France",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:DSC122_Australia_Queensland_Whitsunday_Islands_Whitehaven_bay_(5491401519).jpg"
+        },
+        {
+          "asset": "assets/images/beaches/whitehaven-beach-3.jpg",
+          "artist": "Neil Parley",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:North_of_Whitehaven_Beach_-_panoramio_(2).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "byron-bay",
+      "region": "australia",
+      "name": "Byron Bay",
+      "area": "Main Beach · Byron Bay",
+      "country": "New South Wales",
+      "lat": -28.643,
+      "lon": 153.6125,
+      "tag": "THE LIGHTHOUSE ONE",
+      "tags": [
+        "Surf spots",
+        "Nature & wildlife"
+      ],
+      "wave": "1–4 ft",
+      "waveNote": "Gentle surf at Main Beach; bigger waves at The Pass and beyond",
+      "lifeguards": "Yes",
+      "lifeguardNote": "Patrolled by lifeguards; check the flag times",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Paid parking near the beach; it fills quickly.",
+      "description": "A relaxed surf-town beach below Cape Byron lighthouse, mainland Australia's most easterly point. Dolphins are common, and humpback whales pass by in winter and spring.",
+      "features": [
+        "Lifeguards",
+        "Restrooms & showers",
+        "Surf lessons",
+        "Lighthouse walk",
+        "Cafés nearby"
+      ],
+      "safety": "Swim between the flags. Watch for rip currents, especially after big swells.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": true,
+      "restrooms": true,
+      "familyFriendly": true,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "4–7",
+          "rainIn": 5.2
+        },
+        {
+          "month": "Feb",
+          "airF": 81,
+          "waterF": 78,
+          "waveFt": "5–7",
+          "rainIn": 7.3
+        },
+        {
+          "month": "Mar",
+          "airF": 79,
+          "waterF": 79,
+          "waveFt": "4–8",
+          "rainIn": 10.0
+        },
+        {
+          "month": "Apr",
+          "airF": 75,
+          "waterF": 77,
+          "waveFt": "5–8",
+          "rainIn": 5.2
+        },
+        {
+          "month": "May",
+          "airF": 71,
+          "waterF": 73,
+          "waveFt": "5–8",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Jun",
+          "airF": 67,
+          "waterF": 71,
+          "waveFt": "4–6",
+          "rainIn": 3.9
+        },
+        {
+          "month": "Jul",
+          "airF": 67,
+          "waterF": 69,
+          "waveFt": "4–6",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Aug",
+          "airF": 69,
+          "waterF": 69,
+          "waveFt": "4–6",
+          "rainIn": 2.2
+        },
+        {
+          "month": "Sep",
+          "airF": 72,
+          "waterF": 70,
+          "waveFt": "4–6",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Oct",
+          "airF": 75,
+          "waterF": 72,
+          "waveFt": "4–6",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Nov",
+          "airF": 77,
+          "waterF": 72,
+          "waveFt": "4–5",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Dec",
+          "airF": 80,
+          "waterF": 74,
+          "waveFt": "4–6",
+          "rainIn": 5.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/byron-bay-1.jpg",
+          "artist": "Ank Kumar",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Main_Beach_and_Cape_Byron,_Byron_Bay,_New_South_Wales,_Australia_(Ank_Kumar,_Infosys_Limited)_02.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/byron-bay-2.jpg",
+          "artist": "Ank Kumar",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Main_Beach_and_Cape_Byron,_Byron_Bay,_New_South_Wales,_Australia_(Ank_Kumar,_Infosys_Limited)_05.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/byron-bay-3.jpg",
+          "artist": "Ank Kumar",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Main_Beach_and_Cape_Byron,_Byron_Bay,_New_South_Wales,_Australia_(Ank_Kumar,_Infosys_Limited)_04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "anse-source-dargent",
+      "region": "seychelles",
+      "name": "Anse Source d'Argent",
+      "area": "La Digue",
+      "lat": -4.3708,
+      "lon": 55.827,
+      "tag": "THE GRANITE BOULDERS",
+      "tags": [
+        "Snorkeling",
+        "Quiet escapes"
+      ],
+      "wave": "Calm",
+      "waveNote": "Protected by a reef; very shallow at low tide",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards",
+      "entry": "Estate fee",
+      "entryUnit": null,
+      "entryNote": "You reach it through L'Union Estate, which charges an entry fee (the estate also has giant tortoises and an old plantation).",
+      "parking": "No cars on La Digue: cycle or walk from La Passe.",
+      "description": "Pink-tinted granite boulders, powdery sand and shallow turquoise water: one of the most photographed beaches in the world.",
+      "features": [
+        "Granite boulders",
+        "Shallow water",
+        "Giant tortoises at the estate",
+        "Snack & juice stands"
+      ],
+      "safety": "The water gets very shallow at low tide; go near high tide for swimming. No lifeguards.",
+      "color": 2,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 10.4
+        },
+        {
+          "month": "Feb",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 7.1
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 5.7
+        },
+        {
+          "month": "Apr",
+          "airF": 84,
+          "waterF": 87,
+          "waveFt": "3–4",
+          "rainIn": 7.2
+        },
+        {
+          "month": "May",
+          "airF": 83,
+          "waterF": 86,
+          "waveFt": "4–5",
+          "rainIn": 6.9
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 83,
+          "waveFt": "5–7",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Jul",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "6–7",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Aug",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "6–7",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Sep",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "5–7",
+          "rainIn": 5.9
+        },
+        {
+          "month": "Oct",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "4–5",
+          "rainIn": 5.1
+        },
+        {
+          "month": "Nov",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 6.8
+        },
+        {
+          "month": "Dec",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 12.0
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/anse-source-dargent-1.jpg",
+          "artist": "Tobias Alt, Tobi 87",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Source_d%27Argent_2-La_Digue.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/anse-source-dargent-2.jpg",
+          "artist": "NorbertNagel",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Source_d%27Argent_-_La_Digue_-_Seychelles_-_03.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/anse-source-dargent-3.jpg",
+          "artist": "Tobias Alt, Tobi 87",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Source_d%27Argent_3-La_Digue.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "anse-lazio",
+      "region": "seychelles",
+      "name": "Anse Lazio",
+      "area": "Praslin",
+      "lat": -4.293,
+      "lon": 55.702,
+      "tag": "THE PRASLIN STAR",
+      "tags": [
+        "Calm swimming",
+        "Snorkeling"
+      ],
+      "wave": "0–2 ft",
+      "waveNote": "Usually calm; rougher during the southeast trade winds (about May–September)",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Small free car park at the beach.",
+      "description": "A wide bay of white sand framed by granite rocks and takamaka trees, with clear water and snorkeling around the rocks at either end.",
+      "features": [
+        "Snorkeling around the rocks",
+        "Shade trees",
+        "Restaurants at the beach"
+      ],
+      "safety": "No lifeguards. Swim in the calm middle of the bay and watch for currents near the rocks.",
+      "color": 0,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": false,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 10.2
+        },
+        {
+          "month": "Feb",
+          "airF": 83,
+          "waterF": 85,
+          "waveFt": "3–4",
+          "rainIn": 6.6
+        },
+        {
+          "month": "Mar",
+          "airF": 84,
+          "waterF": 86,
+          "waveFt": "2–3",
+          "rainIn": 5.4
+        },
+        {
+          "month": "Apr",
+          "airF": 84,
+          "waterF": 87,
+          "waveFt": "2–3",
+          "rainIn": 6.9
+        },
+        {
+          "month": "May",
+          "airF": 83,
+          "waterF": 86,
+          "waveFt": "3–4",
+          "rainIn": 6.7
+        },
+        {
+          "month": "Jun",
+          "airF": 81,
+          "waterF": 83,
+          "waveFt": "4–6",
+          "rainIn": 4.0
+        },
+        {
+          "month": "Jul",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "5–7",
+          "rainIn": 2.6
+        },
+        {
+          "month": "Aug",
+          "airF": 79,
+          "waterF": 80,
+          "waveFt": "5–6",
+          "rainIn": 3.2
+        },
+        {
+          "month": "Sep",
+          "airF": 80,
+          "waterF": 81,
+          "waveFt": "5–6",
+          "rainIn": 5.3
+        },
+        {
+          "month": "Oct",
+          "airF": 81,
+          "waterF": 82,
+          "waveFt": "3–4",
+          "rainIn": 5.4
+        },
+        {
+          "month": "Nov",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "2–3",
+          "rainIn": 6.9
+        },
+        {
+          "month": "Dec",
+          "airF": 82,
+          "waterF": 84,
+          "waveFt": "3–4",
+          "rainIn": 12.0
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/anse-lazio-1.jpg",
+          "artist": "Bjørn Christian Tørrissen",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Lazio-rama_2015.JPG"
+        },
+        {
+          "asset": "assets/images/beaches/anse-lazio-2.jpg",
+          "artist": "Tobias Alt, Tobi 87",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Lazio-Praslin-Seychellen.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/anse-lazio-3.jpg",
+          "artist": "Svein-Magne Tunli - tunliweb.no",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Anse_Lazio_beach_Praslin_Seychelles.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "camps-bay",
+      "region": "south-africa",
+      "name": "Camps Bay",
+      "area": "Cape Town · Western Cape",
+      "lat": -33.951,
+      "lon": 18.377,
+      "tag": "THE MOUNTAIN VIEW ONE",
+      "tags": [
+        "Boardwalk fun"
+      ],
+      "wave": "1–4 ft",
+      "waveNote": "Atlantic waves; can be strong",
+      "lifeguards": "Summer only",
+      "lifeguardNote": "Lifeguards in the summer season",
+      "entry": "Free",
+      "entryUnit": null,
+      "entryNote": "Free and public.",
+      "parking": "Paid street parking along Victoria Road; busy on summer weekends.",
+      "description": "White sand and palm trees below the Twelve Apostles mountains, with cafés and restaurants just across the road. The Atlantic water is cold even in summer.",
+      "features": [
+        "Lifeguards (summer)",
+        "Restrooms",
+        "Tidal pool",
+        "Cafés & restaurants"
+      ],
+      "safety": "The water is cold (often 55–60°F) and currents can be strong. Swim only where lifeguards are on duty.",
+      "color": 1,
+      "shacksFood": true,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 78,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 0.6
+        },
+        {
+          "month": "Feb",
+          "airF": 79,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 0.4
+        },
+        {
+          "month": "Mar",
+          "airF": 75,
+          "waterF": 59,
+          "waveFt": "6–9",
+          "rainIn": 1.2
+        },
+        {
+          "month": "Apr",
+          "airF": 72,
+          "waterF": 57,
+          "waveFt": "6–10",
+          "rainIn": 1.6
+        },
+        {
+          "month": "May",
+          "airF": 67,
+          "waterF": 57,
+          "waveFt": "7–12",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Jun",
+          "airF": 64,
+          "waterF": 57,
+          "waveFt": "7–12",
+          "rainIn": 5.1
+        },
+        {
+          "month": "Jul",
+          "airF": 62,
+          "waterF": 57,
+          "waveFt": "8–14",
+          "rainIn": 4.6
+        },
+        {
+          "month": "Aug",
+          "airF": 62,
+          "waterF": 57,
+          "waveFt": "8–14",
+          "rainIn": 3.4
+        },
+        {
+          "month": "Sep",
+          "airF": 65,
+          "waterF": 58,
+          "waveFt": "7–11",
+          "rainIn": 1.9
+        },
+        {
+          "month": "Oct",
+          "airF": 70,
+          "waterF": 58,
+          "waveFt": "6–10",
+          "rainIn": 1.5
+        },
+        {
+          "month": "Nov",
+          "airF": 73,
+          "waterF": 57,
+          "waveFt": "6–9",
+          "rainIn": 0.8
+        },
+        {
+          "month": "Dec",
+          "airF": 75,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 1.1
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/camps-bay-1.jpg",
+          "artist": "HelenOnline",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Camps_Bay_beach_6.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/camps-bay-2.jpg",
+          "artist": "Nithin bolar k",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Camps_Bay_Beach_...,_Cape_Town.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/camps-bay-3.jpg",
+          "artist": "Capsol",
+          "license": "CC BY 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Camps_Bay_Beach_at_sunset_04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "boulders-beach",
+      "region": "south-africa",
+      "name": "Boulders Beach",
+      "area": "Simon's Town · Cape Peninsula",
+      "lat": -34.1975,
+      "lon": 18.452,
+      "tag": "THE PENGUIN BEACH",
+      "tags": [
+        "Nature & wildlife",
+        "Calm swimming"
+      ],
+      "wave": "Calm",
+      "waveNote": "Sheltered by huge granite boulders",
+      "lifeguards": "No",
+      "lifeguardNote": "No lifeguards",
+      "entry": "Park fee",
+      "entryUnit": null,
+      "entryNote": "Part of Table Mountain National Park: a conservation fee is charged (lower for South African residents).",
+      "parking": "Paid parking near the entrances.",
+      "hours": "Opening hours change with the season; check before you go.",
+      "description": "A sheltered cove of granite boulders and calm water, home to a colony of endangered African penguins. Boardwalks let you watch them up close.",
+      "features": [
+        "African penguin colony",
+        "Boardwalks",
+        "Sheltered swimming",
+        "Restrooms"
+      ],
+      "safety": "Don't touch or feed the penguins: they can bite.",
+      "color": 2,
+      "shacksFood": false,
+      "waterSportsRentals": false,
+      "restrooms": true,
+      "familyFriendly": false,
+      "monthly": [
+        {
+          "month": "Jan",
+          "airF": 75,
+          "waterF": 62,
+          "waveFt": "5–7",
+          "rainIn": 0.7
+        },
+        {
+          "month": "Feb",
+          "airF": 75,
+          "waterF": 63,
+          "waveFt": "5–7",
+          "rainIn": 0.5
+        },
+        {
+          "month": "Mar",
+          "airF": 72,
+          "waterF": 61,
+          "waveFt": "5–8",
+          "rainIn": 1.3
+        },
+        {
+          "month": "Apr",
+          "airF": 69,
+          "waterF": 59,
+          "waveFt": "5–8",
+          "rainIn": 1.4
+        },
+        {
+          "month": "May",
+          "airF": 66,
+          "waterF": 60,
+          "waveFt": "6–8",
+          "rainIn": 2.0
+        },
+        {
+          "month": "Jun",
+          "airF": 63,
+          "waterF": 59,
+          "waveFt": "6–9",
+          "rainIn": 4.1
+        },
+        {
+          "month": "Jul",
+          "airF": 61,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 3.5
+        },
+        {
+          "month": "Aug",
+          "airF": 61,
+          "waterF": 58,
+          "waveFt": "6–9",
+          "rainIn": 2.5
+        },
+        {
+          "month": "Sep",
+          "airF": 63,
+          "waterF": 59,
+          "waveFt": "6–8",
+          "rainIn": 1.7
+        },
+        {
+          "month": "Oct",
+          "airF": 67,
+          "waterF": 60,
+          "waveFt": "5–8",
+          "rainIn": 1.2
+        },
+        {
+          "month": "Nov",
+          "airF": 70,
+          "waterF": 60,
+          "waveFt": "5–7",
+          "rainIn": 0.9
+        },
+        {
+          "month": "Dec",
+          "airF": 72,
+          "waterF": 63,
+          "waveFt": "6–7",
+          "rainIn": 1.2
+        }
+      ],
+      "monthlySource": "Averages of daily data: air and rain 2016–2025, waves and water 2016–2025. Weather data by Open-Meteo.com (CC BY 4.0).",
+      "photos": [
+        {
+          "asset": "assets/images/beaches/boulders-beach-1.jpg",
+          "artist": "Satdeep Gill",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Penguins_at_Boulders_Beach_04.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/boulders-beach-2.jpg",
+          "artist": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Simon%E2%80%99s_Town_(ZA),_Boulders_Beach,_Penguin_Colony_--_2024_--_3420.jpg"
+        },
+        {
+          "asset": "assets/images/beaches/boulders-beach-3.jpg",
+          "artist": "Jopparn",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Penguins_at_Boulders_Beach_2018_05.jpg"
+        }
+      ]
     }
   ],
-  "sourcesNote": "Gathered from public sources in Nov 2026. Prices, hours and ocean conditions change, so check with the lifeguards and the official site before you swim. Photos are from Wikimedia Commons (credited below); drawings fill in where we don’t have a photo yet.",
+  "sourcesNote": "Gathered from public sources in Nov 2026. Prices, hours and ocean conditions change, so check with the lifeguards and the official site before you swim. Photos are from Wikimedia Commons, credited on each photo and below; drawings fill in where we don’t have a photo yet.",
   "regions": {
     "jersey-shore": {
       "name": "Jersey Shore",
@@ -2756,6 +7054,78 @@
       "airNote": "Typical highs · coolest Jan–Feb",
       "waterTemp": "73–81°F",
       "waterNote": "Warmest Aug–Sept"
+    },
+    "california": {
+      "name": "California",
+      "state": "California",
+      "airTemp": "72–80°F",
+      "airNote": "Typical summer highs · Jul–Sep",
+      "waterTemp": "62–70°F",
+      "waterNote": "Warmest Aug–Sep"
+    },
+    "caribbean": {
+      "name": "Caribbean & Mexico",
+      "state": "Caribbean",
+      "airTemp": "84–90°F",
+      "airNote": "Warm all year",
+      "waterTemp": "79–84°F",
+      "waterNote": "Warmest Aug–Oct"
+    },
+    "brazil": {
+      "name": "Brazil",
+      "state": "Brazil",
+      "airTemp": "77–86°F",
+      "airNote": "Warmest Dec–Mar",
+      "waterTemp": "72–80°F",
+      "waterNote": "Warmest Feb–Apr"
+    },
+    "iberia": {
+      "name": "Portugal & Spain",
+      "state": "Europe",
+      "airTemp": "75–85°F",
+      "airNote": "Typical summer highs · Jul–Aug",
+      "waterTemp": "64–72°F",
+      "waterNote": "Warmest Aug–Sep"
+    },
+    "mediterranean": {
+      "name": "Greece & Italy",
+      "state": "Mediterranean",
+      "airTemp": "82–90°F",
+      "airNote": "Typical summer highs · Jul–Aug",
+      "waterTemp": "75–80°F",
+      "waterNote": "Warmest Aug–Sep"
+    },
+    "southeast-asia": {
+      "name": "Southeast Asia",
+      "state": "Asia",
+      "airTemp": "86–92°F",
+      "airNote": "Hot all year",
+      "waterTemp": "82–86°F",
+      "waterNote": "Warm all year"
+    },
+    "australia": {
+      "name": "Australia",
+      "state": "Australia",
+      "airTemp": "77–86°F",
+      "airNote": "Typical summer highs · Dec–Feb",
+      "waterTemp": "70–80°F",
+      "waterNote": "Warmest Feb–Mar"
+    },
+    "seychelles": {
+      "name": "Seychelles",
+      "state": "Seychelles",
+      "airTemp": "84–88°F",
+      "airNote": "Warm all year",
+      "waterTemp": "80–84°F",
+      "waterNote": "Warmest Mar–May"
+    },
+    "south-africa": {
+      "name": "South Africa",
+      "state": "South Africa",
+      "airTemp": "75–80°F",
+      "airNote": "Typical summer highs · Dec–Feb",
+      "waterTemp": "55–64°F",
+      "waterNote": "Cold Atlantic; warmer at False Bay"
     }
   }
 }

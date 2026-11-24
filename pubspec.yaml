@@ -40,6 +40,7 @@ dependencies:
   latlong2: ^0.10.1
   go_router: ^18.1.3
   flutter_svg: ^2.3.2
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:
@@ -80,6 +81,11 @@ flutter:
         - asset: assets/fonts/LiberationSans-BoldItalic.ttf
           weight: 700
           style: italic
+    # Headings and the wordmark: a variable font (weight set in Brand.title).
+    # SIL Open Font License, see LICENSE-BricolageGrotesque.txt.
+    - family: BricolageGrotesque
+      fonts:
+        - asset: assets/fonts/BricolageGrotesque.ttf
     # Symbols (✳ ↗ ☀ ☂ ⚑ ≈) so phones don't swap in colourful emoji.
     - family: DejaVuSans
       fonts:

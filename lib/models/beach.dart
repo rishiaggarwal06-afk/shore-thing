@@ -8,6 +8,7 @@ class Beach {
     required this.region,
     required this.name,
     required this.area,
+    this.country,
     required this.lat,
     required this.lon,
     required this.tag,
@@ -41,6 +42,9 @@ class Beach {
   final String region;
   final String name;
   final String area;
+
+  /// Country (or state), when it differs from the region's, e.g. "Aruba" in the Caribbean region.
+  final String? country;
   final double lat;
   final double lon;
 
@@ -78,36 +82,45 @@ class Beach {
   /// Real photos with credits (empty → the illustrated scenes are shown instead).
   final List<BeachPhoto> photos;
 
+  /// Short lifeguard line for cards: "Yes", "No", "Summer only" or anything else ("Varies").
+  String get lifeguardsShort => switch (lifeguards) {
+    'Yes' => 'Lifeguards',
+    'No' => 'No lifeguards',
+    'Summer only' => 'Summer lifeguards',
+    _ => 'Lifeguards vary',
+  };
+
   factory Beach.fromJson(Map<String, dynamic> j) => Beach(
-        slug: j['slug'] as String,
-        region: j['region'] as String,
-        name: j['name'] as String,
-        area: j['area'] as String,
-        lat: (j['lat'] as num).toDouble(),
-        lon: (j['lon'] as num).toDouble(),
-        tag: j['tag'] as String,
-        tags: List<String>.from(j['tags'] as List),
-        wave: j['wave'] as String,
-        waveNote: j['waveNote'] as String,
-        lifeguards: j['lifeguards'] as String,
-        lifeguardNote: j['lifeguardNote'] as String,
-        entry: j['entry'] as String,
-        entryUnit: j['entryUnit'] as String?,
-        entryNote: j['entryNote'] as String,
-        parking: j['parking'] as String,
-        hours: j['hours'] as String?,
-        description: j['description'] as String,
-        features: List<String>.from(j['features'] as List),
-        safety: j['safety'] as String,
-        color: j['color'] as int,
-        shacksFood: j['shacksFood'] as bool,
-        waterSportsRentals: j['waterSportsRentals'] as bool,
-        restrooms: j['restrooms'] as bool,
-        familyFriendly: j['familyFriendly'] as bool,
-        monthly: [for (final m in (j['monthly'] as List?) ?? const []) MonthConditions.fromJson(m as Map<String, dynamic>)],
-        monthlySource: j['monthlySource'] as String?,
-        photos: [for (final p in (j['photos'] as List?) ?? const []) BeachPhoto.fromJson(p as Map<String, dynamic>)],
-      );
+    slug: j['slug'] as String,
+    region: j['region'] as String,
+    name: j['name'] as String,
+    area: j['area'] as String,
+    country: j['country'] as String?,
+    lat: (j['lat'] as num).toDouble(),
+    lon: (j['lon'] as num).toDouble(),
+    tag: j['tag'] as String,
+    tags: List<String>.from(j['tags'] as List),
+    wave: j['wave'] as String,
+    waveNote: j['waveNote'] as String,
+    lifeguards: j['lifeguards'] as String,
+    lifeguardNote: j['lifeguardNote'] as String,
+    entry: j['entry'] as String,
+    entryUnit: j['entryUnit'] as String?,
+    entryNote: j['entryNote'] as String,
+    parking: j['parking'] as String,
+    hours: j['hours'] as String?,
+    description: j['description'] as String,
+    features: List<String>.from(j['features'] as List),
+    safety: j['safety'] as String,
+    color: j['color'] as int,
+    shacksFood: j['shacksFood'] as bool,
+    waterSportsRentals: j['waterSportsRentals'] as bool,
+    restrooms: j['restrooms'] as bool,
+    familyFriendly: j['familyFriendly'] as bool,
+    monthly: [for (final m in (j['monthly'] as List?) ?? const []) MonthConditions.fromJson(m as Map<String, dynamic>)],
+    monthlySource: j['monthlySource'] as String?,
+    photos: [for (final p in (j['photos'] as List?) ?? const []) BeachPhoto.fromJson(p as Map<String, dynamic>)],
+  );
 }
 
 /// A region (Jersey Shore, Florida, Hawaiʻi): its names, plus typical temperatures
@@ -132,12 +145,12 @@ class Region {
   final String waterNote;
 
   factory Region.fromJson(String id, Map<String, dynamic> j) => Region(
-        id: id,
-        name: j['name'] as String,
-        state: j['state'] as String,
-        airTemp: j['airTemp'] as String,
-        airNote: j['airNote'] as String,
-        waterTemp: j['waterTemp'] as String,
-        waterNote: j['waterNote'] as String,
-      );
+    id: id,
+    name: j['name'] as String,
+    state: j['state'] as String,
+    airTemp: j['airTemp'] as String,
+    airNote: j['airNote'] as String,
+    waterTemp: j['waterTemp'] as String,
+    waterNote: j['waterNote'] as String,
+  );
 }

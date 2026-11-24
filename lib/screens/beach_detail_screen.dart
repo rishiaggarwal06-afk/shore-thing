@@ -1,47 +1,48 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import '../models/beach.dart';
 import '../models/beach_photo.dart';
+import '../widgets/brand_sheet.dart';
+import '../widgets/forecast_strip.dart';
+import '../widgets/photo_gallery.dart';
 import '../services/beach_scope.dart';
 import '../services/climate_service.dart';
-import '../widgets/beach_scene.dart';
 import '../widgets/brand.dart';
 import '../widgets/month_strip.dart';
-import '../widgets/search_box.dart';
 import '../widgets/site_chrome.dart';
 
-/// Shared scrolling page frame: banner, header, centred content, footer.
+/// Shared page frame: the top bar (Map button + Search) stays put while the page scrolls.
 class SitePage extends StatelessWidget {
-  const SitePage({super.key, required this.children});
+  const SitePage({super.key, required this.children, this.beach});
   final List<Widget> children;
+
+  /// The beach this page is about, for its photo credits in the footer's Credits panel.
+  final Beach? beach;
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: SingleChildScrollView(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-            DemoBanner(beachCount: BeachScope.of(context).beaches.length),
-            const SiteHeader(),
-            PageWidth(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: children),
+    body: Column(
+      children: [
+        const TopBar(leading: HomeButton(), trailing: SearchButton()),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                PageWidth(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: children),
+                ),
+                SiteFooter(beach: beach),
+              ],
             ),
-            const SiteFooter(),
-          ]),
+          ),
         ),
-      );
+      ],
+    ),
+  );
 }
 
-class BackToMap extends StatelessWidget {
-  const BackToMap({super.key});
-
-  @override
-  Widget build(BuildContext context) => InkWell(
-        onTap: () => context.go('/'),
-        child: const UnderlinedText('← Back to the map', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
-      );
-}
-
-/// Eyebrow + big title + paragraph on the left, search on the right (stacked on phones).
+/// Small label + big title + paragraph at the top of a page.
 class DetailHead extends StatelessWidget {
   const DetailHead({super.key, required this.eyebrow, required this.title, required this.text});
   final String eyebrow, title, text;
@@ -49,26 +50,19 @@ class DetailHead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final phone = Brand.isPhone(context);
-    final words = Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(eyebrow.toUpperCase(), style: Brand.eyebrow),
-      const SizedBox(height: 8),
-      Semantics(
-        header: true,
-        child: Text(title,
-            style: TextStyle(fontSize: phone ? 34 : 52, fontWeight: FontWeight.w900, height: 1.02, letterSpacing: -1)),
-      ),
-      const SizedBox(height: 12),
-      ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 640),
-        child: Text(text, style: const TextStyle(fontSize: 17, height: 1.45)),
-      ),
-    ]);
-    if (phone) return Column(children: [words, const SizedBox(height: 20), const SearchBox()]);
-    return Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
-      Expanded(flex: 2, child: words),
-      const SizedBox(width: 28),
-      const Expanded(child: SearchBox()),
-    ]);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(eyebrow, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+        const SizedBox(height: 6),
+        Semantics(header: true, child: Text(title, style: Brand.title(phone ? 40 : 56))),
+        const SizedBox(height: 12),
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 680),
+          child: Text(text, style: const TextStyle(fontSize: 17, height: 1.45)),
+        ),
+      ],
+    );
   }
 }
 
@@ -80,243 +74,172 @@ class BeachDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final b = beach;
     final repo = BeachScope.of(context);
-    final region = repo.regionOf(b);
-    final phone = Brand.isPhone(context);
-    const gap = SizedBox(height: 22);
+    const gap = SizedBox(height: 28);
 
     return Title(
       title: '${b.name} · Shore Thing',
       color: Brand.ink,
-      child: SitePage(children: [
-        const BackToMap(),
-        const SizedBox(height: 14),
-        DetailHead(eyebrow: '${b.area} · ${region.state}', title: b.name, text: b.description),
-        gap,
-        _Gallery(b, phone: phone),
-        gap,
-        _StatusLine(b.tag),
-        gap,
-        _Stats(cards: [
-          _airCard(b, region),
-          _waterCard(b, region),
-          ('↗︎ Waves', b.wave, b.waveNote),
-          ('⚑︎ Lifeguards', b.lifeguards, b.lifeguardNote),
-        ]),
-        gap,
-        _InfoGrid(b, phone: phone),
-        const SizedBox(height: 30),
-        BestTimeToGo(climate: const ClimateService().monthlyFor(b)),
-        gap,
-        Text(repo.sourcesNote, style: const TextStyle(fontSize: 12, height: 1.5)),
-        if (b.photos.isNotEmpty) _PhotoCredits(b.photos),
-      ]),
+      child: SitePage(
+        beach: b,
+        children: [
+          PhotoGallery(beach: b),
+          const SizedBox(height: 20),
+          DetailHead(eyebrow: '${b.area} · ${repo.placeOf(b)}', title: b.name, text: b.description),
+          gap,
+          _FactTiles(b),
+          gap,
+          ForecastStrip(beach: b),
+          gap,
+          _WhatsThere(b),
+          gap,
+          BestTimeToGo(climate: const ClimateService().monthlyFor(b), beachName: b.name),
+          gap,
+          // Sources and full photo credits live behind "Credits & sources" in the footer.
+        ],
+      ),
     );
   }
 }
 
-/// Air temperature card: this beach's real summer highs if we have them, else the region's.
-(String, String, String) _airCard(Beach b, Region region) {
-  if (b.monthly.length != 12) return ('☀\ufe0e Air temperature', region.airTemp, region.airNote);
-  final summer = b.monthly.sublist(5, 8).map((m) => m.airF).toList()..sort();
-  return ('☀\ufe0e Air temperature', '${summer.first}–${summer.last}°F', 'Average summer highs · Jun–Aug');
-}
-
-/// Water temperature card: the warmest month on average.
-(String, String, String) _waterCard(Beach b, Region region) {
-  if (b.monthly.length != 12) return ('≈ Water temperature', region.waterTemp, region.waterNote);
-  final warmest = b.monthly.reduce((a, m) => m.waterF > a.waterF ? m : a);
-  return ('≈ Water temperature', 'Up to ${warmest.waterF}°F', 'Warmest in ${warmest.month}, on average');
-}
-
-/// Full photo credits with links to each photo's page (required by the CC licenses).
-class _PhotoCredits extends StatelessWidget {
-  const _PhotoCredits(this.photos);
-  final List<BeachPhoto> photos;
-
-  @override
-  Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.only(top: 12),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text('PHOTO CREDITS', style: Brand.eyebrow),
-          const SizedBox(height: 6),
-          for (final p in photos)
-            SelectableText('${p.artist}, ${p.license}, ${p.source}', style: const TextStyle(fontSize: 11, height: 1.5)),
-        ]),
-      );
-}
-
-class _Gallery extends StatelessWidget {
-  const _Gallery(this.b, {required this.phone});
+/// The key facts as tappable tiles; each opens a panel with the full details.
+class _FactTiles extends StatelessWidget {
+  const _FactTiles(this.b);
   final Beach b;
-  final bool phone;
-
-  /// Slot [i] shows the beach's i-th real photo, or an illustration if there isn't one.
-  Widget _slot(int i, String sceneLabel) {
-    final scene = BeachScene(palette: b.color, view: i, label: sceneLabel);
-    return i < b.photos.length ? PhotoTile(photo: b.photos[i], beachName: b.name, fallback: scene) : scene;
-  }
 
   @override
   Widget build(BuildContext context) {
-    final main = _slot(0, 'Illustrated shoreline for ${b.name}');
-    final side1 = _slot(1, 'Illustrated umbrella on the sand');
-    final side2 = _slot(2, 'Illustrated sailboat offshore');
-    if (phone) {
-      return Column(children: [
-        main,
-        const SizedBox(height: 10),
-        Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Expanded(child: side1),
-          const SizedBox(width: 10),
-          Expanded(child: side2),
-        ]),
-      ]);
-    }
-    return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Expanded(flex: 2, child: main),
-      const SizedBox(width: 10),
-      Expanded(child: Column(children: [side1, const SizedBox(height: 10), side2])),
-    ]);
+    // The tile shows just the price; the panel adds what it's per (car, person, day...).
+    final entry = b.entry;
+    final entryFull = b.entryUnit == null ? b.entry : '${b.entry} ${b.entryUnit}';
+    final tiles = [
+      (
+        Icons.confirmation_number_outlined,
+        Brand.sunTint,
+        'Entry',
+        entry,
+        entryFull == entry ? b.entryNote : '$entryFull. ${b.entryNote}',
+      ),
+      (Icons.pool_rounded, Brand.lagoonTint, 'Lifeguards', b.lifeguards, b.lifeguardNote),
+      (Icons.waves_rounded, Brand.lagoonTint, 'Waves', b.wave, b.waveNote),
+      (Icons.local_parking_rounded, Brand.sandTint, 'Parking', 'Details', b.parking),
+      if (b.hours != null) (Icons.schedule_rounded, Brand.sandTint, 'Hours', 'Details', b.hours!),
+      (Icons.health_and_safety_outlined, Brand.coralTint, 'Safety', 'Tips', b.safety),
+    ];
+    return LayoutBuilder(
+      builder: (context, c) {
+        final cols = c.maxWidth < 560 ? 2 : 3;
+        const gap = 10.0;
+        final w = (c.maxWidth - gap * (cols - 1) - 5) / cols;
+        return Wrap(
+          spacing: gap,
+          runSpacing: gap,
+          children: [
+            for (final (icon, tint, title, value, note) in tiles)
+              SizedBox(
+                width: w,
+                child: Semantics(
+                  button: true,
+                  label: '$title: $value. Show details',
+                  excludeSemantics: true,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(18),
+                    onTap: () => showBrandSheet(
+                      context,
+                      title: title,
+                      subtitle: b.name,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          if (value != 'Details' && value != 'Tips')
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 8),
+                              child: Text(value, style: Brand.title(32)),
+                            ),
+                          Text(note, style: const TextStyle(fontSize: 17, height: 1.45)),
+                        ],
+                      ),
+                    ),
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: Brand.card(shadow: 3),
+                      child: Row(
+                        children: [
+                          // Icon in a soft coloured bubble.
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(color: tint, shape: BoxShape.circle),
+                            child: Icon(icon, size: 22, color: Brand.ink),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(title, style: const TextStyle(fontSize: 13, color: Brand.inkSoft)),
+                                Text(
+                                  value,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, height: 1.15),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const Icon(Icons.chevron_right_rounded, color: Brand.inkSoft),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+          ],
+        );
+      },
+    );
   }
 }
 
-/// A real photo in the chunky frame, with its required credit line underneath.
-class PhotoTile extends StatelessWidget {
-  const PhotoTile({super.key, required this.photo, required this.beachName, required this.fallback});
-  final BeachPhoto photo;
-  final String beachName;
-  final Widget fallback;
-
-  @override
-  Widget build(BuildContext context) => Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Container(
-          decoration: Brand.chunky(shadow: 0),
-          child: AspectRatio(
-            aspectRatio: 3 / 2,
-            child: Image.asset(
-              photo.asset,
-              fit: BoxFit.cover,
-              semanticLabel: 'Photo of $beachName',
-              errorBuilder: (_, _, _) => fallback, // photo file missing → show the illustration
-            ),
-          ),
-        ),
-        const SizedBox(height: 4),
-        Text(photo.credit, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10.5, height: 1.3)),
-      ]);
-}
-
-class _StatusLine extends StatelessWidget {
-  const _StatusLine(this.tag);
-  final String tag;
+/// "What's there": the beach's features as a checklist.
+class _WhatsThere extends StatelessWidget {
+  const _WhatsThere(this.b);
+  final Beach b;
 
   @override
   Widget build(BuildContext context) => Container(
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 9),
-        decoration: const BoxDecoration(
-          border: Border.symmetric(horizontal: BorderSide(color: Brand.ink, width: 3)),
+    width: double.infinity,
+    padding: const EdgeInsets.all(20),
+    decoration: Brand.card(shadow: 3, radius: 22),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('What’s there', style: Brand.title(28)),
+        const SizedBox(height: 14),
+        LayoutBuilder(
+          builder: (context, c) {
+            final w = c.maxWidth < 380 ? c.maxWidth : (c.maxWidth - 16) / 2;
+            return Wrap(
+              spacing: 16,
+              runSpacing: 10,
+              children: [
+                for (final f in b.features)
+                  SizedBox(
+                    width: w,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(top: 1, right: 8),
+                          child: Icon(Icons.check_circle_rounded, size: 20, color: Brand.ocean),
+                        ),
+                        Expanded(child: Text(f, style: const TextStyle(fontSize: 16, height: 1.3))),
+                      ],
+                    ),
+                  ),
+              ],
+            );
+          },
         ),
-        child: Wrap(alignment: WrapAlignment.spaceBetween, runSpacing: 6, spacing: 16, children: [
-          Text('✳︎ $tag', style: Brand.eyebrow.copyWith(fontSize: 12)),
-          Text('TYPICAL CONDITIONS · NOT A LIVE FORECAST', style: Brand.eyebrow.copyWith(fontSize: 12)),
-        ]),
-      );
-}
-
-class _Stats extends StatelessWidget {
-  const _Stats({required this.cards});
-  final List<(String, String, String)> cards;
-
-  @override
-  Widget build(BuildContext context) => LayoutBuilder(builder: (context, c) {
-        final cols = c.maxWidth < 560 ? 2 : 4;
-        const gap = 12.0;
-        final w = (c.maxWidth - gap * (cols - 1) - 5) / cols;
-        return Wrap(spacing: gap, runSpacing: gap, children: [
-          for (final (label, value, note) in cards)
-            Container(
-              width: w,
-              padding: const EdgeInsets.all(14),
-              decoration: Brand.chunky(),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(label, style: const TextStyle(fontSize: 13)),
-                const SizedBox(height: 6),
-                Text(value, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w900)),
-                const SizedBox(height: 6),
-                Text(note, style: const TextStyle(fontSize: 12.5, height: 1.35)),
-              ]),
-            ),
-        ]);
-      });
-}
-
-class _InfoGrid extends StatelessWidget {
-  const _InfoGrid(this.b, {required this.phone});
-  final Beach b;
-  final bool phone;
-
-  @override
-  Widget build(BuildContext context) {
-    final whatsThere = Container(
-      padding: const EdgeInsets.all(20),
-      decoration: Brand.chunky(),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text('What’s there', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900)),
-        const SizedBox(height: 14),
-        LayoutBuilder(builder: (context, c) {
-          final w = c.maxWidth < 380 ? c.maxWidth : (c.maxWidth - 16) / 2;
-          return Wrap(spacing: 16, runSpacing: 10, children: [
-            for (final f in b.features)
-              SizedBox(
-                width: w,
-                child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  const Text('✓  ', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
-                  Expanded(child: Text(f, style: const TextStyle(fontSize: 16, height: 1.3))),
-                ]),
-              ),
-          ]);
-        }),
-        const SizedBox(height: 16),
-        Text.rich(TextSpan(children: [
-          const TextSpan(text: 'Safety: ', style: TextStyle(fontWeight: FontWeight.w700)),
-          TextSpan(text: b.safety),
-        ]), style: const TextStyle(fontSize: 13, height: 1.45)),
-      ]),
-    );
-
-    const label = TextStyle(fontWeight: FontWeight.w700, fontSize: 16);
-    const body = TextStyle(fontSize: 16, height: 1.4);
-    final gettingIn = Container(
-      padding: const EdgeInsets.all(20),
-      decoration: Brand.chunky(color: Brand.yellow),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text('GETTING IN', style: Brand.eyebrow),
-        const SizedBox(height: 6),
-        Text.rich(TextSpan(children: [
-          TextSpan(text: b.entry, style: const TextStyle(fontSize: 38, fontWeight: FontWeight.w900)),
-          if (b.entryUnit != null) TextSpan(text: '  ${b.entryUnit}', style: const TextStyle(fontSize: 14)),
-        ])),
-        const SizedBox(height: 10),
-        Text(b.entryNote, style: body),
-        const SizedBox(height: 14),
-        const Text('Parking', style: label),
-        Text(b.parking, style: body),
-        if (b.hours != null) ...[
-          const SizedBox(height: 14),
-          const Text('Hours', style: label),
-          Text(b.hours!, style: body),
-        ],
-      ]),
-    );
-
-    if (phone) return Column(children: [whatsThere, const SizedBox(height: 18), gettingIn]);
-    return IntrinsicHeight(
-      child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        Expanded(flex: 2, child: whatsThere),
-        const SizedBox(width: 18),
-        Expanded(child: gettingIn),
-      ]),
-    );
-  }
+      ],
+    ),
+  );
 }

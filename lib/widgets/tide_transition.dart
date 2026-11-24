@@ -137,7 +137,7 @@ class _Layer extends StatelessWidget {
           Center(
             child: Padding(
               padding: const EdgeInsets.all(24),
-              child: Text('✳︎ $label',
+              child: Text(label!,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                       fontFamily: Brand.font, fontFamilyFallback: Brand.fontFallback, color: Brand.paper, fontSize: 42, fontWeight: FontWeight.w900, decoration: TextDecoration.none)),

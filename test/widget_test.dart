@@ -8,13 +8,13 @@ void main() {
 
   test('loads all beaches with their amenity flags', () async {
     final repo = await BeachRepository.load();
-    expect(repo.beaches, hasLength(20));
+    expect(repo.beaches, hasLength(50));
     expect(repo.bySlug('island-beach-state-park')!.shacksFood, isFalse);
     // Every beach belongs to a known region, and slugs are unique.
     for (final b in repo.beaches) {
       expect(repo.regions.containsKey(b.region), isTrue, reason: b.slug);
     }
-    expect(repo.beaches.map((b) => b.slug).toSet(), hasLength(20));
+    expect(repo.beaches.map((b) => b.slug).toSet(), hasLength(50));
     expect(repo.regionOf(repo.bySlug('hanauma-bay')!).state, 'Hawaiʻi');
   });
 
@@ -31,6 +31,19 @@ void main() {
     expect(repo.find('siesta key')!.slug, 'siesta-key-beach');
     expect(repo.find('south beach')!.slug, 'south-beach');
     expect(repo.find('daytona')!.slug, 'daytona-beach');
+  });
+
+  test('search page matches names, towns and regions', () async {
+    final repo = await BeachRepository.load();
+    expect(repo.search(''), hasLength(50));
+    expect(repo.search('waikiki').map((b) => b.slug), ['waikiki-beach']);
+    expect(repo.search('hawaii'), hasLength(5)); // region "Hawaiʻi"
+    expect(repo.search('FLORIDA'), hasLength(5));
+    expect(repo.search('cape may').first.slug, 'cape-may');
+    expect(repo.search('myrtle'), isEmpty);
+    expect(repo.search('aruba').map((b) => b.slug), ['eagle-beach']); // by country
+    expect(repo.search('australia'), hasLength(4));
+    expect(repo.search('bondi').first.slug, 'bondi-beach');
   });
 
   test('uses real monthly data and photos when a beach has them', () async {
