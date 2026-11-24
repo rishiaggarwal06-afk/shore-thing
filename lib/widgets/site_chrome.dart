@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../models/beach.dart';
+import '../services/beach_scope.dart';
 import 'brand.dart';
+import 'brand_sheet.dart';
 
 /// "shore thing" wordmark. Tapping it goes home.
 /// [onStripes]: sits on the striped awning, so it gets a cream pill behind it.
@@ -151,28 +154,75 @@ class SearchButton extends StatelessWidget {
       BarButton(icon: Icons.search_rounded, label: 'Search', onTap: () => context.go('/search'));
 }
 
-/// Dark strip at the bottom of the beach pages with the required credits.
+/// One quiet line at the bottom of a page: a short safety note and a "Credits & sources"
+/// link. The full credits (sources, weather data, photo credits with links, map data)
+/// open in a panel, so the page itself stays clean. Pass [beach] for its photo credits.
 class SiteFooter extends StatelessWidget {
-  const SiteFooter({super.key});
+  const SiteFooter({super.key, this.beach});
+  final Beach? beach;
 
   @override
   Widget build(BuildContext context) => Container(
-    width: double.infinity,
-    color: Brand.ink,
-    padding: EdgeInsets.only(bottom: MediaQuery.paddingOf(context).bottom),
-    child: const PageWidth(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Logo(color: Brand.yellow),
-          SizedBox(height: 12),
-          Text(
-            'Beach info gathered from public sources, Nov 2026. Fees, hours and conditions change, '
-            'so always check with lifeguards and official sites. Map © MapTiler © OpenStreetMap contributors. Weather data by Open-Meteo.com (CC BY 4.0). Beach photos from Wikimedia Commons, credited on each beach page.',
-            style: TextStyle(color: Brand.paper, fontSize: 12, height: 1.5),
+        width: double.infinity,
+        decoration: const BoxDecoration(border: Border(top: BorderSide(color: Brand.teal))),
+        padding: EdgeInsets.only(bottom: MediaQuery.paddingOf(context).bottom),
+        child: PageWidth(
+          vertical: 14,
+          child: Wrap(
+            spacing: 14,
+            runSpacing: 8,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              const Text('Conditions change: check with lifeguards before you swim.',
+                  style: TextStyle(fontSize: 12.5, color: Brand.inkSoft)),
+              Semantics(
+                button: true,
+                child: InkWell(
+                  onTap: () => showCredits(context, beach),
+                  child: const UnderlinedText('Credits & sources',
+                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700)),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    ),
+        ),
+      );
+}
+
+/// The full credits panel. Everything here is what the data and photo licenses ask for.
+void showCredits(BuildContext context, Beach? beach) {
+  final repo = BeachScope.of(context);
+  const head = TextStyle(fontSize: 15, fontWeight: FontWeight.w700);
+  const body = TextStyle(fontSize: 13.5, height: 1.5);
+  Widget section(String title, List<Widget> lines) => Padding(
+        padding: const EdgeInsets.only(bottom: 18),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(title, style: head),
+          const SizedBox(height: 4),
+          ...lines,
+        ]),
+      );
+  showBrandSheet(
+    context,
+    title: 'Credits & sources',
+    subtitle: beach?.name,
+    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      section('Beach information', [Text(repo.sourcesNote, style: body)]),
+      section('Weather', [
+        if (beach?.monthlySource != null) Text('Monthly averages: ${beach!.monthlySource}', style: body),
+        const Text('7-day forecast: weather data by Open-Meteo.com, licensed CC BY 4.0.', style: body),
+      ]),
+      if (beach != null && beach.photos.isNotEmpty)
+        section('Photos (Wikimedia Commons)', [
+          for (final p in beach.photos)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: SelectableText('${p.artist} · ${p.license}\n${p.source}', style: body),
+            ),
+        ]),
+      section('Map', [
+        const Text('© MapTiler © OpenStreetMap contributors. Built-in map: Natural Earth (public domain).', style: body),
+      ]),
+    ]),
   );
 }

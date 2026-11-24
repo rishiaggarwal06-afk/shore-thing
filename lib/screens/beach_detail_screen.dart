@@ -13,8 +13,11 @@ import '../widgets/site_chrome.dart';
 
 /// Shared page frame: the top bar (Map button + Search) stays put while the page scrolls.
 class SitePage extends StatelessWidget {
-  const SitePage({super.key, required this.children});
+  const SitePage({super.key, required this.children, this.beach});
   final List<Widget> children;
+
+  /// The beach this page is about, for its photo credits in the footer's Credits panel.
+  final Beach? beach;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -29,7 +32,7 @@ class SitePage extends StatelessWidget {
                 PageWidth(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: children),
                 ),
-                const SiteFooter(),
+                SiteFooter(beach: beach),
               ],
             ),
           ),
@@ -77,6 +80,7 @@ class BeachDetailScreen extends StatelessWidget {
       title: '${b.name} · Shore Thing',
       color: Brand.ink,
       child: SitePage(
+        beach: b,
         children: [
           PhotoGallery(beach: b),
           const SizedBox(height: 20),
@@ -90,35 +94,11 @@ class BeachDetailScreen extends StatelessWidget {
           gap,
           BestTimeToGo(climate: const ClimateService().monthlyFor(b), beachName: b.name),
           gap,
-          Text(repo.sourcesNote, style: const TextStyle(fontSize: 12, height: 1.5)),
-          if (b.photos.isNotEmpty) _PhotoCredits(b.photos),
+          // Sources and full photo credits live behind "Credits & sources" in the footer.
         ],
       ),
     );
   }
-}
-
-/// Full photo credits with links to each photo's page (required by the CC licenses).
-class _PhotoCredits extends StatelessWidget {
-  const _PhotoCredits(this.photos);
-  final List<BeachPhoto> photos;
-
-  @override
-  Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.only(top: 14),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text('Photo credits', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700)),
-        const SizedBox(height: 4),
-        for (final p in photos)
-          SelectableText(
-            '${p.artist} · ${p.license} · ${p.source.replaceFirst('https://', '')}',
-            style: const TextStyle(fontSize: 11, height: 1.5),
-          ),
-      ],
-    ),
-  );
 }
 
 /// The key facts as tappable tiles; each opens a panel with the full details.

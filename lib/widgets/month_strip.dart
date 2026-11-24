@@ -42,11 +42,7 @@ class BestTimeToGo extends StatelessWidget {
         else
           Wrap(spacing: 10, runSpacing: 10, children: [for (final m in months) _card(context, m)]),
       ],
-      if (climate.source != null) ...[
-        const SizedBox(height: 8),
-        const SizedBox(height: 8),
-        Text(climate.source!, style: const TextStyle(fontSize: 11.5)),
-      ],
+      // Where the averages come from is in the footer's Credits & sources panel.
     ],
   );
 
