@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 /// Shore Thing's look: "cabana stripes". Colours, the headline font, and soft rounded cards.
 ///
 /// The user picked this direction (Nov 2026) from the samples page: a striped umbrella awning
-/// across the top, pool-tile teal, mango orange, friendly rounded type, and a map whose water
-/// gets deeper and darker offshore. Cards are rounded with soft shadows and no outlines (the
+/// across the top, pool-tile teal, mango orange and friendly rounded type. Cards are rounded with soft shadows and no outlines (the
 /// old thick-outline, hard-shadow style made every screen feel boxy and generated).
 class Brand {
   // Colours.
@@ -24,9 +23,8 @@ class Brand {
   static const coralTint = Color(0xFFFDE6CC);
   static const sandTint = Color(0xFFF3EAD6);
 
-  /// Sea colours from the shallows to the deep ocean (depth shading on the map):
-  /// coast, deeper than 200 m, 1,000 m, 3,000 m and 5,000 m.
-  static const sea = [Color(0xFFA9E4E8), Color(0xFF7FD0D8), Color(0xFF4FB3C3), Color(0xFF2F93AA), Color(0xFF1F6F86)];
+  /// Map water: one flat sea colour.
+  static const water = Color(0xFF5BBFC9);
 
   /// Bundled Liberation Sans (same letter widths as Arial) for body text.
   static const font = 'LiberationSans';

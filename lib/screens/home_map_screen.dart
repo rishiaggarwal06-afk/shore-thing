@@ -251,7 +251,7 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                           child: FlutterMap(
                             mapController: _map,
                             options: MapOptions(
-                              backgroundColor: Brand.sea.first, // shallow water; DepthLayers darkens the deep sea
+                              backgroundColor: Brand.water,
                               initialCameraFit: CameraFit.coordinates(
                                 coordinates: [for (final b in repo.beaches) LatLng(b.lat, b.lon)],
                                 padding: const EdgeInsets.all(80),
@@ -271,8 +271,6 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                             ),
                             children: [
                               // No MapTiler key (e.g. the shared web preview): draw the built-in map.
-                              // The sea gets darker the deeper it is (drawn under the land).
-                              if (tiles.builtIn) const DepthLayers(),
                               if (tiles.builtIn)
                                 const BasemapLayers()
                               else
@@ -283,8 +281,6 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
                                   tileBuilder: (context, tile, _) =>
                                       ColorFiltered(colorFilter: tiles.tint, child: tile),
                                 ),
-                              // On MapTiler's map: see-through depth shading on top of its flat water.
-                              if (!tiles.builtIn) const DepthLayers(overlay: true),
                               if (_ready)
                                 CastleLayer(
                                   beaches: repo.beaches,

@@ -24,8 +24,7 @@ class _BasemapLayersState extends State<BasemapLayers> {
       if (!mounted) return;
       setState(() {
         _land = [
-          for (final r in m.land)
-            Polygon(points: r, color: Brand.sand, borderColor: Brand.ink.withValues(alpha: .6), borderStrokeWidth: 1),
+          for (final r in m.land) Polygon(points: r, color: Brand.sand, borderColor: Brand.ink, borderStrokeWidth: 1.2),
         ];
         _states = [
           for (final r in m.states)
@@ -106,47 +105,4 @@ class _Labels extends StatelessWidget {
     shadows: _halo,
   );
   static const _stateStyle = TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Brand.ink, shadows: _halo);
-}
-
-/// Sea-depth shading: pale water near the coast getting darker offshore, like a
-/// nautical chart. [overlay] = drawn see-through on top of MapTiler's map (which has
-/// its own flat water colour); otherwise drawn solid under the built-in map's land.
-class DepthLayers extends StatefulWidget {
-  const DepthLayers({super.key, this.overlay = false});
-  final bool overlay;
-
-  @override
-  State<DepthLayers> createState() => _DepthLayersState();
-}
-
-class _DepthLayersState extends State<DepthLayers> {
-  List<Polygon>? _polygons;
-
-  @override
-  void initState() {
-    super.initState();
-    Bathymetry.load().then((b) {
-      if (!mounted) return;
-      setState(() {
-        _polygons = [
-          for (final (i, level) in b.levels.indexed)
-            for (final a in level.areas)
-              Polygon(
-                points: a.outline,
-                holePointsList: a.holes,
-                // Solid: the next darker sea colour. Overlay: a see-through deep teal that
-                // stacks up, so the deepest water is the darkest.
-                color: widget.overlay ? Brand.sea.last.withValues(alpha: .16) : Brand.sea[i + 1],
-              ),
-        ];
-      });
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final p = _polygons;
-    if (p == null) return const SizedBox.shrink();
-    return PolygonLayer(polygons: p, simplificationTolerance: .6);
-  }
 }
