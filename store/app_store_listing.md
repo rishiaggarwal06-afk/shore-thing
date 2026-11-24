@@ -14,13 +14,13 @@ Primary: Travel · Secondary: Weather
 ## Promotional text (max 170, can be changed any time without review)
 Plan your next beach day: 50 beaches around the world, a live 7-day forecast for each one, and this week's handpicked beaches.
 
-## Description (max 4,000)
+## Description (max 4,000; plain characters only: App Store Connect rejects the ʻokina, so write "Hawaii")
 Find your kind of beach.
 
 Shore Thing helps you pick a beach by what you want from the day: calm water for the kids, a reef to snorkel, a surf break, a boardwalk, or a quiet stretch of sand.
 
 EXPLORE THE MAP
-Browse 50 beaches across 12 regions, from the Jersey Shore and Florida to Hawaiʻi, the Caribbean, Portugal, Greece, Thailand, Australia and the Seychelles. Filter by what you're after (calm swimming, snorkeling, surf spots, quiet escapes, boardwalk fun, nature and wildlife) and tap a sandcastle to open a beach.
+Browse 50 beaches across 12 regions, from the Jersey Shore and Florida to Hawaii, the Caribbean, Portugal, Greece, Thailand, Australia and the Seychelles. Filter by what you're after (calm swimming, snorkeling, surf spots, quiet escapes, boardwalk fun, nature and wildlife) and tap a sandcastle to open a beach.
 
 KNOW BEFORE YOU GO
 Every beach has the essentials in one place: entry fees, lifeguards, waves, parking, hours and safety tips, plus what's there, from restrooms and food to rentals and walking trails.
