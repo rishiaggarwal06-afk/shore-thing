@@ -99,8 +99,6 @@ class _MonthCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Warm months get the yellow card so the beach season stands out.
-    final warm = m.airF >= 75;
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -108,7 +106,6 @@ class _MonthCard extends StatelessWidget {
         width: MediaQuery.textScalerOf(context).scale(104),
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.only(bottom: 4, right: 4),
-        decoration: warm ? Brand.card(color: Brand.sunTint, shadow: 0, radius: 16) : const BoxDecoration(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
