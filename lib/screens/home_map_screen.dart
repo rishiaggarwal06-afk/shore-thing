@@ -51,6 +51,10 @@ class _HomeMapScreenState extends State<HomeMapScreen> with SingleTickerProvider
   @override
   void initState() {
     super.initState();
+    // If MapTiler refuses the key, redraw with the built-in map.
+    MapTiles.checkKey().then((changed) {
+      if (changed && mounted) setState(() {});
+    });
     _fly.addListener(() {
       final t = Curves.easeInOutCubic.transform(_fly.value);
       _map.move(

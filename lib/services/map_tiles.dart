@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:http/http.dart' as http;
 
 import '../config/secrets.dart';
 
@@ -24,7 +25,30 @@ class MapTiles {
 
   static bool get hasMapTilerKey => Secrets.maptilerKey.isNotEmpty && !Secrets.maptilerKey.startsWith('YOUR_');
 
-  static MapTiles get current => hasMapTilerKey ? _mapTiler : _builtIn;
+  /// Set to false when MapTiler turns the key down (deleted, mistyped or over its limit),
+  /// so the app shows the built-in map instead of "Invalid key" tiles.
+  static bool _keyWorks = true;
+
+  static MapTiles get current => hasMapTilerKey && _keyWorks ? _mapTiler : _builtIn;
+
+  /// Asks MapTiler for one small map image. If it refuses the key (HTTP 401/403), the
+  /// app falls back to the built-in map. Network trouble doesn't count: the tiles may
+  /// still load later. Returns true when the map source changed.
+  static Future<bool> checkKey() async {
+    if (!hasMapTilerKey || !_keyWorks) return false;
+    try {
+      final r = await http
+          .head(Uri.parse('https://api.maptiler.com/maps/basic-v2/256/0/0/0.png?key=${Secrets.maptilerKey}'))
+          .timeout(const Duration(seconds: 8));
+      if (r.statusCode == 401 || r.statusCode == 403) {
+        _keyWorks = false;
+        return true;
+      }
+    } catch (_) {
+      // Offline or slow: keep MapTiler.
+    }
+    return false;
+  }
 
   /// True when the app draws its own built-in map instead of downloading map images.
   bool get builtIn => urlTemplate.isEmpty;
