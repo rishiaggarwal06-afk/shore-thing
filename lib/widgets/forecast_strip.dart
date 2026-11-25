@@ -64,38 +64,42 @@ class _ForecastStripState extends State<ForecastStrip> {
           }
           final days = snap.data?.days ?? const <DayForecast>[];
           if (snap.hasError || days.isEmpty) {
-            return Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(16),
-              decoration: Brand.chunky(shadow: 3),
-              child: Wrap(
-                spacing: 12,
-                runSpacing: 10,
-                crossAxisAlignment: WrapCrossAlignment.center,
-                children: [
-                  Text.rich(
-                    TextSpan(children: [
-                      const TextSpan(text: 'Couldn’t load the forecast. Check your connection.'),
-                      // The technical reason, small, so a screenshot says what went wrong.
-                      if (snap.hasError)
-                        TextSpan(
-                          text: '\n${_reason(snap.error!)}',
-                          style: const TextStyle(fontSize: 12, color: Brand.inkSoft),
-                        ),
-                    ]),
-                    style: const TextStyle(fontSize: 15, height: 1.4),
+            // No live forecast (offline or the weather service didn't answer): show what's
+            // typical this month instead of an error, with a small way to try again.
+            final month = _months[DateTime.now().month - 1];
+            final typical = widget.beach.monthly.where((m) => m.month == month).firstOrNull;
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (typical != null) ...[
+                  Text('Typical for $month', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 18,
+                    runSpacing: 8,
+                    children: [
+                      _mini(Icons.wb_sunny_outlined, 'Air ${typical.airF}°F'),
+                      _mini(Icons.pool_rounded, 'Water ${typical.waterF}°F'),
+                      _mini(Icons.waves_rounded, 'Waves ${typical.waveFt} ft'),
+                      _mini(Icons.water_drop_outlined, 'Rain ${typical.rainIn.toStringAsFixed(1)} in'),
+                    ],
                   ),
-                  OutlinedButton(
-                    onPressed: _retry,
-                    style: OutlinedButton.styleFrom(
-                      foregroundColor: Brand.ink,
-                      side: const BorderSide(color: Brand.ink, width: 1.5),
-                      shape: const StadiumBorder(),
-                    ),
-                    child: const Text('Try again', style: TextStyle(fontWeight: FontWeight.w700)),
-                  ),
+                  const SizedBox(height: 10),
                 ],
-              ),
+                Wrap(
+                  spacing: 8,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    const Text('Live forecast unavailable right now.',
+                        style: TextStyle(fontSize: 13, color: Brand.inkSoft)),
+                    InkWell(
+                      onTap: _retry,
+                      child: const UnderlinedText('Try again',
+                          style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700)),
+                    ),
+                  ],
+                ),
+              ],
             );
           }
           return Column(
@@ -231,11 +235,6 @@ class _DayCard extends StatelessWidget {
   );
 }
 
-/// Short description of why the forecast failed (shown in small print).
-String _reason(Object e) {
-  final text = e.toString().replaceAll('\n', ' ');
-  return text.length > 120 ? '${text.substring(0, 120)}…' : text;
-}
 
 /// Spinner while the forecast loads; after a few seconds it says it's still trying.
 class _Waiting extends StatefulWidget {
@@ -276,3 +275,12 @@ class _WaitingState extends State<_Waiting> {
         ]),
       );
 }
+
+Widget _mini(IconData icon, String text) => Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(icon, size: 18, color: Brand.ocean),
+        const SizedBox(width: 6),
+        Text(text, style: const TextStyle(fontSize: 15)),
+      ],
+    );

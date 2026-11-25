@@ -45,6 +45,14 @@ void main() {
           await tester.pump(const Duration(milliseconds: 100));
         }
         expect(tester.takeException(), isNull, reason: '$path at text scale $scale');
+        // Tests can't reach the internet, so beach pages show the typical-month fallback.
+        if (path == '/beach/asbury-park') {
+          for (var i = 0; i < 6; i++) {
+            await tester.pump(const Duration(seconds: 10));
+          }
+          expect(find.text('Live forecast unavailable right now.'), findsOneWidget);
+          expect(tester.takeException(), isNull, reason: 'fallback at text scale $scale');
+        }
       }
       tester.platformDispatcher.clearTextScaleFactorTestValue();
     });

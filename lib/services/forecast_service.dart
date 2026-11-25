@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 
 import '../models/beach.dart';
 import '../models/forecast.dart';
+import 'http_client.dart';
 
 /// Gets the real 7-day forecast for a beach from Open-Meteo (free, no key needed).
 ///
@@ -18,6 +19,9 @@ class ForecastService {
   ForecastService._();
   static final instance = ForecastService._();
 
+  /// Apple's networking on iPhone (see http_client.dart).
+  final http.Client _client = makeHttpClient();
+
   static const _keepFor = Duration(hours: 1);
   final _cache = <String, ({DateTime at, Future<BeachForecast> forecast})>{};
 
@@ -25,7 +29,8 @@ class ForecastService {
     final hit = _cache[b.slug];
     if (!refresh && hit != null && DateTime.now().difference(hit.at) < _keepFor) return hit.forecast;
     // Never wait forever: if the network is stuck, give up after 20 seconds and say so.
-    final f = _fetch(b).timeout(const Duration(seconds: 20));
+    // One retry, and never wait forever (two tries of up to 20 s each).
+    final f = _fetch(b).catchError((Object _) => _fetch(b)).timeout(const Duration(seconds: 45));
     _cache[b.slug] = (at: DateTime.now(), forecast: f);
     f.catchError((Object _) {
       _cache.remove(b.slug); // don't remember a failure; try again next time
@@ -54,11 +59,11 @@ class ForecastService {
       'timezone': 'auto',
       'forecast_days': '7',
     });
-    final weather = http.get(weatherUri).timeout(const Duration(seconds: 12));
+    final weather = _client.get(weatherUri).timeout(const Duration(seconds: 20));
     // The marine forecast is a bonus: if it fails, the weather still shows.
-    final marine = http
+    final marine = _client
         .get(marineUri)
-        .timeout(const Duration(seconds: 12))
+        .timeout(const Duration(seconds: 20))
         .then<Map<String, dynamic>?>((r) => r.statusCode == 200 ? jsonDecode(r.body) as Map<String, dynamic> : null)
         .catchError((Object _) => null);
 
